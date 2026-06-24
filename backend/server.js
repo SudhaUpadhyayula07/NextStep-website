@@ -395,7 +395,7 @@ async function handleApi(req, res, url) {
     });
   }
 
-  if (method === 'POST' && path === '/api/mentor/chat') {
+  if (method === 'POST' && (path === '/api/mentor/chat' || path === '/api/mentor')) {
     const body = await readBody(req);
     const userMessage = String(body.message || '').trim();
     const sessionId = getChatSessionId(body);

@@ -324,8 +324,8 @@
         const sendBtn = document.getElementById('mentorSendButton');
         const suggestedButtons = document.querySelectorAll('.suggestion-button');
         // For local development: http://localhost:4000
-        // For production: same origin
-        const API_BASE = '';
+        // For production: Vercel backend route prefix
+        const API_BASE = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') ? 'http://localhost:4000' : '/_/backend';
 
         function appendMessage(role, text) {
             const messageWrapper = document.createElement('div');
