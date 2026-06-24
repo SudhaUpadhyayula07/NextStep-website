@@ -1,0 +1,2279 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="auth.js"></script>
+<script>NextStepAuth.requireLogin();</script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<title>Career Path</title>
+<style>
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    .career-card-hover:hover { transform: translateY(-8px); box-shadow: 0px 10px 30px rgba(1, 10, 38, 0.04); }
+    .hide-scrollbar::-webkit-scrollbar { display: none; }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    primary: "#010a26",
+                    background: "#fff9ed",
+                    "surface-container": "#f7eed3",
+                    "surface-container-lowest": "#ffffff",
+                    secondary: "#556340",
+                    "on-surface": "#1f1c0b",
+                    "secondary-fixed": "#d8e9bc",
+                    "surface": "#fff9ed",
+                    "surface-container-low": "#fcf3d8",
+                    "secondary-container": "#d8e9bc",
+                    "on-surface-variant": "#45464d",
+                    outline: "#76777e"
+                },
+                borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+                spacing: { "margin-mobile": "20px", "margin-desktop": "80px", "container-max": "1200px" },
+                fontFamily: { display: ["Sora"], headline: ["Sora"], label: ["Manrope"], body: ["Manrope"] }
+            }
+        }
+    }
+</script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen">
+<aside class="fixed left-0 top-0 h-full flex flex-col py-8 bg-surface border-r border-secondary-fixed w-64 z-50">
+    <div class="px-6 mb-10">
+        <h1 class="font-display text-headline-md font-extrabold text-primary tracking-tight">NextStep</h1>
+        <p class="font-label text-label text-on-surface-variant mt-1">Executive Career Suite</p>
+    </div>
+    <nav class="flex-1 flex flex-col gap-1">
+        <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="4-dashboard.html">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span class="font-label text-label">Dashboard</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="5-study-paths.html">
+            <span class="material-symbols-outlined">school</span>
+            <span class="font-label text-label">Study Paths</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-primary font-bold border-r-4 border-primary bg-surface-container-low rounded-xl transition-all duration-200" href="5-career-paths.html">
+            <span class="material-symbols-outlined">explore</span>
+            <span class="font-label text-label">Career Paths</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="6-exams.html">
+            <span class="material-symbols-outlined">school</span>
+            <span class="font-label text-label">Exams</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="7-colleges.html">
+            <span class="material-symbols-outlined">account_balance</span>
+            <span class="font-label text-label">Colleges</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="8-scholarships.html">
+            <span class="material-symbols-outlined">payments</span>
+            <span class="font-label text-label">Scholarships</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="9-cgai.html">
+            <span class="material-symbols-outlined">psychology</span>
+            <span class="font-label text-label">AI Mentor</span>
+        </a>
+    </nav>
+</aside>
+<main class="ml-64 min-h-screen pb-20">
+<header class="sticky top-0 z-40 flex justify-between items-center w-full px-margin-desktop py-6 bg-background/80 backdrop-blur-md">
+    <div class="relative w-full max-w-xl group">
+        <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+        <input class="w-full pl-12 pr-4 py-3 bg-surface-container-low border-b border-secondary-container focus:border-primary focus:ring-0 transition-all font-body-md rounded-t-lg outline-none" placeholder="Search careers, industries, or skills..." type="text"/>
+    </div>
+    <div class="flex items-center gap-6">
+        <div class="flex items-center gap-3">
+            <div class="text-right hidden sm:block">
+                <p class="font-label text-label text-primary font-bold">Alex Chen</p>
+            </div>
+            <div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center border border-secondary-fixed">
+                <span class="material-symbols-outlined text-primary">person</span>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="max-w-container-max mx-auto px-margin-desktop space-y-10 py-10">
+    <section class="bg-surface p-10 rounded-[32px] border border-secondary-fixed">
+        <div class="flex flex-col gap-4">
+            <span class="text-secondary font-label uppercase tracking-widest">Career Path Detail</span>
+            <h1 id="pathTitle" class="font-headline-lg text-headline-lg text-primary">Loading career details...</h1>
+            <p id="pathBranch" class="text-on-surface-variant font-label-md">Branch information will appear here.</p>
+        </div>
+        <div class="mt-10 grid gap-10 lg:grid-cols-[1fr_320px]">
+            <div class="space-y-10">
+                <div class="space-y-4">
+                    <h2 class="font-headline-md text-primary">What this role does</h2>
+                    <p id="pathDescription" class="text-on-surface-variant leading-8"></p>
+                </div>
+                <div class="space-y-4">
+                    <h2 class="font-headline-md text-primary">Key skills</h2>
+                    <ul id="pathSkills" class="list-disc list-inside space-y-2 text-on-surface-variant"></ul>
+                </div>
+                <div class="space-y-4">
+                    <h2 class="font-headline-md text-primary">Career outlook</h2>
+                    <p id="pathFuture" class="text-on-surface-variant leading-8"></p>
+                </div>
+            </div>
+            <aside class="bg-surface-container-low p-8 rounded-3xl border border-secondary-fixed space-y-6">
+                <div>
+                    <span class="text-secondary uppercase tracking-widest font-label-sm">Fast facts</span>
+                    <dl class="mt-4 space-y-4 text-on-surface-variant">
+                        <div>
+                            <dt id="branchLabel" class="font-label-md text-primary">Branch</dt>
+                            <dd id="quickBranch" class="mt-1">—</dd>
+                        </div>
+                        <div>
+                            <dt class="font-label-md text-primary">Skills focus</dt>
+                            <dd id="quickSkills" class="mt-1">—</dd>
+                        </div>
+                        <div>
+                            <dt class="font-label-md text-primary">Future scope</dt>
+                            <dd id="quickFuture" class="mt-1">—</dd>
+                        </div>
+                    </dl>
+                </div>
+                <a href="5-career-paths.html" class="inline-flex items-center justify-center w-full rounded-full bg-primary px-4 py-3 text-white font-label-md hover:bg-indigo-900 transition-colors">
+                    Back to Career Paths
+                </a>
+            </aside>
+        </div>
+    </section>
+</div>
+</main>
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const selectedPath = params.get('path') || 'Software Engineer';
+    const branchLabel = document.getElementById('branchLabel');
+    const careerPathDetails = {
+        'Software Engineer': {
+            branch: 'Computer Science / Software Engineering',
+            description: 'Designs, develops and maintains software applications, tools and backend systems that people and businesses rely on every day. This role combines problem solving, coding and systems thinking to turn ideas into reliable software products.',
+            skills: ['Python', 'Java', 'C++', 'Data Structures', 'Algorithms', 'Git'],
+            future: '🔥 Extremely High — one of the fastest growing fields globally, with demand across startups, enterprises and every industry undergoing digital transformation.'
+        },
+        'AI/ML Engineer': {
+            branch: 'Artificial Intelligence / Machine Learning',
+            description: 'Builds intelligent systems that learn from data, recognize patterns and make predictions. This role blends statistics, programming and domain knowledge to create smart applications and automation.',
+            skills: ['Python', 'TensorFlow', 'PyTorch', 'Mathematics', 'Data Modelling'],
+            future: '🔥 Exponential — AI is transforming every industry, creating rapid career growth for specialists who can build scalable models and intelligent products.'
+        },
+        'DevOps Engineer': {
+            branch: 'IT Operations / Cloud Engineering',
+            description: 'Bridges development and operations by automating software delivery pipelines, infrastructure and deployments. This role helps teams ship faster while keeping systems stable and secure.',
+            skills: ['Docker', 'Kubernetes', 'AWS', 'CI/CD', 'Linux', 'Shell Scripting'],
+            future: '🔥 Very High — every tech company needs DevOps expertise to support modern software delivery and cloud-native operations.'
+        },
+        'Data Engineer': {
+            branch: 'Data Engineering / Analytics',
+            description: 'Builds systems to collect, store and process large volumes of data, enabling businesses to analyze information and make smarter decisions. This role is the plumbing behind data-driven products.',
+            skills: ['SQL', 'Spark', 'Hadoop', 'Python', 'ETL Pipelines', 'Cloud'],
+            future: '🔥 Very High — data is the new oil, and organizations need strong engineering pipelines to harness it effectively.'
+        },
+        'Cloud Engineer': {
+            branch: 'Cloud Infrastructure',
+            description: 'Designs and manages cloud infrastructure, ensuring applications run reliably and scale on AWS, Azure or GCP. This role keeps cloud services performant, secure and cost-effective.',
+            skills: ['AWS', 'Azure', 'GCP', 'Networking', 'Security', 'Terraform'],
+            future: '🔥 Very High — cloud adoption is growing rapidly, creating strong demand for engineers who can build cloud-native systems.'
+        },
+        'Cybersecurity Engineer': {
+            branch: 'Cybersecurity / Network Security',
+            description: 'Protects systems and networks from digital attacks, breaches and data theft. This role focuses on detection, response and defense to keep critical systems secure.',
+            skills: ['Ethical Hacking', 'Network Security', 'Cryptography', 'SIEM tools'],
+            future: '🔥 Very High — cyber threats are increasing globally, so skilled security engineers are increasingly essential.'
+        },
+        'Computer Hardware Engineer': {
+            branch: 'Electronics / Computer Engineering',
+            description: 'Researches and develops computer processors, circuits and physical hardware components. This role brings together electronics design and physical engineering for devices and chips.',
+            skills: ['Circuit Design', 'VLSI', 'Embedded Systems', 'C', 'Semiconductor Physics'],
+            future: '📈 High — chip demand is surging with AI, electric vehicles and next-generation electronics.'
+        },
+        'Civil Engineer': {
+            branch: 'Civil Engineering',
+            description: 'Plans and oversees construction of roads, bridges, buildings and infrastructure projects. This role combines design, construction management and safety to shape the built environment.',
+            skills: ['AutoCAD', 'STAAD Pro', 'Surveying', 'Project Management', 'Concrete Design'],
+            future: '📈 Stable — infrastructure development keeps this field consistently needed over time.'
+        },
+        'Structural Engineer': {
+            branch: 'Civil / Structural Engineering',
+            description: 'Ensures buildings and structures can safely withstand loads and forces. This role focuses on analysis, materials and safe design for strong, reliable construction.',
+            skills: ['Structural Analysis', 'ETABS', 'AutoCAD', 'Material Science', 'Load Calculations'],
+            future: '📈 Stable — high demand continues as urban development and construction grow.'
+        },
+        'Geotechnical Engineer': {
+            branch: 'Civil Engineering',
+            description: 'Studies soil and rock behavior to support foundations, tunnels and earthworks. This role is essential for safe site preparation and foundation design on construction projects.',
+            skills: ['Soil Mechanics', 'Site Investigation', 'Foundation Design', 'GIS'],
+            future: '📈 Moderate — needed in construction and mining projects that depend on subsurface expertise.'
+        },
+        'Transportation Engineer': {
+            branch: 'Civil / Transportation Engineering',
+            description: 'Plans and designs roads, highways, airports and public transit systems. This role improves how people and goods move safely and efficiently through cities and regions.',
+            skills: ['Traffic Analysis', 'AutoCAD', 'Urban Planning', 'GIS', 'Highway Design'],
+            future: '📈 Good — smart city and transport modernization projects are driving demand.'
+        },
+        'Electrical Engineer': {
+            branch: 'Electrical Engineering',
+            description: 'Designs and maintains electrical systems for power generation, distribution and control. This role powers buildings, industries and renewable energy systems.',
+            skills: ['Circuit Theory', 'Power Systems', 'MATLAB', 'AutoCAD Electrical', 'PLCs'],
+            future: '📈 High — the renewable energy revolution is creating strong demand for electrical expertise.'
+        },
+        'Electronics Engineer': {
+            branch: 'Electronics Engineering',
+            description: 'Designs and develops electronic circuits, devices and communication systems. This role powers everything from consumer gadgets to industrial control systems.',
+            skills: ['PCB Design', 'Embedded Systems', 'MATLAB', 'Signal Processing', 'Arduino'],
+            future: '📈 High — IoT and consumer electronics are booming, fueling more opportunities.'
+        },
+        'Telecommunication Engineer': {
+            branch: 'Telecom / RF Engineering',
+            description: 'Designs and manages communication networks including 5G, fiber and satellite systems. This role keeps the world connected through modern telecommunication infrastructure.',
+            skills: ['Networking', 'RF Engineering', '5G Protocols', 'MATLAB', 'Signal Processing'],
+            future: '🔥 Very High — 5G and future wireless rollout are creating massive demand.'
+        },
+        'Power Systems Engineer': {
+            branch: 'Power / Electrical Engineering',
+            description: 'Manages electricity generation, transmission, and distribution grids. This role ensures power systems stay stable, efficient, and prepared for renewable integration.',
+            skills: ['Power Electronics', 'SCADA', 'Grid Analysis', 'MATLAB', 'Smart Grid tech'],
+            future: '📈 High — the energy transition to renewables needs skilled power engineers.'
+        },
+        'Instrumentation Engineer': {
+            branch: 'Instrumentation / Control Engineering',
+            description: 'Designs systems to measure and control physical quantities in industries like manufacturing and chemical processing. This role keeps automated plants monitored and operating safely.',
+            skills: ['PLC', 'SCADA', 'Sensors', 'Control Systems', 'P&ID diagrams'],
+            future: '📈 Moderate — essential in oil, pharma and manufacturing industries.'
+        },
+        'Mechanical Engineer': {
+            branch: 'Mechanical Engineering',
+            description: 'Designs and develops mechanical systems, machines and thermal devices. This role is central to products, machinery and manufacturing industries.',
+            skills: ['CAD/CAM', 'SolidWorks', 'Thermodynamics', 'Fluid Mechanics', 'FEA'],
+            future: '📈 Stable — a core engineering field that remains relevant across many sectors.'
+        },
+        'Robotics Engineer': {
+            branch: 'Robotics / Mechatronics Engineering',
+            description: 'Designs and programs robots for automation and industrial use. This role blends mechanics, electronics and software to build intelligent machines.',
+            skills: ['ROS', 'Python', 'C++', 'Control Systems', 'Machine Learning', 'CAD'],
+            future: '🔥 Very High — the automation wave is expanding across manufacturing and services.'
+        },
+        'Automobile Engineer': {
+            branch: 'Automotive / Mechanical Engineering',
+            description: 'Designs and develops vehicles, engines and electric powertrains. This role is at the heart of the automotive shift toward EVs and smart mobility.',
+            skills: ['CAD', 'Vehicle Dynamics', 'Thermodynamics', 'EV Technology', 'MATLAB'],
+            future: '🔥 High — the electric vehicle revolution is creating strong demand for automotive engineers.'
+        },
+        'Manufacturing Engineer': {
+            branch: 'Manufacturing / Industrial Engineering',
+            description: 'Optimizes production processes and systems in factories. This role helps companies improve output, quality and efficiency through smarter manufacturing design.',
+            skills: ['Lean Manufacturing', 'Six Sigma', 'CAD/CAM', 'CNC', 'Quality Control'],
+            future: '📈 Good — Industry 4.0 and smart factories are driving new opportunities.'
+        },
+        'Industrial Engineer': {
+            branch: 'Industrial Engineering',
+            description: 'Improves efficiency of complex systems that combine people, machines and processes. This role focuses on productivity, workflow and operational excellence.',
+            skills: ['Operations Research', 'Six Sigma', 'Simulation', 'Supply Chain', 'Statistics'],
+            future: '📈 Good — needed in every large organization to improve systems and reduce waste.'
+        },
+        'Mechatronics Engineer': {
+            branch: 'Mechatronics Engineering',
+            description: 'Integrates mechanical, electrical and software systems for smart machines and automation. This role is ideal for building intelligent products with both hardware and software.',
+            skills: ['Robotics', 'Embedded Systems', 'CAD', 'Control Systems', 'PLC Programming'],
+            future: '🔥 Very High — bridges hardware and software worlds for advanced automation.'
+        },
+        'Product Design Engineer': {
+            branch: 'Product / Industrial Design Engineering',
+            description: 'Creates and develops physical products from concept through manufacturing. This role combines creativity, engineering and user-centered thinking.',
+            skills: ['SolidWorks', 'Prototyping', 'User Research', 'CAD', 'Material Science'],
+            future: '📈 High — product innovation remains critical for consumer and industrial goods.'
+        },
+        'Environmental Engineer': {
+            branch: 'Environmental Engineering',
+            description: 'Develops solutions for pollution control, waste management and sustainable infrastructure. This role helps businesses and communities meet environmental goals.',
+            skills: ['Environmental Laws', 'GIS', 'Water Treatment', 'Air Quality Analysis', 'EIA'],
+            future: '🔥 Very High — climate action is making this career path increasingly critical.'
+        },
+        'Renewable Energy Engineer': {
+            branch: 'Energy / Renewable Engineering',
+            description: 'Designs and implements solar, wind and clean energy systems. This role helps shape the transition to sustainable power sources.',
+            skills: ['Solar/Wind Technology', 'Power Systems', 'MATLAB', 'Energy Storage', 'Grid Integration'],
+            future: '🔥 Exponential — the world is shifting quickly to clean energy solutions.'
+        },
+        'Petroleum Engineer': {
+            branch: 'Petroleum / Chemical Engineering',
+            description: 'Develops methods to extract oil and gas from underground reservoirs. This role focuses on drilling, reservoir management and efficient extraction.',
+            skills: ['Reservoir Simulation', 'Drilling Engineering', 'Geology', 'MATLAB'],
+            future: '⚠️ Declining — fossil fuels are being phased out over the long term, reducing long-term demand.'
+        },
+        'Nuclear Engineer': {
+            branch: 'Nuclear Engineering',
+            description: 'Designs and manages nuclear reactors, radiation systems and safety processes. This role supports clean power and high-tech industrial applications.',
+            skills: ['Nuclear Physics', 'Reactor Design', 'Radiation Safety', 'Thermodynamics'],
+            future: '📈 Moderate — nuclear energy is seeing a revival as a low-carbon power option.'
+        },
+        'Chemical Engineer': {
+            branch: 'Chemical Engineering',
+            description: 'Designs industrial processes that convert raw materials into valuable products like chemicals, fuels and medicines. This role is central to manufacturing and process industries.',
+            skills: ['Process Design', 'ASPEN Plus', 'Thermodynamics', 'Fluid Mechanics', 'Safety'],
+            future: '📈 Good — pharma, food and materials sectors continue to need chemical engineers.'
+        },
+        'Materials Engineer': {
+            branch: 'Materials / Metallurgical Engineering',
+            description: 'Develops new materials and improves existing ones used in electronics, aerospace, energy and manufacturing. This role helps bring stronger, lighter and smarter materials to market.',
+            skills: ['Material Characterization', 'Metallurgy', 'Lab Testing', 'CAD', 'R&D'],
+            future: '📈 High — semiconductors and electric vehicles need advanced materials expertise.'
+        },
+        'Metallurgical Engineer': {
+            branch: 'Metallurgical Engineering',
+            description: 'Studies and processes metals and alloys for industrial applications. This role supports steel, automotive and battery manufacturing industries.',
+            skills: ['Metal Processing', 'Heat Treatment', 'Alloy Design', 'Material Testing'],
+            future: '📈 Moderate — steel, mining and EV battery sectors maintain steady demand.'
+        },
+        'Nanotechnology Engineer': {
+            branch: 'Nanotechnology / Materials Engineering',
+            description: 'Works with materials at the nanoscale to build new devices and technologies in medicine, electronics and energy. This role is at the cutting edge of science and engineering.',
+            skills: ['Nanofabrication', 'Chemistry', 'Physics', 'Electron Microscopy', 'R&D'],
+            future: '🔥 Very High — an emerging field with huge long-term potential.'
+        },
+        'Aerospace Engineer': {
+            branch: 'Aerospace Engineering',
+            description: 'Designs aircraft, spacecraft and related systems. This role supports aviation, defense and the growing space economy with advanced engineering work.',
+            skills: ['Aerodynamics', 'CAD', 'MATLAB', 'Propulsion Systems', 'Structural Analysis'],
+            future: '🔥 High — aviation and the space industry are both expanding rapidly.'
+        },
+        'Biomedical Engineer': {
+            branch: 'Biomedical / Healthcare Engineering',
+            description: 'Applies engineering principles to develop medical devices, diagnostics and healthcare technology. This role helps improve patient care and medical innovation.',
+            skills: ['Biology', 'Medical Devices', 'Signal Processing', 'CAD', 'FDA Regulations'],
+            future: '🔥 Very High — the ageing population is driving strong demand for healthcare innovation.'
+        },
+        'Biotechnology Engineer': {
+            branch: 'Biotechnology / Bioengineering',
+            description: 'Uses biology and engineering to develop drugs, vaccines and agri-biotech solutions. This role is central to modern pharma and life sciences innovation.',
+            skills: ['Molecular Biology', 'Genetic Engineering', 'Lab Skills', 'Bioinformatics'],
+            future: '🔥 Very High — genomics and biotech are booming after the COVID era.'
+        },
+        'Agricultural Engineer': {
+            branch: 'Agricultural Engineering',
+            description: 'Improves farming equipment, irrigation systems and crop processing. This role supports food security through smarter agriculture and agri-tech solutions.',
+            skills: ['Farm Machinery', 'Irrigation Design', 'GIS', 'Soil Science', 'AgriTech'],
+            future: '📈 Good — food security and AgriTech are driving steady demand.'
+        },
+        'Mining Engineer': {
+            branch: 'Mining Engineering',
+            description: 'Extracts minerals and resources safely and efficiently from the earth. This role supports industries like EV batteries, construction and metals supply.',
+            skills: ['Geology', 'Explosives', 'Mine Planning', 'Safety', 'GIS', 'Rock Mechanics'],
+            future: '📈 Moderate — lithium and rare earth mining are growing for EVs.'
+        },
+        'Textile Engineer': {
+            branch: 'Textile / Materials Engineering',
+            description: 'Develops fiber, yarn and fabric manufacturing processes. This role supports smart textiles, fashion tech and industrial fabrics.',
+            skills: ['Textile Technology', 'CAD', 'Quality Control', 'Chemistry', 'Production Management'],
+            future: '📈 Moderate — technical textiles and smart fabrics are expanding.'
+        },
+
+        'Food Technology Engineer': {
+            branch: 'Food / Bioprocess Engineering',
+            description: 'Improves food production, preservation and safety processes. This role helps ensure quality and innovation in the food supply chain.',
+            skills: ['Food Science', 'Quality Control', 'HACCP', 'Chemistry', 'Processing Technology'],
+            future: '📈 Good — food processing continues to grow, especially in India.'
+        },
+        'Safety Engineer': {
+            branch: 'Safety / Industrial Engineering',
+            description: 'Identifies and reduces workplace hazards to protect people, equipment and operations. This role is critical for compliance and risk reduction in every sector.',
+            skills: ['Risk Assessment', 'OSHA Standards', 'Hazard Analysis', 'Safety Audits'],
+            future: '📈 Good — regulation and industry focus make safety expertise essential.'
+        },
+        'Quality Assurance Engineer': {
+            branch: 'Quality / Manufacturing Engineering',
+            description: 'Ensures products and processes meet quality standards and specifications. This role helps companies deliver consistent, reliable results across engineering and software teams.',
+            skills: ['Testing Methodologies', 'Six Sigma', 'Statistical Analysis', 'ISO Standards'],
+            future: '📈 High — every product company needs QA experts to maintain trust and performance.'
+        },
+        'Systems Engineer': {
+            branch: 'Systems Engineering',
+            description: 'Designs and manages complex, integrated systems across their entire lifecycle. This role is ideal for work on defence, space and multi-disciplinary technology programs.',
+            skills: ['Systems Thinking', 'MBSE', 'Requirements Analysis', 'Project Management'],
+            future: '📈 High — complex technical programs continue to need strong systems engineers.'
+        },
+        'Graphic Designer': {
+            branch: 'Visual Communication / Graphic Design',
+            description: 'Creates visual content for brands, marketing materials and digital media using design tools.',
+            skills: ['Adobe Photoshop', 'Illustrator', 'Typography', 'Color Theory', 'Brand Identity', 'Creativity'],
+            future: '📈 High — every business needs visual design, freelance market booming'
+        },
+        'UI/UX Designer': {
+            branch: 'Interaction Design / UX',
+            description: 'Designs user interfaces and experiences for websites, apps and digital products.',
+            skills: ['Figma', 'Adobe XD', 'User Research', 'Wireframing', 'Prototyping', 'Design Thinking'],
+            future: '🔥 Very High — every tech product needs great UX, huge demand in India'
+        },
+        'Fashion Designer': {
+            branch: 'Fashion / Apparel Design',
+            description: 'Creates clothing, accessories and footwear by combining aesthetics with functionality.',
+            skills: ['Sketching', 'Fabric Knowledge', 'Trend Forecasting', 'Pattern Making', 'Sewing', 'CAD'],
+            future: '📈 Good — Indian fashion industry growing, global demand for Indian designers'
+        },
+        'Interior Designer': {
+            branch: 'Interior Design',
+            description: 'Plans and designs indoor spaces to be functional, safe and aesthetically pleasing.',
+            skills: ['AutoCAD', 'SketchUp', 'Space Planning', 'Color Theory', '3D Visualization', 'Client Management'],
+            future: '📈 High — real estate boom and home improvement culture driving demand'
+        },
+        'Fine Artist': {
+            branch: 'Fine Arts',
+            description: 'Creates original artwork through painting, sculpture or mixed media for galleries and collectors.',
+            skills: ['Drawing', 'Painting', 'Sculpture', 'Art History', 'Creativity', 'Portfolio Development'],
+            future: '📈 Moderate — NFTs and digital art creating new revenue streams'
+        },
+        'Illustrator': {
+            branch: 'Illustration / Digital Art',
+            description: 'Creates drawings and illustrations for books, advertisements, games and digital media.',
+            skills: ['Drawing', 'Adobe Illustrator', 'Procreate', 'Digital Art', 'Storytelling', 'Character Design'],
+            future: '📈 High — children\'s books, gaming and social media driving demand'
+        },
+        'Architect': {
+            branch: 'Architecture',
+            description: 'Designs buildings and structures balancing aesthetics, functionality and safety requirements.',
+            skills: ['AutoCAD', 'Revit', 'SketchUp', 'Building Codes', 'Structural Knowledge', '3D Modeling'],
+            future: '📈 High — urbanization and smart city projects creating huge opportunities'
+        },
+        'Art Director': {
+            branch: 'Advertising / Creative Direction',
+            description: 'Leads the visual style and creative direction of advertising campaigns, films and publications.',
+            skills: ['Visual Storytelling', 'Leadership', 'Design Software', 'Brand Strategy', 'Project Management'],
+            future: '📈 High — advertising and media industry growing rapidly'
+        },
+        'Creative Director': {
+            branch: 'Creative Leadership',
+            description: 'Oversees the creative vision and output of an entire brand, agency or production team.',
+            skills: ['Leadership', 'Brand Strategy', 'Design Thinking', 'Communication', 'Campaign Planning'],
+            future: '📈 High — brands investing heavily in creative identity'
+        },
+        'Game Artist': {
+            branch: 'Game Design / Art',
+            description: 'Creates visual assets including characters, environments and UI for video games.',
+            skills: ['3D Modeling', 'Unity', 'Unreal Engine', 'Concept Art', 'Animation', 'Photoshop'],
+            future: '🔥 Very High — Indian gaming industry growing at 28% annually'
+        },
+        'Product Designer': {
+            branch: 'Product Design',
+            description: 'Designs physical and digital products focusing on user needs, aesthetics and usability.',
+            skills: ['SolidWorks', 'Figma', 'Prototyping', 'User Research', 'Design Thinking', 'CAD'],
+            future: '🔥 High — startups and consumer brands need product designers badly'
+        },
+        'Photographer': {
+            branch: 'Photography',
+            description: 'Captures images for commercial, editorial, artistic or documentary purposes.',
+            skills: ['Camera Operation', 'Lighting', 'Photo Editing', 'Lightroom', 'Photoshop', 'Composition'],
+            future: '📈 Good — wedding, commercial and social media photography booming in India'
+        },
+        'Film Director': {
+            branch: 'Film / Media Production',
+            description: 'Leads the creative vision and production of films, web series and video content.',
+            skills: ['Storytelling', 'Script Analysis', 'Camera Knowledge', 'Team Leadership', 'Editing'],
+            future: '📈 High — OTT platforms like Netflix and Amazon creating massive content demand'
+        },
+        'Video Editor': {
+            branch: 'Video Editing / Post Production',
+            description: 'Assembles raw footage into polished videos for films, ads, YouTube and social media.',
+            skills: ['Premiere Pro', 'Final Cut Pro', 'After Effects', 'Color Grading', 'Storytelling', 'Audio Editing'],
+            future: '🔥 Very High — video content consumption exploding across all platforms'
+        },
+        'Animator': {
+            branch: 'Animation / Motion Graphics',
+            description: 'Creates moving images and visual effects for films, games, ads and educational content.',
+            skills: ['Maya', 'Blender', 'After Effects', '2D/3D Animation', 'Rigging', 'Storytelling'],
+            future: '🔥 Very High — OTT content and gaming driving massive animation demand in India'
+        },
+        'Content Writer': {
+            branch: 'Content Writing / Copy',
+            description: 'Creates written content for websites, blogs, social media and marketing campaigns.',
+            skills: ['Writing', 'SEO', 'Research', 'Copyediting', 'Content Strategy', 'Social Media Knowledge'],
+            future: '📈 High — every brand needs content, remote work making it accessible globally'
+        },
+        'Copywriter': {
+            branch: 'Copywriting / Marketing',
+            description: 'Writes persuasive marketing and advertising copy to drive sales and brand awareness.',
+            skills: ['Persuasive Writing', 'Brand Voice', 'Marketing Psychology', 'Creativity', 'Research'],
+            future: '📈 High — digital advertising spend in India growing at 30% annually'
+        },
+        'Journalist': {
+            branch: 'Journalism / Reporting',
+            description: 'Investigates, researches and reports news stories for print, digital or broadcast media.',
+            skills: ['Investigation', 'Writing', 'Communication', 'Research', 'Ethics', 'Interviewing'],
+            future: '📈 Moderate — digital journalism growing but traditional media declining'
+        },
+        'Author': {
+            branch: 'Creative Writing / Publishing',
+            description: 'Writes books, novels and non-fiction works for publication and reader audiences.',
+            skills: ['Creative Writing', 'Research', 'Storytelling', 'Self-Discipline', 'Grammar', 'Publishing Knowledge'],
+            future: '📈 Moderate — self-publishing and audiobooks creating new opportunities'
+        },
+        'Screenwriter': {
+            branch: 'Script Writing / Screenwriting',
+            description: 'Writes scripts and screenplays for films, web series, TV shows and advertisements.',
+            skills: ['Screenplay Format', 'Storytelling', 'Dialogue Writing', 'Character Development', 'Research'],
+            future: '🔥 High — OTT boom creating massive demand for original scripts in India'
+        },
+        'Linguist': {
+            branch: 'Linguistics / Language Studies',
+            description: 'Studies language structure, evolution and use to work in translation, education or research.',
+            skills: ['Multiple Languages', 'Phonetics', 'Grammar Analysis', 'Research', 'Cultural Knowledge'],
+            future: '📈 Good — AI translation still needs human linguistic expertise'
+        },
+        'Language Translator': {
+            branch: 'Translation / Localization',
+            description: 'Converts written or spoken content from one language to another accurately and naturally.',
+            skills: ['Bilingual Fluency', 'Cultural Knowledge', 'Writing', 'Terminology', 'Attention to Detail'],
+            future: '📈 Good — globalization driving demand, especially for Indian regional languages'
+        },
+        'Actor': {
+            branch: 'Acting / Performance',
+            description: 'Portrays characters in films, TV shows, theatre productions and digital content.',
+            skills: ['Acting Techniques', 'Voice Modulation', 'Emotional Range', 'Script Reading', 'Physical Fitness'],
+            future: '📈 High — OTT platforms creating opportunities beyond Bollywood'
+        },
+        'Musician': {
+            branch: 'Music / Performance',
+            description: 'Composes and performs music across genres for recordings, live events and film scores.',
+            skills: ['Instrument Mastery', 'Music Theory', 'Composition', 'Recording Software', 'Performance'],
+            future: '📈 Good — digital streaming and live events creating new revenue streams'
+        },
+        'Dancer': {
+            branch: 'Dance / Performing Arts',
+            description: 'Performs choreographed or improvised movement for entertainment, films and cultural events.',
+            skills: ['Dance Techniques', 'Choreography', 'Physical Fitness', 'Rhythm', 'Performance', 'Flexibility'],
+            future: '📈 Moderate — Bollywood, reality shows and dance academies driving demand'
+        },
+        'Theatre Artist': {
+            branch: 'Theatre / Stage Performance',
+            description: 'Performs in stage plays and theatrical productions combining acting, voice and movement.',
+            skills: ['Stage Acting', 'Voice Projection', 'Script Analysis', 'Movement', 'Improvisation'],
+            future: '📈 Moderate — theatre culture reviving in Indian metros'
+        },
+        'Digital Marketer': {
+            branch: 'Digital Marketing',
+            description: 'Plans and executes online marketing campaigns across social media, SEO and paid advertising.',
+            skills: ['SEO', 'Google Ads', 'Social Media', 'Analytics', 'Content Strategy', 'Email Marketing'],
+            future: '🔥 Very High — every business shifting to digital, demand is exploding'
+        },
+        'Social Media Manager': {
+            branch: 'Social Media / Community',
+            description: 'Creates and manages a brand\'s presence and content across social media platforms.',
+            skills: ['Content Creation', 'Analytics', 'Platform Knowledge', 'Copywriting', 'Community Management'],
+            future: '🔥 High — social media becoming primary marketing channel for all businesses'
+        },
+        'Public Relations Specialist': {
+            branch: 'Public Relations / Media Relations',
+            description: 'Manages a company\'s or individual\'s public image and media communications.',
+            skills: ['Communication', 'Media Relations', 'Crisis Management', 'Writing', 'Networking'],
+            future: '📈 Good — brand reputation management growing in importance'
+        },
+        'Event Manager': {
+            branch: 'Event Management',
+            description: 'Plans, organizes and executes events including corporate conferences, weddings and concerts.',
+            skills: ['Planning', 'Vendor Management', 'Budgeting', 'Communication', 'Problem Solving', 'Creativity'],
+            future: '📈 High — events industry bouncing back strongly post-COVID'
+        },
+        'Museum Curator': {
+            branch: 'Museum Studies / Curation',
+            description: 'Manages and preserves collections of artifacts and artworks in museums and galleries.',
+            skills: ['Art History', 'Research', 'Conservation', 'Cataloging', 'Exhibition Design', 'Communication'],
+            future: '📈 Moderate — digital museums and cultural tourism creating new opportunities'
+        },
+        'Art Therapist': {
+            branch: 'Art Therapy / Mental Health',
+            description: 'Uses creative art processes to help clients improve mental health and emotional wellbeing.',
+            skills: ['Art Techniques', 'Psychology', 'Counseling', 'Empathy', 'Therapeutic Methods', 'Creativity'],
+            future: '📈 High — mental health awareness driving demand for alternative therapies'
+        },
+        'Archaeologist': {
+            branch: 'Archaeology / Heritage Studies',
+            description: 'Excavates and studies ancient sites and artifacts to understand past human civilizations.',
+            skills: ['Excavation', 'Research', 'GIS', 'Dating Techniques', 'Report Writing', 'History Knowledge'],
+            future: '📈 Moderate — heritage conservation and tourism supporting the field'
+        },
+        'Historian': {
+            branch: 'History / Research',
+            description: 'Researches, analyzes and interprets historical events and their impact on society.',
+            skills: ['Research', 'Critical Analysis', 'Writing', 'Archival Work', 'Languages', 'Teaching'],
+            future: '📈 Moderate — academia, publishing and heritage tourism offer opportunities'
+        },
+        'Sociologist': {
+            branch: 'Sociology / Social Research',
+            description: 'Studies human society, social relationships and institutions to understand social behavior.',
+            skills: ['Research Methods', 'Data Analysis', 'Critical Thinking', 'Writing', 'Statistics', 'Fieldwork'],
+            future: '📈 Good — NGOs, government policy and corporate research need sociologists'
+        },
+        'Chartered Accountant (CA)': {
+            branch: 'Chartered Accountancy',
+            description: 'Provides financial auditing, taxation, accounting and advisory services to businesses and individuals.',
+            skills: ['Accounting', 'Taxation', 'Auditing', 'Financial Reporting', 'Tally', 'GST', 'Company Law'],
+            future: '🔥 Very High — every company legally needs CAs, one of India\'s most respected professions'
+        },
+        'Cost Accountant (CMA)': {
+            branch: 'Cost Management / CMA',
+            description: 'Analyzes and manages costs within organizations to improve profitability and efficiency.',
+            skills: ['Cost Analysis', 'Budgeting', 'Financial Reporting', 'Management Accounting', 'ERP Systems'],
+            future: '📈 High — manufacturing and large corporations need cost management experts'
+        },
+        'Company Secretary (CS)': {
+            branch: 'Corporate Law / Governance',
+            description: 'Ensures a company complies with legal and regulatory requirements and manages corporate governance.',
+            skills: ['Corporate Law', 'SEBI Regulations', 'Board Management', 'Legal Compliance', 'Communication'],
+            future: '📈 High — every listed company mandatorily needs a Company Secretary'
+        },
+        'Accountant': {
+            branch: 'Accounting',
+            description: 'Records, maintains and reports financial transactions for businesses and individuals.',
+            skills: ['Bookkeeping', 'Tally', 'GST', 'Excel', 'Financial Statements', 'Attention to Detail'],
+            future: '📈 Good — always in demand across every industry and business size'
+        },
+        'Auditor': {
+            branch: 'Auditing',
+            description: 'Examines financial records to ensure accuracy, compliance and proper accounting practices.',
+            skills: ['Auditing Standards', 'Risk Assessment', 'Financial Analysis', 'Accounting', 'Attention to Detail'],
+            future: '📈 High — regulatory compliance requirements growing for all businesses'
+        },
+        'Tax Consultant': {
+            branch: 'Taxation',
+            description: 'Advises individuals and businesses on tax planning, compliance and filing obligations.',
+            skills: ['Income Tax', 'GST', 'Tax Planning', 'Tally', 'Financial Statements', 'IT Portal'],
+            future: '🔥 Very High — India\'s complex tax structure creates huge demand for experts'
+        },
+        'Investment Banker': {
+            branch: 'Investment Banking',
+            description: 'Helps companies raise capital, execute mergers, acquisitions and manage large financial deals.',
+            skills: ['Financial Modeling', 'Valuation', 'Excel', 'Pitch Decks', 'Market Analysis', 'CFA Knowledge'],
+            future: '🔥 Very High — India\'s capital markets growing rapidly, startup ecosystem booming'
+        },
+        'Financial Analyst': {
+            branch: 'Financial Analysis',
+            description: 'Analyzes financial data to guide investment decisions and business strategies.',
+            skills: ['Excel', 'Financial Modeling', 'Bloomberg', 'Data Analysis', 'Valuation', 'Report Writing'],
+            future: '🔥 Very High — every bank, fund and corporate finance team needs analysts'
+        },
+        'Business Analyst': {
+            branch: 'Business Analysis',
+            description: 'Identifies business problems and recommends solutions using data and process analysis.',
+            skills: ['Data Analysis', 'SQL', 'Excel', 'Requirements Gathering', 'Process Mapping', 'Communication'],
+            future: '🔥 Very High — every company undergoing digital transformation needs business analysts'
+        },
+        'Bank Manager': {
+            branch: 'Banking Operations',
+            description: 'Oversees daily operations of a bank branch including staff, customer service and targets.',
+            skills: ['Banking Operations', 'Leadership', 'Customer Service', 'Financial Products', 'Risk Management'],
+            future: '📈 Good — public and private sector banking still massive employer in India'
+        },
+        'Stockbroker': {
+            branch: 'Securities Trading',
+            description: 'Buys and sells stocks and securities on behalf of clients in financial markets.',
+            skills: ['Market Analysis', 'Trading Platforms', 'Financial Products', 'Risk Management', 'Communication'],
+            future: '📈 High — India\'s retail investor base growing at record pace post-COVID'
+        },
+        'Insurance Advisor': {
+            branch: 'Insurance Sales / Advisory',
+            description: 'Advises clients on appropriate insurance products and helps them understand their coverage.',
+            skills: ['Insurance Products', 'Sales', 'Communication', 'Risk Assessment', 'Financial Planning'],
+            future: '📈 High — India massively underinsured, huge growth potential ahead'
+        },
+        'Actuary': {
+            branch: 'Actuarial Science',
+            description: 'Uses mathematics and statistics to assess financial risk for insurance and pension companies.',
+            skills: ['Statistics', 'Mathematics', 'Risk Modeling', 'Excel', 'R/Python', 'Actuarial Exams'],
+            future: '🔥 Very High — one of the highest paid and most in-demand careers globally'
+        },
+        'Economist': {
+            branch: 'Economics / Research',
+            description: 'Studies economic trends and data to advise governments, businesses and research institutions.',
+            skills: ['Economics Theory', 'Data Analysis', 'Statistics', 'R/Python', 'Research', 'Report Writing'],
+            future: '📈 Good — government think tanks, RBI, IMF and corporates need economists'
+        },
+        'Marketing Manager': {
+            branch: 'Marketing Management',
+            description: 'Develops and executes marketing strategies to promote products and grow brand awareness.',
+            skills: ['Marketing Strategy', 'Digital Marketing', 'Data Analytics', 'Campaign Management', 'Leadership'],
+            future: '🔥 Very High — digital revolution making marketing more data-driven and critical'
+        },
+        'Human Resources Manager': {
+            branch: 'Human Resources / People Operations',
+            description: 'Manages recruitment, employee relations, performance and workplace culture in organizations.',
+            skills: ['Recruitment', 'Labor Law', 'Employee Relations', 'HRMS Tools', 'Communication', 'Leadership'],
+            future: '📈 High — people management becoming strategic priority for all companies'
+        },
+        'Operations Manager': {
+            branch: 'Operations Management',
+            description: 'Oversees day-to-day business operations to maximize efficiency and productivity.',
+            skills: ['Process Management', 'Supply Chain', 'Data Analysis', 'Leadership', 'Problem Solving', 'ERP'],
+            future: '📈 High — e-commerce and manufacturing boom driving operations talent demand'
+        },
+        'Management Consultant': {
+            branch: 'Management Consulting',
+            description: 'Advises organizations on improving performance, solving problems and implementing strategy.',
+            skills: ['Problem Solving', 'Data Analysis', 'Presentation', 'Business Strategy', 'Communication', 'Excel'],
+            future: '🔥 Very High — consulting industry growing 15% annually in India'
+        },
+        'Entrepreneur': {
+            branch: 'Entrepreneurship / Startups',
+            description: 'Creates and builds businesses from scratch by identifying opportunities and managing resources.',
+            skills: ['Business Planning', 'Leadership', 'Risk Taking', 'Financial Management', 'Networking', 'Resilience'],
+            future: '🔥 Exponential — India\'s startup ecosystem is 3rd largest in the world and growing'
+        },
+        'Doctor': {
+            branch: 'MBBS',
+            label: 'Course / Specialisation',
+            description: 'Diagnoses and treats illnesses, injuries and medical conditions in patients across all age groups.',
+            skills: ['Clinical Diagnosis', 'Patient Care', 'Medical Knowledge', 'Communication', 'Decision Making'],
+            future: '🔥 Very High — always in demand, especially in rural India'
+        },
+        'Surgeon': {
+            branch: 'MS / MCh / Surgical Specialisation',
+            label: 'Course / Specialisation',
+            description: 'Performs operations to treat injuries, diseases and deformities through surgical procedures.',
+            skills: ['Surgical Techniques', 'Anatomy', 'Hand-Eye Coordination', 'Decision Making', 'Stamina'],
+            future: '🔥 Very High — specialist surgeons extremely scarce in India'
+        },
+        'Dentist': {
+            branch: 'BDS / Dental Surgery',
+            label: 'Course / Specialisation',
+            description: 'Diagnoses and treats problems related to teeth, gums and oral health.',
+            skills: ['Dental Procedures', 'X-ray Analysis', 'Patient Communication', 'Precision', 'Oral Surgery'],
+            future: '📈 High — dental awareness and cosmetic dentistry growing fast'
+        },
+        'Anesthesiologist': {
+            branch: 'MD / DA / Anesthesiology',
+            label: 'Course / Specialisation',
+            description: 'Administers anesthesia and monitors patients before, during and after surgery.',
+            skills: ['Pharmacology', 'Patient Monitoring', 'Critical Care', 'Anatomy', 'Decision Making'],
+            future: '🔥 Very High — every surgery needs an anesthesiologist'
+        },
+        'Cardiologist': {
+            branch: 'DM / Cardiology',
+            label: 'Course / Specialisation',
+            description: 'Specializes in diagnosing and treating heart and cardiovascular system diseases.',
+            skills: ['ECG Interpretation', 'Cardiac Imaging', 'Interventional Cardiology', 'Patient Management'],
+            future: '🔥 Very High — heart disease is India\'s leading cause of death'
+        },
+        'Dermatologist': {
+            branch: 'MD / Dermatology',
+            label: 'Course / Specialisation',
+            description: 'Diagnoses and treats skin, hair and nail conditions and disorders.',
+            skills: ['Skin Diagnosis', 'Dermatoscopy', 'Cosmetic Procedures', 'Laser Treatments', 'Prescription'],
+            future: '🔥 Very High — cosmetic dermatology booming in urban India'
+        },
+        'Pediatrician': {
+            branch: 'MD / Pediatrics',
+            label: 'Course / Specialisation',
+            description: 'Provides medical care for infants, children and adolescents up to age 18.',
+            skills: ['Child Development', 'Vaccination', 'Diagnosis', 'Patient Communication', 'Emergency Care'],
+            future: '📈 High — large young population in India ensures steady demand'
+        },
+        'Psychiatrist': {
+            branch: 'MD / Psychiatry',
+            label: 'Course / Specialisation',
+            description: 'Diagnoses and treats mental health disorders using therapy and medication.',
+            skills: ['Mental Health Assessment', 'Psychotherapy', 'Pharmacology', 'Empathy', 'Communication'],
+            future: '🔥 Exponential — mental health crisis creating massive demand in India'
+        },
+        'Psychologist': {
+            branch: 'MSc / Psychology',
+            label: 'Course / Specialisation',
+            description: 'Studies human behavior and provides therapy for mental and emotional issues.',
+            skills: ['Counseling', 'CBT', 'Psychological Testing', 'Research', 'Active Listening'],
+            future: '🔥 Very High — mental health awareness rapidly growing in India'
+        },
+        'Optometrist': {
+            branch: 'BOptom / Optometry',
+            label: 'Course / Specialisation',
+            description: 'Examines eyes, diagnoses vision problems and prescribes corrective lenses.',
+            skills: ['Eye Examination', 'Vision Testing', 'Lens Prescription', 'Optical Equipment', 'Patient Care'],
+            future: '📈 High — screen time increasing eye problems across all ages'
+        },
+        'Veterinarian': {
+            branch: 'BVSc / Veterinary Science',
+            label: 'Course / Specialisation',
+            description: 'Diagnoses and treats animals, ensuring their health and welfare.',
+            skills: ['Animal Anatomy', 'Surgery', 'Diagnosis', 'Animal Handling', 'Pharmacology'],
+            future: '📈 Good — pet ownership growing rapidly in Indian urban areas'
+        },
+        'Nurse': {
+            branch: 'BSc Nursing / GNM',
+            label: 'Course / Specialisation',
+            description: 'Provides direct patient care, administers medication and supports doctors in treatment.',
+            skills: ['Patient Care', 'Medication Administration', 'Emergency Response', 'Communication', 'Empathy'],
+            future: '🔥 Very High — massive nursing shortage in India and globally'
+        },
+        'Pharmacist': {
+            branch: 'BPharm / PharmD',
+            label: 'Course / Specialisation',
+            description: 'Dispenses medications, advises on drug interactions and manages pharmaceutical inventory.',
+            skills: ['Pharmacology', 'Drug Interactions', 'Patient Counseling', 'Inventory Management', 'Chemistry'],
+            future: '📈 High — pharma industry and retail pharmacy growing rapidly'
+        },
+        'Physiotherapist': {
+            branch: 'BPT / MPT',
+            label: 'Course / Specialisation',
+            description: 'Rehabilitates patients with physical injuries or disabilities through therapeutic exercises.',
+            skills: ['Manual Therapy', 'Exercise Prescription', 'Anatomy', 'Rehabilitation', 'Patient Assessment'],
+            future: '📈 High — sports injuries and ageing population driving demand'
+        },
+        'Radiologist': {
+            branch: 'MD / Radiology',
+            label: 'Course / Specialisation',
+            description: 'Interprets medical images like X-rays, MRIs and CT scans to diagnose diseases.',
+            skills: ['Image Interpretation', 'Anatomy', 'CT/MRI Analysis', 'Report Writing', 'Attention to Detail'],
+            future: '🔥 Very High — AI-assisted radiology still needs expert radiologists'
+        },
+        'Medical Lab Technologist': {
+            branch: 'BMLT / MMLT',
+            label: 'Course / Specialisation',
+            description: 'Performs laboratory tests on blood, tissue and body fluids to help diagnose diseases.',
+            skills: ['Lab Techniques', 'Microscopy', 'Quality Control', 'Equipment Operation', 'Data Analysis'],
+            future: '📈 High — diagnostic labs expanding rapidly across India'
+        },
+        'Occupational Therapist': {
+            branch: 'BOT / MOT',
+            label: 'Course / Specialisation',
+            description: 'Helps patients recover and develop skills needed for daily living and working.',
+            skills: ['Rehabilitation', 'Activity Planning', 'Patient Assessment', 'Adaptive Equipment', 'Communication'],
+            future: '📈 High — disability care and elderly rehabilitation growing'
+        },
+        'Speech Therapist': {
+            branch: 'BSc Speech Therapy / M.Sc Speech Therapy',
+            label: 'Course / Specialisation',
+            description: 'Assesses and treats communication disorders, speech problems and swallowing difficulties.',
+            skills: ['Speech Assessment', 'Language Therapy', 'Articulation Techniques', 'Patience', 'Communication'],
+            future: '📈 Good — autism and developmental disorders increasing awareness'
+        },
+        'Nutritionist': {
+            branch: 'BSc Nutrition / M.Sc Nutrition',
+            label: 'Course / Specialisation',
+            description: 'Advises individuals and communities on healthy eating habits and dietary plans.',
+            skills: ['Nutrition Science', 'Diet Planning', 'Counseling', 'Food Science', 'Public Health'],
+            future: '📈 High — health consciousness and lifestyle disease prevention growing fast'
+        },
+        'Paramedic': {
+            branch: 'Diploma / Degree in Paramedical Sciences',
+            label: 'Course / Specialisation',
+            description: 'Provides emergency medical care and stabilizes patients before hospital arrival.',
+            skills: ['Emergency Response', 'CPR', 'Trauma Care', 'Medical Equipment', 'Quick Decision Making'],
+            future: '📈 High — emergency medical services expanding in Indian cities'
+        },
+        'Biomedical Scientist': {
+            branch: 'MSc / PhD Biomedical Science',
+            label: 'Course / Specialisation',
+            description: 'Conducts research on human diseases and develops new diagnostic tests and treatments.',
+            skills: ['Lab Research', 'Molecular Biology', 'Data Analysis', 'Scientific Writing', 'Equipment Operation'],
+            future: '🔥 Very High — biotech and pharma R&D booming in India'
+        },
+        'Clinical Researcher': {
+            branch: 'MSc / MPH / Clinical Research',
+            label: 'Course / Specialisation',
+            description: 'Designs and conducts clinical trials to test new drugs, devices and medical treatments.',
+            skills: ['Research Methodology', 'Statistics', 'GCP Guidelines', 'Data Analysis', 'Protocol Writing'],
+            future: '🔥 Very High — India is a major hub for global clinical trials'
+        },
+        'Public Health Specialist': {
+            branch: 'MPH / Public Health',
+            label: 'Course / Specialisation',
+            description: 'Designs programs and policies to improve health outcomes across communities and populations.',
+            skills: ['Epidemiology', 'Health Policy', 'Data Analysis', 'Program Management', 'Communication'],
+            future: '🔥 Very High — COVID-19 showed the world the importance of public health'
+        },
+        'Forensic Medical Expert': {
+            branch: 'MD Forensic Medicine / Forensic Science',
+            label: 'Course / Specialisation',
+            description: 'Applies medical knowledge to legal investigations including cause of death and injury analysis.',
+            skills: ['Forensic Pathology', 'Legal Medicine', 'Evidence Analysis', 'Report Writing', 'Anatomy'],
+            future: '📈 Good — legal and criminal justice system expansion in India'
+        },
+        'Hospital Administrator': {
+            branch: 'MBA Healthcare / Hospital Administration',
+            label: 'Course / Specialisation',
+            description: 'Manages the operations, staff and finances of hospitals and healthcare facilities.',
+            skills: ['Healthcare Management', 'Finance', 'Leadership', 'Operations', 'HR Management', 'Policy'],
+            future: '📈 High — hospital chains expanding rapidly across India'
+        },
+        'Medical Writer': {
+            branch: 'MSc Medical Writing / Science Communication',
+            label: 'Course / Specialisation',
+            description: 'Creates clear, accurate medical content for journals, reports, manuals and pharma companies.',
+            skills: ['Medical Knowledge', 'Scientific Writing', 'Research', 'Communication', 'Attention to Detail'],
+            future: '📈 High — pharma and biotech companies need medical writers constantly'
+        },
+        'Homeopathy Doctor': {
+            branch: 'BHMS / Homeopathy',
+            label: 'Course / Specialisation',
+            description: 'Treats patients using homeopathic remedies based on the principle of like cures like.',
+            skills: ['Homeopathic Medicine', 'Patient Consultation', 'Case Taking', 'Repertory', 'Pharmacy'],
+            future: '📈 Moderate — alternative medicine growing in popularity in India'
+        },
+        'Ayurveda Doctor': {
+            branch: 'BAMS / Ayurveda',
+            label: 'Course / Specialisation',
+            description: 'Practices traditional Indian medicine using herbs, diet and lifestyle to treat and prevent disease.',
+            skills: ['Ayurvedic Principles', 'Herbal Medicine', 'Pulse Diagnosis', 'Panchakarma', 'Patient Care'],
+            future: '📈 Good — government promoting AYUSH, global interest in natural medicine growing'
+        },
+        'Hotel Manager': {
+            branch: 'Hotel Management',
+            description: 'Oversees all operations of a hotel including staff, guest experience, finances and quality standards.',
+            skills: ['Hospitality Management', 'Leadership', 'Customer Service', 'Financial Management', 'Operations', 'Communication'],
+            future: '🔥 High — tourism and hospitality industry bouncing back strongly post-COVID'
+        },
+        'Front Office Manager': {
+            branch: 'Hospitality Operations',
+            description: 'Manages hotel reception, guest check-ins, reservations and first impressions of the property.',
+            skills: ['Customer Service', 'PMS Software', 'Communication', 'Problem Solving', 'Team Management'],
+            future: '📈 Good — every hotel needs front office professionals at all levels'
+        },
+        'Food & Beverage Manager': {
+            branch: 'Food & Beverage Management',
+            description: 'Oversees restaurant, bar and banquet operations including menu planning and staff management.',
+            skills: ['Food Knowledge', 'Operations', 'Menu Planning', 'Cost Control', 'Team Leadership', 'Quality Standards'],
+            future: '📈 High — dining experiences becoming core part of hotel business'
+        },
+        'Executive Chef': {
+            branch: 'Culinary Arts',
+            description: 'Leads the kitchen team, designs menus and maintains food quality and hygiene standards.',
+            skills: ['Culinary Arts', 'Menu Design', 'Kitchen Management', 'Food Safety', 'Creativity', 'Leadership'],
+            future: '🔥 High — fine dining, cloud kitchens and hotel restaurants growing rapidly'
+        },
+        'Sous Chef': {
+            branch: 'Culinary Operations',
+            description: 'Assists the Executive Chef in managing kitchen operations and steps in during their absence.',
+            skills: ['Cooking Techniques', 'Kitchen Operations', 'Food Safety', 'Team Coordination', 'Recipe Development'],
+            future: '📈 Good — every professional kitchen needs experienced sous chefs'
+        },
+        'Pastry Chef': {
+            branch: 'Pastry Arts',
+            description: 'Specializes in creating desserts, breads, pastries and baked goods for hotels and restaurants.',
+            skills: ['Baking', 'Pastry Arts', 'Creativity', 'Precision', 'Food Presentation', 'Kitchen Management'],
+            future: '📈 Good — bakery and dessert culture growing rapidly in Indian cities'
+        },
+        'Housekeeping Manager': {
+            branch: 'Housekeeping',
+            description: 'Manages cleanliness, maintenance and presentation of all hotel rooms and public areas.',
+            skills: ['Attention to Detail', 'Team Management', 'Quality Control', 'Inventory Management', 'Communication'],
+            future: '📈 Good — hygiene standards post-COVID making housekeeping more critical than ever'
+        },
+        'Event & Banquet Manager': {
+            branch: 'Event Management',
+            description: 'Plans and executes weddings, corporate events and banquets hosted at hotel properties.',
+            skills: ['Event Planning', 'Vendor Management', 'Client Relations', 'Budgeting', 'Coordination', 'Creativity'],
+            future: '🔥 High — India\'s wedding and MICE (events) industry is booming'
+        },
+        'Revenue Manager': {
+            branch: 'Revenue Management',
+            description: 'Optimizes hotel room pricing and availability strategies to maximize revenue and occupancy.',
+            skills: ['Data Analysis', 'Pricing Strategy', 'OTA Management', 'Excel', 'Market Analysis', 'Forecasting'],
+            future: '🔥 Very High — data-driven revenue management becoming essential for all hotels'
+        },
+        'Travel & Tourism Manager': {
+            branch: 'Travel & Tourism',
+            description: 'Plans and manages travel packages, tours and tourism experiences for individuals and groups.',
+            skills: ['Tourism Knowledge', 'Customer Service', 'Geography', 'Communication', 'Itinerary Planning', 'Marketing'],
+            future: '🔥 Very High — India\'s domestic tourism growing explosively, government pushing tourism'
+        },
+        'Resort Manager': {
+            branch: 'Resort Management',
+            description: 'Manages all operations of a resort property including accommodation, recreation and guest activities.',
+            skills: ['Hospitality Management', 'Operations', 'Guest Relations', 'Financial Management', 'Leadership'],
+            future: '📈 High — eco-resorts and luxury resorts expanding rapidly across India'
+        },
+        'Cabin Crew / Flight Attendant': {
+            branch: 'Aviation Hospitality',
+            description: 'Ensures passenger safety and comfort on flights while delivering excellent in-flight service.',
+            skills: ['Customer Service', 'Safety Procedures', 'Communication', 'Grooming', 'Language Skills', 'Emergency Response'],
+            future: '📈 High — Indian aviation expanding with new airports and airlines'
+        },
+        'Commercial Pilot': {
+            branch: 'Aviation',
+            description: 'Flies commercial aircraft transporting passengers and cargo safely across domestic and international routes.',
+            skills: ['Aviation', 'Navigation', 'Decision Making', 'Weather Analysis', 'Communication', 'Technical Knowledge'],
+            future: '🔥 Very High — India needs 10,000+ pilots in next 10 years due to aviation boom'
+        },
+        'Airport Manager': {
+            branch: 'Airport Operations',
+            description: 'Oversees all operations of an airport including safety, security, retail and passenger experience.',
+            skills: ['Operations Management', 'Safety', 'Leadership', 'Coordination', 'Aviation Knowledge', 'Problem Solving'],
+            future: '📈 High — India building 100 new airports under UDAN scheme'
+        },
+        'Hospitality Trainer': {
+            branch: 'Training & Development',
+            description: 'Trains hotel and hospitality staff on service standards, etiquette and operational procedures.',
+            skills: ['Training & Development', 'Hospitality Knowledge', 'Communication', 'Presentation', 'Curriculum Design'],
+            future: '📈 Good — hospitality industry expansion creating demand for trainers'
+        },
+        'Spa & Wellness Manager': {
+            branch: 'Wellness Management',
+            description: 'Manages spa facilities, wellness programs and therapist teams at hotels and resorts.',
+            skills: ['Wellness Knowledge', 'Operations', 'Customer Service', 'Team Management', 'Treatment Knowledge'],
+            future: '📈 High — wellness tourism growing at 20% annually in India'
+        },
+        'Restaurant Manager': {
+            branch: 'Restaurant Management',
+            description: 'Manages daily operations of a restaurant including staff, customer experience and profitability.',
+            skills: ['Operations', 'Customer Service', 'Staff Management', 'Financial Control', 'Menu Knowledge', 'Problem Solving'],
+            future: '📈 High — restaurant industry in India growing at 9% annually'
+        },
+        'Sommelier': {
+            branch: 'Beverage Management',
+            description: 'Specializes in wine and beverage selection, pairing food with drinks in fine dining establishments.',
+            skills: ['Wine Knowledge', 'Tasting', 'Pairing', 'Customer Service', 'Inventory Management', 'Communication'],
+            future: '📈 Moderate — luxury hotels and fine dining restaurants need certified sommeliers'
+        },
+        'Tourism Officer (Government)': {
+            branch: 'Tourism Promotion',
+            description: 'Promotes and develops tourism in a region by working with government tourism boards and departments.',
+            skills: ['Tourism Knowledge', 'Marketing', 'Government Schemes', 'Communication', 'Event Management', 'Research'],
+            future: '📈 High — state and central government investing heavily in tourism promotion'
+        },
+        'Cruise Ship Officer': {
+            branch: 'Cruise Hospitality',
+            description: 'Manages operations and passenger experience on luxury cruise ships sailing international waters.',
+            skills: ['Maritime Knowledge', 'Hospitality', 'Leadership', 'Navigation', 'Customer Service', 'Languages'],
+            future: '📈 Good — Indian professionals highly sought after in global cruise industry'
+        },
+        'Lawyer / Advocate': {
+            branch: 'Law Practice',
+            description: 'Represents clients in court proceedings and provides legal advice on civil, criminal and constitutional matters.',
+            skills: ['Legal Knowledge', 'Argumentation', 'Research', 'Communication', 'Critical Thinking', 'Case Analysis', 'Drafting'],
+            future: '🔥 Very High — India has world\'s largest pending court cases, demand for lawyers never stops'
+        },
+        'Corporate Lawyer': {
+            branch: 'Corporate Law',
+            description: 'Handles legal matters for businesses including contracts, mergers, acquisitions and regulatory compliance.',
+            skills: ['Corporate Law', 'Contract Drafting', 'SEBI Regulations', 'Due Diligence', 'Negotiation', 'Communication'],
+            future: '🔥 Very High — startup boom and FDI growth creating massive demand for corporate lawyers'
+        },
+        'Criminal Lawyer': {
+            branch: 'Criminal Law',
+            description: 'Defends or prosecutes individuals accused of crimes in sessions courts and high courts.',
+            skills: ['Criminal Law', 'IPC Knowledge', 'Evidence Law', 'Court Procedures', 'Argumentation', 'Research'],
+            future: '📈 High — rising crime rates and awareness of legal rights driving demand'
+        },
+        'Civil Lawyer': {
+            branch: 'Civil Law',
+            description: 'Handles non-criminal disputes involving property, contracts, family matters and tort claims.',
+            skills: ['Civil Procedure Code', 'Property Law', 'Contract Law', 'Drafting', 'Negotiation', 'Research'],
+            future: '📈 High — property disputes and civil litigation massive in India'
+        },
+        'Family Lawyer': {
+            branch: 'Family Law',
+            description: 'Handles legal matters related to marriage, divorce, child custody, adoption and inheritance.',
+            skills: ['Family Law', 'Mediation', 'Empathy', 'Communication', 'Drafting', 'Hindu/Muslim Personal Law Knowledge'],
+            future: '📈 Good — rising divorce rates and property disputes driving family law demand'
+        },
+        'Intellectual Property Lawyer': {
+            branch: 'IP Law',
+            description: 'Protects patents, trademarks, copyrights and trade secrets for individuals and businesses.',
+            skills: ['IP Law', 'Patent Drafting', 'Trademark Registration', 'Research', 'Technical Knowledge', 'Negotiation'],
+            future: '🔥 Very High — India\'s innovation economy creating massive IP protection needs'
+        },
+        'Tax Lawyer': {
+            branch: 'Tax Law',
+            description: 'Advises clients on tax planning, handles tax disputes and represents them before tax authorities and courts.',
+            skills: ['Income Tax Act', 'GST Law', 'Tax Planning', 'Litigation', 'Drafting', 'Financial Knowledge'],
+            future: '🔥 High — India\'s complex tax system creating constant demand for tax law specialists'
+        },
+        'Environmental Lawyer': {
+            branch: 'Environmental Law',
+            description: 'Handles cases related to environmental protection, pollution, forest rights and climate regulations.',
+            skills: ['Environmental Law', 'NGT Procedures', 'Research', 'Drafting', 'Policy Knowledge', 'Communication'],
+            future: '📈 High — climate change and pollution cases growing rapidly in Indian courts'
+        },
+        'Human Rights Lawyer': {
+            branch: 'Human Rights Law',
+            description: 'Advocates for individuals whose fundamental rights have been violated by state or private actors.',
+            skills: ['Constitutional Law', 'Human Rights Conventions', 'PILs', 'Research', 'Communication', 'Courage'],
+            future: '📈 Good — NGOs, UN bodies and human rights organizations need legal experts'
+        },
+        'Legal Consultant': {
+            branch: 'Legal Advisory',
+            description: 'Provides specialized legal advice to businesses and individuals without representing them in court.',
+            skills: ['Legal Knowledge', 'Communication', 'Research', 'Report Writing', 'Domain Expertise', 'Problem Solving'],
+            future: '📈 High — companies preferring consultants over full-time lawyers for cost efficiency'
+        },
+        'Patent Attorney': {
+            branch: 'Patent Law',
+            description: 'Helps inventors protect their innovations by filing and prosecuting patent applications.',
+            skills: ['Patent Law', 'Technical Knowledge', 'Patent Drafting', 'IP Strategy', 'Research', 'Communication'],
+            future: '🔥 Very High — India\'s R&D boom creating massive patent filing demand'
+        },
+        'Notary': {
+            branch: 'Notary Services',
+            description: 'Authenticates legal documents, administers oaths and witnesses signatures for official purposes.',
+            skills: ['Legal Knowledge', 'Attention to Detail', 'Document Verification', 'Communication', 'Integrity'],
+            future: '📈 Moderate — essential service but limited growth due to digital documentation'
+        },
+        'Legal Researcher': {
+            branch: 'Legal Research',
+            description: 'Conducts in-depth research on legal questions for law firms, courts and academic institutions.',
+            skills: ['Legal Research', 'Writing', 'Case Analysis', 'Database Tools', 'Critical Thinking', 'Documentation'],
+            future: '📈 Good — law firms and legal tech companies need dedicated researchers'
+        },
+        'Arbitrator / Mediator': {
+            branch: 'Dispute Resolution',
+            description: 'Resolves disputes between parties outside of court through negotiation and alternative dispute resolution.',
+            skills: ['Mediation', 'Arbitration Law', 'Negotiation', 'Communication', 'Impartiality', 'Legal Knowledge'],
+            future: '🔥 High — courts encouraging ADR to reduce backlog, corporate contracts mandating arbitration'
+        },
+        'Cyber Lawyer': {
+            branch: 'Cyber Law',
+            description: 'Handles legal issues related to cybercrime, data privacy, IT Act violations and digital rights.',
+            skills: ['IT Act', 'Cyber Law', 'Data Privacy Laws', 'GDPR', 'Digital Evidence', 'Communication', 'Research'],
+            future: '🔥 Exponential — every cybercrime and data breach needs legal expertise, brand new field'
+        },
+        'Data Scientist': {
+            branch: 'Data Science',
+            description: 'Extracts insights from large datasets using statistics, machine learning and programming to help businesses make data-driven decisions.',
+            skills: ['Python', 'R', 'Machine Learning', 'Statistics', 'SQL', 'Data Visualization', 'TensorFlow', 'Pandas'],
+            future: '🔥 Exponential — every company becoming data-driven, one of the highest paid roles in India'
+        },
+        'Blockchain Developer': {
+            branch: 'Blockchain Development',
+            description: 'Builds decentralized applications and smart contracts on blockchain platforms for finance, supply chain and healthcare industries.',
+            skills: ['Solidity', 'Ethereum', 'Web3.js', 'Cryptography', 'Smart Contracts', 'Python', 'JavaScript'],
+            future: '🔥 Very High — Web3 and DeFi creating massive demand, average salary ₹15-40LPA in India'
+        },
+        'Prompt Engineer': {
+            branch: 'AI / Prompt Design',
+            description: 'Designs and optimizes text prompts to get the best outputs from AI language models for businesses and products.',
+            skills: ['AI/LLM Knowledge', 'Creative Writing', 'Critical Thinking', 'Python', 'Problem Solving', 'Communication'],
+            future: '🔥 Exponential — brand new field created by ChatGPT, every AI company needs prompt engineers'
+        },
+        'Cybersecurity Analyst': {
+            branch: 'Cybersecurity',
+            description: 'Monitors, detects and responds to security threats and vulnerabilities in an organization\'s digital infrastructure.',
+            skills: ['Network Security', 'Ethical Hacking', 'SIEM Tools', 'Python', 'Penetration Testing', 'Risk Assessment'],
+            future: '🔥 Very High — cybercrime growing 15% annually, India facing massive shortage of security professionals'
+        },
+        'No-Code Developer': {
+            branch: 'No-Code Platforms',
+            description: 'Builds websites, apps and automated workflows using no-code platforms without writing traditional code.',
+            skills: ['Bubble', 'Webflow', 'Zapier', 'Airtable', 'Make', 'Logic Thinking', 'UI/UX Basics', 'Problem Solving'],
+            future: '📈 High — democratizing software development, startups adopting no-code to reduce costs'
+        },
+        'Digital Forensics Expert': {
+            branch: 'Digital Forensics',
+            description: 'Investigates cybercrimes by recovering and analyzing digital evidence from computers, phones and networks.',
+            skills: ['Forensic Tools', 'Cybersecurity', 'Evidence Analysis', 'Legal Knowledge', 'Networking', 'Report Writing'],
+            future: '🔥 High — cybercrime cases in India growing 300% annually, courts need digital forensics experts'
+        },
+        'Cloud Architect': {
+            branch: 'Cloud Architecture',
+            description: 'Designs and manages cloud computing infrastructure strategies for organizations moving to AWS, Azure or GCP.',
+            skills: ['AWS', 'Azure', 'GCP', 'Networking', 'Security', 'Terraform', 'Docker', 'Kubernetes', 'System Design'],
+            future: '🔥 Exponential — every company migrating to cloud, architects among highest paid IT professionals'
+        },
+        'Full Stack Developer': {
+            branch: 'Full Stack Development',
+            description: 'Builds both frontend and backend of web applications handling everything from UI design to database management.',
+            skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js', 'SQL', 'MongoDB', 'Git', 'REST APIs', 'System Design'],
+            future: '🔥 Very High — most in-demand developer role globally, thousands of job openings daily in India'
+        },
+        'Mobile App Developer': {
+            branch: 'Mobile Development',
+            description: 'Creates applications for iOS and Android smartphones that serve millions of users across various purposes.',
+            skills: ['Flutter', 'React Native', 'Swift', 'Kotlin', 'Firebase', 'API Integration', 'UI/UX', 'App Store Deployment'],
+            future: '🔥 Very High — India has 750 million smartphone users creating massive app demand'
+        },
+        'AR/VR Developer': {
+            branch: 'AR/VR Development',
+            description: 'Builds augmented and virtual reality experiences for gaming, education, healthcare and retail industries.',
+            skills: ['Unity', 'Unreal Engine', 'C#', '3D Modeling', 'Spatial Computing', 'OpenXR', 'JavaScript', 'WebXR'],
+            future: '🔥 Very High — metaverse and spatial computing creating entirely new digital worlds'
+        },
+        'Game Developer': {
+            branch: 'Game Development',
+            description: 'Designs and builds video games for mobile, PC and console platforms combining programming with creative storytelling.',
+            skills: ['Unity', 'Unreal Engine', 'C++', 'C#', 'Game Design', '3D Modeling', 'Physics Simulation', 'UI/UX'],
+            future: '🔥 Very High — Indian gaming industry growing at 28% annually, mobile gaming booming'
+        },
+        'IT Project Manager': {
+            branch: 'IT Project Management',
+            description: 'Plans, executes and delivers technology projects on time and within budget while coordinating cross-functional teams.',
+            skills: ['Project Management', 'Agile', 'Scrum', 'JIRA', 'Risk Management', 'Communication', 'Leadership', 'PMP Certification'],
+            future: '📈 High — every tech company needs PMs, one of the most stable and well-paying IT roles'
+        },
+        'Database Administrator': {
+            branch: 'Database Administration',
+            description: 'Designs, manages and optimizes databases ensuring data security, performance and availability for organizations.',
+            skills: ['SQL', 'MySQL', 'PostgreSQL', 'Oracle', 'MongoDB', 'Performance Tuning', 'Backup & Recovery', 'Security'],
+            future: '📈 High — every organization runs on data, DBAs always in demand across all industries'
+        },
+        'Network Engineer': {
+            branch: 'Network Engineering',
+            description: 'Designs, implements and maintains computer networks including LAN, WAN and cloud connectivity for organizations.',
+            skills: ['Cisco', 'Networking Protocols', 'TCP/IP', 'Firewall Management', 'VPN', 'Cloud Networking', 'Troubleshooting'],
+            future: '📈 High — 5G rollout and cloud adoption creating massive demand for network professionals'
+        },
+        'Technical Writer': {
+            branch: 'Technical Communication',
+            description: 'Creates clear documentation, user manuals, API guides and technical content for software products and engineering teams.',
+            skills: ['Technical Writing', 'Documentation Tools', 'API Knowledge', 'Research', 'Communication', 'Markdown', 'Git'],
+            future: '📈 High — every tech product needs documentation, remote work making this a global opportunity'
+        },
+        'IAS Officer': {
+            branch: 'Civil Services',
+            description: 'Administers government policies, manages districts and leads state and central government departments.',
+            skills: ['Leadership', 'Policy Analysis', 'Decision Making', 'Communication', 'General Administration', 'Crisis Management'],
+            future: '🔥 Most prestigious — highest authority in Indian civil services, lifelong career security'
+        },
+        'IPS Officer': {
+            branch: 'Civil Services',
+            description: 'Leads and manages police forces to maintain law, order and public safety across India.',
+            skills: ['Leadership', 'Investigation', 'Law Knowledge', 'Physical Fitness', 'Crisis Management', 'Communication'],
+            future: '🔥 Very High — critical role in national security and law enforcement'
+        },
+        'IFS Officer': {
+            branch: 'Civil Services',
+            description: 'Represents India in diplomatic missions abroad and manages international relations and treaties.',
+            skills: ['Diplomacy', 'Languages', 'International Relations', 'Communication', 'Negotiation', 'Cultural Awareness'],
+            future: '📈 High — India\'s growing global presence increasing importance of diplomats'
+        },
+        'IRS Officer': {
+            branch: 'Civil Services',
+            description: 'Administers and enforces direct and indirect tax laws on behalf of the Government of India.',
+            skills: ['Tax Law', 'Investigation', 'Financial Analysis', 'Accounting', 'Legal Knowledge', 'Communication'],
+            future: '📈 High — tax compliance and revenue collection critical for government'
+        },
+        'Defense Officer': {
+            branch: 'Armed Forces',
+            description: 'Serves in the Indian Armed Forces protecting national security and sovereignty.',
+            skills: ['Leadership', 'Physical Fitness', 'Tactical Planning', 'Weapons Training', 'Teamwork', 'Discipline'],
+            future: '🔥 Very High — India increasing defence budget, expanding armed forces'
+        },
+        'Army Officer': {
+            branch: 'Army',
+            description: 'Leads soldiers in combat operations, peacekeeping missions and disaster relief activities.',
+            skills: ['Military Tactics', 'Leadership', 'Physical Fitness', 'Weapons Handling', 'Strategic Planning'],
+            future: '🔥 High — India maintains world\'s largest standing army'
+        },
+        'Navy Officer': {
+            branch: 'Navy',
+            description: 'Commands naval vessels and operations to protect India\'s maritime borders and interests.',
+            skills: ['Navigation', 'Naval Warfare', 'Leadership', 'Engineering', 'Communication', 'Physical Fitness'],
+            future: '📈 High — India expanding naval capabilities in Indian Ocean region'
+        },
+        'Air Force Officer': {
+            branch: 'Air Force',
+            description: 'Pilots aircraft and leads air operations to defend India\'s airspace and conduct missions.',
+            skills: ['Aviation', 'Physics', 'Quick Decision Making', 'Physical Fitness', 'Leadership', 'Technical Knowledge'],
+            future: '📈 High — IAF modernizing with new fighter jets and drones'
+        },
+        'Police Officer': {
+            branch: 'State Police',
+            description: 'Maintains law and order, investigates crimes and ensures public safety in communities.',
+            skills: ['Investigation', 'Physical Fitness', 'Law Knowledge', 'Communication', 'Quick Thinking', 'Observation'],
+            future: '📈 High — state police forces constantly recruiting across India'
+        },
+        'Coast Guard Officer': {
+            branch: 'Coast Guard',
+            description: 'Patrols coastal waters to prevent smuggling, protect fishermen and respond to maritime emergencies.',
+            skills: ['Navigation', 'Maritime Law', 'Physical Fitness', 'Search & Rescue', 'Communication'],
+            future: '📈 Good — India\'s coastline security becoming increasingly important'
+        },
+        'Intelligence Officer': {
+            branch: 'Intelligence Services',
+            description: 'Gathers, analyzes and acts on intelligence information to protect national security interests.',
+            skills: ['Analytical Thinking', 'Investigation', 'Languages', 'Discretion', 'Research', 'Communication'],
+            future: '📈 High — national security threats driving expansion of intelligence agencies'
+        },
+        'Customs Officer': {
+            branch: 'Customs',
+            description: 'Monitors and regulates the import and export of goods to enforce trade laws and collect duties.',
+            skills: ['Trade Law', 'Inspection', 'Investigation', 'Communication', 'Attention to Detail', 'Decision Making'],
+            future: '📈 Good — international trade growth increasing customs workload'
+        },
+        'Excise Officer': {
+            branch: 'Excise',
+            description: 'Enforces laws related to the production, storage and distribution of excisable goods.',
+            skills: ['Tax Law', 'Investigation', 'Legal Knowledge', 'Inspection', 'Report Writing', 'Communication'],
+            future: '📈 Moderate — GST implementation changing but not eliminating excise department'
+        },
+        'Income Tax Officer': {
+            branch: 'Income Tax',
+            description: 'Assesses and collects income tax, investigates tax evasion and enforces tax compliance.',
+            skills: ['Tax Law', 'Investigation', 'Accounting', 'Communication', 'Legal Knowledge', 'Data Analysis'],
+            future: '📈 High — India\'s expanding taxpayer base increasing IT department workload'
+        },
+        'Judge': {
+            branch: 'Judiciary',
+            description: 'Presides over court proceedings, interprets laws and delivers judgments in civil and criminal cases.',
+            skills: ['Legal Knowledge', 'Critical Analysis', 'Impartiality', 'Communication', 'Research', 'Decision Making'],
+            future: '📈 High — India\'s judicial system expanding, huge backlog of cases needs more judges'
+        },
+        'Public Prosecutor': {
+            branch: 'Legal Services',
+            description: 'Represents the government in criminal cases and presents evidence against accused persons in court.',
+            skills: ['Criminal Law', 'Argumentation', 'Research', 'Communication', 'Evidence Analysis', 'Legal Writing'],
+            future: '📈 Good — every district and court needs public prosecutors'
+        },
+        'Legal Officer': {
+            branch: 'Legal Compliance',
+            description: 'Provides legal advice and handles legal matters for government departments and public sector units.',
+            skills: ['Legal Knowledge', 'Contract Law', 'Research', 'Communication', 'Documentation', 'Compliance'],
+            future: '📈 High — government PSUs and departments need legal expertise'
+        },
+        'Government Teacher': {
+            branch: 'Education',
+            description: 'Teaches students in government schools under state or central education boards.',
+            skills: ['Subject Knowledge', 'Communication', 'Patience', 'Lesson Planning', 'Child Psychology', 'Teaching Methods'],
+            future: '📈 High — NEP 2020 and teacher recruitment drives creating thousands of positions'
+        },
+        'Professor': {
+            branch: 'Academia',
+            description: 'Teaches undergraduate and postgraduate students and conducts research in universities and colleges.',
+            skills: ['Subject Expertise', 'Research', 'Communication', 'Academic Writing', 'Mentoring', 'Critical Thinking'],
+            future: '📈 High — India expanding higher education institutions rapidly'
+        },
+        'Scientist': {
+            branch: 'Scientific Research',
+            description: 'Conducts research and development in government organizations like ISRO, DRDO and CSIR.',
+            skills: ['Research Methodology', 'Subject Expertise', 'Data Analysis', 'Scientific Writing', 'Laboratory Skills'],
+            future: '🔥 Very High — India\'s science and technology ambitions growing rapidly'
+        },
+        'Librarian': {
+            branch: 'Library Science',
+            description: 'Manages library collections, assists researchers and maintains information resources in institutions.',
+            skills: ['Library Science', 'Cataloging', 'Research', 'Digital Tools', 'Organization', 'Communication'],
+            future: '📈 Moderate — digital libraries transforming but not eliminating the profession'
+        },
+        'Forest Officer': {
+            branch: 'Forest Conservation',
+            description: 'Manages and protects forest resources, wildlife and enforces forest conservation laws.',
+            skills: ['Forestry', 'Wildlife Management', 'Environmental Law', 'Physical Fitness', 'GIS', 'Leadership'],
+            future: '📈 High — climate change making forest conservation critically important'
+        },
+        'Agricultural Officer': {
+            branch: 'Agriculture',
+            description: 'Advises farmers on modern farming techniques and implements government agricultural schemes.',
+            skills: ['Agriculture Science', 'Soil Science', 'Crop Management', 'Communication', 'Government Schemes'],
+            future: '📈 High — India\'s agricultural modernization creating demand for experts'
+        },
+        'Agricultural Scientist': {
+            branch: 'Agricultural Research',
+            description: 'Conducts research to improve crop yield, soil health, pest control, and farming techniques for sustainable food production.',
+            skills: ['Crop Science', 'Research & Analysis', 'Soil Management', 'Data Interpretation', 'Laboratory Skills', 'Report Writing', 'Agri-Technology'],
+            future: '🔥 Very High — India\'s food security depends on constant agricultural innovation; ICAR, state universities, and agri-startups are actively hiring.'
+        },
+        'Horticulturist': {
+            branch: 'Horticulture',
+            description: 'Studies and manages the cultivation of fruits, vegetables, flowers, and ornamental plants for commercial and ecological purposes.',
+            skills: ['Plant Science', 'Landscaping', 'Crop Management', 'Pest Control', 'Greenhouse Management', 'Irrigation Techniques', 'Botany'],
+            future: '🔆 High — Growing demand in organic farming, urban gardening, export horticulture, and floriculture industries.'
+        },
+        'Dairy Farmer / Manager': {
+            branch: 'Dairy Management',
+            description: 'Oversees the complete operations of a dairy farm including animal health, milk production, quality control, and business management.',
+            skills: ['Animal Husbandry', 'Farm Management', 'Veterinary Basics', 'Quality Control', 'Supply Chain', 'Business Operations', 'Record Keeping'],
+            future: '🔆 High — India is the world\'s largest milk producer; cooperatives like Amul and private dairies constantly need skilled managers.'
+        },
+        'Fisheries Officer': {
+            branch: 'Fisheries Management',
+            description: 'Manages and regulates fish production, aquaculture operations, marine resources, and enforces fisheries-related policies and laws.',
+            skills: ['Aquaculture', 'Marine Biology', 'Water Quality Management', 'Policy Implementation', 'Research', 'Environmental Assessment', 'GIS Tools'],
+            future: '🔆 High — Blue Revolution scheme and expanding aquaculture exports create strong government and private sector demand.'
+        },
+        'Soil Scientist': {
+            branch: 'Soil Science',
+            description: 'Analyses soil composition, fertility, and degradation to recommend land-use practices for agriculture and environmental conservation.',
+            skills: ['Soil Chemistry', 'Field Sampling', 'GIS Mapping', 'Laboratory Analysis', 'Data Interpretation', 'Report Writing', 'Environmental Science'],
+            future: '🔆 High — Soil degradation crisis, precision farming boom, and climate adaptation programs drive consistent hiring.'
+        },
+        'Agronomist': {
+            branch: 'Crop Science',
+            description: 'Applies scientific principles to optimize crop production, manage field conditions, and advise farmers on best agricultural practices.',
+            skills: ['Crop Physiology', 'Agronomy Research', 'Fertilizer Management', 'Pest Control', 'Weather Analysis', 'Farm Advisory', 'Data Analysis'],
+            future: '🔥 Very High — Corporate farms, agri-input companies, and government extension programs all actively recruit agronomists.'
+        },
+        'Plant Geneticist': {
+            branch: 'Plant Biotechnology',
+            description: 'Researches and manipulates the genetic makeup of plants to develop disease-resistant, high-yield, or climate-adaptive crop varieties.',
+            skills: ['Genetics', 'Molecular Biology', 'Biotechnology', 'Lab Research', 'CRISPR/Gene Editing', 'Data Analysis', 'Scientific Writing'],
+            future: '🔥 Very High — GM crops, seed technology companies, and climate-resilient agriculture make this one of the most future-proof science careers.'
+        },
+        'Farm Manager': {
+            branch: 'Farm Operations',
+            description: 'Supervises day-to-day operations of a farm including planning, staff management, budgeting, crop cycles, and market liaison.',
+            skills: ['Farm Operations', 'Leadership', 'Budgeting', 'Supply Chain', 'Agri-Technology', 'Equipment Management', 'Record Keeping'],
+            future: '🔆 High — Corporate agri-businesses and large export-oriented farms increasingly demand professional farm managers over traditional supervision.'
+        },
+        'Environmental Consultant': {
+            branch: 'Environmental Advisory',
+            description: 'Advises businesses, governments, and NGOs on minimizing environmental impact, ensuring regulatory compliance, and promoting sustainability.',
+            skills: ['Environmental Law', 'Impact Assessment', 'GIS', 'Data Analysis', 'Sustainability Planning', 'Report Writing', 'Stakeholder Communication'],
+            future: '🔥 Very High — EIA mandatory for all major projects in India; green compliance rules tightening across industries every year.'
+        },
+        'Climate Change Analyst': {
+            branch: 'Climate Science',
+            description: 'Studies climate data and trends to assess environmental risks, develop mitigation strategies, and advise policy and corporate decisions.',
+            skills: ['Climate Modelling', 'Data Science', 'Environmental Policy', 'Statistical Analysis', 'GIS', 'Research', 'Report Writing'],
+            future: '🔥 Very High — India\'s net-zero targets, international climate commitments, and disaster management funding are creating hundreds of new roles annually.'
+        },
+        'Wildlife Biologist': {
+            branch: 'Wildlife Conservation',
+            description: 'Studies the behavior, habitats, and population dynamics of wild animals to support conservation and biodiversity protection efforts.',
+            skills: ['Field Research', 'Animal Behavior', 'Ecology', 'GIS Mapping', 'Camera Trapping', 'Data Analysis', 'Conservation Planning'],
+            future: '🔆 High — Forest department recruitments, NGO conservation projects, and eco-tourism sector all need trained wildlife professionals.'
+        },
+        'Conservation Scientist': {
+            branch: 'Conservation Science',
+            description: 'Works to protect and restore natural ecosystems, biodiversity, and natural resources through research, policy, and on-ground intervention.',
+            skills: ['Ecology', 'Environmental Law', 'GIS', 'Community Engagement', 'Research', 'Fundraising', 'Project Management'],
+            future: '🔆 High — International conservation funding, government wildlife schemes, and CSR-backed green projects are expanding rapidly.'
+        },
+        'Oceanographer': {
+            branch: 'Oceanography',
+            description: 'Investigates physical, chemical, biological, and geological aspects of oceans to understand marine systems and support resource management.',
+            skills: ['Marine Science', 'Data Collection', 'Oceanographic Equipment', 'Remote Sensing', 'GIS', 'Research', 'Environmental Analysis'],
+            future: '🔆 High — INCOIS, DRDO, and deep-sea mission funding under India\'s Blue Economy policy are opening significant opportunities.'
+        },
+        'Meteorologist': {
+            branch: 'Meteorology',
+            description: 'Analyzes atmospheric data to forecast weather, study climate patterns, and provide critical information for aviation, agriculture, and disaster management.',
+            skills: ['Atmospheric Science', 'Data Modelling', 'Remote Sensing', 'GIS', 'Statistics', 'Weather Systems', 'Communication'],
+            future: '🔆 High — IMD expansion, private weather analytics firms, and aviation sector demand are growing steadily.'
+        },
+        'Water Resource Manager': {
+            branch: 'Water Resource Management',
+            description: 'Plans, develops, and manages freshwater resources including rivers, groundwater, and reservoirs to ensure sustainable supply and usage.',
+            skills: ['Hydrology', 'Water Policy', 'GIS', 'Environmental Science', 'Project Management', 'Stakeholder Engagement', 'Civil Engineering Basics'],
+            future: '🔥 Very High — India\'s water crisis is worsening; Jal Jeevan Mission and smart water management schemes need thousands of specialists.'
+        },
+        'News Anchor': {
+            branch: 'Broadcast Journalism',
+            description: 'Presents news bulletins and live coverage on television, maintaining credibility, composure, and audience engagement at all times.',
+            skills: ['On-Camera Presence', 'Diction', 'Script Reading', 'News Judgment', 'Current Affairs', 'Language Fluency', 'Crisis Communication'],
+            future: '🔆 High — India has 900+ TV channels; demand for regional-language anchors is especially strong and growing.'
+        },
+        'TV Reporter': {
+            branch: 'Field Reporting',
+            description: 'Investigates stories, conducts field interviews, and delivers live or recorded reports for television broadcast.',
+            skills: ['Investigative Research', 'Interviewing', 'Storytelling', 'Video Reporting', 'Current Affairs', 'Quick Thinking', 'Script Writing'],
+            future: '🔆 High — ground reporters remain essential despite digital shift; regional TV markets are expanding rapidly across India.'
+        },
+        'Radio Jockey (RJ)': {
+            branch: 'Audio Hosting',
+            description: 'Hosts radio programs, engages listeners with music, conversations, contests, and commentary across FM or digital radio platforms.',
+            skills: ['Voice Modulation', 'Wit & Humor', 'Improvisation', 'Content Creation', 'Language Skills', 'Audience Engagement', 'Music Knowledge'],
+            future: '🔆 Moderate-High — FM market is stable; podcast and digital audio boom is creating new opportunities beyond traditional radio.'
+        },
+        'Podcast Host': {
+            branch: 'Digital Media',
+            description: 'Creates, produces, and presents audio or video podcast content on specific topics, building niche audiences across streaming platforms.',
+            skills: ['Content Creation', 'Interviewing', 'Audio Editing', 'Storytelling', 'Audience Building', 'Social Media Marketing', 'Research'],
+            future: '🔥 Very High — India\'s podcast industry growing at 35%+ annually; monetization through ads, Spotify, and subscriptions is maturing fast.'
+        },
+        'Photojournalist': {
+            branch: 'Visual Journalism',
+            description: 'Captures powerful images that document news events, social issues, and human stories for print, digital, and broadcast media.',
+            skills: ['Photography', 'Visual Storytelling', 'Photo Editing', 'Fieldwork', 'Current Affairs', 'Ethics', 'Speed & Accuracy'],
+            future: '🔆 High — digital media\'s insatiable need for visual content keeps this profession relevant; conflict and social documentary photography especially valued.'
+        },
+        'Documentary Filmmaker': {
+            branch: 'Non-Fiction Film',
+            description: 'Researches, writes, directs, and produces non-fiction films that explore social, political, environmental, or cultural subjects in depth.',
+            skills: ['Filmmaking', 'Research', 'Scriptwriting', 'Cinematography', 'Editing', 'Storytelling', 'Project Management'],
+            future: '🔥 Very High — OTT platforms like Netflix, Prime, and Hotstar are massively investing in Indian documentaries and original content.'
+        },
+        'Film Critic': {
+            branch: 'Film Analysis',
+            description: 'Analyzes and reviews films from artistic, technical, and cultural perspectives for publications, websites, YouTube channels, or broadcast media.',
+            skills: ['Film Theory', 'Writing', 'Critical Analysis', 'Cultural Awareness', 'Research', 'Communication', 'Audience Understanding'],
+            future: '🔆 Moderate — growing through YouTube and Substack monetization; traditional print critic roles are shrinking while digital criticism is rising.'
+        },
+        'Sports Journalist': {
+            branch: 'Sports Reporting',
+            description: 'Covers sports events, profiles athletes, reports on league developments, and analyzes game strategies across print, broadcast, and digital platforms.',
+            skills: ['Sports Knowledge', 'Writing', 'Interviewing', 'Broadcasting', 'Social Media', 'Data Analysis', 'Storytelling'],
+            future: '🔆 High — IPL, Pro Kabaddi, ISL, and rising sports coverage budgets are creating consistent demand for specialized sports media professionals.'
+        },
+        'Political Analyst': {
+            branch: 'Political Commentary',
+            description: 'Interprets political events, electoral trends, government policies, and party strategies for media houses, think tanks, and academic institutions.',
+            skills: ['Political Science', 'Research', 'Data Analysis', 'Public Speaking', 'Writing', 'Strategic Thinking', 'Current Affairs'],
+            future: '🔆 High — election-heavy democracy with 24/7 news cycle means political analysts are in near-constant demand across media and consulting.'
+        },
+        'Magazine Editor': {
+            branch: 'Editorial Management',
+            description: 'Oversees the editorial direction, content planning, and production of magazine issues, managing writers, designers, and deadlines.',
+            skills: ['Editorial Judgment', 'Writing & Editing', 'Content Strategy', 'Leadership', 'SEO', 'Visual Sense', 'Audience Understanding'],
+            future: '🔆 Moderate — print is declining but digital magazines and branded content are growing; multi-platform editing skills are essential.'
+        },
+        'News Editor': {
+            branch: 'Newsroom Leadership',
+            description: 'Manages the newsroom\'s daily output by assigning stories, editing copy, verifying facts, and ensuring editorial standards are maintained.',
+            skills: ['News Judgment', 'Editing', 'Leadership', 'Fact-Checking', 'Crisis Management', 'Language Mastery', 'Team Coordination'],
+            future: '🔆 High — every digital and broadcast newsroom needs experienced editors; senior roles are well-compensated and remain essential.'
+        },
+        'Media Producer': {
+            branch: 'Production Management',
+            description: 'Manages the technical and creative production of TV shows, films, podcasts, or digital content from concept to final delivery.',
+            skills: ['Production Management', 'Budgeting', 'Scheduling', 'Creative Direction', 'Technical Knowledge', 'Leadership', 'Problem-Solving'],
+            future: '🔥 Very High — OTT explosion and branded content boom have created unprecedented demand for skilled producers across all formats.'
+        },
+        'PR Manager': {
+            branch: 'Public Relations',
+            description: 'Manages the public image and communications of brands, celebrities, or organizations through media relations, campaigns, and crisis management.',
+            skills: ['Communication', 'Media Relations', 'Writing', 'Crisis Management', 'Strategic Thinking', 'Brand Storytelling', 'Social Media'],
+            future: '🔥 Very High — every major brand, politician, and startup needs PR; digital reputation management has made this role more critical than ever.'
+        },
+        'Fact Checker': {
+            branch: 'Verification',
+            description: 'Verifies the accuracy of information published or broadcast by media organizations, fighting misinformation and upholding journalistic credibility.',
+            skills: ['Research', 'Critical Thinking', 'Source Verification', 'Attention to Detail', 'Data Analysis', 'Digital Tools', 'Writing'],
+            future: '🔆 High — India\'s misinformation crisis and international pressure on platforms are driving significant investment in fact-checking operations.'
+        },
+        'War Correspondent': {
+            branch: 'Conflict Reporting',
+            description: 'Reports from active conflict zones, covering wars, civil unrest, and humanitarian crises for international and national media organizations.',
+            skills: ['Courage & Resilience', 'Field Reporting', 'Crisis Communication', 'Geopolitics', 'Language Skills', 'Ethical Judgment', 'Survival Training'],
+            future: '🔆 High — geopolitically turbulent world keeps demand alive; also one of the highest-risk and highest-prestige roles in journalism.'
+        },
+        'School Teacher (Private)': {
+            branch: 'School Teaching',
+            description: 'Delivers curriculum-based education to students in private institutions, fostering academic development and holistic growth.',
+            skills: ['Subject Expertise', 'Pedagogy', 'Communication', 'Classroom Management', 'Assessment Design', 'Patience', 'Digital Teaching Tools'],
+            future: '🔆 High — private school sector is India\'s largest employer in education; NEP 2020 reforms are raising quality standards and pay scales.'
+        },
+        'Special Education Teacher': {
+            branch: 'Special Education',
+            description: 'Provides customized educational support to children with learning disabilities, developmental challenges, or special needs.',
+            skills: ['Special Education Methodology', 'Patience', 'IEP Development', 'Child Psychology', 'Communication', 'Adaptive Teaching', 'Empathy'],
+            future: '🔥 Very High — India has 26+ million children with disabilities; awareness is growing but trained special educators remain severely short in supply.'
+        },
+        'Online Tutor / EdTech Educator': {
+            branch: 'EdTech Teaching',
+            description: 'Delivers live or recorded educational content to students through digital platforms like YouTube, Unacademy, BYJU\'s, or independent websites.',
+            skills: ['Subject Mastery', 'Content Creation', 'Video Production', 'Audience Engagement', 'Digital Marketing', 'Curriculum Design'],
+            future: '🔥 Very High — India\'s EdTech market is among the world\'s largest; even individual educators on YouTube earn significantly through ads and courses.'
+        },
+        'Corporate Trainer': {
+            branch: 'Corporate Training',
+            description: 'Designs and delivers professional development programs for employees on skills like leadership, communication, sales, and technology.',
+            skills: ['Facilitation', 'Adult Learning Theory', 'Content Design', 'Communication', 'Industry Knowledge', 'Assessment', 'Presentation Skills'],
+            future: '🔥 Very High — every scaling company invests in employee training; L&D departments are growing across IT, BFSI, and manufacturing sectors.'
+        },
+        'Educational Psychologist': {
+            branch: 'Educational Psychology',
+            description: 'Applies psychology principles to improve learning, assess students with challenges, and design effective educational interventions.',
+            skills: ['Psychology', 'Assessment Tools', 'Research', 'Counseling', 'Behavioral Analysis', 'Report Writing', 'Collaboration with Teachers'],
+            future: '🔆 High — mental health awareness in schools and NEP\'s focus on holistic development are driving demand for trained educational psychologists.'
+        },
+        'Curriculum Developer': {
+            branch: 'Curriculum Design',
+            description: 'Designs structured learning programs, textbooks, and educational frameworks for schools, colleges, or EdTech platforms.',
+            skills: ['Instructional Design', 'Subject Expertise', 'Pedagogy', 'Content Writing', 'Assessment Design', 'Research', 'Technology Integration'],
+            future: '🔆 High — NEP 2020 curriculum overhaul and EdTech content arms race are creating sustained demand for skilled curriculum professionals.'
+        },
+        'Preschool Teacher': {
+            branch: 'Early Childhood Education',
+            description: 'Guides children aged 2–6 in foundational learning, social development, and creative expression through play-based education methods.',
+            skills: ['Child Development', 'Creative Teaching', 'Communication', 'Patience', 'Activity Design', 'Parent Engagement', 'Classroom Management'],
+            future: '🔆 High — growing awareness of early childhood education and expansion of premium preschool chains like Kidzee and EuroKids are driving demand.'
+        },
+        'Montessori Teacher': {
+            branch: 'Montessori Education',
+            description: 'Implements the Montessori philosophy of child-led, hands-on learning to nurture independence, curiosity, and self-discipline in young children.',
+            skills: ['Montessori Methodology', 'Child Observation', 'Material Preparation', 'Patience', 'Classroom Environment Design', 'Communication'],
+            future: '🔆 High — Montessori schools are growing rapidly in metros and tier-2 cities; international certifications command significantly higher salaries.'
+        },
+        'Career Counselor': {
+            branch: 'Career Guidance',
+            description: 'Helps students and professionals identify career goals, assess skills, explore opportunities, and make informed education or career decisions.',
+            skills: ['Counseling', 'Psychometric Assessment', 'Career Mapping', 'Communication', 'Knowledge of Industries', 'Empathy', 'Research'],
+            future: '🔥 Very High — India\'s student population of 250+ million and career confusion post-COVID have created enormous demand for quality counselors.'
+        },
+        'Life Coach': {
+            branch: 'Personal Coaching',
+            description: 'Partners with individuals to help them clarify personal goals, overcome limiting beliefs, and take consistent action toward fulfilling lives.',
+            skills: ['Coaching Methodology', 'Active Listening', 'Goal Setting', 'Communication', 'Emotional Intelligence', 'Psychology Basics', 'Motivation'],
+            future: '🔆 High — urban India\'s growing self-development culture and social media have significantly increased demand and visibility for life coaching.'
+        },
+        'Skill Development Trainer': {
+            branch: 'Vocational Training',
+            description: 'Trains individuals in vocational, technical, or soft skills under government schemes or private programs to improve employability.',
+            skills: ['Vocational Expertise', 'Training Delivery', 'Content Design', 'Assessment', 'Communication', 'Patience', 'Industry Connections'],
+            future: '🔥 Very High — PM Kaushal Vikas Yojana and National Skill Development Mission fund thousands of trainers across sectors every year.'
+        },
+        'IELTS / Language Trainer': {
+            branch: 'Language Training',
+            description: 'Prepares students for international English proficiency tests or general language improvement for academic and professional purposes.',
+            skills: ['English Language Mastery', 'Test Strategy Knowledge', 'Teaching Methodology', 'Patience', 'Communication', 'Assessment Design'],
+            future: '🔆 High — millions of Indians pursue abroad education and immigration annually; language training institutes are thriving across all tier cities.'
+        },
+        'Coding Instructor': {
+            branch: 'Coding Education',
+            description: 'Teaches programming languages, software development concepts, and computational thinking to students across age groups and skill levels.',
+            skills: ['Programming Expertise', 'Pedagogy', 'Curriculum Design', 'Debugging', 'Communication', 'Patience', 'Practical Project Guidance'],
+            future: '🔥 Very High — India\'s push for digital literacy, NEP coding mandate, and thousands of coding bootcamps make this one of the fastest-growing education careers.'
+        },
+        'Music Teacher': {
+            branch: 'Music Education',
+            description: 'Provides instruction in vocal or instrumental music, theory, and performance to students at schools, academies, or privately.',
+            skills: ['Musical Proficiency', 'Music Theory', 'Teaching Methodology', 'Ear Training', 'Patience', 'Performance Skills', 'Notation Reading'],
+            future: '🔆 Moderate-High — increased cultural investment, online music platforms, and international music school chains growing in Indian metros.'
+        },
+        'Dance Teacher': {
+            branch: 'Dance Education',
+            description: 'Instructs students in classical, folk, contemporary, or commercial dance forms for performance, fitness, or cultural preservation.',
+            skills: ['Dance Expertise', 'Choreography', 'Teaching Methodology', 'Rhythm & Timing', 'Physical Fitness', 'Creativity', 'Audience Performance'],
+            future: '🔆 High — Bollywood dance academies, reality shows, international performance troupes, and online dance classes are expanding opportunities significantly.'
+        },
+        'Meditation Coach': {
+            branch: 'Mindfulness Coaching',
+            description: 'Teaches various meditation techniques to help clients manage stress, improve focus, and cultivate inner calm and emotional balance.',
+            skills: ['Meditation Techniques', 'Mindfulness', 'Psychology Basics', 'Communication', 'Empathy', 'Program Design', 'Active Listening'],
+            future: '🔥 Very High — Corporate wellness programs, mental health apps, and luxury retreat centers are creating strong global demand for certified coaches.'
+        },
+        'Nutritionist / Dietitian': {
+            branch: 'Nutrition & Dietetics',
+            description: 'Assesses dietary habits and designs personalized nutrition plans to support health, fitness, disease management, or performance goals.',
+            skills: ['Nutritional Science', 'Dietetics', 'Clinical Assessment', 'Meal Planning', 'Communication', 'Behavior Change Coaching', 'Research'],
+            future: '🔥 Very High — India\'s diabetes and obesity epidemics combined with fitness culture are driving massive demand for qualified nutrition professionals.'
+        },
+        'Wellness Coach': {
+            branch: 'Wellness Coaching',
+            description: 'Provides holistic guidance on physical health, mental wellness, lifestyle habits, and stress management for sustainable well-being.',
+            skills: ['Health Coaching', 'Communication', 'Goal Setting', 'Behavior Change', 'Empathy', 'Wellness Assessment', 'Mindfulness'],
+            future: '🔆 High — Corporate wellness, online health platforms, and premium lifestyle brands are steadily expanding wellness coaching opportunities.'
+        },
+        'Ayurveda Practitioner': {
+            branch: 'Ayurvedic Medicine',
+            description: 'Diagnoses and treats patients using traditional Ayurvedic medicine including herbal remedies, diet, detox therapies, and lifestyle guidance.',
+            skills: ['Ayurvedic Medicine', 'Herbal Knowledge', 'Diagnosis', 'Patient Communication', 'Treatment Planning', 'Sanskrit Basics', 'Ethics'],
+            future: '🔥 Very High — PM Ayushman Bharat, global ayurveda tourism, and international demand for AYUSH practitioners are creating exceptional growth.'
+        },
+        'Naturopath': {
+            branch: 'Naturopathy',
+            description: 'Uses natural therapies including nutrition, herbal medicine, hydrotherapy, and lifestyle counseling to support the body\'s healing processes.',
+            skills: ['Natural Medicine', 'Nutrition', 'Holistic Assessment', 'Patient Communication', 'Herbal Remedies', 'Lifestyle Counseling', 'Ethics'],
+            future: '🔆 High — Growing anti-chemical sentiment and wellness awareness are driving clients toward natural healing modalities in urban India.'
+        },
+        'Mental Health Counselor': {
+            branch: 'Mental Health Counseling',
+            description: 'Provides therapeutic support to individuals dealing with stress, anxiety, depression, trauma, and other psychological challenges through counseling.',
+            skills: ['Counseling Techniques', 'Empathy', 'Active Listening', 'Psychology', 'Crisis Management', 'Confidentiality', 'Assessment Tools'],
+            future: '🔥 Very High — India has a massive mental health gap with only 1 psychiatrist per 100,000 people; demand is at a historic high and growing fast.'
+        },
+        'Relationship Counselor': {
+            branch: 'Relationship Counseling',
+            description: 'Helps individuals and couples navigate relationship challenges, communication breakdowns, trust issues, and personal boundaries.',
+            skills: ['Counseling', 'Communication', 'Empathy', 'Conflict Resolution', 'Psychology', 'Active Listening', 'Non-Judgment'],
+            future: '🔆 High — Changing social dynamics, nuclear families, and reduced stigma around counseling are steadily growing this profession across urban India.'
+        },
+        'Sleep Therapist': {
+            branch: 'Sleep Therapy',
+            description: 'Diagnoses and treats sleep disorders like insomnia, sleep apnea, and circadian rhythm disruptions using behavioral and therapeutic techniques.',
+            skills: ['Sleep Science', 'CBT-I', 'Patient Assessment', 'Psychology', 'Report Writing', 'Empathy', 'Behavioral Techniques'],
+            future: '🔥 Very High — India\'s urban sleep crisis is severe; corporate wellness programs and sleep clinics are just beginning to address this massively underserved space.'
+        },
+        'Holistic Health Practitioner': {
+            branch: 'Holistic Health',
+            description: 'Integrates multiple wellness disciplines including nutrition, movement, mindfulness, and energy healing to support complete physical and mental health.',
+            skills: ['Integrative Health Knowledge', 'Multiple Modality Certification', 'Client Assessment', 'Communication', 'Empathy', 'Program Design'],
+            future: '🔆 High — Premium wellness retreats, integrative health centers, and high-income urban clients are driving growth in holistic health services.'
+        },
+        'Physicist': {
+            branch: 'Physics Research',
+            description: 'Investigates the fundamental principles of matter, energy, space, and time through theoretical models and experimental research.',
+            skills: ['Mathematics', 'Theoretical Reasoning', 'Laboratory Skills', 'Data Analysis', 'Research', 'Scientific Writing', 'Programming'],
+            future: '🔆 High — ISRO, DRDO, BARC, IITs, and international research collaborations offer strong opportunities for top physics graduates.'
+        },
+        'Chemist': {
+            branch: 'Chemical Research',
+            description: 'Studies the composition, structure, and properties of substances and develops new materials, drugs, or processes through experimentation.',
+            skills: ['Chemical Analysis', 'Lab Techniques', 'Research', 'Data Interpretation', 'Safety Protocols', 'Scientific Writing', 'Instrumentation'],
+            future: '🔆 High — Pharmaceutical, materials science, agrochemical, and specialty chemicals industries have consistent demand for research chemists.'
+        },
+        'Mathematician': {
+            branch: 'Mathematical Sciences',
+            description: 'Develops and applies mathematical theories, models, and algorithms to solve problems across science, engineering, finance, and technology.',
+            skills: ['Abstract Reasoning', 'Problem Solving', 'Statistics', 'Computation', 'Proof Writing', 'Modeling', 'Programming'],
+            future: '🔆 High — Data science, AI research, cryptography, and quantitative finance are heavily recruiting mathematicians with strong theoretical foundations.'
+        },
+        'Biologist': {
+            branch: 'Biological Sciences',
+            description: 'Studies living organisms and life processes across molecular, cellular, organismal, and ecological scales to advance scientific understanding.',
+            skills: ['Laboratory Research', 'Microscopy', 'Data Analysis', 'Scientific Writing', 'Field Research', 'Experimental Design', 'Observation'],
+            future: '🔆 High — Biotechnology, pharmaceuticals, conservation, and public health sectors all recruit broadly trained biologists.'
+        },
+        'Zoologist': {
+            branch: 'Animal Biology',
+            description: 'Studies the biology, behavior, physiology, and classification of animals in natural habitats and controlled research environments.',
+            skills: ['Animal Behavior', 'Field Research', 'Taxonomy', 'Data Collection', 'Lab Analysis', 'Scientific Writing', 'Conservation Biology'],
+            future: '🔆 Moderate-High — Wildlife boards, forest departments, conservation NGOs, and research institutions recruit zoologists steadily.'
+        },
+        'Botanist': {
+            branch: 'Plant Sciences',
+            description: 'Researches plant life including structure, genetics, ecology, and applications in medicine, agriculture, and environmental management.',
+            skills: ['Plant Identification', 'Field Research', 'Lab Analysis', 'Taxonomy', 'Ecology', 'Scientific Writing', 'GIS'],
+            future: '🔆 Moderate-High — Ethnobotany, plant-based drug discovery, and forestry conservation programs are creating growing research opportunities.'
+        },
+        'Astronomer': {
+            branch: 'Astronomy',
+            description: 'Observes and interprets cosmic phenomena including stars, galaxies, black holes, and planetary systems using advanced telescopes and data.',
+            skills: ['Astrophysics', 'Mathematics', 'Data Analysis', 'Telescope Operation', 'Programming', 'Scientific Writing', 'Physics'],
+            future: '🔆 High — ISRO\'s expanding space program, AstroSat, and India\'s growing contribution to global astronomy research are strengthening career paths.'
+        },
+        'Geologist': {
+            branch: 'Geological Sciences',
+            description: 'Studies the Earth\'s structure, rock formations, mineral deposits, and geological history to support mining, construction, and natural disaster management.',
+            skills: ['Rock & Mineral Identification', 'Field Mapping', 'GIS', 'Seismic Analysis', 'Lab Analysis', 'Report Writing', 'Remote Sensing'],
+            future: '🔆 High — Mining sector, oil & gas, water resources, and natural disaster agencies have steady and well-paying demand for geologists.'
+        },
+        'Microbiologist': {
+            branch: 'Microbiology',
+            description: 'Investigates bacteria, viruses, fungi, and other microorganisms to advance medical treatments, food safety, and environmental applications.',
+            skills: ['Lab Techniques', 'Microbial Analysis', 'Sterile Procedures', 'Data Interpretation', 'Scientific Writing', 'Bioinformatics', 'Safety'],
+            future: '🔥 Very High — Post-pandemic investment in infectious disease research, vaccine development, and food microbiology has significantly elevated this field.'
+        },
+        'Biochemist': {
+            branch: 'Biochemistry',
+            description: 'Explores the chemical processes and molecules that underlie living systems, bridging biology and chemistry to advance medicine and biotechnology.',
+            skills: ['Molecular Biology', 'Lab Techniques', 'Data Analysis', 'Protein Chemistry', 'Instrumentation', 'Scientific Writing', 'Bioinformatics'],
+            future: '🔥 Very High — Pharmaceutical R&D, biotech companies, and medical diagnostics firms in India are aggressively hiring biochemists.'
+        },
+        'Neuroscientist': {
+            branch: 'Neuroscience',
+            description: 'Investigates the structure and function of the brain and nervous system to understand behavior, cognition, and neurological diseases.',
+            skills: ['Neurobiology', 'Lab Research', 'Brain Imaging', 'Data Analysis', 'Computational Modeling', 'Scientific Writing', 'Psychology'],
+            future: '🔥 Very High — Brain-computer interfaces, mental health research, AI-neuroscience crossover, and neurological drug discovery are rapidly expanding fields.'
+        },
+        'Marine Biologist': {
+            branch: 'Marine Biology',
+            description: 'Studies marine organisms and ecosystems in oceans, coastal zones, and freshwater bodies for conservation and scientific advancement.',
+            skills: ['Marine Ecology', 'Field Research', 'Diving Skills', 'Data Collection', 'Species Identification', 'Lab Analysis', 'GIS'],
+            future: '🔆 High — India\'s 7,500 km coastline, Blue Economy push, and coral reef conservation projects are creating growing demand.'
+        },
+        'Forensic Scientist': {
+            branch: 'Forensic Science',
+            description: 'Applies scientific methods to analyze physical evidence from crime scenes to assist law enforcement and judicial investigations.',
+            skills: ['Chemistry', 'Biology', 'Lab Analysis', 'Evidence Handling', 'Critical Thinking', 'Report Writing', 'Legal Knowledge'],
+            future: '🔥 Very High — India\'s judicial modernization push, rising crime complexity, and new forensic labs under Home Ministry are creating strong demand.'
+        },
+        'Geneticist': {
+            branch: 'Genetics',
+            description: 'Studies genes, heredity, and genetic variation in organisms to advance medicine, agriculture, biotechnology, and evolutionary understanding.',
+            skills: ['Molecular Genetics', 'DNA Analysis', 'Bioinformatics', 'Lab Research', 'Data Interpretation', 'Scientific Writing', 'Ethics'],
+            future: '🔥 Very High — Personalized medicine, agricultural biotech, and genomic research programs like India\'s GenomeIndia project are creating strong growth.'
+        },
+        'Astrophysicist': {
+            branch: 'Astrophysics',
+            description: 'Combines physics and astronomy to study the physical properties and processes of celestial objects and the universe as a whole.',
+            skills: ['Advanced Mathematics', 'Computational Physics', 'Data Analysis', 'Programming', 'Scientific Research', 'Telescope Operation'],
+            future: '🔆 High — ISRO\'s Gaganyaan, Aditya-L1, and international collaborations are elevating India\'s astrophysics ecosystem significantly.'
+        },
+        'Merchant Navy Officer': {
+            branch: 'Property Brokerage',
+            description: 'Facilitates the buying, selling, or renting of properties by connecting clients with suitable options, negotiating deals, and managing transactions.',
+            skills: ['Market Knowledge', 'Negotiation', 'Communication', 'Client Management', 'Legal Basics', 'Networking', 'Digital Marketing'],
+            future: '🔥 Very High — India\'s real estate market is projected to reach $1 trillion by 2030; RERA professionalization is elevating agent standards and earnings.'
+        },
+        'Property Developer': {
+            branch: 'Real Estate Development',
+            description: 'Acquires land, secures funding, manages construction, and sells or leases developed residential or commercial real estate projects.',
+            skills: ['Project Management', 'Finance', 'Legal Knowledge', 'Stakeholder Management', 'Risk Assessment', 'Sales', 'Urban Planning'],
+            future: '🔥 Very High — Urbanization, affordable housing schemes, smart cities, and commercial real estate boom are making development one of India\'s most lucrative fields.'
+        },
+        'Real Estate Lawyer': {
+            branch: 'Property Law',
+            description: 'Handles legal aspects of property transactions including title verification, contracts, disputes, RERA compliance, and registration.',
+            skills: ['Property Law', 'Contract Drafting', 'Legal Research', 'Negotiation', 'Due Diligence', 'RERA Knowledge', 'Communication'],
+            future: '🔥 Very High — Every property transaction needs legal oversight; RERA Act and increasing buyer awareness have made real estate law one of India\'s most demanded specializations.'
+        },
+        'Property Manager': {
+            branch: 'Property Management',
+            description: 'Manages daily operations of residential or commercial properties on behalf of owners, including maintenance, tenant relations, and rent collection.',
+            skills: ['Property Management', 'Communication', 'Maintenance Coordination', 'Financial Reporting', 'Tenant Management', 'Legal Knowledge'],
+            future: '🔆 High — India\'s growing rental market and NRI property owners are fueling demand for professional property management services.'
+        },
+        'Construction Manager': {
+            branch: 'Construction Management',
+            description: 'Oversees building projects from planning to completion, managing timelines, budgets, contractors, safety, and quality across construction sites.',
+            skills: ['Project Management', 'Civil Engineering', 'Budgeting', 'Leadership', 'Safety Management', 'Technical Knowledge', 'Scheduling'],
+            future: '🔥 Very High — Infrastructure push under PM Gati Shakti, smart cities, metro projects, and housing missions are creating unprecedented demand.'
+        },
+        'Quantity Surveyor': {
+            branch: 'Cost Management',
+            description: 'Estimates and manages construction costs at all project stages, ensuring financial efficiency from initial planning through project completion.',
+            skills: ['Cost Estimation', 'Technical Drawing Reading', 'Contracts', 'Measurement', 'Procurement', 'Financial Reporting', 'Construction Knowledge'],
+            future: '🔆 High — Large-scale infrastructure and commercial construction growth is driving consistent demand for qualified quantity surveyors.'
+        },
+        'Interior Contractor': {
+            branch: 'Interior Construction',
+            description: 'Executes interior construction and finishing work including partitions, false ceilings, flooring, and fit-outs for residential and commercial spaces.',
+            skills: ['Construction Techniques', 'Reading Plans', 'Material Knowledge', 'Project Management', 'Team Supervision', 'Quality Control', 'Client Communication'],
+            future: '🔆 High — Commercial office fit-outs, retail expansion, and premium residential demand are keeping interior contracting highly active.'
+        },
+        'Real Estate Consultant': {
+            branch: 'Real Estate Advisory',
+            description: 'Provides strategic advisory services to investors, developers, and corporates on property acquisition, valuation, and market positioning.',
+            skills: ['Market Analysis', 'Financial Modeling', 'Research', 'Strategic Thinking', 'Client Communication', 'Valuation', 'Negotiation'],
+            future: '🔆 High — Institutional investment in Indian real estate and private equity activity are growing the market for professional real estate advisory.'
+        },
+        'Housing Finance Advisor': {
+            branch: 'Housing Finance',
+            description: 'Guides clients through home loan options, eligibility, documentation, interest calculations, and PMAY subsidy benefits for property purchase.',
+            skills: ['Finance Knowledge', 'Home Loan Products', 'Communication', 'Customer Service', 'Documentation', 'Banking Liaison', 'Advisory'],
+            future: '🔆 High — India\'s housing loan market growing at 15%+ annually; PMAY and co-lending models are expanding affordable housing finance significantly.'
+        },
+        'Facility Manager': {
+            branch: 'Facility Management',
+            description: 'Manages the complete operational environment of buildings including utilities, security, housekeeping, maintenance, and vendor coordination.',
+            skills: ['Operations Management', 'Vendor Management', 'Safety', 'Budgeting', 'Communication', 'Technical Knowledge', 'Leadership'],
+            future: '🔆 High — Corporatization of commercial real estate and SEZ expansion are professionalizing facility management as a distinct and well-paying career.'
+        },
+        'Land Acquisition Officer': {
+            branch: 'Land Acquisition',
+            description: 'Handles the legal, financial, and community aspects of acquiring land for government or private infrastructure and development projects.',
+            skills: ['Land Law', 'Negotiation', 'Community Relations', 'Documentation', 'Government Liaison', 'Assessment', 'Ethics'],
+            future: '🔆 High — India\'s massive infrastructure pipeline requires continuous land acquisition; both government and private developers need skilled professionals.'
+        },
+        'Merchant Navy Officer': {
+            branch: 'Maritime Operations',
+            description: 'Commands or operates commercial vessels transporting cargo or passengers across international sea routes as part of the global shipping industry.',
+            skills: ['Navigation', 'Seamanship', 'International Maritime Law', 'Engine Operations', 'Crisis Management', 'Leadership', 'STCW Certification'],
+            future: '🔥 Very High — Shipping carries 90% of global trade; Indian seafarers are among the world\'s most sought after and among the highest paid professionals.'
+        },
+        'Marine Engineer': {
+            branch: 'Marine Engineering',
+            description: 'Designs, operates, and maintains the mechanical and electrical systems aboard ships and offshore platforms.',
+            skills: ['Marine Engineering', 'Mechanical Systems', 'Electrical Systems', 'Troubleshooting', 'Safety Protocols', 'STCW Certification', 'Leadership'],
+            future: '🔥 Very High — Seafaring engineers earn exceptionally well internationally; shore-based shipbuilding roles at L&T Shipbuilding and Cochin Shipyard are also growing.'
+        },
+        'Ship Captain': {
+            branch: 'Ship Command',
+            description: 'Commands a vessel with complete legal and operational responsibility for the ship, crew, cargo, and passenger safety during voyages.',
+            skills: ['Master Mariner License', 'Navigation', 'Leadership', 'International Maritime Law', 'Crisis Management', 'Communication', 'Decision Making'],
+            future: '🔆 High — It takes 10–12 years to command a ship, but captains earn among the highest salaries in any Indian profession — often ₹5–15 LPA equivalent at sea.'
+        },
+        'Naval Architect': {
+            branch: 'Ship Design',
+            description: 'Designs the structure, stability, hydrodynamics, and systems of ships, submarines, offshore platforms, and marine structures.',
+            skills: ['Naval Architecture', 'CAD/CAM', 'Structural Engineering', 'Hydrodynamics', 'Marine Systems', 'Project Management', 'Mathematics'],
+            future: '🔆 High — India\'s shipbuilding ambitions, defense naval expansion, and offshore energy projects are creating growing demand for naval architects.'
+        },
+        'Port Manager': {
+            branch: 'Port Operations',
+            description: 'Oversees port operations including cargo handling, vessel scheduling, logistics coordination, safety compliance, and infrastructure management.',
+            skills: ['Port Operations', 'Logistics', 'Leadership', 'Safety Management', 'Regulatory Compliance', 'Stakeholder Relations', 'Budgeting'],
+            future: '🔆 High — Sagarmala Programme and India\'s port modernization push are professionalizing port management significantly.'
+        },
+        'Maritime Lawyer': {
+            branch: 'Maritime Law',
+            description: 'Specializes in legal matters involving shipping, cargo disputes, maritime accidents, insurance claims, and international maritime conventions.',
+            skills: ['Maritime Law', 'International Trade Law', 'Dispute Resolution', 'Contract Drafting', 'Research', 'Communication', 'Arbitration'],
+            future: '🔆 High — India\'s growing shipping trade, coastal shipping expansion, and maritime arbitration center development are building this niche steadily.'
+        },
+        'Aviation Engineer': {
+            branch: 'Aerospace Engineering',
+            description: 'Designs, develops, and tests aircraft systems, structures, and propulsion technologies for commercial, military, or space aviation applications.',
+            skills: ['Aeronautical Engineering', 'CAD', 'Systems Design', 'Mathematics', 'Mechanical Engineering', 'Safety Analysis', 'Testing'],
+            future: '🔥 Very High — India\'s aviation fleet is the world\'s fastest growing; HAL, DRDO, and private MRO expansion are creating strong engineering demand.'
+        },
+        'Air Traffic Controller': {
+            branch: 'Air Traffic Management',
+            description: 'Coordinates the safe movement of aircraft in controlled airspace and on runways, ensuring collision-free operations across busy flight corridors.',
+            skills: ['Communication', 'Spatial Awareness', 'Crisis Decision-Making', 'Technical Knowledge', 'Concentration', 'Regulation Compliance', 'Team Coordination'],
+            future: '🔥 Very High — India is adding airports rapidly; AAI is recruiting ATCs at scale as air traffic volume is expected to triple by 2035.'
+        },
+        'Aircraft Maintenance Engineer (AME)': {
+            branch: 'Aircraft Maintenance',
+            description: 'Inspects, services, and certifies the airworthiness of aircraft components and systems according to DGCA and international aviation standards.',
+            skills: ['Aircraft Systems', 'Mechanical Skills', 'DGCA Certification', 'Troubleshooting', 'Attention to Detail', 'Safety Compliance', 'Documentation'],
+            future: '🔥 Very High — India\'s MRO sector is growing rapidly with government target of ₹20,000 crore market; AMEs are in acute short supply nationwide.'
+        },
+        'Aerospace Scientist': {
+            branch: 'Aerospace Research',
+            description: 'Conducts advanced research and development in aerodynamics, propulsion, materials, and spacecraft systems for defense, civil, or space applications.',
+            skills: ['Aerospace Engineering', 'Advanced Mathematics', 'Research', 'Simulation', 'Systems Engineering', 'Programming', 'Scientific Writing'],
+            future: '🔥 Very High — ISRO\'s expanded mandate, DRDO\'s missile programs, and India\'s new space policy opening private aerospace sector are creating exceptional opportunities.'
+        },
+        'Professional Athlete': {
+            branch: 'Athletics',
+            description: 'Competes at elite levels in a chosen sport, dedicating full-time efforts to training, performance, tournaments, and representing clubs or country.',
+            skills: ['Sport-Specific Technique', 'Physical Conditioning', 'Mental Toughness', 'Discipline', 'Tactical Awareness', 'Recovery', 'Teamwork'],
+            future: '🔆 High — TOPS scheme, rising prize money, corporate sponsorships, and Olympics 2036 ambitions are creating better athlete support systems.'
+        },
+        'Sports Coach': {
+            branch: 'Coaching',
+            description: 'Trains and mentors athletes or teams to improve performance, develop strategy, and achieve competitive goals at various levels.',
+            skills: ['Sport Expertise', 'Coaching Methodology', 'Leadership', 'Communication', 'Tactical Planning', 'Performance Analysis', 'Psychology'],
+            future: '🔥 Very High — rapid expansion of state academies, school sports, and professional leagues is creating massive demand for certified coaches.'
+        },
+        'Fitness Trainer / Personal Trainer': {
+            branch: 'Fitness Training',
+            description: 'Designs and delivers personalized exercise programs to help clients achieve health, weight, strength, or athletic performance goals.',
+            skills: ['Exercise Science', 'Program Design', 'Motivation', 'Anatomy & Physiology', 'Nutrition Basics', 'Client Management', 'Safety'],
+            future: '🔥 Very High — fitness culture explosion in urban India; gym memberships, home training apps, and corporate wellness programs are all booming.'
+        },
+        'Yoga Instructor': {
+            branch: 'Yoga Instruction',
+            description: 'Teaches yoga postures, breathing techniques, and meditation practices to individuals or groups for physical, mental, and spiritual wellness.',
+            skills: ['Asana Expertise', 'Anatomy', 'Pranayama', 'Teaching Methodology', 'Communication', 'Patience', 'Cultural Knowledge'],
+            future: '🔥 Very High — India is the global yoga capital; international certifications, wellness resorts, and online yoga platforms offer enormous global opportunities.'
+        },
+        'Sports Physiotherapist': {
+            branch: 'Sports Rehabilitation',
+            description: 'Assesses and treats sports-related injuries, designs rehabilitation programs, and helps athletes return to peak performance safely.',
+            skills: ['Physiotherapy', 'Sports Medicine', 'Anatomy', 'Rehabilitation', 'Manual Therapy', 'Injury Prevention', 'Patient Assessment'],
+            future: '🔥 Very High — every professional sports team now mandates physiotherapists; clinic-based sports rehab is also growing rapidly across Indian cities.'
+        },
+        'Sports Psychologist': {
+            branch: 'Sports Psychology',
+            description: 'Helps athletes manage performance anxiety, build mental resilience, improve focus, and maintain motivation throughout their careers.',
+            skills: ['Psychology', 'Counseling', 'Performance Coaching', 'Communication', 'Research', 'Behavioral Analysis', 'Empathy'],
+            future: '🔆 High — mental performance is now recognized as critical in elite sport; BCCI, Hockey India, and Olympic programs are actively hiring.'
+        },
+        'Sports Nutritionist': {
+            branch: 'Sports Nutrition',
+            description: 'Creates customized nutrition and diet plans for athletes to maximize performance, recovery, and long-term physical health.',
+            skills: ['Sports Nutrition Science', 'Dietetics', 'Physiology', 'Meal Planning', 'Supplement Knowledge', 'Data Analysis', 'Client Communication'],
+            future: '🔆 High — growing athlete awareness about nutrition science is making this a specialized and well-paying career in professional sports.'
+        },
+        'Sports Manager': {
+            branch: 'Sports Management',
+            description: 'Handles the business, contractual, marketing, and administrative aspects of an athlete\'s or sports organization\'s career and operations.',
+            skills: ['Sports Business', 'Negotiation', 'Contract Law', 'Marketing', 'Networking', 'Financial Planning', 'Event Management'],
+            future: '🔆 High — professionalization of Indian sports leagues is creating strong demand for business-savvy sports management professionals.'
+        },
+        'Cricket Coach': {
+            branch: 'Cricket Coaching',
+            description: 'Trains cricketers in batting, bowling, fielding, and tactical aspects of the game at club, state, or national levels.',
+            skills: ['Cricket Expertise', 'Coaching Certification', 'Tactical Analysis', 'Video Analysis', 'Communication', 'Player Development', 'Patience'],
+            future: '🔥 Very High — India\'s cricket ecosystem is massive; BCCI academies, state associations, private academies, and IPL franchises all hire extensively.'
+        },
+        'Football Coach': {
+            branch: 'Football Coaching',
+            description: 'Develops tactical systems, trains players, and manages team performance in football across club, school, or federation levels.',
+            skills: ['Football Expertise', 'UEFA/AFC Coaching Badges', 'Tactical Planning', 'Fitness Training', 'Team Management', 'Video Analysis'],
+            future: '🔆 High — ISL growth, I-League expansion, and grassroots federations are driving steady increase in demand for qualified football coaches.'
+        },
+        'Swimming Coach': {
+            branch: 'Swimming Coaching',
+            description: 'Teaches swimming techniques, improves stroke efficiency, and trains competitive swimmers for club or national-level competitions.',
+            skills: ['Swimming Expertise', 'Coaching Certification', 'Stroke Analysis', 'Training Program Design', 'Safety', 'Motivational Skills'],
+            future: '🔆 High — increased Olymp focus on swimming, growing number of aquatic academies, and school sports programs are expanding career options.'
+        },
+        'Esports Player / Coach': {
+            branch: 'Esports',
+            description: 'Competes or trains teams professionally in video game tournaments, combining deep game knowledge with strategic and technical skills.',
+            skills: ['Game Mastery', 'Strategic Thinking', 'Teamwork', 'Reflexes', 'Mental Conditioning', 'Communication', 'Analytical Skills'],
+            future: '🔥 Very High — India\'s esports industry is projected to cross ₹1,100 crore by 2025; BGMI, Valorant, and FIFA tournaments now offer significant prize pools.'
+        },
+        'Sports Administrator': {
+            branch: 'Sports Administration',
+            description: 'Manages governance, policy, funding, and operations of sports federations, associations, or government sports bodies.',
+            skills: ['Sports Policy', 'Administration', 'Leadership', 'Event Management', 'Stakeholder Relations', 'Budgeting', 'Legal Knowledge'],
+            future: '🔆 High — professionalization of Indian sports governance is creating demand for trained administrators beyond traditional bureaucratic appointments.'
+        },
+        'Olympics Coach': {
+            branch: 'High Performance Coaching',
+            description: 'Prepares athletes specifically for Olympic-level competition, managing advanced periodization, peaking strategies, and elite performance systems.',
+            skills: ['Elite Coaching Methodology', 'Periodization', 'Sports Science', 'Mental Conditioning', 'International Competition Knowledge', 'Leadership'],
+            future: '🔆 High — India\'s Olympic ambitions for 2028 and 2036 are driving significant investment in specialized high-performance coaches.'
+        },
+        'Professional Athlete': {
+            branch: 'Athletics',
+            description: 'Competes at elite levels in a chosen sport, dedicating full-time efforts to training, performance, tournaments, and representing clubs or country.',
+            skills: ['Sport-Specific Technique', 'Physical Conditioning', 'Mental Toughness', 'Discipline', 'Tactical Awareness', 'Recovery', 'Teamwork'],
+            future: '🔆 High — TOPS scheme, rising prize money, corporate sponsorships, and Olympics 2036 ambitions are creating better athlete support systems.'
+        },
+        'Sports Coach': {
+            branch: 'Coaching',
+            description: 'Trains and mentors athletes or teams to improve performance, develop strategy, and achieve competitive goals at various levels.',
+            skills: ['Sport Expertise', 'Coaching Methodology', 'Leadership', 'Communication', 'Tactical Planning', 'Performance Analysis', 'Psychology'],
+            future: '🔥 Very High — rapid expansion of state academies, school sports, and professional leagues is creating massive demand for certified coaches.'
+        },
+        'Fitness Trainer / Personal Trainer': {
+            branch: 'Fitness Training',
+            description: 'Designs and delivers personalized exercise programs to help clients achieve health, weight, strength, or athletic performance goals.',
+            skills: ['Exercise Science', 'Program Design', 'Motivation', 'Anatomy & Physiology', 'Nutrition Basics', 'Client Management', 'Safety'],
+            future: '🔥 Very High — fitness culture explosion in urban India; gym memberships, home training apps, and corporate wellness programs are all booming.'
+        },
+        'Yoga Instructor': {
+            branch: 'Yoga Instruction',
+            description: 'Teaches yoga postures, breathing techniques, and meditation practices to individuals or groups for physical, mental, and spiritual wellness.',
+            skills: ['Asana Expertise', 'Anatomy', 'Pranayama', 'Teaching Methodology', 'Communication', 'Patience', 'Cultural Knowledge'],
+            future: '🔥 Very High — India is the global yoga capital; international certifications, wellness resorts, and online yoga platforms offer enormous global opportunities.'
+        },
+        'Sports Physiotherapist': {
+            branch: 'Sports Rehabilitation',
+            description: 'Assesses and treats sports-related injuries, designs rehabilitation programs, and helps athletes return to peak performance safely.',
+            skills: ['Physiotherapy', 'Sports Medicine', 'Anatomy', 'Rehabilitation', 'Manual Therapy', 'Injury Prevention', 'Patient Assessment'],
+            future: '🔥 Very High — every professional sports team now mandates physiotherapists; clinic-based sports rehab is also growing rapidly across Indian cities.'
+        },
+        'Sports Psychologist': {
+            branch: 'Sports Psychology',
+            description: 'Helps athletes manage performance anxiety, build mental resilience, improve focus, and maintain motivation throughout their careers.',
+            skills: ['Psychology', 'Counseling', 'Performance Coaching', 'Communication', 'Research', 'Behavioral Analysis', 'Empathy'],
+            future: '🔆 High — mental performance is now recognized as critical in elite sport; BCCI, Hockey India, and Olympic programs are actively hiring.'
+        },
+        'Sports Nutritionist': {
+            branch: 'Sports Nutrition',
+            description: 'Creates customized nutrition and diet plans for athletes to maximize performance, recovery, and long-term physical health.',
+            skills: ['Sports Nutrition Science', 'Dietetics', 'Physiology', 'Meal Planning', 'Supplement Knowledge', 'Data Analysis', 'Client Communication'],
+            future: '🔆 High — growing athlete awareness about nutrition science is making this a specialized and well-paying career in professional sports.'
+        },
+        'Sports Manager': {
+            branch: 'Sports Management',
+            description: 'Handles the business, contractual, marketing, and administrative aspects of an athlete\'s or sports organization\'s career and operations.',
+            skills: ['Sports Business', 'Negotiation', 'Contract Law', 'Marketing', 'Networking', 'Financial Planning', 'Event Management'],
+            future: '🔆 High — professionalization of Indian sports leagues is creating strong demand for business-savvy sports management professionals.'
+        },
+        'Cricket Coach': {
+            branch: 'Cricket Coaching',
+            description: 'Trains cricketers in batting, bowling, fielding, and tactical aspects of the game at club, state, or national levels.',
+            skills: ['Cricket Expertise', 'Coaching Certification', 'Tactical Analysis', 'Video Analysis', 'Communication', 'Player Development', 'Patience'],
+            future: '🔥 Very High — India\'s cricket ecosystem is massive; BCCI academies, state associations, private academies, and IPL franchises all hire extensively.'
+        },
+        'Football Coach': {
+            branch: 'Football Coaching',
+            description: 'Develops tactical systems, trains players, and manages team performance in football across club, school, or federation levels.',
+            skills: ['Football Expertise', 'UEFA/AFC Coaching Badges', 'Tactical Planning', 'Fitness Training', 'Team Management', 'Video Analysis'],
+            future: '🔆 High — ISL growth, I-League expansion, and grassroots federations are driving steady increase in demand for qualified football coaches.'
+        },
+        'Swimming Coach': {
+            branch: 'Swimming Coaching',
+            description: 'Teaches swimming techniques, improves stroke efficiency, and trains competitive swimmers for club or national-level competitions.',
+            skills: ['Swimming Expertise', 'Coaching Certification', 'Stroke Analysis', 'Training Program Design', 'Safety', 'Motivational Skills'],
+            future: '🔆 High — increased Olymp focus on swimming, growing number of aquatic academies, and school sports programs are expanding career options.'
+        },
+        'Esports Player / Coach': {
+            branch: 'Esports',
+            description: 'Competes or trains teams professionally in video game tournaments, combining deep game knowledge with strategic and technical skills.',
+            skills: ['Game Mastery', 'Strategic Thinking', 'Teamwork', 'Reflexes', 'Mental Conditioning', 'Communication', 'Analytical Skills'],
+            future: '🔥 Very High — India\'s esports industry is projected to cross ₹1,100 crore by 2025; BGMI, Valorant, and FIFA tournaments now offer significant prize pools.'
+        },
+        'Sports Administrator': {
+            branch: 'Sports Administration',
+            description: 'Manages governance, policy, funding, and operations of sports federations, associations, or government sports bodies.',
+            skills: ['Sports Policy', 'Administration', 'Leadership', 'Event Management', 'Stakeholder Relations', 'Budgeting', 'Legal Knowledge'],
+            future: '🔆 High — professionalization of Indian sports governance is creating demand for trained administrators beyond traditional bureaucratic appointments.'
+        },
+        'Olympics Coach': {
+            branch: 'High Performance Coaching',
+            description: 'Prepares athletes specifically for Olympic-level competition, managing advanced periodization, peaking strategies, and elite performance systems.',
+            skills: ['Elite Coaching Methodology', 'Periodization', 'Sports Science', 'Mental Conditioning', 'International Competition Knowledge', 'Leadership'],
+            future: '🔆 High — India\'s Olympic ambitions for 2028 and 2036 are driving significant investment in specialized high-performance coaches.'
+        },
+        'Food Safety Officer': {
+            branch: 'Food Safety',
+            description: 'Inspects food products and establishments to ensure compliance with food safety standards.',
+            skills: ['Food Science', 'Inspection', 'Regulatory Knowledge', 'Lab Testing', 'Report Writing'],
+            future: '📈 High — food safety awareness growing rapidly among Indian consumers'
+        },
+        'Railway Officer': {
+            branch: 'Railway Management',
+            description: 'Manages railway operations, infrastructure and services across India\'s massive rail network.',
+            skills: ['Engineering/Management', 'Operations', 'Leadership', 'Problem Solving', 'Railway Systems'],
+            future: '📈 High — Indian Railways undergoing massive modernization and expansion'
+        },
+        'Bank PO': {
+            branch: 'Banking',
+            description: 'Manages banking operations, customer service and branch activities in public sector banks.',
+            skills: ['Banking Knowledge', 'Mathematics', 'Communication', 'Customer Service', 'Financial Products'],
+            future: '📈 High — IBPS and SBI recruiting thousands of POs annually'
+        },
+        'SSC Officer': {
+            branch: 'Government Service',
+            description: 'Works in various central government departments through Staff Selection Commission recruitment.',
+            skills: ['General Knowledge', 'Mathematics', 'English', 'Reasoning', 'Computer Skills'],
+            future: '📈 High — millions of government positions filled through SSC every year'
+        },
+        'Public Sector Engineer': {
+            branch: 'Public Sector Engineering',
+            description: 'Works as a technical expert in PSUs like ONGC, BHEL, NTPC and other government enterprises.',
+            skills: ['Engineering Expertise', 'Project Management', 'Technical Knowledge', 'Problem Solving'],
+            future: '📈 Good — PSUs offer job security and good pay with regular GATE-based recruitment'
+        },
+        'Postal Officer': {
+            branch: 'Postal Services',
+            description: 'Manages postal services, banking through India Post and implements government financial schemes.',
+            skills: ['Operations Management', 'Customer Service', 'Financial Services', 'Communication', 'Computer Skills'],
+            future: '📈 Moderate — India Post transforming with digital and banking services'
+        },
+        'State Civil Service Officer': {
+            branch: 'State Civil Services',
+            description: 'Administers state government functions through state civil service examinations like APPSC, TNPSC.',
+            skills: ['Administrative Skills', 'Policy Knowledge', 'Leadership', 'Communication', 'Regional Language'],
+            future: '📈 High — every state has thousands of civil service positions'
+        },
+        'Administrative Assistant': {
+            branch: 'Administration',
+            description: 'Provides clerical and administrative support to government offices and departments.',
+            skills: ['Computer Skills', 'Communication', 'Office Management', 'Filing', 'MS Office', 'Organization'],
+            future: '📈 Moderate — large number of positions with good job security'
+        },
+        'Clerk': {
+            branch: 'Office Administration',
+            description: 'Performs data entry, filing and routine administrative tasks in government offices.',
+            skills: ['Typing', 'Data Entry', 'MS Office', 'Filing', 'Communication', 'Attention to Detail'],
+            future: '📈 Moderate — still large recruitment but being reduced by digitization'
+        },
+        'Data Entry Operator': {
+            branch: 'Data Operations',
+            description: 'Enters and manages data in government systems and databases accurately and efficiently.',
+            skills: ['Typing Speed', 'MS Office', 'Accuracy', 'Computer Skills', 'Attention to Detail'],
+            future: '📈 Moderate — government digitization projects creating short-term demand'
+        },
+        'Accounts Officer': {
+            branch: 'Government Accounts',
+            description: 'Manages financial accounts and budgets of government departments and public sector units.',
+            skills: ['Accounting', 'Tally', 'Government Financial Rules', 'Auditing', 'Excel', 'Attention to Detail'],
+            future: '📈 Good — every government department needs accounts officers'
+        },
+        'Audit Officer': {
+            branch: 'Government Audit',
+            description: 'Examines and verifies financial records of government departments for accuracy and compliance.',
+            skills: ['Auditing', 'Accounting Standards', 'Investigation', 'Report Writing', 'Financial Analysis'],
+            future: '📈 Good — CAG and internal audit departments constantly recruiting'
+        },
+        'Revenue Officer': {
+            branch: 'Revenue Administration',
+            description: 'Manages land records, revenue collection and enforces revenue laws at district level.',
+            skills: ['Revenue Law', 'Land Records', 'Communication', 'Regional Language', 'Administration', 'Computer Skills'],
+            future: '📈 Good — land digitization and revenue modernization creating demand'
+        },
+        'Policy Analyst': {
+            branch: 'Policy Research',
+            description: 'Researches and evaluates government policies and recommends improvements based on data.',
+            skills: ['Research', 'Data Analysis', 'Economics', 'Writing', 'Critical Thinking', 'Policy Knowledge'],
+            future: '🔥 High — evidence-based policy making becoming priority for Indian government'
+        },
+        'Urban Planner': {
+            branch: 'Urban Planning',
+            description: 'Designs and develops plans for land use, infrastructure and growth of towns and cities.',
+            skills: ['Urban Planning', 'GIS', 'AutoCAD', 'Policy Analysis', 'Public Administration', 'Research'],
+            future: '🔥 High — smart cities mission and rapid urbanization driving demand'
+        },
+        'Planning Officer': {
+            branch: 'Government Planning',
+            description: 'Develops and monitors implementation of government development plans and schemes.',
+            skills: ['Project Planning', 'Data Analysis', 'Economics', 'Report Writing', 'Monitoring & Evaluation'],
+            future: '📈 High — government scheme implementation needing dedicated planning officers'
+        },
+        'Rural Development Officer': {
+            branch: 'Rural Development',
+            description: 'Implements government schemes for rural infrastructure, livelihoods and community development.',
+            skills: ['Rural Development', 'Communication', 'Project Management', 'Regional Language', 'Government Schemes'],
+            future: '📈 High — India\'s rural development budget increasing with schemes like MGNREGA'
+        },
+        'Social Welfare Officer': {
+            branch: 'Social Welfare',
+            description: 'Implements welfare schemes for marginalized communities including women, children and disabled.',
+            skills: ['Social Work', 'Communication', 'Empathy', 'Government Schemes', 'Community Mobilization'],
+            future: '📈 High — government expanding social protection schemes rapidly'
+        },
+        'Women and Child Development Officer': {
+            branch: 'Women & Child Welfare',
+            description: 'Implements programs for women empowerment and child welfare under government ministry.',
+            skills: ['Social Work', 'Child Development', 'Gender Studies', 'Communication', 'Project Management'],
+            future: '📈 High — government focus on women and child welfare increasing'
+        },
+        'Panchayat Officer': {
+            branch: 'Local Government',
+            description: 'Manages local self-governance and implements development schemes at village level.',
+            skills: ['Rural Administration', 'Communication', 'Regional Language', 'Government Schemes', 'Leadership'],
+            future: '📈 Good — decentralization giving more powers and positions to panchayat level'
+        },
+        'Disaster Management Officer': {
+            branch: 'Disaster Management',
+            description: 'Plans and coordinates responses to natural and man-made disasters to minimize loss of life.',
+            skills: ['Emergency Management', 'Crisis Communication', 'Logistics', 'Leadership', 'First Aid', 'GIS'],
+            future: '🔥 High — climate change increasing frequency of disasters in India'
+        },
+        'Labour Officer': {
+            branch: 'Labour Administration',
+            description: 'Enforces labour laws, resolves industrial disputes and protects workers\' rights and welfare.',
+            skills: ['Labour Law', 'Mediation', 'Communication', 'Investigation', 'Report Writing', 'Inspection'],
+            future: '📈 Good — gig economy and new labour codes creating need for labour officials'
+        },
+        'Transport Officer': {
+            branch: 'Transport Administration',
+            description: 'Regulates and manages transport systems, vehicle registration and road safety enforcement.',
+            skills: ['Transport Law', 'Administration', 'Computer Skills', 'Communication', 'Inspection'],
+            future: '📈 Good — vehicle growth and road safety focus driving transport department expansion'
+        },
+        'Election Officer': {
+            branch: 'Election Management',
+            description: 'Conducts and supervises free and fair elections at various levels of Indian democracy.',
+            skills: ['Electoral Law', 'Administration', 'Logistics', 'Communication', 'Impartiality', 'Coordination'],
+            future: '📈 Good — regular elections at all levels ensuring steady demand'
+        },
+        'Municipal Officer': {
+            branch: 'Urban Services',
+            description: 'Manages city services like sanitation, water supply and urban infrastructure at local level.',
+            skills: ['Urban Management', 'Administration', 'Public Service', 'Communication', 'Problem Solving'],
+            future: '📈 High — urbanization expanding municipal corporations across India'
+        },
+        'Public Health Officer': {
+            branch: 'Public Health',
+            description: 'Implements public health programs and disease prevention initiatives at community level.',
+            skills: ['Public Health', 'Epidemiology', 'Communication', 'Medical Knowledge', 'Program Management'],
+            future: '🔥 Very High — COVID-19 showed India needs massive public health infrastructure'
+        },
+        'Diplomat': {
+            branch: 'Diplomacy',
+            description: 'Represents India\'s interests in foreign countries and negotiates international agreements.',
+            skills: ['International Relations', 'Languages', 'Diplomacy', 'Communication', 'Cultural Sensitivity', 'Negotiation'],
+            future: '📈 High — India\'s growing global influence expanding diplomatic corps'
+        },
+        'Foreign Service Assistant': {
+            branch: 'Diplomatic Services',
+            description: 'Supports diplomatic missions and manages administrative functions of Indian embassies abroad.',
+            skills: ['Languages', 'Administration', 'Communication', 'Cultural Awareness', 'Computer Skills'],
+            future: '📈 Good — Indian embassies expanding globally needing support staff'
+        },
+        'Statistical Officer': {
+            branch: 'Statistics',
+            description: 'Collects, analyzes and interprets statistical data for government planning and policy decisions.',
+            skills: ['Statistics', 'Data Analysis', 'Mathematics', 'R/Python', 'Excel', 'Report Writing'],
+            future: '🔥 High — data-driven governance making statisticians essential'
+        },
+        'Information Officer': {
+            branch: 'Government Communications',
+            description: 'Manages government communication, press releases and public information dissemination.',
+            skills: ['Communication', 'Media Relations', 'Writing', 'Digital Media', 'Public Relations', 'Journalism'],
+            future: '📈 Good — government transparency initiatives increasing information officer roles'
+        },
+        'Research Officer': {
+            branch: 'Research',
+            description: 'Conducts research and provides expert inputs for government departments and policy bodies.',
+            skills: ['Research Methodology', 'Data Analysis', 'Writing', 'Subject Expertise', 'Critical Thinking'],
+            future: '📈 High — evidence-based policymaking increasing research officer positions'
+        }
+    };
+
+    const details = careerPathDetails[selectedPath] || {
+        branch: 'General Career Path',
+        description: 'This career path is not yet fully documented, but it is part of the broader exploration experience. Come back soon for a richer, expanded profile.',
+        skills: ['Research industry requirements', 'Connect with mentors', 'Build relevant projects', 'Develop communication skills'],
+        future: '📈 Growing — more detail will be added soon.'
+    };
+
+    document.getElementById('pathTitle').textContent = selectedPath;
+    document.getElementById('pathBranch').textContent = `${details.label || 'Branch'}: ${details.branch}`;
+    document.getElementById('pathDescription').textContent = details.description;
+    document.getElementById('pathFuture').textContent = details.future;
+    document.getElementById('quickBranch').textContent = details.branch;
+    branchLabel.textContent = details.label || 'Branch';
+    document.getElementById('quickSkills').textContent = details.skills.join(', ');
+    document.getElementById('quickFuture').textContent = details.future;
+
+    const skillsList = document.getElementById('pathSkills');
+    skillsList.innerHTML = '';
+    details.skills.forEach(skill => {
+        const item = document.createElement('li');
+        item.textContent = skill;
+        skillsList.appendChild(item);
+    });
+    document.title = `${selectedPath} · NextStep`;
+</script>
+</body>
+</html>

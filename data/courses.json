@@ -1,0 +1,3050 @@
+[
+  {
+    "Level": "&#9612; AFTER 10TH",
+    "Stream": "",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "",
+    "Stream": "Higher Secondary (10+2)",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "Higher Secondary (10+2)",
+    "Course Name": "Science Stream (PCM)",
+    "Duration": "2 Years",
+    "Description": "Physics, Chemistry, Mathematics; gateway to Engineering, Architecture and Pure Sciences",
+    "Entrance Exam / Pathway": "State Board / CBSE / ICSE / ISC"
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "Higher Secondary (10+2)",
+    "Course Name": "Science Stream (PCB)",
+    "Duration": "2 Years",
+    "Description": "Physics, Chemistry, Biology; gateway to Medical, Pharmacy, Nursing and Life Sciences",
+    "Entrance Exam / Pathway": "State Board / CBSE / ICSE / ISC"
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "Higher Secondary (10+2)",
+    "Course Name": "Science Stream (PCMB)",
+    "Duration": "2 Years",
+    "Description": "All four core science subjects; maximum flexibility for both engineering and medical UG options",
+    "Entrance Exam / Pathway": "State Board / CBSE / ICSE / ISC"
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "Higher Secondary (10+2)",
+    "Course Name": "Commerce Stream",
+    "Duration": "2 Years",
+    "Description": "Accountancy, Business Studies, Economics; pathway to B.Com, BBA, CA, CS and finance careers",
+    "Entrance Exam / Pathway": "State Board / CBSE / ICSE / ISC"
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "Higher Secondary (10+2)",
+    "Course Name": "Arts / Humanities Stream",
+    "Duration": "2 Years",
+    "Description": "History, Civics, Economics, Language subjects; pathway to BA, Law, Journalism and Social Sciences",
+    "Entrance Exam / Pathway": "State Board / CBSE / ICSE / ISC"
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "Higher Secondary (10+2)",
+    "Course Name": "Vocational / Bifocal Stream",
+    "Duration": "2 Years",
+    "Description": "Academic studies combined with a vocational subject (IT, Electronics, Agriculture) for early employability",
+    "Entrance Exam / Pathway": "State Board / CBSE"
+  },
+  {
+    "Level": "",
+    "Stream": "Diploma / Polytechnic",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "Diploma / Polytechnic",
+    "Course Name": "Diploma in Civil Engineering",
+    "Duration": "3 Years",
+    "Description": "Structures, construction materials, surveying and site management; lateral entry to B.Tech available",
+    "Entrance Exam / Pathway": "State Polytechnic Entrance / Direct Admission"
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "Diploma / Polytechnic",
+    "Course Name": "Diploma in Mechanical Engineering",
+    "Duration": "3 Years",
+    "Description": "Machine design, thermodynamics, manufacturing processes; widely applicable across industries",
+    "Entrance Exam / Pathway": "State Polytechnic Entrance / Direct Admission"
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "Diploma / Polytechnic",
+    "Course Name": "Diploma in Electrical Engineering",
+    "Duration": "3 Years",
+    "Description": "Circuits, power systems, electrical machines; leads to roles in power sector and manufacturing",
+    "Entrance Exam / Pathway": "State Polytechnic Entrance / Direct Admission"
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "Diploma / Polytechnic",
+    "Course Name": "Diploma in Electronics & Communication Engineering",
+    "Duration": "3 Years",
+    "Description": "Electronics, communication systems, embedded systems; telecom and consumer electronics industries",
+    "Entrance Exam / Pathway": "State Polytechnic Entrance / Direct Admission"
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "Diploma / Polytechnic",
+    "Course Name": "Diploma in Computer Science & Engineering",
+    "Duration": "3 Years",
+    "Description": "Programming, networking, databases; fastest path to IT jobs or lateral B.Tech entry",
+    "Entrance Exam / Pathway": "State Polytechnic Entrance / Direct Admission"
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "Diploma / Polytechnic",
+    "Course Name": "Diploma in Automobile Engineering",
+    "Duration": "3 Years",
+    "Description": "Vehicle systems, engines, automotive electronics; auto manufacturing and service sector",
+    "Entrance Exam / Pathway": "State Polytechnic Entrance / Direct Admission"
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "Diploma / Polytechnic",
+    "Course Name": "Diploma in Information Technology",
+    "Duration": "3 Years",
+    "Description": "Software, networking, web development; lateral entry to B.Tech IT available",
+    "Entrance Exam / Pathway": "State Polytechnic Entrance / Direct Admission"
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "Diploma / Polytechnic",
+    "Course Name": "Diploma in Pharmacy (D.Pharm)",
+    "Duration": "2 Years",
+    "Description": "Dispensing of medicines and pharmaceutical sciences; eligible to work in retail and hospital pharmacies",
+    "Entrance Exam / Pathway": "State Board / Direct Admission"
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "Diploma / Polytechnic",
+    "Course Name": "Diploma in Architecture Assistantship",
+    "Duration": "3 Years",
+    "Description": "Architectural drawing, building design basics, construction documents; assists architects and engineers",
+    "Entrance Exam / Pathway": "State Polytechnic Entrance / Direct Admission"
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "Diploma / Polytechnic",
+    "Course Name": "Diploma in Chemical Engineering",
+    "Duration": "3 Years",
+    "Description": "Chemical processes, plant operations, safety; chemical and pharmaceutical industries",
+    "Entrance Exam / Pathway": "State Polytechnic Entrance / Direct Admission"
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "Diploma / Polytechnic",
+    "Course Name": "Diploma in Textile Technology",
+    "Duration": "3 Years",
+    "Description": "Fibre science, fabric manufacturing, textile machinery; textile mills and garment export industry",
+    "Entrance Exam / Pathway": "State Polytechnic Entrance / Direct Admission"
+  },
+  {
+    "Level": "",
+    "Stream": "ITI / Vocational Training",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "ITI / Vocational Training",
+    "Course Name": "ITI Electrician",
+    "Duration": "2 Years",
+    "Description": "Electrical wiring, panel installation and maintenance; highly demanded in construction and manufacturing",
+    "Entrance Exam / Pathway": "NCVT / State CTS"
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "ITI / Vocational Training",
+    "Course Name": "ITI Fitter",
+    "Duration": "2 Years",
+    "Description": "Assembly, fitting and maintenance of mechanical components; core trade in engineering workshops",
+    "Entrance Exam / Pathway": "NCVT / State CTS"
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "ITI / Vocational Training",
+    "Course Name": "ITI Welder",
+    "Duration": "1 Year",
+    "Description": "Arc, gas, TIG and MIG welding techniques; essential in construction, shipbuilding and fabrication",
+    "Entrance Exam / Pathway": "NCVT / State CTS"
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "ITI / Vocational Training",
+    "Course Name": "ITI Turner",
+    "Duration": "2 Years",
+    "Description": "Lathe machine operation, precision turning of metal components; for manufacturing industries",
+    "Entrance Exam / Pathway": "NCVT / State CTS"
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "ITI / Vocational Training",
+    "Course Name": "ITI COPA (Computer Operator & Programming Assistant)",
+    "Duration": "1 Year",
+    "Description": "Computer basics, office applications, data entry; entry-level IT and government sector roles",
+    "Entrance Exam / Pathway": "NCVT / State CTS"
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "ITI / Vocational Training",
+    "Course Name": "ITI Plumber",
+    "Duration": "1 Year",
+    "Description": "Pipefitting, sanitation systems, water supply; construction and infrastructure sector",
+    "Entrance Exam / Pathway": "NCVT / State CTS"
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "ITI / Vocational Training",
+    "Course Name": "ITI Refrigeration & AC Mechanic (RAC)",
+    "Duration": "2 Years",
+    "Description": "Installation and maintenance of refrigerators and ACs; growing demand in urban India",
+    "Entrance Exam / Pathway": "NCVT / State CTS"
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "ITI / Vocational Training",
+    "Course Name": "ITI Mechanic Motor Vehicle (MMV)",
+    "Duration": "2 Years",
+    "Description": "Automobile diagnosis and repair; roles in workshops, garages and auto dealerships",
+    "Entrance Exam / Pathway": "NCVT / State CTS"
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "ITI / Vocational Training",
+    "Course Name": "ITI Mechanic Diesel",
+    "Duration": "1 Year",
+    "Description": "Diesel engine maintenance and repair; transport, railways and heavy machinery sectors",
+    "Entrance Exam / Pathway": "NCVT / State CTS"
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "ITI / Vocational Training",
+    "Course Name": "ITI Draughtsman Civil",
+    "Duration": "2 Years",
+    "Description": "Technical drawing, CAD basics, construction drawings; assist civil engineers and architects",
+    "Entrance Exam / Pathway": "NCVT / State CTS"
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "ITI / Vocational Training",
+    "Course Name": "ITI Wireman",
+    "Duration": "2 Years",
+    "Description": "Wiring, earthing, electrical safety for buildings and factories; construction sector demand",
+    "Entrance Exam / Pathway": "NCVT / State CTS"
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "ITI / Vocational Training",
+    "Course Name": "ITI Stenography (English / Hindi)",
+    "Duration": "1 Year",
+    "Description": "Shorthand writing, typing and office skills; judiciary, government and corporate sector jobs",
+    "Entrance Exam / Pathway": "NCVT / State CTS"
+  },
+  {
+    "Level": "",
+    "Stream": "Certificate Courses",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "Certificate Courses",
+    "Course Name": "Certificate in Computer Applications (CCA / CCC)",
+    "Duration": "6 Months - 1 Year",
+    "Description": "MS Office, internet browsing, email; NIELIT-certified; basic requirement for many government jobs",
+    "Entrance Exam / Pathway": "NIELIT / Direct Admission"
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "Certificate Courses",
+    "Course Name": "Certificate in Tally & Accounting (Tally ERP / Prime)",
+    "Duration": "6 Months",
+    "Description": "GST filing, bookkeeping, payroll using Tally; essential skill for commerce and accounting jobs",
+    "Entrance Exam / Pathway": "Direct Admission / Institute-level"
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "Certificate Courses",
+    "Course Name": "Certificate in Graphic Design (CorelDraw / Photoshop)",
+    "Duration": "6 Months - 1 Year",
+    "Description": "Visual design, logo creation, print media; creative jobs in advertising and media",
+    "Entrance Exam / Pathway": "Direct Admission"
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "Certificate Courses",
+    "Course Name": "Certificate in Fashion & Dress Designing",
+    "Duration": "6 Months - 1 Year",
+    "Description": "Pattern making, stitching and basic garment construction; boutique and fashion career",
+    "Entrance Exam / Pathway": "Direct Admission / NIFT Foundation"
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "Certificate Courses",
+    "Course Name": "Certificate in Beauty & Wellness (Cosmetology)",
+    "Duration": "6 Months - 1 Year",
+    "Description": "Haircare, skincare, makeup, salon management; beauty industry career",
+    "Entrance Exam / Pathway": "Direct Admission (VLCC, CIDESCO etc.)"
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "Certificate Courses",
+    "Course Name": "Certificate in Hospitality & Food Production",
+    "Duration": "1 Year",
+    "Description": "Kitchen operations, food service, hospitality basics; hotel and restaurant industry",
+    "Entrance Exam / Pathway": "Direct Admission"
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "Certificate Courses",
+    "Course Name": "Certificate in Photography & Videography",
+    "Duration": "6 Months - 1 Year",
+    "Description": "DSLR/mirrorless photography, editing, lighting; freelance and media career",
+    "Entrance Exam / Pathway": "Direct Admission"
+  },
+  {
+    "Level": "After 10th",
+    "Stream": "Certificate Courses",
+    "Course Name": "Certificate in Spoken English & Personality Development",
+    "Duration": "3 - 6 Months",
+    "Description": "Communication skills, grammar, pronunciation; essential soft skill for any career",
+    "Entrance Exam / Pathway": "Direct Admission"
+  },
+  {
+    "Level": "&#9612; AFTER 12TH / INTER",
+    "Stream": "",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "",
+    "Stream": "Engineering & Technology",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Engineering & Technology",
+    "Course Name": "B.Tech / B.E. (Various Branches)",
+    "Duration": "4 Years",
+    "Description": "Four-year undergraduate engineering degree in CSE, ECE, Mechanical, Civil, Chemical etc.; most sought-after UG degree in India",
+    "Entrance Exam / Pathway": "JEE Main, JEE Advanced, AP/TS EAMCET, MHT CET, KCET, KEAM, WBJEE, BITSAT"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Engineering & Technology",
+    "Course Name": "B.Arch (Bachelor of Architecture)",
+    "Duration": "5 Years",
+    "Description": "Five-year professional degree in architectural design, urban planning and construction technology",
+    "Entrance Exam / Pathway": "NATA, JEE Paper 2 (B.Arch)"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Engineering & Technology",
+    "Course Name": "B.Plan (Bachelor of Planning)",
+    "Duration": "4 Years",
+    "Description": "Urban and regional planning, land use and infrastructure policy; offered at NITs and planning schools",
+    "Entrance Exam / Pathway": "JEE Paper 2 (B.Plan), State CETs"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Engineering & Technology",
+    "Course Name": "Diploma Lateral Entry to B.Tech (2nd Year)",
+    "Duration": "3 Years",
+    "Description": "Direct admission to 2nd year B.Tech for Polytechnic diploma holders; saves one year",
+    "Entrance Exam / Pathway": "ECET (AP/TS), LEET (Punjab), State lateral entry exams"
+  },
+  {
+    "Level": "",
+    "Stream": "Medical & Health Sciences",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Medical & Health Sciences",
+    "Course Name": "MBBS",
+    "Duration": "5.5 Years",
+    "Description": "Foundation medical degree for becoming a qualified allopathic doctor; one of the most competitive programs in India",
+    "Entrance Exam / Pathway": "NEET-UG"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Medical & Health Sciences",
+    "Course Name": "BDS (Dentistry)",
+    "Duration": "5 Years",
+    "Description": "Dental surgeon degree; diagnosis and treatment of dental and oral diseases",
+    "Entrance Exam / Pathway": "NEET-UG"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Medical & Health Sciences",
+    "Course Name": "BAMS (Ayurveda)",
+    "Duration": "5.5 Years",
+    "Description": "Bachelor of Ayurvedic Medicine and Surgery; classical Indian medicine system",
+    "Entrance Exam / Pathway": "NEET-UG"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Medical & Health Sciences",
+    "Course Name": "BHMS (Homeopathy)",
+    "Duration": "5.5 Years",
+    "Description": "Bachelor of Homoeopathic Medicine and Surgery; alternative medicine practice",
+    "Entrance Exam / Pathway": "NEET-UG"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Medical & Health Sciences",
+    "Course Name": "BUMS (Unani)",
+    "Duration": "5.5 Years",
+    "Description": "Bachelor of Unani Medicine and Surgery; traditional Greco-Arabic medicine system",
+    "Entrance Exam / Pathway": "NEET-UG"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Medical & Health Sciences",
+    "Course Name": "B.Pharm (Pharmacy)",
+    "Duration": "4 Years",
+    "Description": "Pharmaceutical sciences, drug formulation, clinical pharmacy; pharma industry or hospital career",
+    "Entrance Exam / Pathway": "AP EAMCET / State Pharmacy Entrance"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Medical & Health Sciences",
+    "Course Name": "Pharm.D (Doctor of Pharmacy)",
+    "Duration": "6 Years",
+    "Description": "Clinical pharmacy doctoral-level program; patient care and drug therapy management",
+    "Entrance Exam / Pathway": "NEET / State Pharmacy Entrance"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Medical & Health Sciences",
+    "Course Name": "B.Sc Nursing",
+    "Duration": "4 Years",
+    "Description": "Professional nursing degree; critical care, community health, midwifery; direct patient care career",
+    "Entrance Exam / Pathway": "NEET / State Nursing Entrance / College-level"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Medical & Health Sciences",
+    "Course Name": "GNM (General Nursing & Midwifery)",
+    "Duration": "3 Yrs + 6 Months Internship",
+    "Description": "Diploma-level nursing program; widely accepted in government and private hospitals",
+    "Entrance Exam / Pathway": "State Nursing Entrance / Direct Admission"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Medical & Health Sciences",
+    "Course Name": "ANM (Auxiliary Nursing & Midwifery)",
+    "Duration": "2 Years",
+    "Description": "Basic nursing; community health worker; maternal and child healthcare roles",
+    "Entrance Exam / Pathway": "State Nursing Entrance / Direct Admission"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Medical & Health Sciences",
+    "Course Name": "BPT (Physiotherapy)",
+    "Duration": "4.5 Years",
+    "Description": "Physical rehabilitation, sports medicine, musculoskeletal therapy; growing healthcare career",
+    "Entrance Exam / Pathway": "IPU CET, MH CET, State Physiotherapy Entrance"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Medical & Health Sciences",
+    "Course Name": "D.Pharm (Diploma in Pharmacy)",
+    "Duration": "2 Years",
+    "Description": "Short-duration pharmacy diploma; can work in retail or hospital pharmacy; eligible to own a pharmacy shop",
+    "Entrance Exam / Pathway": "State Board / Direct Admission"
+  },
+  {
+    "Level": "",
+    "Stream": "Commerce, Management & Finance",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Commerce, Management & Finance",
+    "Course Name": "B.Com (Bachelor of Commerce)",
+    "Duration": "3 Years",
+    "Description": "Core commerce degree covering accounting, finance, taxation, auditing and business law",
+    "Entrance Exam / Pathway": "Merit-based / DU JAT / CUET"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Commerce, Management & Finance",
+    "Course Name": "B.Com (Hons)",
+    "Duration": "3 Years",
+    "Description": "Specialized commerce degree with greater academic depth; preferred for CA, CPA and research pursuits",
+    "Entrance Exam / Pathway": "CUET / DU Cut-off / State University Entrance"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Commerce, Management & Finance",
+    "Course Name": "BBA (Bachelor of Business Administration)",
+    "Duration": "3 Years",
+    "Description": "Business management fundamentals; marketing, HR, operations; popular gateway to MBA",
+    "Entrance Exam / Pathway": "CUET / SET / IPU CET / College-level"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Commerce, Management & Finance",
+    "Course Name": "Integrated MBA (5-Year)",
+    "Duration": "5 Years",
+    "Description": "Combined UG + PG management program; saves time; IIM Indore, Symbiosis, NMIMS",
+    "Entrance Exam / Pathway": "IPMAT (IIM Indore), JIPMAT, NPAT"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Commerce, Management & Finance",
+    "Course Name": "CA Foundation (Chartered Accountancy)",
+    "Duration": "Varies",
+    "Description": "ICAI's CA program; India's top professional accounting qualification; highly valued in finance careers",
+    "Entrance Exam / Pathway": "ICAI CA Foundation Exam"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Commerce, Management & Finance",
+    "Course Name": "CS Foundation (Company Secretary)",
+    "Duration": "Varies",
+    "Description": "ICSI program; corporate governance, compliance, secretarial practice; niche and valuable qualification",
+    "Entrance Exam / Pathway": "ICSI CS Foundation Exam"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Commerce, Management & Finance",
+    "Course Name": "CMA Foundation (Cost & Management Accountant)",
+    "Duration": "Varies",
+    "Description": "ICMAI program; cost accounting, financial analysis, management accounting; industry-valued certification",
+    "Entrance Exam / Pathway": "ICMAI CMA Foundation Exam"
+  },
+  {
+    "Level": "",
+    "Stream": "Science & Technology",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Science & Technology",
+    "Course Name": "B.Sc (Physics / Chemistry / Mathematics)",
+    "Duration": "3 Years",
+    "Description": "Core pure science degree; foundation for research, competitive exams (UPSC, GATE) and PG studies",
+    "Entrance Exam / Pathway": "CUET / State University Entrance / Merit"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Science & Technology",
+    "Course Name": "B.Sc (Biotechnology / Microbiology / Biochemistry)",
+    "Duration": "3 Years",
+    "Description": "Life sciences at molecular and cellular level; research and pharmaceutical industry careers",
+    "Entrance Exam / Pathway": "CUET / State Entrance / Direct"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Science & Technology",
+    "Course Name": "B.Sc Computer Science",
+    "Duration": "3 Years",
+    "Description": "Programming, algorithms, OS, databases; alternative to B.Tech CSE",
+    "Entrance Exam / Pathway": "CUET / College-level Entrance"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Science & Technology",
+    "Course Name": "BCA (Bachelor of Computer Applications)",
+    "Duration": "3 Years",
+    "Description": "Software development, networking, IT applications; popular gateway to MCA or IT industry",
+    "Entrance Exam / Pathway": "CUET / State CET / Direct Admission"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Science & Technology",
+    "Course Name": "B.Sc Data Science / Statistics",
+    "Duration": "3 Years",
+    "Description": "Data analysis, machine learning foundations, statistical modelling; career in analytics and data science",
+    "Entrance Exam / Pathway": "CUET / Merit-based"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Science & Technology",
+    "Course Name": "Integrated M.Sc (5-Year)",
+    "Duration": "5 Years",
+    "Description": "Combined BSc + MSc program offered by IITs via JAM; for science enthusiasts aiming for research",
+    "Entrance Exam / Pathway": "IIT JAM, IISER Aptitude Test, CUCET"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Science & Technology",
+    "Course Name": "B.Sc Agriculture",
+    "Duration": "4 Years",
+    "Description": "Crop science, soil science, agronomy, farm management; government agriculture services and agri-business",
+    "Entrance Exam / Pathway": "ICAR AIEEA, State Agriculture Entrance Exams"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Science & Technology",
+    "Course Name": "B.Sc Forensic Science",
+    "Duration": "3 Years",
+    "Description": "Crime scene investigation, toxicology, questioned documents; emerging career in law enforcement",
+    "Entrance Exam / Pathway": "CUET / College Entrance / Direct"
+  },
+  {
+    "Level": "",
+    "Stream": "Arts, Humanities & Social Sciences",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Arts, Humanities & Social Sciences",
+    "Course Name": "BA (English / History / Economics / Sociology / Psychology / Political Science)",
+    "Duration": "3 Years",
+    "Description": "Flexible humanities degree; broad career options in civil services, education, media and social work",
+    "Entrance Exam / Pathway": "CUET / Merit-based / College Entrance"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Arts, Humanities & Social Sciences",
+    "Course Name": "BJMC / BA Journalism & Mass Communication",
+    "Duration": "3 Years",
+    "Description": "Reporting, editing, broadcasting, digital media; entry to journalism, PR and media production",
+    "Entrance Exam / Pathway": "IPU CET / IIMC Entrance / CUET / College Entrance"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Arts, Humanities & Social Sciences",
+    "Course Name": "BSW (Bachelor of Social Work)",
+    "Duration": "3 Years",
+    "Description": "Social welfare, community development, NGO sector; government and humanitarian careers",
+    "Entrance Exam / Pathway": "CUET / College Entrance / Direct"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Arts, Humanities & Social Sciences",
+    "Course Name": "BFA (Bachelor of Fine Arts)",
+    "Duration": "4 Years",
+    "Description": "Drawing, painting, sculpture, printmaking; career in fine arts, art teaching, galleries and design",
+    "Entrance Exam / Pathway": "NID / State Fine Arts Entrance / College Entrance"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Arts, Humanities & Social Sciences",
+    "Course Name": "B.El.Ed (Elementary Education)",
+    "Duration": "4 Years",
+    "Description": "Four-year integrated teaching degree for primary and middle school; recognized by NCTE",
+    "Entrance Exam / Pathway": "DU B.El.Ed Entrance / State Teaching Entrance"
+  },
+  {
+    "Level": "",
+    "Stream": "Law",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Law",
+    "Course Name": "BA LLB (Integrated 5-Year)",
+    "Duration": "5 Years",
+    "Description": "Most popular integrated law degree; combines arts and legal studies; gateway to litigation, judiciary and legal research",
+    "Entrance Exam / Pathway": "CLAT, AILET, LSAT India, MH CET Law, TS/AP LAWCET"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Law",
+    "Course Name": "BBA LLB (Integrated 5-Year)",
+    "Duration": "5 Years",
+    "Description": "Business law focus; ideal for corporate law, M&A and legal consultancy careers",
+    "Entrance Exam / Pathway": "CLAT, LSAT India, College-level Entrance"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Law",
+    "Course Name": "B.Com LLB (Integrated 5-Year)",
+    "Duration": "5 Years",
+    "Description": "Commerce and law; well-suited for taxation law, banking law and corporate compliance roles",
+    "Entrance Exam / Pathway": "CLAT, TS/AP LAWCET"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Law",
+    "Course Name": "B.Sc LLB (Integrated 5-Year)",
+    "Duration": "5 Years",
+    "Description": "Science and law; ideal for intellectual property, patent law and environmental law careers",
+    "Entrance Exam / Pathway": "CLAT, LSAT India"
+  },
+  {
+    "Level": "",
+    "Stream": "Design & Architecture",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Design & Architecture",
+    "Course Name": "B.Des (Fashion Design)",
+    "Duration": "4 Years",
+    "Description": "Garment design, textile development, fashion forecasting; career at brands, studios or as independent designer",
+    "Entrance Exam / Pathway": "NIFT Entrance, NID DAT, CEED, Pearl Academy Entrance"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Design & Architecture",
+    "Course Name": "B.Des (Industrial / Product Design)",
+    "Duration": "4 Years",
+    "Description": "Product design, human factors, manufacturing; design roles in consumer goods, automotive and furniture",
+    "Entrance Exam / Pathway": "NID DAT, CEED, MIT Institute of Design Entrance"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Design & Architecture",
+    "Course Name": "B.Des (UI/UX / Communication Design)",
+    "Duration": "4 Years",
+    "Description": "Digital interfaces, user experience, visual communication; roles in tech companies, agencies and startups",
+    "Entrance Exam / Pathway": "NID DAT, NIFT, Srishti Entrance, CEED"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Design & Architecture",
+    "Course Name": "B.Des (Interior Design)",
+    "Duration": "4 Years",
+    "Description": "Spatial design, furniture, lighting, material specifications; residential, commercial and hospitality interiors",
+    "Entrance Exam / Pathway": "CEED, NID DAT, NIFT, Institute-level Entrance"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Design & Architecture",
+    "Course Name": "B.Arch (Bachelor of Architecture)",
+    "Duration": "5 Years",
+    "Description": "Architectural design, structural systems, urban design; 5-year professional degree",
+    "Entrance Exam / Pathway": "NATA, JEE Paper 2"
+  },
+  {
+    "Level": "",
+    "Stream": "Hotel Management & Hospitality",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Hotel Management & Hospitality",
+    "Course Name": "BHM (Bachelor of Hotel Management)",
+    "Duration": "4 Years",
+    "Description": "Hotel operations, food & beverage, front office, housekeeping; top roles in 5-star hotels and cruise lines",
+    "Entrance Exam / Pathway": "NCHMCT JEE, AIIHM Entrance, CUET, State HM Entrance"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Hotel Management & Hospitality",
+    "Course Name": "B.Sc Hospitality & Hotel Administration",
+    "Duration": "3 Years",
+    "Description": "Hospitality management with science foundation; IHMs under Ministry of Tourism offer this course",
+    "Entrance Exam / Pathway": "NCHMCT JEE, State Entrance"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Hotel Management & Hospitality",
+    "Course Name": "BBA Tourism & Hospitality",
+    "Duration": "3 Years",
+    "Description": "Tourism industry, event management, travel trade; growing sector driven by domestic and international tourism",
+    "Entrance Exam / Pathway": "CUET / College Entrance / Direct"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Hotel Management & Hospitality",
+    "Course Name": "Diploma in Hotel Management",
+    "Duration": "1 - 3 Years",
+    "Description": "Practical hospitality training; faster entry into hotel operations; offered by private institutes and NCHMCT",
+    "Entrance Exam / Pathway": "Direct Admission / Institute Entrance"
+  },
+  {
+    "Level": "",
+    "Stream": "Defence & Maritime",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Defence & Maritime",
+    "Course Name": "NDA (National Defence Academy)",
+    "Duration": "3 Years (Cadet Training)",
+    "Description": "Entry as commissioned officer in Army, Navy or Air Force; most prestigious route for 12th pass youth; PCM required for Navy/AF",
+    "Entrance Exam / Pathway": "UPSC NDA & NA Examination (Twice a year)"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Defence & Maritime",
+    "Course Name": "Agniveer Scheme (Army / Navy / Air Force)",
+    "Duration": "4 Years (Short Service)",
+    "Description": "Short-term defence service for youth; subsequent civilian skills certification; Army, Navy and Air Force open entry",
+    "Entrance Exam / Pathway": "Agniveer Rally / Written + Physical Test"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Defence & Maritime",
+    "Course Name": "B.Sc Nautical Science (Merchant Navy)",
+    "Duration": "3 Years",
+    "Description": "Navigation, maritime law, ship operations; leads to Deck Officer career on cargo and tanker ships",
+    "Entrance Exam / Pathway": "IMU CET (Indian Maritime University Common Entrance Test)"
+  },
+  {
+    "Level": "After 12th / Inter",
+    "Stream": "Defence & Maritime",
+    "Course Name": "B.Tech Marine Engineering",
+    "Duration": "4 Years",
+    "Description": "Ship machinery, marine diesel engines, naval architecture basics; Engineer Officer career in Merchant Navy",
+    "Entrance Exam / Pathway": "IMU CET"
+  },
+  {
+    "Level": "&#9612; UG",
+    "Stream": "",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "",
+    "Stream": "Engineering",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "UG",
+    "Stream": "Engineering",
+    "Course Name": "B.Tech CSE (Computer Science & Engineering)",
+    "Duration": "4 Years",
+    "Description": "Algorithms, software development, OS, AI/ML fundamentals; most popular B.Tech branch in India",
+    "Entrance Exam / Pathway": "JEE Main/Advanced, State CETs (EAMCET, MHT CET, KCET etc.)"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Engineering",
+    "Course Name": "B.Tech AI & ML",
+    "Duration": "4 Years",
+    "Description": "Artificial intelligence, machine learning, deep learning, NLP; next-generation computing career",
+    "Entrance Exam / Pathway": "JEE Main/Advanced, State CETs"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Engineering",
+    "Course Name": "B.Tech Data Science",
+    "Duration": "4 Years",
+    "Description": "Statistical modelling, big data tools, Python/R programming, data visualization; analytics industry",
+    "Entrance Exam / Pathway": "JEE Main/Advanced, State CETs"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Engineering",
+    "Course Name": "B.Tech Information Technology (IT)",
+    "Duration": "4 Years",
+    "Description": "Software systems, networking, databases, cloud computing; IT industry and product development",
+    "Entrance Exam / Pathway": "JEE Main/Advanced, State CETs"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Engineering",
+    "Course Name": "B.Tech ECE (Electronics & Communication Engineering)",
+    "Duration": "4 Years",
+    "Description": "Circuit design, signal processing, VLSI, embedded systems, communication networks",
+    "Entrance Exam / Pathway": "JEE Main/Advanced, State CETs"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Engineering",
+    "Course Name": "B.Tech EEE (Electrical & Electronics Engineering)",
+    "Duration": "4 Years",
+    "Description": "Power systems, control systems, electrical machines, renewable energy; power sector and manufacturing",
+    "Entrance Exam / Pathway": "JEE Main/Advanced, State CETs"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Engineering",
+    "Course Name": "B.Tech Mechanical Engineering",
+    "Duration": "4 Years",
+    "Description": "Thermodynamics, fluid mechanics, machine design, manufacturing; core branch across industries",
+    "Entrance Exam / Pathway": "JEE Main/Advanced, State CETs"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Engineering",
+    "Course Name": "B.Tech Civil Engineering",
+    "Duration": "4 Years",
+    "Description": "Structural design, geotechnical engineering, transportation, water resources; construction and infrastructure",
+    "Entrance Exam / Pathway": "JEE Main/Advanced, State CETs"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Engineering",
+    "Course Name": "B.Tech Chemical Engineering",
+    "Duration": "4 Years",
+    "Description": "Process design, reaction engineering; pharmaceutical, petrochemical and chemical industries",
+    "Entrance Exam / Pathway": "JEE Main/Advanced, State CETs"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Engineering",
+    "Course Name": "B.Tech Biotechnology",
+    "Duration": "4 Years",
+    "Description": "Genetic engineering, bioinformatics, fermentation technology; life sciences and biotech industry",
+    "Entrance Exam / Pathway": "JEE Main/Advanced, State CETs"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Engineering",
+    "Course Name": "B.Tech Aerospace Engineering",
+    "Duration": "4 Years",
+    "Description": "Aerodynamics, propulsion, aircraft structures; ISRO, HAL, defence and aviation careers",
+    "Entrance Exam / Pathway": "JEE Main/Advanced, State CETs"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Engineering",
+    "Course Name": "B.Tech Robotics & Automation",
+    "Duration": "4 Years",
+    "Description": "Robot design, automation systems, industrial IoT, mechatronics; Industry 4.0 career",
+    "Entrance Exam / Pathway": "JEE Main/Advanced, State CETs"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Engineering",
+    "Course Name": "B.Tech Cyber Security",
+    "Duration": "4 Years",
+    "Description": "Network security, ethical hacking, cryptography, digital forensics; high-demand IT and government career",
+    "Entrance Exam / Pathway": "JEE Main/Advanced, State CETs"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Engineering",
+    "Course Name": "B.Tech Mechatronics",
+    "Duration": "4 Years",
+    "Description": "Interdisciplinary blend of mechanical, electronics and computing; smart manufacturing and automation",
+    "Entrance Exam / Pathway": "JEE Main/Advanced, State CETs"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Engineering",
+    "Course Name": "B.Tech Petroleum Engineering",
+    "Duration": "4 Years",
+    "Description": "Drilling, reservoir engineering, production systems; ONGC, oil majors and petroleum sector",
+    "Entrance Exam / Pathway": "JEE Main/Advanced, State CETs"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Engineering",
+    "Course Name": "B.Tech Agricultural Engineering",
+    "Duration": "4 Years",
+    "Description": "Farm machinery, irrigation systems, post-harvest technology; government agriculture and agri-industry",
+    "Entrance Exam / Pathway": "JEE Main/Advanced, ICAR AIEEA, State CETs"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Engineering",
+    "Course Name": "B.Tech Automobile Engineering",
+    "Duration": "4 Years",
+    "Description": "Vehicle dynamics, engine systems, EV technology; automotive OEMs &#8212; Tata, Mahindra, Maruti, Hyundai",
+    "Entrance Exam / Pathway": "JEE Main/Advanced, State CETs"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Engineering",
+    "Course Name": "B.Tech Mining Engineering",
+    "Duration": "4 Years",
+    "Description": "Mine planning, excavation methods, safety; Coal India, NMDC, SCCL and mining corporations",
+    "Entrance Exam / Pathway": "JEE Main/Advanced, State CETs"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Engineering",
+    "Course Name": "B.Tech Environmental Engineering",
+    "Duration": "4 Years",
+    "Description": "Pollution control, water treatment, waste management; government regulatory agencies and green industries",
+    "Entrance Exam / Pathway": "JEE Main/Advanced, State CETs"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Engineering",
+    "Course Name": "B.Tech Textile Engineering",
+    "Duration": "4 Years",
+    "Description": "Fibre science, fabric manufacturing, textile machinery; textile mills, garment and technical textile industries",
+    "Entrance Exam / Pathway": "JEE Main/Advanced, State CETs"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Engineering",
+    "Course Name": "B.Tech Industrial Engineering & Management",
+    "Duration": "4 Years",
+    "Description": "Productivity, operations research, supply chain, quality management; manufacturing and consulting",
+    "Entrance Exam / Pathway": "JEE Main/Advanced, State CETs"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Engineering",
+    "Course Name": "B.Tech Naval Architecture & Ocean Engineering",
+    "Duration": "4 Years",
+    "Description": "Ship hull design, offshore structures, marine hydrodynamics; Cochin Shipyard, GRSE, private shipbuilders",
+    "Entrance Exam / Pathway": "JEE Main/Advanced, State CETs"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Engineering",
+    "Course Name": "B.Arch (Bachelor of Architecture)",
+    "Duration": "5 Years",
+    "Description": "Five-year professional architecture degree; building design, urban planning, interior architecture",
+    "Entrance Exam / Pathway": "NATA, JEE Paper 2"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Engineering",
+    "Course Name": "B.Plan (Bachelor of Urban & Regional Planning)",
+    "Duration": "4 Years",
+    "Description": "Town and country planning, GIS, infrastructure policy; urban development authorities and consultancies",
+    "Entrance Exam / Pathway": "JEE Paper 2"
+  },
+  {
+    "Level": "",
+    "Stream": "Medical & Health Sciences",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "UG",
+    "Stream": "Medical & Health Sciences",
+    "Course Name": "MBBS",
+    "Duration": "5.5 Years",
+    "Description": "Bachelor of Medicine and Bachelor of Surgery; foundation for becoming a qualified allopathic doctor in India",
+    "Entrance Exam / Pathway": "NEET-UG"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Medical & Health Sciences",
+    "Course Name": "BDS (Bachelor of Dental Surgery)",
+    "Duration": "5 Years",
+    "Description": "Dental degree for diagnosis, prevention and treatment of oral diseases; private practice or hospital dentistry",
+    "Entrance Exam / Pathway": "NEET-UG"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Medical & Health Sciences",
+    "Course Name": "BAMS (Ayurvedic Medicine & Surgery)",
+    "Duration": "5.5 Years",
+    "Description": "Classical Indian herbal medicine and surgery; practice as Ayurvedic physician in government health centres",
+    "Entrance Exam / Pathway": "NEET-UG"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Medical & Health Sciences",
+    "Course Name": "BHMS (Homoeopathic Medicine & Surgery)",
+    "Duration": "5.5 Years",
+    "Description": "Homeopathic medicine system; private practice and government homoeopathic hospitals",
+    "Entrance Exam / Pathway": "NEET-UG"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Medical & Health Sciences",
+    "Course Name": "BUMS (Unani Medicine & Surgery)",
+    "Duration": "5.5 Years",
+    "Description": "Greco-Arabic Unani system of medicine; practice in Unani hospitals and dispensaries",
+    "Entrance Exam / Pathway": "NEET-UG"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Medical & Health Sciences",
+    "Course Name": "BPT (Bachelor of Physiotherapy)",
+    "Duration": "4.5 Years",
+    "Description": "Physical rehabilitation, sports injury management, neuro-physiotherapy; hospitals, sports clubs and clinics",
+    "Entrance Exam / Pathway": "State Physiotherapy Entrance / IPU CET / MH CET"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Medical & Health Sciences",
+    "Course Name": "B.Sc Nursing",
+    "Duration": "4 Years",
+    "Description": "Professional nursing degree; ICU, OT, community and public health nursing; critical healthcare workforce",
+    "Entrance Exam / Pathway": "NEET / State Nursing Entrance / College Entrance"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Medical & Health Sciences",
+    "Course Name": "GNM (General Nursing & Midwifery)",
+    "Duration": "3 Yrs + 6 Months Internship",
+    "Description": "Diploma-level nursing qualification; bedside nursing, midwifery; eligible for staff nurse positions",
+    "Entrance Exam / Pathway": "State Nursing Entrance / Direct"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Medical & Health Sciences",
+    "Course Name": "BMLT (Bachelor of Medical Lab Technology)",
+    "Duration": "3 Years",
+    "Description": "Diagnostic laboratory sciences; blood testing, microbiology, histopathology; hospital and diagnostic lab careers",
+    "Entrance Exam / Pathway": "State MLT Entrance / Direct"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Medical & Health Sciences",
+    "Course Name": "B.Optom (Bachelor of Optometry)",
+    "Duration": "3 Years",
+    "Description": "Eye examination, refraction, contact lens fitting, low vision care; hospitals and optical chains",
+    "Entrance Exam / Pathway": "State Entrance / Direct"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Medical & Health Sciences",
+    "Course Name": "B.Pharm (Bachelor of Pharmacy)",
+    "Duration": "4 Years",
+    "Description": "Drug design, formulation, pharmacology, clinical pharmacy; pharma companies, hospitals and retail pharmacies",
+    "Entrance Exam / Pathway": "AP EAMCET / State Pharmacy CET"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Medical & Health Sciences",
+    "Course Name": "Pharm.D (Doctor of Pharmacy)",
+    "Duration": "6 Years",
+    "Description": "Clinical pharmacy doctoral program with hospital residency; pharmacovigilance, clinical trials, patient counselling",
+    "Entrance Exam / Pathway": "NEET / State Pharmacy Entrance"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Medical & Health Sciences",
+    "Course Name": "B.V.Sc & AH (Veterinary Science & Animal Husbandry)",
+    "Duration": "5 Years",
+    "Description": "Animal healthcare, surgery, livestock management; animal hospitals, ICAR and government veterinary services",
+    "Entrance Exam / Pathway": "ICAR AIEEA / State Veterinary Entrance"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Medical & Health Sciences",
+    "Course Name": "BNYS (Naturopathy & Yoga Sciences)",
+    "Duration": "5.5 Years",
+    "Description": "Natural healing and yoga therapy; wellness centres, naturopathy hospitals and yoga institutions",
+    "Entrance Exam / Pathway": "NEET / State Entrance"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Medical & Health Sciences",
+    "Course Name": "BOT (Bachelor of Occupational Therapy)",
+    "Duration": "4.5 Years",
+    "Description": "Rehabilitating patients through meaningful daily activities; neuro-rehabilitation and paediatric therapy",
+    "Entrance Exam / Pathway": "State OT Entrance / Direct"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Medical & Health Sciences",
+    "Course Name": "B.Sc Radiography & Medical Imaging Technology",
+    "Duration": "3 Years",
+    "Description": "X-ray, CT scan, MRI operation; hospitals and diagnostic imaging centres",
+    "Entrance Exam / Pathway": "State Entrance / Direct"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Medical & Health Sciences",
+    "Course Name": "B.Sc Nutrition & Dietetics",
+    "Duration": "3 Years",
+    "Description": "Therapeutic nutrition, diet counselling, clinical dietetics; hospitals, sports nutrition and wellness industry",
+    "Entrance Exam / Pathway": "CUET / State Entrance / Direct"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Medical & Health Sciences",
+    "Course Name": "B.Sc Anaesthesia Technology",
+    "Duration": "3 Years",
+    "Description": "Anaesthesia administration support, OT equipment management; hospital OT career",
+    "Entrance Exam / Pathway": "State Entrance / Direct"
+  },
+  {
+    "Level": "",
+    "Stream": "Commerce & Management",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "UG",
+    "Stream": "Commerce & Management",
+    "Course Name": "B.Com (Bachelor of Commerce)",
+    "Duration": "3 Years",
+    "Description": "Accounting, finance, taxation, auditing, business law; foundation for CA, CS, MBA or government finance roles",
+    "Entrance Exam / Pathway": "CUET / Merit / State University Entrance"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Commerce & Management",
+    "Course Name": "B.Com (Computers / IT)",
+    "Duration": "3 Years",
+    "Description": "Commerce with computing skills; accounts management software, e-commerce, digital business operations",
+    "Entrance Exam / Pathway": "CUET / Merit / Direct"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Commerce & Management",
+    "Course Name": "B.Com (Hons)",
+    "Duration": "3 Years",
+    "Description": "Rigorous specialized commerce degree; preferred for advanced finance, research and CA pursuits",
+    "Entrance Exam / Pathway": "CUET / DU High Cut-off / State University"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Commerce & Management",
+    "Course Name": "BBA (Bachelor of Business Administration)",
+    "Duration": "3 Years",
+    "Description": "Marketing, HRM, finance, operations and strategy; primary gateway to MBA and corporate management roles",
+    "Entrance Exam / Pathway": "CUET / IPU CET / SET / College Entrance"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Commerce & Management",
+    "Course Name": "BBA Analytics",
+    "Duration": "3 Years",
+    "Description": "Business decision-making using data analytics tools and statistical methods; career in analytics and consulting",
+    "Entrance Exam / Pathway": "CUET / College Entrance"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Commerce & Management",
+    "Course Name": "BBA Finance",
+    "Duration": "3 Years",
+    "Description": "Corporate finance, investments, banking; preparation for MBA Finance, CA and CFA",
+    "Entrance Exam / Pathway": "CUET / College Entrance"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Commerce & Management",
+    "Course Name": "BMS (Bachelor of Management Studies)",
+    "Duration": "3 Years",
+    "Description": "Comprehensive management program popular in Mumbai University; strategy, marketing and operations focus",
+    "Entrance Exam / Pathway": "CUET / Mumbai University Entrance / DTE"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Commerce & Management",
+    "Course Name": "Integrated MBA (5-Year)",
+    "Duration": "5 Years",
+    "Description": "Dual UG + PG management program; enter corporate world early; IIM Indore, Symbiosis, NMIMS",
+    "Entrance Exam / Pathway": "IPMAT, JIPMAT, NPAT, CUET"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Commerce & Management",
+    "Course Name": "BBM (Bachelor of Business Management)",
+    "Duration": "3 Years",
+    "Description": "Business management degree offered mainly by Bangalore University and Karnataka state institutions",
+    "Entrance Exam / Pathway": "Karnataka PGCET / College Entrance"
+  },
+  {
+    "Level": "",
+    "Stream": "Science",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "UG",
+    "Stream": "Science",
+    "Course Name": "B.Sc Physics",
+    "Duration": "3 Years",
+    "Description": "Classical and modern physics, quantum mechanics, astrophysics; research, ISRO, teaching and PG studies",
+    "Entrance Exam / Pathway": "CUET / State University"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Science",
+    "Course Name": "B.Sc Chemistry",
+    "Duration": "3 Years",
+    "Description": "Organic, inorganic and physical chemistry; chemical industry, pharma R&D, competitive exam preparation",
+    "Entrance Exam / Pathway": "CUET / State University"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Science",
+    "Course Name": "B.Sc Mathematics",
+    "Duration": "3 Years",
+    "Description": "Analysis, algebra, calculus, number theory; data science, actuarial science, teaching and research careers",
+    "Entrance Exam / Pathway": "CUET / State University"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Science",
+    "Course Name": "B.Sc Statistics",
+    "Duration": "3 Years",
+    "Description": "Probability, inference, regression, design of experiments; finance, analytics and government statistics services",
+    "Entrance Exam / Pathway": "CUET / ISI / CMI Entrance"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Science",
+    "Course Name": "B.Sc Computer Science",
+    "Duration": "3 Years",
+    "Description": "Algorithms, programming, software engineering, OS; industry alternative to B.Tech CSE",
+    "Entrance Exam / Pathway": "CUET / State University / College-level"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Science",
+    "Course Name": "B.Sc Data Science",
+    "Duration": "3 Years",
+    "Description": "Machine learning, Python, big data, data visualization; data-driven industries and analytics firms",
+    "Entrance Exam / Pathway": "CUET / College-level"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Science",
+    "Course Name": "B.Sc AI (Artificial Intelligence)",
+    "Duration": "3 Years",
+    "Description": "Neural networks, AI programming, computer vision; AI industry, research and product development",
+    "Entrance Exam / Pathway": "CUET / College-level"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Science",
+    "Course Name": "B.Sc Biotechnology",
+    "Duration": "3 Years",
+    "Description": "Genetic engineering, cell biology, bioinformatics; pharma R&D, biotech firms and research institutes",
+    "Entrance Exam / Pathway": "CUET / State University / BHU"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Science",
+    "Course Name": "B.Sc Microbiology",
+    "Duration": "3 Years",
+    "Description": "Bacteria, viruses, fungi and protozoa; food safety, clinical labs, pharma and research careers",
+    "Entrance Exam / Pathway": "CUET / State University"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Science",
+    "Course Name": "B.Sc Forensic Science",
+    "Duration": "3 Years",
+    "Description": "Crime investigation, DNA analysis, questioned documents, toxicology; police, courts and investigation agencies",
+    "Entrance Exam / Pathway": "CUET / College-level"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Science",
+    "Course Name": "BCA (Bachelor of Computer Applications)",
+    "Duration": "3 Years",
+    "Description": "Web development, software applications, databases; gateway to MCA, IT industry or full-stack development",
+    "Entrance Exam / Pathway": "CUET / State CET / Direct"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Science",
+    "Course Name": "Integrated M.Sc (5-Year)",
+    "Duration": "5 Years",
+    "Description": "Five-year joint BSc + MSc; IITs, NITs, BHU; research career or industry placement on completion",
+    "Entrance Exam / Pathway": "IIT JAM, IISER Aptitude Test, CUCET"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Science",
+    "Course Name": "B.Sc Electronics",
+    "Duration": "3 Years",
+    "Description": "Analog/digital electronics, communication systems, embedded design; semiconductor and electronics industries",
+    "Entrance Exam / Pathway": "CUET / State University"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Science",
+    "Course Name": "B.Sc Environmental Science",
+    "Duration": "3 Years",
+    "Description": "Ecosystems, pollution monitoring, climate change, environmental law; NGOs, government environment depts",
+    "Entrance Exam / Pathway": "CUET / State University"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Science",
+    "Course Name": "B.Sc Biochemistry",
+    "Duration": "3 Years",
+    "Description": "Metabolic pathways, enzymes, proteins; medical research, clinical labs and pharma industry",
+    "Entrance Exam / Pathway": "CUET / State University"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Science",
+    "Course Name": "B.Sc Zoology",
+    "Duration": "3 Years",
+    "Description": "Animal biology, ecology, wildlife sciences; forest department, wildlife NGOs, zoos and research",
+    "Entrance Exam / Pathway": "CUET / State University"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Science",
+    "Course Name": "B.Sc Botany",
+    "Duration": "3 Years",
+    "Description": "Plant biology, ecology, phytochemistry; agricultural research, forestry and pharmaceutical industries",
+    "Entrance Exam / Pathway": "CUET / State University"
+  },
+  {
+    "Level": "",
+    "Stream": "Arts & Humanities",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "UG",
+    "Stream": "Arts & Humanities",
+    "Course Name": "BA English",
+    "Duration": "3 Years",
+    "Description": "Literary studies, linguistics, communication; media, content writing, civil services and academic careers",
+    "Entrance Exam / Pathway": "CUET / State University / College Entrance"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Arts & Humanities",
+    "Course Name": "BA Economics",
+    "Duration": "3 Years",
+    "Description": "Micro/macroeconomics, econometrics, development economics; banking, civil services and research",
+    "Entrance Exam / Pathway": "CUET / State University"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Arts & Humanities",
+    "Course Name": "BA Psychology",
+    "Duration": "3 Years",
+    "Description": "Behavioural sciences, mental health, counselling theory; clinical psychology, HR and market research",
+    "Entrance Exam / Pathway": "CUET / State University"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Arts & Humanities",
+    "Course Name": "BA Political Science",
+    "Duration": "3 Years",
+    "Description": "Political theory, Indian governance, international relations; civil services, diplomacy and teaching",
+    "Entrance Exam / Pathway": "CUET / State University"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Arts & Humanities",
+    "Course Name": "BA Sociology",
+    "Duration": "3 Years",
+    "Description": "Society, culture, social institutions; social work, research, NGO, civil services and policy-making",
+    "Entrance Exam / Pathway": "CUET / State University"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Arts & Humanities",
+    "Course Name": "BA History",
+    "Duration": "3 Years",
+    "Description": "Ancient, medieval and modern history; civil services, archaeology, archival research and academia",
+    "Entrance Exam / Pathway": "CUET / State University"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Arts & Humanities",
+    "Course Name": "BA Journalism & Mass Communication",
+    "Duration": "3 Years",
+    "Description": "Reporting, editing, broadcasting, digital journalism; print, TV, radio and new media careers",
+    "Entrance Exam / Pathway": "CUET / IIMC Entrance / IPU CET"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Arts & Humanities",
+    "Course Name": "BA Mass Communication",
+    "Duration": "3 Years",
+    "Description": "Media theory, PR, advertising, media management; corporate communications and broadcasting",
+    "Entrance Exam / Pathway": "CUET / College-level Entrance"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Arts & Humanities",
+    "Course Name": "BA Public Administration",
+    "Duration": "3 Years",
+    "Description": "Government administration, policy analysis, public services; civil services foundation and government roles",
+    "Entrance Exam / Pathway": "CUET / State University"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Arts & Humanities",
+    "Course Name": "BA Philosophy",
+    "Duration": "3 Years",
+    "Description": "Logic, ethics, epistemology, metaphysics; UPSC optional, law, corporate ethics and academic research",
+    "Entrance Exam / Pathway": "CUET / State University"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Arts & Humanities",
+    "Course Name": "BA Geography",
+    "Duration": "3 Years",
+    "Description": "Physical and human geography, GIS, cartography; survey departments, urban planning and environmental roles",
+    "Entrance Exam / Pathway": "CUET / State University"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Arts & Humanities",
+    "Course Name": "BSW (Bachelor of Social Work)",
+    "Duration": "3 Years",
+    "Description": "Community development, welfare services, counselling, NGO sector; government social welfare departments",
+    "Entrance Exam / Pathway": "CUET / TISS / State Social Work Entrance"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Arts & Humanities",
+    "Course Name": "BPA (Bachelor of Performing Arts)",
+    "Duration": "3 - 4 Years",
+    "Description": "Classical dance, music, theatre, drama; performing arts schools, cultural institutions and media",
+    "Entrance Exam / Pathway": "Entrance Audition / CUET"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Arts & Humanities",
+    "Course Name": "B.El.Ed (Elementary Education)",
+    "Duration": "4 Years",
+    "Description": "Integrated four-year teacher education for primary and middle level; recognized by NCTE",
+    "Entrance Exam / Pathway": "DU B.El.Ed Entrance / State Teaching Entrance"
+  },
+  {
+    "Level": "",
+    "Stream": "Law",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "UG",
+    "Stream": "Law",
+    "Course Name": "LLB (3-Year)",
+    "Duration": "3 Years",
+    "Description": "Graduate law degree for students who already hold a bachelor's degree; litigation, judiciary and corporate law",
+    "Entrance Exam / Pathway": "CLAT PG / State BAR Council Entrance / DU LLB Entrance"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Law",
+    "Course Name": "BA LLB (Integrated 5-Year)",
+    "Duration": "5 Years",
+    "Description": "Most popular integrated law program; legal theory, constitutional law, criminal law, corporate law",
+    "Entrance Exam / Pathway": "CLAT, AILET, LSAT India, TS/AP LAWCET"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Law",
+    "Course Name": "BBA LLB (Integrated 5-Year)",
+    "Duration": "5 Years",
+    "Description": "Business and corporate law focus; M&A, intellectual property, contracts; top law firms and in-house legal roles",
+    "Entrance Exam / Pathway": "CLAT, LSAT India, College Entrance"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Law",
+    "Course Name": "B.Com LLB (Integrated 5-Year)",
+    "Duration": "5 Years",
+    "Description": "Tax law, banking law, financial regulations; CA + LLB combination is highly valued",
+    "Entrance Exam / Pathway": "CLAT, TS/AP LAWCET"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Law",
+    "Course Name": "B.Sc LLB (Integrated 5-Year)",
+    "Duration": "5 Years",
+    "Description": "Science with law; intellectual property rights, patent law, environmental law and cybercrime law",
+    "Entrance Exam / Pathway": "CLAT, LSAT India"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Law",
+    "Course Name": "BSW LLB (Integrated 5-Year)",
+    "Duration": "5 Years",
+    "Description": "Social work and law; human rights law, family law, juvenile justice and NGO legal work",
+    "Entrance Exam / Pathway": "CLAT, College Entrance"
+  },
+  {
+    "Level": "",
+    "Stream": "Agriculture & Allied Sciences",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "UG",
+    "Stream": "Agriculture & Allied Sciences",
+    "Course Name": "B.Sc Agriculture",
+    "Duration": "4 Years",
+    "Description": "Agronomy, soil science, crop improvement, farm management; ICAR, agriculture departments, agri-business",
+    "Entrance Exam / Pathway": "ICAR AIEEA, State Agriculture University Entrance"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Agriculture & Allied Sciences",
+    "Course Name": "B.Tech Food Technology",
+    "Duration": "4 Years",
+    "Description": "Food processing, preservation, quality control; FSSAI, food companies (HUL, Nestle, ITC) and agri-industry",
+    "Entrance Exam / Pathway": "JEE / State CET / ICAR AIEEA"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Agriculture & Allied Sciences",
+    "Course Name": "B.Sc Horticulture",
+    "Duration": "4 Years",
+    "Description": "Fruit science, vegetable science, floriculture, landscape gardening; government horticulture depts and export",
+    "Entrance Exam / Pathway": "ICAR AIEEA / State Agriculture Entrance"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Agriculture & Allied Sciences",
+    "Course Name": "B.Sc Forestry",
+    "Duration": "4 Years",
+    "Description": "Forest management, wildlife conservation, tree species, ecosystems; Indian Forest Service (IFS) and MOEF",
+    "Entrance Exam / Pathway": "ICAR AIEEA / State Agriculture Entrance"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Agriculture & Allied Sciences",
+    "Course Name": "B.Sc Fisheries",
+    "Duration": "4 Years",
+    "Description": "Aquaculture, fisheries management, marine biology; MPEDA, fisheries department, aquaculture industry",
+    "Entrance Exam / Pathway": "ICAR AIEEA / State Fisheries Entrance"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Agriculture & Allied Sciences",
+    "Course Name": "B.Tech Dairy Technology",
+    "Duration": "4 Years",
+    "Description": "Milk processing, dairy plant operations, quality control; NDDB, state co-operatives and private dairies",
+    "Entrance Exam / Pathway": "ICAR AIEEA / State CET"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Agriculture & Allied Sciences",
+    "Course Name": "B.Sc Sericulture",
+    "Duration": "3 Years",
+    "Description": "Silkworm rearing, silk processing, mulberry cultivation; Central Silk Board and silk industry",
+    "Entrance Exam / Pathway": "State Agriculture Entrance / Direct"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Agriculture & Allied Sciences",
+    "Course Name": "B.Sc Agricultural Biotechnology",
+    "Duration": "4 Years",
+    "Description": "Genetic modification of crops, biopesticides, molecular breeding; research institutes like ICRISAT, ICAR",
+    "Entrance Exam / Pathway": "ICAR AIEEA / State Agriculture Entrance"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Agriculture & Allied Sciences",
+    "Course Name": "B.Sc Agri-Business Management",
+    "Duration": "3 Years",
+    "Description": "Farm economics, rural marketing, supply chain management; corporate agri sector, cooperative societies",
+    "Entrance Exam / Pathway": "State Agriculture University / Direct"
+  },
+  {
+    "Level": "",
+    "Stream": "Design & Fine Arts",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "UG",
+    "Stream": "Design & Fine Arts",
+    "Course Name": "B.Des Fashion Design",
+    "Duration": "4 Years",
+    "Description": "Garment construction, draping, fashion illustration, textile development; NIFT, brands and fashion weeks",
+    "Entrance Exam / Pathway": "NIFT Entrance, NID DAT, Pearl Academy Entrance"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Design & Fine Arts",
+    "Course Name": "B.Des Industrial / Product Design",
+    "Duration": "4 Years",
+    "Description": "Product conceptualization, prototyping, ergonomics; design consultancies, automotive and consumer goods companies",
+    "Entrance Exam / Pathway": "NID DAT, CEED, MIT Institute of Design"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Design & Fine Arts",
+    "Course Name": "B.Des UI/UX & Communication Design",
+    "Duration": "4 Years",
+    "Description": "Digital product design, user research, visual hierarchy; top tech companies and startups",
+    "Entrance Exam / Pathway": "NID DAT, NIFT, Srishti Entrance, CEED"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Design & Fine Arts",
+    "Course Name": "B.Des Interior Design",
+    "Duration": "4 Years",
+    "Description": "Space planning, materials, lighting design, 3D modelling; architecture firms, hospitality and corporate interiors",
+    "Entrance Exam / Pathway": "CEED, NID DAT, Pearl Academy, NIFT"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Design & Fine Arts",
+    "Course Name": "B.Des Graphic & Communication Design",
+    "Duration": "4 Years",
+    "Description": "Visual design, branding, typography, print and digital media design; advertising agencies and studios",
+    "Entrance Exam / Pathway": "NID DAT, NIFT, College-level Entrance"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Design & Fine Arts",
+    "Course Name": "B.Des Animation & Multimedia",
+    "Duration": "4 Years",
+    "Description": "2D/3D animation, motion graphics, VFX; film, gaming, OTT platforms and advertising",
+    "Entrance Exam / Pathway": "NIFT, Arena, MAAC, College-level Entrance"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Design & Fine Arts",
+    "Course Name": "BFA (Bachelor of Fine Arts)",
+    "Duration": "4 Years",
+    "Description": "Painting, sculpture, printmaking, applied arts; galleries, art direction, teaching and independent artist career",
+    "Entrance Exam / Pathway": "State Fine Arts Entrance / NID / College Entrance"
+  },
+  {
+    "Level": "",
+    "Stream": "Education",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "UG",
+    "Stream": "Education",
+    "Course Name": "B.Ed (Bachelor of Education)",
+    "Duration": "2 Years",
+    "Description": "Teacher education for secondary and senior secondary level; mandatory NCTE qualification for school teaching",
+    "Entrance Exam / Pathway": "State TET / CTET After Completion"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Education",
+    "Course Name": "D.El.Ed (Diploma in Elementary Education)",
+    "Duration": "2 Years",
+    "Description": "Diploma for primary teachers; NCTE-recognized; required for TET/CTET eligibility for primary teaching",
+    "Entrance Exam / Pathway": "State DLED Entrance / Direct"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Education",
+    "Course Name": "B.El.Ed (Bachelor of Elementary Education)",
+    "Duration": "4 Years",
+    "Description": "Four-year integrated course for elementary teachers; offered by DU and state universities",
+    "Entrance Exam / Pathway": "DU B.El.Ed Entrance / State Teaching Entrance"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Education",
+    "Course Name": "B.P.Ed (Bachelor of Physical Education)",
+    "Duration": "3 - 4 Years",
+    "Description": "Physical training, sports science, yoga; PT teacher roles in schools and sports academies",
+    "Entrance Exam / Pathway": "State Physical Education Entrance"
+  },
+  {
+    "Level": "",
+    "Stream": "Hotel Management & Tourism",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "UG",
+    "Stream": "Hotel Management & Tourism",
+    "Course Name": "BHM (Bachelor of Hotel Management)",
+    "Duration": "4 Years",
+    "Description": "Hotel operations, front office, food production, F&B service, housekeeping; 5-star hotels and cruise lines",
+    "Entrance Exam / Pathway": "NCHMCT JEE, AIIHM, CUET, State HM Entrance"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Hotel Management & Tourism",
+    "Course Name": "B.Sc Hospitality & Hotel Administration",
+    "Duration": "3 Years",
+    "Description": "Comprehensive hospitality management degree; offered by IHMs under Ministry of Tourism",
+    "Entrance Exam / Pathway": "NCHMCT JEE / State Entrance"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Hotel Management & Tourism",
+    "Course Name": "BBA Tourism & Hospitality",
+    "Duration": "3 Years",
+    "Description": "Tourism industry management, travel trade, event management; travel agencies and tourism companies",
+    "Entrance Exam / Pathway": "CUET / College Entrance"
+  },
+  {
+    "Level": "UG",
+    "Stream": "Hotel Management & Tourism",
+    "Course Name": "BTTM (Bachelor of Travel & Tourism Management)",
+    "Duration": "3 Years",
+    "Description": "Tourism policy, travel agency operations, tour guiding; Ministry of Tourism recognized institutes",
+    "Entrance Exam / Pathway": "State Entrance / Direct"
+  },
+  {
+    "Level": "&#9612; PG",
+    "Stream": "",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "",
+    "Stream": "Engineering",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "PG",
+    "Stream": "Engineering",
+    "Course Name": "M.Tech CSE",
+    "Duration": "2 Years",
+    "Description": "Advanced algorithms, distributed systems, software engineering research; top academic and industry career",
+    "Entrance Exam / Pathway": "GATE (CS/IT paper), State PGCET"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Engineering",
+    "Course Name": "M.Tech AI & Machine Learning",
+    "Duration": "2 Years",
+    "Description": "Deep learning, NLP, computer vision, AI systems design; AI product companies and research labs",
+    "Entrance Exam / Pathway": "GATE / College Entrance"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Engineering",
+    "Course Name": "M.Tech Data Science & Big Data Analytics",
+    "Duration": "2 Years",
+    "Description": "Large-scale data processing, ML pipelines, cloud analytics; analytics firms and tech industry",
+    "Entrance Exam / Pathway": "GATE / College Entrance"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Engineering",
+    "Course Name": "M.Tech ECE (Electronics & Communication Engineering)",
+    "Duration": "2 Years",
+    "Description": "VLSI, embedded systems, signal processing, RF design; semiconductor industry, ISRO, defence R&D",
+    "Entrance Exam / Pathway": "GATE (EC paper)"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Engineering",
+    "Course Name": "M.Tech Mechanical Engineering",
+    "Duration": "2 Years",
+    "Description": "Advanced manufacturing, CAD/CAM, thermal engineering, robotics; core engineering industries",
+    "Entrance Exam / Pathway": "GATE (ME paper)"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Engineering",
+    "Course Name": "M.Tech Civil Engineering",
+    "Duration": "2 Years",
+    "Description": "Structural analysis, geotechnical engineering, transportation; PWD, NHAI, infrastructure consultancies",
+    "Entrance Exam / Pathway": "GATE (CE paper)"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Engineering",
+    "Course Name": "M.Tech EEE (Electrical & Electronics Engineering)",
+    "Duration": "2 Years",
+    "Description": "Power electronics, smart grids, EV systems; power utilities, NTPC, BHEL and renewable energy firms",
+    "Entrance Exam / Pathway": "GATE (EE paper)"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Engineering",
+    "Course Name": "M.Tech Robotics & Automation",
+    "Duration": "2 Years",
+    "Description": "Robot design, industrial automation, human-robot interaction; Industry 4.0 companies",
+    "Entrance Exam / Pathway": "GATE / College Entrance"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Engineering",
+    "Course Name": "M.Tech Biotechnology",
+    "Duration": "2 Years",
+    "Description": "Advanced genetic engineering, bioinformatics, drug design; research institutes and biotech companies",
+    "Entrance Exam / Pathway": "GATE (BT paper)"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Engineering",
+    "Course Name": "M.Tech Environmental Engineering",
+    "Duration": "2 Years",
+    "Description": "Waste treatment, pollution modelling, sustainability; government agencies, NGOs and green consultancies",
+    "Entrance Exam / Pathway": "GATE / College Entrance"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Engineering",
+    "Course Name": "M.Tech VLSI Design",
+    "Duration": "2 Years",
+    "Description": "Chip design, microarchitecture, EDA tools; semiconductor firms like Qualcomm, TI and Intel India",
+    "Entrance Exam / Pathway": "GATE (EC paper)"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Engineering",
+    "Course Name": "M.Tech Structural Engineering",
+    "Duration": "2 Years",
+    "Description": "Advanced structural analysis, earthquake engineering, bridge design; leading engineering consultancies",
+    "Entrance Exam / Pathway": "GATE (CE paper)"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Engineering",
+    "Course Name": "ME (Master of Engineering)",
+    "Duration": "2 Years",
+    "Description": "Research-focused engineering master's; offered by Anna University and affiliated colleges in South India",
+    "Entrance Exam / Pathway": "GATE / TANCET"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Engineering",
+    "Course Name": "MS by Research",
+    "Duration": "2 - 3 Years",
+    "Description": "Thesis-based master's with original research contribution; prerequisite for PhD or research career",
+    "Entrance Exam / Pathway": "GATE / IIT/NIT Internal Exam"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Engineering",
+    "Course Name": "MCA (Master of Computer Applications)",
+    "Duration": "2 - 3 Years",
+    "Description": "Software engineering, advanced programming, IT systems; widely accepted for IT industry roles",
+    "Entrance Exam / Pathway": "NIMCET, State MCA Entrance / GATE"
+  },
+  {
+    "Level": "",
+    "Stream": "Management",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "PG",
+    "Stream": "Management",
+    "Course Name": "MBA (General Management)",
+    "Duration": "2 Years",
+    "Description": "Foundation management degree covering all business functions; generalist management career in any industry",
+    "Entrance Exam / Pathway": "CAT, XAT, MAT, GMAT, State MBA Entrance (TANCET, MAHCET, PGCET)"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Management",
+    "Course Name": "MBA Finance",
+    "Duration": "2 Years",
+    "Description": "Corporate finance, investment banking, financial markets, CFA preparation; BFSI sector and consulting",
+    "Entrance Exam / Pathway": "CAT, XAT, GMAT, MAT"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Management",
+    "Course Name": "MBA Marketing",
+    "Duration": "2 Years",
+    "Description": "Brand management, digital marketing, consumer behaviour, sales; FMCG, retail, e-commerce and agencies",
+    "Entrance Exam / Pathway": "CAT, XAT, GMAT, MAT"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Management",
+    "Course Name": "MBA Human Resources (HR)",
+    "Duration": "2 Years",
+    "Description": "Talent management, organizational behaviour, labour laws; HR function in all industries",
+    "Entrance Exam / Pathway": "CAT, XAT, MAT"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Management",
+    "Course Name": "MBA Operations & Supply Chain",
+    "Duration": "2 Years",
+    "Description": "Logistics, procurement, lean management, Six Sigma; manufacturing, FMCG and consulting sectors",
+    "Entrance Exam / Pathway": "CAT, XAT, MAT"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Management",
+    "Course Name": "MBA Business Analytics",
+    "Duration": "2 Years",
+    "Description": "Data-driven decision making, predictive modelling, BI tools; analytics, consulting and tech companies",
+    "Entrance Exam / Pathway": "CAT, XAT, GMAT"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Management",
+    "Course Name": "MBA IT & Systems",
+    "Duration": "2 Years",
+    "Description": "IT strategy, ERP, digital transformation, project management; IT-enabled services and consulting",
+    "Entrance Exam / Pathway": "CAT, XAT, GMAT"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Management",
+    "Course Name": "MBA Healthcare Management",
+    "Duration": "2 Years",
+    "Description": "Hospital administration, health policy, pharmaceutical marketing; hospital chains and health insurance firms",
+    "Entrance Exam / Pathway": "CAT, GMAT, PGIMER Management"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Management",
+    "Course Name": "MBA International Business",
+    "Duration": "2 Years",
+    "Description": "Global trade, forex, cross-cultural management; export-import companies, multinational corporations",
+    "Entrance Exam / Pathway": "CAT, XAT, GMAT"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Management",
+    "Course Name": "MBA Rural & Agri-Business Management",
+    "Duration": "2 Years",
+    "Description": "Rural markets, cooperative sector, agri value chain; MANAGE, IRMA, IIM Ahmedabad AgriMBA",
+    "Entrance Exam / Pathway": "CAT, XAT / IRMA Entrance"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Management",
+    "Course Name": "MBA Logistics & Supply Chain Management",
+    "Duration": "2 Years",
+    "Description": "Freight management, warehouse systems, last-mile delivery; logistics companies and e-commerce firms",
+    "Entrance Exam / Pathway": "CAT, XAT, MAT"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Management",
+    "Course Name": "Executive MBA (EMBA)",
+    "Duration": "1 - 2 Years",
+    "Description": "Management degree for working professionals; flexible weekend/online schedules; career acceleration",
+    "Entrance Exam / Pathway": "GMAT / CAT + Work Experience"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Management",
+    "Course Name": "PGDM (Post Graduate Diploma in Management)",
+    "Duration": "2 Years",
+    "Description": "Autonomous management program equivalent to MBA; AICTE-approved; offered by top private B-Schools",
+    "Entrance Exam / Pathway": "CAT, XAT, GMAT, MAT"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Management",
+    "Course Name": "MHRM (Master of Human Resource Management)",
+    "Duration": "2 Years",
+    "Description": "Specialized HRM program; labour relations, training & development, performance management",
+    "Entrance Exam / Pathway": "TISS HRM Entrance, CAT, State MBA CET"
+  },
+  {
+    "Level": "",
+    "Stream": "Science",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "PG",
+    "Stream": "Science",
+    "Course Name": "M.Sc Physics",
+    "Duration": "2 Years",
+    "Description": "Advanced quantum mechanics, condensed matter, nuclear physics; research institutes, ISRO, DRDO and academia",
+    "Entrance Exam / Pathway": "IIT JAM, CUCET, State Entrance"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Science",
+    "Course Name": "M.Sc Chemistry",
+    "Duration": "2 Years",
+    "Description": "Organic synthesis, spectroscopy, polymer chemistry; pharma industry, research labs and chemical companies",
+    "Entrance Exam / Pathway": "IIT JAM, CUCET"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Science",
+    "Course Name": "M.Sc Mathematics",
+    "Duration": "2 Years",
+    "Description": "Real analysis, topology, abstract algebra; academia, data science, finance and actuarial science",
+    "Entrance Exam / Pathway": "IIT JAM, CMI, ISI"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Science",
+    "Course Name": "M.Sc Statistics",
+    "Duration": "2 Years",
+    "Description": "Advanced probability, time series, applied statistics; ISI, NSO, financial services and analytics",
+    "Entrance Exam / Pathway": "IIT JAM, ISI Entrance, CUCET"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Science",
+    "Course Name": "M.Sc Data Science",
+    "Duration": "2 Years",
+    "Description": "Machine learning, statistical computing, big data; analytics companies and data-driven industries",
+    "Entrance Exam / Pathway": "IIT JAM / College-level Entrance"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Science",
+    "Course Name": "M.Sc Biotechnology",
+    "Duration": "2 Years",
+    "Description": "Genetic engineering, bioinformatics, drug discovery; CSIR labs, pharma companies, biotech startups",
+    "Entrance Exam / Pathway": "IIT JAM (BT), CUET PG, DBT JRF"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Science",
+    "Course Name": "M.Sc Computer Science",
+    "Duration": "2 Years",
+    "Description": "Algorithms, AI, distributed computing; IT industry and PhD preparation",
+    "Entrance Exam / Pathway": "CUCET / State University / IIT Internal"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Science",
+    "Course Name": "M.Sc Environmental Science",
+    "Duration": "2 Years",
+    "Description": "Climate change, pollution assessment, EIA; government regulatory bodies and environmental consultancies",
+    "Entrance Exam / Pathway": "CUCET / State University"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Science",
+    "Course Name": "M.Sc Microbiology",
+    "Duration": "2 Years",
+    "Description": "Clinical microbiology, industrial fermentation, epidemiology; pharma, food safety and healthcare sectors",
+    "Entrance Exam / Pathway": "IIT JAM / CUCET / State"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Science",
+    "Course Name": "M.Sc Biochemistry",
+    "Duration": "2 Years",
+    "Description": "Protein biochemistry, metabolomics, clinical biochemistry; research labs, hospitals and diagnostics",
+    "Entrance Exam / Pathway": "IIT JAM / CUCET / State"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Science",
+    "Course Name": "M.Sc Forensic Science",
+    "Duration": "2 Years",
+    "Description": "Advanced forensic investigation, cyber forensics, DNA typing; CBI, FSLs, judiciary",
+    "Entrance Exam / Pathway": "CUCET / State University"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Science",
+    "Course Name": "M.Sc Bioinformatics",
+    "Duration": "2 Years",
+    "Description": "Computational biology, genomics data analysis, drug target discovery; CSIR, DBT labs and pharma",
+    "Entrance Exam / Pathway": "CUET PG / JNU / State University"
+  },
+  {
+    "Level": "",
+    "Stream": "Medical & Health",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "PG",
+    "Stream": "Medical & Health",
+    "Course Name": "MD (Doctor of Medicine)",
+    "Duration": "3 Years",
+    "Description": "Super-specialization in medicine (General Medicine, Dermatology, Psychiatry, Paediatrics etc.); hospitals and research",
+    "Entrance Exam / Pathway": "NEET PG"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Medical & Health",
+    "Course Name": "MS (Master of Surgery)",
+    "Duration": "3 Years",
+    "Description": "Surgical specialization (General Surgery, Orthopaedics, ENT, Ophthalmology etc.); leading hospitals",
+    "Entrance Exam / Pathway": "NEET PG"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Medical & Health",
+    "Course Name": "MDS (Master of Dental Surgery)",
+    "Duration": "3 Years",
+    "Description": "Dental specialization (Orthodontics, Periodontology, Endodontics, Oral Surgery etc.)",
+    "Entrance Exam / Pathway": "NEET MDS"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Medical & Health",
+    "Course Name": "M.Pharm (Master of Pharmacy)",
+    "Duration": "2 Years",
+    "Description": "Pharmaceutical analysis, clinical pharmacy, pharmacology; pharma R&D, quality control and regulatory affairs",
+    "Entrance Exam / Pathway": "GPAT, State Pharmacy PG Entrance"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Medical & Health",
+    "Course Name": "MPH (Master of Public Health)",
+    "Duration": "2 Years",
+    "Description": "Epidemiology, biostatistics, health policy, global health; WHO, UNDP, government health ministry",
+    "Entrance Exam / Pathway": "AIIMS / TISS / State Entrance"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Medical & Health",
+    "Course Name": "M.Sc Nursing",
+    "Duration": "2 Years",
+    "Description": "Advanced nursing specialization (medical-surgical, psychiatric, community, paediatric); faculty and senior nurse roles",
+    "Entrance Exam / Pathway": "State Nursing PG Entrance"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Medical & Health",
+    "Course Name": "MCh (Super Specialization Surgery)",
+    "Duration": "3 Years",
+    "Description": "Advanced surgical super-specialization (Neuro Surgery, Cardio-Thoracic, Urology etc.); top hospital appointments",
+    "Entrance Exam / Pathway": "NEET SS"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Medical & Health",
+    "Course Name": "DM (Super Specialization Medicine)",
+    "Duration": "3 Years",
+    "Description": "Advanced medical super-specialization (Cardiology, Neurology, Nephrology etc.); senior specialist roles",
+    "Entrance Exam / Pathway": "NEET SS"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Medical & Health",
+    "Course Name": "MPT (Master of Physiotherapy)",
+    "Duration": "2 Years",
+    "Description": "Advanced physiotherapy (neuro, sports, musculoskeletal, paediatric); senior clinician and academic roles",
+    "Entrance Exam / Pathway": "State Physiotherapy PG Entrance"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Medical & Health",
+    "Course Name": "M.V.Sc (Master of Veterinary Science)",
+    "Duration": "2 Years",
+    "Description": "Animal medicine, surgery, animal sciences; ICAR research, animal husbandry departments, dairy industry",
+    "Entrance Exam / Pathway": "ICAR AIEEA PG"
+  },
+  {
+    "Level": "",
+    "Stream": "Law",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "PG",
+    "Stream": "Law",
+    "Course Name": "LLM (Master of Laws - General)",
+    "Duration": "1 - 2 Years",
+    "Description": "Advanced legal studies; mandatory for judiciary, law teaching and specialized legal practice",
+    "Entrance Exam / Pathway": "CLAT PG, AILET PG, State LLM Entrance"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Law",
+    "Course Name": "LLM Corporate & Commercial Law",
+    "Duration": "1 - 2 Years",
+    "Description": "M&A law, securities regulations, contract drafting; top law firms and in-house legal departments",
+    "Entrance Exam / Pathway": "CLAT PG / College-level"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Law",
+    "Course Name": "LLM Criminal Law",
+    "Duration": "1 - 2 Years",
+    "Description": "Criminology, criminal justice, human rights; prosecution, judiciary and criminal defence practice",
+    "Entrance Exam / Pathway": "CLAT PG / College-level"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Law",
+    "Course Name": "LLM Constitutional & Administrative Law",
+    "Duration": "1 - 2 Years",
+    "Description": "Constitutional litigation, PIL, government law; High Courts, Supreme Court and policy advocacy",
+    "Entrance Exam / Pathway": "CLAT PG / College-level"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Law",
+    "Course Name": "LLM IPR & Cyber Law",
+    "Duration": "1 - 2 Years",
+    "Description": "Patent law, copyright, trademark, cybercrime; IT companies, IP firms and government departments",
+    "Entrance Exam / Pathway": "CLAT PG / College-level"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Law",
+    "Course Name": "LLM International Law",
+    "Duration": "1 - 2 Years",
+    "Description": "Public international law, trade law, international arbitration; UN bodies, WIPO, global law firms",
+    "Entrance Exam / Pathway": "CLAT PG / College-level"
+  },
+  {
+    "Level": "",
+    "Stream": "Arts & Humanities",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "PG",
+    "Stream": "Arts & Humanities",
+    "Course Name": "MA English",
+    "Duration": "2 Years",
+    "Description": "Literary theory, cultural studies, creative writing, linguistics; academia, content, media and communication careers",
+    "Entrance Exam / Pathway": "CUCET / State University / College Entrance"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Arts & Humanities",
+    "Course Name": "MA Economics",
+    "Duration": "2 Years",
+    "Description": "Econometrics, macroeconomic policy, development economics; RBI, finance ministry, international organisations",
+    "Entrance Exam / Pathway": "CUCET / DSE Entrance / JNU / State"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Arts & Humanities",
+    "Course Name": "MA Psychology",
+    "Duration": "2 Years",
+    "Description": "Clinical, organizational, counselling, social psychology; mental health practice, HR, market research",
+    "Entrance Exam / Pathway": "CUCET / TISS / State University"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Arts & Humanities",
+    "Course Name": "MA Journalism & Mass Communication",
+    "Duration": "2 Years",
+    "Description": "Advanced media studies, broadcast journalism, PR, digital media management; senior editorial and PR roles",
+    "Entrance Exam / Pathway": "IIMC Entrance, CUCET, AJK MCRC, State University"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Arts & Humanities",
+    "Course Name": "MA History",
+    "Duration": "2 Years",
+    "Description": "Medieval, modern and contemporary history; UPSC optional, research, archival work and academia",
+    "Entrance Exam / Pathway": "CUCET / State University"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Arts & Humanities",
+    "Course Name": "MA Sociology",
+    "Duration": "2 Years",
+    "Description": "Social theory, research methods, urban studies, gender studies; TISS, IGNOU, policy and development orgs",
+    "Entrance Exam / Pathway": "CUCET / TISS Entrance / State"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Arts & Humanities",
+    "Course Name": "MA Political Science",
+    "Duration": "2 Years",
+    "Description": "Political theory, comparative politics, Indian politics, international relations; civil services, think tanks",
+    "Entrance Exam / Pathway": "CUCET / JNU Entrance / State"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Arts & Humanities",
+    "Course Name": "MA Public Administration",
+    "Duration": "2 Years",
+    "Description": "Government policy, public finance, bureaucratic systems; civil services, policy research and governance roles",
+    "Entrance Exam / Pathway": "CUCET / State University"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Arts & Humanities",
+    "Course Name": "MSW (Master of Social Work)",
+    "Duration": "2 Years",
+    "Description": "Community development, clinical social work; NGOs, hospitals, government social departments",
+    "Entrance Exam / Pathway": "TISS Entrance / CUCET / State University"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Arts & Humanities",
+    "Course Name": "MA Philosophy",
+    "Duration": "2 Years",
+    "Description": "Advanced ethics, logic, philosophy of science; academia, law, corporate ethics and governance",
+    "Entrance Exam / Pathway": "CUCET / State University / JNU"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Arts & Humanities",
+    "Course Name": "MA Geography",
+    "Duration": "2 Years",
+    "Description": "Human geography, GIS and remote sensing, urban studies; ISRO, survey departments, urban planning",
+    "Entrance Exam / Pathway": "CUCET / State University"
+  },
+  {
+    "Level": "",
+    "Stream": "Commerce & Accounting",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "PG",
+    "Stream": "Commerce & Accounting",
+    "Course Name": "M.Com (Master of Commerce)",
+    "Duration": "2 Years",
+    "Description": "Advanced accounting, finance, taxation, auditing; academia, financial services, banking and CA support",
+    "Entrance Exam / Pathway": "CUCET / State University / Merit"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Commerce & Accounting",
+    "Course Name": "M.Com Finance",
+    "Duration": "2 Years",
+    "Description": "Financial markets, investment analysis, derivatives; securities, corporate finance and BFSI sector",
+    "Entrance Exam / Pathway": "CUCET / College Entrance"
+  },
+  {
+    "Level": "",
+    "Stream": "Agriculture",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "PG",
+    "Stream": "Agriculture",
+    "Course Name": "M.Sc Agriculture (Crop Science / Plant Pathology / Soil Science etc.)",
+    "Duration": "2 Years",
+    "Description": "Advanced crop science, plant pathology, soil science, entomology; ICAR, KVKs, agri-input companies",
+    "Entrance Exam / Pathway": "ICAR AIEEA PG, State Agriculture University"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Agriculture",
+    "Course Name": "M.Sc Horticulture",
+    "Duration": "2 Years",
+    "Description": "Post-harvest management, floriculture, landscape design; export houses, agri-processing companies",
+    "Entrance Exam / Pathway": "ICAR AIEEA PG / State Agriculture"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Agriculture",
+    "Course Name": "M.Sc Fisheries Science",
+    "Duration": "2 Years",
+    "Description": "Advanced aquaculture, fish pathology, marine biotechnology; NFDB, MPEDA, research institutes",
+    "Entrance Exam / Pathway": "ICAR AIEEA PG / State Agriculture"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Agriculture",
+    "Course Name": "M.Tech Food Technology",
+    "Duration": "2 Years",
+    "Description": "Food product development, process engineering; FSSAI, food MNCs (Nestl&#233;, ITC, PepsiCo, HUL)",
+    "Entrance Exam / Pathway": "GATE (XE paper) / College Entrance"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Agriculture",
+    "Course Name": "MBA Agri-Business Management",
+    "Duration": "2 Years",
+    "Description": "Agricultural value chain, rural finance, commodities trading; MANAGE, IIM Ahmedabad, IRMA",
+    "Entrance Exam / Pathway": "CAT/XAT + IRMA Entrance"
+  },
+  {
+    "Level": "",
+    "Stream": "Design",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "PG",
+    "Stream": "Design",
+    "Course Name": "M.Des (Master of Design)",
+    "Duration": "2 Years",
+    "Description": "Advanced design research; specialization in product, communication or interaction design; NID, IITs, Srishti",
+    "Entrance Exam / Pathway": "CEED (IIT/IISc), NID DAT Masters"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Design",
+    "Course Name": "M.Arch (Master of Architecture)",
+    "Duration": "2 Years",
+    "Description": "Urban design, sustainable architecture, conservation architecture; leading architecture firms and academia",
+    "Entrance Exam / Pathway": "GATE (AR paper), CEED, College Entrance"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Design",
+    "Course Name": "MFA (Master of Fine Arts)",
+    "Duration": "2 Years",
+    "Description": "Painting, sculpture, printmaking, digital arts; galleries, art direction, academia and independent artist career",
+    "Entrance Exam / Pathway": "State Fine Arts PG Entrance / College Entrance"
+  },
+  {
+    "Level": "",
+    "Stream": "Education",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "PG",
+    "Stream": "Education",
+    "Course Name": "M.Ed (Master of Education)",
+    "Duration": "2 Years",
+    "Description": "Educational administration, curriculum design, special education; principal, educational researcher, teacher trainer",
+    "Entrance Exam / Pathway": "CUCET / State University / College Entrance"
+  },
+  {
+    "Level": "PG",
+    "Stream": "Education",
+    "Course Name": "M.P.Ed (Master of Physical Education)",
+    "Duration": "2 Years",
+    "Description": "Sports science, physical training methodology, sports psychology; sports academy coach and PE department head",
+    "Entrance Exam / Pathway": "State Physical Education PG Entrance"
+  },
+  {
+    "Level": "&#9612; AFTER PG",
+    "Stream": "",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "",
+    "Stream": "PhD & Doctoral Programs",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "After PG",
+    "Stream": "PhD & Doctoral Programs",
+    "Course Name": "PhD in Computer Science",
+    "Duration": "3 - 6 Years",
+    "Description": "Original research in algorithms, AI, distributed systems; IIT/IISc faculty, CSIR labs and tech research roles",
+    "Entrance Exam / Pathway": "GATE + Institute Interview / UGC-JRF / CSIR-JRF"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "PhD & Doctoral Programs",
+    "Course Name": "PhD in AI & Machine Learning",
+    "Duration": "3 - 6 Years",
+    "Description": "Cutting-edge research in neural architectures, AI safety, generative models; AI labs, IITs, IISc, private research",
+    "Entrance Exam / Pathway": "GATE + Institute Interview / Industry Research Entry"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "PhD & Doctoral Programs",
+    "Course Name": "PhD in Physics",
+    "Duration": "4 - 6 Years",
+    "Description": "Condensed matter, astrophysics, nuclear, high-energy physics; TIFR, IISc, ISRO, BARC and global research",
+    "Entrance Exam / Pathway": "GATE / JEST / UGC-JRF / Institute Interview"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "PhD & Doctoral Programs",
+    "Course Name": "PhD in Chemistry",
+    "Duration": "4 - 6 Years",
+    "Description": "Synthetic chemistry, materials chemistry, drug discovery; pharma companies, CSIR labs and academia",
+    "Entrance Exam / Pathway": "GATE / CSIR-JRF / UGC-JRF / TIFR GS"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "PhD & Doctoral Programs",
+    "Course Name": "PhD in Mathematics",
+    "Duration": "4 - 6 Years",
+    "Description": "Pure or applied mathematics research; ISI, IMSc, TIFR-CAM, academia and quantitative finance",
+    "Entrance Exam / Pathway": "GATE / NBHM / CMI / Institute Interview"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "PhD & Doctoral Programs",
+    "Course Name": "PhD in Biotechnology / Life Sciences",
+    "Duration": "4 - 6 Years",
+    "Description": "Genomics, drug discovery, structural biology; CSIR-CCMB, DBT labs, NCBS, IISc",
+    "Entrance Exam / Pathway": "CSIR-JRF, DBT-JRF, ICMR-JRF, GATE"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "PhD & Doctoral Programs",
+    "Course Name": "PhD in Management / Business Administration",
+    "Duration": "4 - 6 Years",
+    "Description": "Research in strategy, finance, OB, marketing; IIM faculty, think tanks, consultancy and corporate research",
+    "Entrance Exam / Pathway": "CAT/GMAT + FPM Interview (IIMs), Fellow Programme Entrance"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "PhD & Doctoral Programs",
+    "Course Name": "PhD in Economics",
+    "Duration": "4 - 6 Years",
+    "Description": "Economic theory and applied economics; RBI Chair, Planning Commission, world bank, academic research",
+    "Entrance Exam / Pathway": "UGC-JRF (Economics), CUCET, DSE / ISI Entrance"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "PhD & Doctoral Programs",
+    "Course Name": "PhD in Medical Sciences",
+    "Duration": "3 - 5 Years",
+    "Description": "Clinical research, pathology, public health, pharmacology; AIIMS, PGI Chandigarh, PGIMER, medical colleges",
+    "Entrance Exam / Pathway": "ICMR-JRF / AIIMS PhD Entrance / Institute Interview"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "PhD & Doctoral Programs",
+    "Course Name": "PhD in Engineering (Various Specializations)",
+    "Duration": "3 - 5 Years",
+    "Description": "Advanced engineering research in any specialization; IIT/NIT faculty, DRDO, ISRO, HAL, CSIR labs",
+    "Entrance Exam / Pathway": "GATE + Institute Interview"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "PhD & Doctoral Programs",
+    "Course Name": "PhD in Agriculture / Agricultural Sciences",
+    "Duration": "3 - 5 Years",
+    "Description": "Crop genetics, agronomy research, food security; ICAR, ICRISAT, CGIAR and agriculture universities",
+    "Entrance Exam / Pathway": "ICAR-JRF, UGC-JRF / State Agriculture University"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "PhD & Doctoral Programs",
+    "Course Name": "PhD in Environmental Science",
+    "Duration": "3 - 5 Years",
+    "Description": "Climate change, environmental policy, pollution control; CSIR-NEERI, government agencies, NGOs",
+    "Entrance Exam / Pathway": "CSIR-JRF, UGC-JRF / Institute Interview"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "PhD & Doctoral Programs",
+    "Course Name": "PhD in Humanities & Social Sciences",
+    "Duration": "3 - 5 Years",
+    "Description": "Sociology, history, English, political science research; UGC colleges, think tanks, policy organisations",
+    "Entrance Exam / Pathway": "UGC-JRF (NTA NET) / Institute Interview"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "PhD & Doctoral Programs",
+    "Course Name": "PhD in Law (Doctor of Juridical Science)",
+    "Duration": "3 - 5 Years",
+    "Description": "Original legal research; constitutional law, international law, human rights; law school faculty and legal reform",
+    "Entrance Exam / Pathway": "University Entrance / NTA NET Law"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "PhD & Doctoral Programs",
+    "Course Name": "PhD in Psychology",
+    "Duration": "3 - 5 Years",
+    "Description": "Clinical, organizational or social psychology research; NIMHANS, hospitals, academia and policy research",
+    "Entrance Exam / Pathway": "CUCET / UGC-JRF / Institute Interview"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "PhD & Doctoral Programs",
+    "Course Name": "PhD in Education",
+    "Duration": "3 - 5 Years",
+    "Description": "Curriculum, pedagogy, educational technology; NCERT, NCTE, teacher education institutions and education policy",
+    "Entrance Exam / Pathway": "NTA NET Education / University Entrance"
+  },
+  {
+    "Level": "",
+    "Stream": "Post-Doctoral Research",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "After PG",
+    "Stream": "Post-Doctoral Research",
+    "Course Name": "Post-Doctoral Fellowship (Science / Engineering)",
+    "Duration": "1 - 3 Years",
+    "Description": "Research experience beyond PhD; transition to independent scientist or faculty role; government funded positions available",
+    "Entrance Exam / Pathway": "N-PDF (DST), SERB, CSIR RA, INSA, NBHM"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "Post-Doctoral Research",
+    "Course Name": "CSIR Research Associate (RA)",
+    "Duration": "2 - 3 Years",
+    "Description": "Funded research position in CSIR national labs (NCL, CCMB, IMTECH etc.); bridge to permanent scientist role",
+    "Entrance Exam / Pathway": "CSIR-RA Interview"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "Post-Doctoral Research",
+    "Course Name": "ICMR Research Associate (Medical Sciences)",
+    "Duration": "2 - 3 Years",
+    "Description": "Biomedical research post in ICMR institutes; epidemiology, clinical research, disease surveillance",
+    "Entrance Exam / Pathway": "ICMR RA Interview"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "Post-Doctoral Research",
+    "Course Name": "ICAR Post-Doctoral Research (Agriculture)",
+    "Duration": "2 - 3 Years",
+    "Description": "Advanced agricultural research at national institutes; crop improvement, soil health, food security",
+    "Entrance Exam / Pathway": "ICAR-NASF Fellowship"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "Post-Doctoral Research",
+    "Course Name": "DST National Post-Doctoral Fellowship (N-PDF)",
+    "Duration": "2 Years",
+    "Description": "Prestigious government fellowship for young researchers; INR 55,000/month stipend; open to all disciplines",
+    "Entrance Exam / Pathway": "DST SERB N-PDF Application"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "Post-Doctoral Research",
+    "Course Name": "Fulbright-Nehru Postdoctoral Research Fellowship",
+    "Duration": "6 - 12 Months",
+    "Description": "Prestigious government-sponsored research collaboration between India and USA; open to all disciplines",
+    "Entrance Exam / Pathway": "Fulbright Application / USIEF India"
+  },
+  {
+    "Level": "",
+    "Stream": "Academic & Research Careers",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "After PG",
+    "Stream": "Academic & Research Careers",
+    "Course Name": "Assistant Professor (University / College)",
+    "Duration": "Ongoing",
+    "Description": "Teaching and research career at degree colleges or universities; requires UGC-NET/SET qualification and PhD",
+    "Entrance Exam / Pathway": "UGC-NET (NTA NET), State SET, University Recruitment"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "Academic & Research Careers",
+    "Course Name": "Associate / Full Professor",
+    "Duration": "Ongoing",
+    "Description": "Senior faculty position; based on promotions through CAS (Career Advancement Scheme); significant research publication required",
+    "Entrance Exam / Pathway": "University Promotion through API / CAS"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "Academic & Research Careers",
+    "Course Name": "Research Scientist (CSIR / ICAR / ICMR)",
+    "Duration": "Ongoing",
+    "Description": "Permanent Scientist Grade posts in central government research organizations; high job security and research independence",
+    "Entrance Exam / Pathway": "CSIR / ICAR / ICMR Direct Recruitment through GATE or Interview"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "Academic & Research Careers",
+    "Course Name": "Scientist (DRDO / ISRO / DAE / BARC)",
+    "Duration": "Ongoing",
+    "Description": "Defence and space research; DRDO (defence technology), ISRO (space), BARC (nuclear); prestigious and well-paid",
+    "Entrance Exam / Pathway": "DRDO CEPTAM, ISRO ICRB, GATE-based + Interview"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "Academic & Research Careers",
+    "Course Name": "Principal / Director (Educational Institution)",
+    "Duration": "Ongoing",
+    "Description": "Senior academic leadership; management of educational operations; typically requires M.Ed / PhD + experience",
+    "Entrance Exam / Pathway": "Through Promotions / University / State Government Recruitment"
+  },
+  {
+    "Level": "",
+    "Stream": "Civil Services & Competitive Exams",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "After PG",
+    "Stream": "Civil Services & Competitive Exams",
+    "Course Name": "UPSC Civil Services (IAS / IPS / IFS / IRS etc.)",
+    "Duration": "Varies",
+    "Description": "India's most prestigious career path; 20+ central services; eligibility open to all graduates and PG holders",
+    "Entrance Exam / Pathway": "UPSC CSE (Prelims &#8594; Mains &#8594; Interview)"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "Civil Services & Competitive Exams",
+    "Course Name": "State Public Service Commission (State PSC)",
+    "Duration": "Varies",
+    "Description": "Deputy Collector, DSP and other State Administrative/Police Services; each state has its own PSC exam",
+    "Entrance Exam / Pathway": "State PSC Exam (APPSC, TSPSC, MPSC, UPPSC etc.)"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "Civil Services & Competitive Exams",
+    "Course Name": "Banking Services (IBPS PO / SBI PO / RBI Grade B)",
+    "Duration": "Varies",
+    "Description": "Probationary Officer in public sector banks; RBI Grade B is the most prestigious banking services post",
+    "Entrance Exam / Pathway": "IBPS PO/SO, SBI PO, RBI Grade B Written Test + Interview"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "Civil Services & Competitive Exams",
+    "Course Name": "SSC CGL (Central Government Non-Gazetted Posts)",
+    "Duration": "Varies",
+    "Description": "Assistant Section Officer, Income Tax Inspector, Auditor and other Group B & C central government posts",
+    "Entrance Exam / Pathway": "SSC CGL Written Exam + Skill Test"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "Civil Services & Competitive Exams",
+    "Course Name": "GATE (PSU Jobs or Higher Studies Abroad)",
+    "Duration": "Varies",
+    "Description": "Gateway to PSU employment (ONGC, NTPC, BHEL, GAIL) or master's admissions in Germany, Singapore, NUS",
+    "Entrance Exam / Pathway": "GATE Exam (CS, ME, CE, EC, EE, BT, CH etc.)"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "Civil Services & Competitive Exams",
+    "Course Name": "UGC-NET / SET (Lecturer + JRF)",
+    "Duration": "Varies",
+    "Description": "National Eligibility Test for Assistant Professor and Junior Research Fellowship; required for teaching in universities",
+    "Entrance Exam / Pathway": "NTA NET Exam + State SET"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "Civil Services & Competitive Exams",
+    "Course Name": "Short Service Commission - Defence (SSC)",
+    "Duration": "Varies",
+    "Description": "Commissioned officer in Army, Navy or Air Force through Short Service Commission for PG holders",
+    "Entrance Exam / Pathway": "UPSC CDS, AFCAT, SSB Interview"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "Civil Services & Competitive Exams",
+    "Course Name": "NABARD / NHB / SIDBI Officers",
+    "Duration": "Varies",
+    "Description": "Agricultural and rural development banking; NABARD Grade A is prestigious for agriculture and rural finance career",
+    "Entrance Exam / Pathway": "NABARD Exam, NHB / SIDBI Recruitment"
+  },
+  {
+    "Level": "",
+    "Stream": "Professional Certifications & Specializations",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "After PG",
+    "Stream": "Professional Certifications & Specializations",
+    "Course Name": "CFA (Chartered Financial Analyst) Levels I, II, III",
+    "Duration": "3 - 5 Years (self-paced)",
+    "Description": "Globally recognized investment management qualification; investment banking, fund management and equity research",
+    "Entrance Exam / Pathway": "CFA Institute Exam (3 Levels)"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "Professional Certifications & Specializations",
+    "Course Name": "FRM (Financial Risk Manager) Parts I & II",
+    "Duration": "1 - 2 Years",
+    "Description": "Risk management certification by GARP; credit risk, market risk and operational risk roles in banks and finance firms",
+    "Entrance Exam / Pathway": "GARP FRM Exam"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "Professional Certifications & Specializations",
+    "Course Name": "CA Final Level (Chartered Accountancy)",
+    "Duration": "Varies",
+    "Description": "Highest ICAI qualification; Partner in CA firms, CFO and finance leadership in any corporate sector",
+    "Entrance Exam / Pathway": "ICAI CA Final Exam"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "Professional Certifications & Specializations",
+    "Course Name": "Medical Fellowship Programs (Clinical Specializations)",
+    "Duration": "1 - 2 Years",
+    "Description": "Super-specialty clinical training beyond MCh/DM; offered by NMC, professional bodies and leading hospitals",
+    "Entrance Exam / Pathway": "Hospital / College Fellowship Selection"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "Professional Certifications & Specializations",
+    "Course Name": "PMP (Project Management Professional)",
+    "Duration": "Varies",
+    "Description": "PMI global certification; project leadership in IT, construction, pharma and any project-based industry",
+    "Entrance Exam / Pathway": "PMP Exam (PMI Application + 180-question test)"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "Professional Certifications & Specializations",
+    "Course Name": "AWS / Azure / GCP Cloud Certifications",
+    "Duration": "3 - 6 Months",
+    "Description": "Cloud platform skills for Solutions Architects, DevOps and Cloud Engineers; highly demanded in IT industry",
+    "Entrance Exam / Pathway": "Online AWS / Azure / GCP Certification Exams"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "Professional Certifications & Specializations",
+    "Course Name": "Cyber Security Certifications (CISSP / CEH / CISA)",
+    "Duration": "6 Months - 1 Year",
+    "Description": "Advanced information security qualifications; roles in cyber defence, SOC analyst, security architect",
+    "Entrance Exam / Pathway": "EC-Council, ISC2, ISACA Certification Exams"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "Professional Certifications & Specializations",
+    "Course Name": "Data Science / ML Certifications (Google / Coursera / IBM)",
+    "Duration": "3 - 6 Months",
+    "Description": "Industry-recognized data science credentials; add-on to academic PG for analytics and AI careers",
+    "Entrance Exam / Pathway": "Online proctored exams"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "Professional Certifications & Specializations",
+    "Course Name": "Digital Marketing Certifications (Google / Meta / HubSpot)",
+    "Duration": "3 - 6 Months",
+    "Description": "SEO, SEM, content marketing, social media advertising; marketing and brand management roles",
+    "Entrance Exam / Pathway": "Online Certification (Free + Paid)"
+  },
+  {
+    "Level": "",
+    "Stream": "Entrepreneurship & Industry",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "After PG",
+    "Stream": "Entrepreneurship & Industry",
+    "Course Name": "Startup / Entrepreneurship",
+    "Duration": "Ongoing",
+    "Description": "Building and scaling one's own business; supported by T-Hub (Hyderabad), iCreate, IIM incubators and SIDBI SPEED fund",
+    "Entrance Exam / Pathway": "No formal exam; accelerator / incubator applications"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "Entrepreneurship & Industry",
+    "Course Name": "Industry Specialist / Domain Expert",
+    "Duration": "Ongoing",
+    "Description": "Senior technical or functional expert role in a corporation; requires deep subject knowledge and 5-10 years' experience",
+    "Entrance Exam / Pathway": "Corporate Recruitment / Promotion"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "Entrepreneurship & Industry",
+    "Course Name": "Management Consultant (Strategy / Operations / IT)",
+    "Duration": "Ongoing",
+    "Description": "Strategy advisory at McKinsey, BCG, Bain, Deloitte or Big Four; top-tier MBA or PhD + relevant experience",
+    "Entrance Exam / Pathway": "Consulting Firm Campus / Lateral Recruitment"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "Entrepreneurship & Industry",
+    "Course Name": "Independent Researcher / Freelance Consultant",
+    "Duration": "Ongoing",
+    "Description": "Policy research, market research, technology advisory on a project basis; growing gig economy opportunity",
+    "Entrance Exam / Pathway": "Self-employed; no formal exam"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "Entrepreneurship & Industry",
+    "Course Name": "NGO / Development Sector Professional",
+    "Duration": "Ongoing",
+    "Description": "Social impact, community development, international development; TISS, IRMA and development sector degrees help",
+    "Entrance Exam / Pathway": "Organisation Recruitment / TISS Placements"
+  },
+  {
+    "Level": "",
+    "Stream": "International Opportunities",
+    "Course Name": "",
+    "Duration": "",
+    "Description": "",
+    "Entrance Exam / Pathway": ""
+  },
+  {
+    "Level": "After PG",
+    "Stream": "International Opportunities",
+    "Course Name": "MS / PhD Abroad (USA / UK / Canada / Australia / Germany)",
+    "Duration": "1 - 6 Years",
+    "Description": "World-class research and teaching universities; TA/RA funding available; GRE/IELTS required for most countries",
+    "Entrance Exam / Pathway": "GRE + IELTS/TOEFL + SOP + LORs"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "International Opportunities",
+    "Course Name": "MBA at International B-Schools (INSEAD / LBS / HBS)",
+    "Duration": "1 - 2 Years",
+    "Description": "Global MBA at top-ranked global institutes; international career access; typically 3-5 years work experience required",
+    "Entrance Exam / Pathway": "GMAT / GRE + Work Experience + Essays + Interview"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "International Opportunities",
+    "Course Name": "DAAD Fellowship (Germany Research)",
+    "Duration": "1 - 3 Years",
+    "Description": "Funded research stay in Germany; DAAD is India's largest scholarship source for Germany; all disciplines",
+    "Entrance Exam / Pathway": "DAAD Application + University Acceptance"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "International Opportunities",
+    "Course Name": "Erasmus Mundus Scholarship (Europe)",
+    "Duration": "1 - 2 Years",
+    "Description": "Fully funded Master's in European university consortium; highly competitive; all disciplines",
+    "Entrance Exam / Pathway": "EU Erasmus Application"
+  },
+  {
+    "Level": "After PG",
+    "Stream": "International Opportunities",
+    "Course Name": "Fulbright-Nehru Scholarship (USA)",
+    "Duration": "1 - 2 Years",
+    "Description": "Prestigious India-US government funded fellowship; Master's, PhD, research and teaching opportunities",
+    "Entrance Exam / Pathway": "USIEF India Application"
+  }
+]

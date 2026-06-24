@@ -1,0 +1,692 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>NextStep | Settings</title>
+<script src="auth.js"></script>
+<script>NextStepAuth.requireLogin();</script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Manrope:wght@400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#010a26",
+                    "background": "#fff9ed",
+                    "surface-container": "#f7eed3",
+                    "surface-container-lowest": "#ffffff",
+                    "error": "#ba1a1a",
+                    "secondary": "#556340",
+                    "on-surface": "#1f1c0b",
+                    "on-secondary-fixed-variant": "#3e4b2b",
+                    "primary-fixed": "#dae2ff",
+                    "surface-bright": "#fff9ed",
+                    "inverse-primary": "#bbc6ea",
+                    "surface-container-low": "#fcf3d8",
+                    "on-secondary-container": "#5b6946",
+                    "on-background": "#1f1c0b",
+                    "surface-dim": "#e2dabf",
+                    "surface-tint": "#535e7d",
+                    "secondary-fixed": "#d8e9bc",
+                    "error-container": "#ffdad6",
+                    "secondary-container": "#d8e9bc",
+                    "inverse-surface": "#35301e",
+                    "on-tertiary-fixed": "#1e1c05",
+                    "on-primary-fixed": "#0f1a36",
+                    "on-primary-fixed-variant": "#3b4664",
+                    "tertiary": "#0e0d00",
+                    "secondary-fixed-dim": "#bccca2",
+                    "surface-container-high": "#f1e8cd",
+                    "surface": "#fff9ed",
+                    "tertiary-fixed": "#e9e4be",
+                    "on-tertiary-fixed-variant": "#4a482c",
+                    "inverse-on-surface": "#f9f0d5",
+                    "outline-variant": "#c6c6ce",
+                    "primary-fixed-dim": "#bbc6ea",
+                    "tertiary-fixed-dim": "#ccc8a4",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "outline": "#76777e",
+                    "tertiary-container": "#25230b",
+                    "primary-container": "#16213d",
+                    "surface-container-highest": "#ebe2c8",
+                    "on-primary-container": "#7e89aa",
+                    "on-secondary": "#ffffff",
+                    "on-surface-variant": "#45464d",
+                    "on-tertiary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#ebe2c8",
+                    "on-tertiary-container": "#8e8b6a",
+                    "on-secondary-fixed": "#131f04"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "20px",
+                    "margin-desktop": "80px",
+                    "gutter": "24px",
+                    "base": "8px",
+                    "container-max": "1200px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Sora"],
+                    "label-sm": ["Manrope"],
+                    "label-md": ["Manrope"],
+                    "headline-md": ["Sora"],
+                    "body-md": ["Manrope"],
+                    "body-lg": ["Manrope"],
+                    "display-lg": ["Sora"],
+                    "headline-lg": ["Sora"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body {
+            background-color: #fff9ed;
+            color: #010a26;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .soft-card-shadow {
+            box-shadow: 0px 10px 30px rgba(1, 10, 38, 0.04);
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #010a26;
+        }
+        .toggle-checkbox:checked + .toggle-label .toggle-dot {
+            transform: translateX(100%);
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+
+<!-- SideNavBar Shell -->
+<aside class="fixed left-0 top-0 h-full flex flex-col py-8 bg-surface border-r border-secondary-fixed h-screen w-64 z-50">
+    <div class="px-6 mb-12">
+        <h1 class="font-display-lg text-headline-md font-bold text-primary">NextStep</h1>
+        <p class="font-label-md text-label-sm text-on-surface-variant opacity-60">Executive Career Suite</p>
+    </div>
+    <nav class="flex-1 flex flex-col gap-1">
+        <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="4-dashboard.html">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span class="font-label-md">Dashboard</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="5-study-paths.html">
+            <span class="material-symbols-outlined">school</span>
+            <span class="font-label-md">Study Paths</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="5-career-paths.html">
+            <span class="material-symbols-outlined">explore</span>
+            <span class="font-label-md">Career Paths</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="6-exams.html">
+            <span class="material-symbols-outlined">school</span>
+            <span class="font-label-md">Exams</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="7-colleges.html">
+            <span class="material-symbols-outlined">account_balance</span>
+            <span class="font-label-md">Colleges</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="8-scholarships.html">
+            <span class="material-symbols-outlined">payments</span>
+            <span class="font-label-md">Scholarships</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="9-cgai.html">
+            <span class="material-symbols-outlined">psychology</span>
+            <span class="font-label-md">AI Mentor</span>
+        </a>
+        <!-- Active: Settings -->
+        <a class="flex items-center gap-3 px-4 py-3 text-primary font-bold border-r-4 border-primary bg-surface-container-low rounded-xl transition-all duration-200" href="10-settings.html">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">settings</span>
+            <span class="font-label-md">Settings</span>
+        </a>
+    </nav>
+</aside>
+
+<!-- TopAppBar Shell -->
+<header class="sticky top-0 z-40 flex justify-between items-center w-full px-margin-desktop py-4 ml-64 max-w-[calc(100%-16rem)] bg-background/80 backdrop-blur-md">
+    <div class="flex-1 flex items-center">
+        <div class="relative w-full max-w-md">
+            <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+            <input class="w-full bg-surface-container border-none rounded-full py-2 pl-10 pr-4 text-label-md focus:ring-2 focus:ring-primary/20 transition-all" placeholder="Search preferences..." type="text">
+        </div>
+    </div>
+    <div class="flex items-center gap-6">
+        <div class="flex items-center gap-3">
+            <div class="text-right hidden sm:block">
+                <p id="profile-display-name" class="font-label-md text-primary font-bold leading-none">User</p>
+            </div>
+            <div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center border border-secondary-fixed">
+                <span class="material-symbols-outlined text-primary">person</span>
+            </div>
+        </div>
+        <button id="logout-btn" class="flex items-center gap-2 px-4 py-2 border border-secondary-fixed rounded-full font-label-md text-primary hover:bg-surface-container transition-all">
+            <span class="material-symbols-outlined text-[20px]">logout</span>
+            <span>Logout</span>
+        </button>
+    </div>
+</header>
+
+<!-- Main Content Canvas -->
+<main class="ml-64 p-margin-desktop pt-12 min-h-screen">
+    <div class="max-w-container-max mx-auto">
+        <!-- Header Section -->
+        <div class="mb-12">
+            <h2 class="font-display-lg text-display-lg text-primary mb-2">Account Settings</h2>
+            <p class="font-body-md text-on-surface-variant max-w-2xl">Manage your career trajectory, privacy preferences, and notification frequency in our unified executive suite.</p>
+        </div>
+        <!-- Settings Grid -->
+        <div class="grid grid-cols-12 gap-gutter">
+            <!-- Navigation Tabs -->
+            <nav class="col-span-12 md:col-span-3 flex flex-row md:flex-col overflow-x-auto scrollbar-hide md:overflow-visible gap-4 md:gap-2 mb-8 md:mb-0">
+                <button class="settings-tab flex items-center gap-3 px-6 py-4 rounded-xl bg-surface-container-highest text-primary font-bold transition-all shadow-sm" data-tab="profile">
+                    <span class="material-symbols-outlined">person</span>
+                    <span class="font-label-md whitespace-nowrap">Profile Details</span>
+                </button>
+                <button class="settings-tab flex items-center gap-3 px-6 py-4 rounded-xl text-on-surface-variant hover:bg-surface-container transition-all" data-tab="notifications">
+                    <span class="material-symbols-outlined">notifications_active</span>
+                    <span class="font-label-md whitespace-nowrap">Notifications</span>
+                </button>
+                <button class="settings-tab flex items-center gap-3 px-6 py-4 rounded-xl text-on-surface-variant hover:bg-surface-container transition-all" data-tab="privacy">
+                    <span class="material-symbols-outlined">shield</span>
+                    <span class="font-label-md whitespace-nowrap">Privacy &amp; Safety</span>
+                </button>
+            </nav>
+
+            <!-- Settings Content -->
+            <div class="col-span-12 md:col-span-9 space-y-12">
+                <!-- Profile Tab -->
+                <div id="profile-tab" class="settings-content space-y-12">
+                    <!-- Profile Management -->
+                    <section class="bg-surface p-8 rounded-[16px] border border-secondary-fixed soft-card-shadow">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+                            <div>
+                                <h3 class="font-headline-md text-headline-md text-primary mb-1">Executive Profile</h3>
+                                <p class="text-label-sm text-on-surface-variant">Update your public visibility and professional credentials.</p>
+                            </div>
+                            <button id="save-profile-btn" class="px-6 py-2 bg-primary text-on-primary rounded-full font-label-md hover:bg-primary/90 transition-all">Save Changes</button>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="space-y-2">
+                                <label class="font-label-md text-on-surface-variant ml-1">Full Professional Name</label>
+                                <input id="profile-name" class="w-full bg-surface-container-low border-b border-secondary-fixed p-3 focus:border-primary focus:ring-0 transition-all outline-none" type="text" value="">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="font-label-md text-on-surface-variant ml-1">Primary Email</label>
+                                <input id="profile-email" class="w-full bg-surface-container-low border-b border-secondary-fixed p-3 focus:border-primary focus:ring-0 transition-all outline-none" type="email" value="">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="font-label-md text-on-surface-variant ml-1">Career Interests</label>
+                                <input id="profile-interests" class="w-full bg-surface-container-low border-b border-secondary-fixed p-3 focus:border-primary focus:ring-0 transition-all outline-none" type="text" placeholder="e.g., Engineering, Finance, Consulting" value="">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="font-label-md text-on-surface-variant ml-1">Current Experience Level</label>
+                                <select id="profile-level" class="w-full bg-surface-container-low border-b border-secondary-fixed p-3 focus:border-primary focus:ring-0 transition-all outline-none">
+                                    <option value="student">Student</option>
+                                    <option value="fresher">Fresher (0-1 years)</option>
+                                    <option value="junior" selected>Junior (1-3 years)</option>
+                                    <option value="mid">Mid-level (3-6 years)</option>
+                                    <option value="senior">Senior (6+ years)</option>
+                                    <option value="executive">Executive</option>
+                                </select>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Saved Career Paths -->
+                    <section>
+                        <div class="flex items-center justify-between mb-8">
+                            <div>
+                                <h3 class="font-headline-md text-headline-md text-primary">Saved Career Paths</h3>
+                                <p class="text-label-sm text-on-surface-variant">Executive roles you are currently tracking.</p>
+                            </div>
+                            <button id="view-saved-careers-btn" class="text-secondary font-label-md hover:underline">View All</button>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="saved-career-card bg-surface-container p-6 rounded-[16px] border border-secondary-fixed group cursor-pointer hover:border-primary transition-all" data-path="Chief Strategy Officer">
+                                <div class="flex justify-between items-start mb-4">
+                                    <span class="material-symbols-outlined text-secondary bg-secondary-fixed p-2 rounded-lg">finance</span>
+                                    <span class="text-[10px] uppercase tracking-widest font-bold text-secondary">High Match</span>
+                                </div>
+                                <h4 class="font-label-md text-primary mb-1">Chief Strategy Officer</h4>
+                                <p class="text-label-sm text-on-surface-variant mb-4">Tier-1 FinTech</p>
+                                <div class="w-full bg-secondary-fixed/50 h-1 rounded-full overflow-hidden">
+                                    <div class="bg-secondary h-full w-[85%] rounded-full"></div>
+                                </div>
+                                <p class="text-[11px] mt-2 text-secondary font-bold">85% Compatibility</p>
+                            </div>
+                            <div class="saved-career-card bg-surface-container p-6 rounded-[16px] border border-secondary-fixed group cursor-pointer hover:border-primary transition-all" data-path="Operations Manager">
+                                <div class="flex justify-between items-start mb-4">
+                                    <span class="material-symbols-outlined text-secondary bg-secondary-fixed p-2 rounded-lg">cloud</span>
+                                    <span class="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant opacity-50">Saved</span>
+                                </div>
+                                <h4 class="font-label-md text-primary mb-1">VP of Operations</h4>
+                                <p class="text-label-sm text-on-surface-variant mb-4">Sustainability Tech</p>
+                                <div class="w-full bg-secondary-fixed/50 h-1 rounded-full overflow-hidden">
+                                    <div class="bg-secondary h-full w-[62%] rounded-full"></div>
+                                </div>
+                                <p class="text-[11px] mt-2 text-secondary font-bold">62% Compatibility</p>
+                            </div>
+                            <div id="explore-new-paths-card" class="border-2 border-dashed border-secondary-fixed rounded-[16px] flex flex-col items-center justify-center p-6 text-on-surface-variant hover:bg-surface-container transition-all cursor-pointer">
+                                <span class="material-symbols-outlined text-4xl mb-2">add_circle</span>
+                                <p class="font-label-md">Explore New Paths</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Notifications Tab -->
+                <div id="notifications-tab" class="settings-content space-y-8 hidden">
+                    <section class="bg-surface p-8 rounded-[16px] border border-secondary-fixed soft-card-shadow">
+                        <h3 class="font-headline-md text-headline-md text-primary mb-6">Notification Preferences</h3>
+                        <div class="divide-y divide-secondary-fixed/30">
+                            <div class="flex justify-between items-center py-6">
+                                <div>
+                                    <p class="font-label-md text-primary">Email Notifications</p>
+                                    <p class="text-label-sm text-on-surface-variant">Receive updates via email</p>
+                                </div>
+                                <div class="relative inline-block w-12 h-6 align-middle select-none">
+                                    <input checked="" class="toggle-checkbox notification-toggle absolute block w-6 h-6 rounded-full bg-white border-4 border-surface-container-highest appearance-none cursor-pointer z-10" data-setting="email-notifications" type="checkbox">
+                                    <label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-container-highest cursor-pointer transition-colors duration-200"></label>
+                                    <span class="toggle-dot absolute left-0 top-0 w-6 h-6 bg-white rounded-full transition-transform duration-200 border-2 border-primary translate-x-full"></span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center py-6">
+                                <div>
+                                    <p class="font-label-md text-primary">Weekly Career Digest</p>
+                                    <p class="text-label-sm text-on-surface-variant">Curated insights every Monday at 8:00 AM</p>
+                                </div>
+                                <div class="relative inline-block w-12 h-6 align-middle select-none">
+                                    <input checked="" class="toggle-checkbox notification-toggle absolute block w-6 h-6 rounded-full bg-white border-4 border-surface-container-highest appearance-none cursor-pointer z-10" data-setting="weekly-digest" type="checkbox">
+                                    <label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-container-highest cursor-pointer transition-colors duration-200"></label>
+                                    <span class="toggle-dot absolute left-0 top-0 w-6 h-6 bg-white rounded-full transition-transform duration-200 border-2 border-primary translate-x-full"></span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center py-6">
+                                <div>
+                                    <p class="font-label-md text-primary">Exam Reminders</p>
+                                    <p class="text-label-sm text-on-surface-variant">Be notified of exam registration deadlines</p>
+                                </div>
+                                <div class="relative inline-block w-12 h-6 align-middle select-none">
+                                    <input checked="" class="toggle-checkbox notification-toggle absolute block w-6 h-6 rounded-full bg-white border-4 border-surface-container-highest appearance-none cursor-pointer z-10" data-setting="exam-reminders" type="checkbox">
+                                    <label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-container-highest cursor-pointer transition-colors duration-200"></label>
+                                    <span class="toggle-dot absolute left-0 top-0 w-6 h-6 bg-white rounded-full transition-transform duration-200 border-2 border-primary translate-x-full"></span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center py-6">
+                                <div>
+                                    <p class="font-label-md text-primary">College Updates</p>
+                                    <p class="text-label-sm text-on-surface-variant">News from colleges you're following</p>
+                                </div>
+                                <div class="relative inline-block w-12 h-6 align-middle select-none">
+                                    <input class="toggle-checkbox notification-toggle absolute block w-6 h-6 rounded-full bg-white border-4 border-surface-container-highest appearance-none cursor-pointer z-10" data-setting="college-updates" type="checkbox">
+                                    <label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-container-highest cursor-pointer transition-colors duration-200"></label>
+                                    <span class="toggle-dot absolute left-0 top-0 w-6 h-6 bg-white rounded-full transition-transform duration-200 border-2 border-secondary-fixed"></span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center py-6">
+                                <div>
+                                    <p class="font-label-md text-primary">Scholarship Alerts</p>
+                                    <p class="text-label-sm text-on-surface-variant">New scholarship opportunities matching your profile</p>
+                                </div>
+                                <div class="relative inline-block w-12 h-6 align-middle select-none">
+                                    <input checked="" class="toggle-checkbox notification-toggle absolute block w-6 h-6 rounded-full bg-white border-4 border-surface-container-highest appearance-none cursor-pointer z-10" data-setting="scholarship-alerts" type="checkbox">
+                                    <label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-container-highest cursor-pointer transition-colors duration-200"></label>
+                                    <span class="toggle-dot absolute left-0 top-0 w-6 h-6 bg-white rounded-full transition-transform duration-200 border-2 border-primary translate-x-full"></span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center py-6">
+                                <div>
+                                    <p class="font-label-md text-primary">AI Mentor Chat Suggestions</p>
+                                    <p class="text-label-sm text-on-surface-variant">Personalized career guidance prompts</p>
+                                </div>
+                                <div class="relative inline-block w-12 h-6 align-middle select-none">
+                                    <input class="toggle-checkbox notification-toggle absolute block w-6 h-6 rounded-full bg-white border-4 border-surface-container-highest appearance-none cursor-pointer z-10" data-setting="ai-suggestions" type="checkbox">
+                                    <label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-container-highest cursor-pointer transition-colors duration-200"></label>
+                                    <span class="toggle-dot absolute left-0 top-0 w-6 h-6 bg-white rounded-full transition-transform duration-200 border-2 border-secondary-fixed"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Privacy Tab -->
+                <div id="privacy-tab" class="settings-content space-y-8 hidden">
+                    <section class="bg-surface p-8 rounded-[16px] border border-secondary-fixed soft-card-shadow">
+                        <h3 class="font-headline-md text-headline-md text-primary mb-6">Privacy & Security</h3>
+                        <div class="divide-y divide-secondary-fixed/30">
+                            <div class="flex justify-between items-center py-6">
+                                <div>
+                                    <p class="font-label-md text-primary">Two-Factor Authentication</p>
+                                    <p class="text-label-sm text-on-surface-variant">Add an extra layer of security to your career data</p>
+                                </div>
+                                <div class="relative inline-block w-12 h-6 align-middle select-none">
+                                    <input checked="" class="toggle-checkbox privacy-toggle absolute block w-6 h-6 rounded-full bg-white border-4 border-surface-container-highest appearance-none cursor-pointer z-10" data-setting="two-factor-auth" type="checkbox">
+                                    <label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-container-highest cursor-pointer transition-colors duration-200"></label>
+                                    <span class="toggle-dot absolute left-0 top-0 w-6 h-6 bg-white rounded-full transition-transform duration-200 border-2 border-primary translate-x-full"></span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center py-6">
+                                <div>
+                                    <p class="font-label-md text-primary">Anonymous Mentoring Mode</p>
+                                    <p class="text-label-sm text-on-surface-variant">Engage with AI Mentor without sharing personal identity</p>
+                                </div>
+                                <div class="relative inline-block w-12 h-6 align-middle select-none">
+                                    <input class="toggle-checkbox privacy-toggle absolute block w-6 h-6 rounded-full bg-white border-4 border-surface-container-highest appearance-none cursor-pointer z-10" data-setting="anonymous-mode" type="checkbox">
+                                    <label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-container-highest cursor-pointer transition-colors duration-200"></label>
+                                    <span class="toggle-dot absolute left-0 top-0 w-6 h-6 bg-white rounded-full transition-transform duration-200 border-2 border-secondary-fixed"></span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center py-6">
+                                <div>
+                                    <p class="font-label-md text-primary">Profile Visibility</p>
+                                    <p class="text-label-sm text-on-surface-variant">Allow other users to see your career path and achievements</p>
+                                </div>
+                                <div class="relative inline-block w-12 h-6 align-middle select-none">
+                                    <input checked="" class="toggle-checkbox privacy-toggle absolute block w-6 h-6 rounded-full bg-white border-4 border-surface-container-highest appearance-none cursor-pointer z-10" data-setting="profile-visibility" type="checkbox">
+                                    <label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-container-highest cursor-pointer transition-colors duration-200"></label>
+                                    <span class="toggle-dot absolute left-0 top-0 w-6 h-6 bg-white rounded-full transition-transform duration-200 border-2 border-primary translate-x-full"></span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center py-6">
+                                <div>
+                                    <p class="font-label-md text-primary">Data Collection</p>
+                                    <p class="text-label-sm text-on-surface-variant">Allow NextStep to collect usage data for improvements</p>
+                                </div>
+                                <div class="relative inline-block w-12 h-6 align-middle select-none">
+                                    <input checked="" class="toggle-checkbox privacy-toggle absolute block w-6 h-6 rounded-full bg-white border-4 border-surface-container-highest appearance-none cursor-pointer z-10" data-setting="data-collection" type="checkbox">
+                                    <label class="toggle-label block overflow-hidden h-6 rounded-full bg-surface-container-highest cursor-pointer transition-colors duration-200"></label>
+                                    <span class="toggle-dot absolute left-0 top-0 w-6 h-6 bg-white rounded-full transition-transform duration-200 border-2 border-primary translate-x-full"></span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center py-6">
+                                <div>
+                                    <p class="font-label-md text-primary">Cookie Preferences</p>
+                                    <p class="text-label-sm text-on-surface-variant">Manage how we use cookies on your device</p>
+                                </div>
+                                <button id="manage-cookies-btn" class="px-4 py-2 border border-secondary-fixed rounded-full font-label-md hover:bg-surface-container transition-all">Manage Cookies</button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Danger Zone -->
+                    <section class="pt-8 border-t border-error/20">
+                        <div class="bg-error-container/20 p-8 rounded-[16px] border border-error/10">
+                            <h3 class="font-label-md text-error mb-2">Account Deactivation</h3>
+                            <p class="text-label-sm text-on-error-container mb-6">Permanently remove your career profile and matching history from NextStep. This action cannot be undone.</p>
+                            <button id="delete-account-btn" class="px-6 py-2 border border-error text-error rounded-full font-label-md hover:bg-error hover:text-white transition-all">Request Deletion</button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    // Settings Management System
+    const Settings = {
+        storageKey: 'nextstep_user_settings',
+        
+        // Get all settings
+        getAll() {
+            const stored = localStorage.getItem(this.storageKey);
+            return stored ? JSON.parse(stored) : this.getDefaults();
+        },
+        
+        // Get default settings
+        getDefaults() {
+            // Load user data from signup/login
+            const storedUser = JSON.parse(localStorage.getItem('user') || '{}');
+            return {
+                profile: {
+                    name: storedUser.name || 'User',
+                    email: storedUser.email || 'user@example.com',
+                    interests: '',
+                    level: 'junior'
+                },
+                notifications: {
+                    'email-notifications': true,
+                    'weekly-digest': true,
+                    'exam-reminders': true,
+                    'college-updates': false,
+                    'scholarship-alerts': true,
+                    'ai-suggestions': false
+                },
+
+                privacy: {
+                    'two-factor-auth': true,
+                    'anonymous-mode': false,
+                    'profile-visibility': true,
+                    'data-collection': true
+                }
+            };
+        },
+        
+        // Save a setting
+        save(category, key, value) {
+            const settings = this.getAll();
+            if (!settings[category]) settings[category] = {};
+            settings[category][key] = value;
+            localStorage.setItem(this.storageKey, JSON.stringify(settings));
+            return settings;
+        },
+        
+        // Save multiple settings
+        saveMultiple(updates) {
+            const settings = this.getAll();
+            Object.keys(updates).forEach(category => {
+                if (!settings[category]) settings[category] = {};
+                Object.assign(settings[category], updates[category]);
+            });
+            localStorage.setItem(this.storageKey, JSON.stringify(settings));
+            return settings;
+        },
+        
+        // Get a setting
+        get(category, key) {
+            const settings = this.getAll();
+            return settings[category]?.[key];
+        }
+    };
+
+    // Tab Switching
+    document.querySelectorAll('.settings-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+            const tabName = tab.dataset.tab;
+            
+            // Update active tab button
+            document.querySelectorAll('.settings-tab').forEach(t => {
+                t.classList.remove('bg-surface-container-highest', 'text-primary', 'font-bold', 'shadow-sm');
+                t.classList.add('text-on-surface-variant', 'hover:bg-surface-container');
+            });
+            tab.classList.add('bg-surface-container-highest', 'text-primary', 'font-bold', 'shadow-sm');
+            tab.classList.remove('text-on-surface-variant', 'hover:bg-surface-container');
+            
+            // Hide all content sections
+            document.querySelectorAll('.settings-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+            
+            // Show selected content
+            const contentTab = document.getElementById(`${tabName}-tab`);
+            if (contentTab) {
+                contentTab.classList.remove('hidden');
+            }
+        });
+    });
+
+    // Toggle Switches Functionality
+    document.querySelectorAll('.toggle-checkbox').forEach(toggle => {
+        // Initialize from settings
+        const setting = toggle.dataset.setting;
+        if (setting) {
+            let value = false;
+            if (toggle.classList.contains('notification-toggle')) {
+                value = Settings.get('notifications', setting);
+            } else if (toggle.classList.contains('privacy-toggle')) {
+                value = Settings.get('privacy', setting);
+            }
+            
+            if (value) {
+                toggle.checked = true;
+                const dot = toggle.parentElement.querySelector('.toggle-dot');
+                dot.style.transform = 'translateX(100%)';
+                dot.style.borderColor = '#010a26';
+            }
+        }
+        
+        // Listen to changes
+        toggle.addEventListener('change', function() {
+            const dot = this.parentElement.querySelector('.toggle-dot');
+            const setting = this.dataset.setting;
+            
+            if (this.checked) {
+                dot.style.transform = 'translateX(100%)';
+                dot.style.borderColor = '#010a26';
+            } else {
+                dot.style.transform = 'translateX(0)';
+                dot.style.borderColor = '#d1cca8';
+            }
+            
+            // Save setting
+            if (setting) {
+                if (this.classList.contains('notification-toggle')) {
+                    Settings.save('notifications', setting, this.checked);
+                } else if (this.classList.contains('privacy-toggle')) {
+                    Settings.save('privacy', setting, this.checked);
+                }
+            }
+        });
+    });
+
+    // Profile Save
+    document.getElementById('save-profile-btn').addEventListener('click', () => {
+        const profileData = {
+            profile: {
+                name: document.getElementById('profile-name').value,
+                email: document.getElementById('profile-email').value,
+                interests: document.getElementById('profile-interests').value,
+                level: document.getElementById('profile-level').value
+            }
+        };
+        
+        Settings.saveMultiple(profileData);
+        
+        // Show success message
+        const btn = document.getElementById('save-profile-btn');
+        const originalText = btn.textContent;
+        btn.textContent = 'Changes Saved ✓';
+        btn.classList.add('bg-secondary', 'text-white');
+        btn.classList.remove('bg-primary', 'text-on-primary');
+        
+        setTimeout(() => {
+            btn.textContent = originalText;
+            btn.classList.remove('bg-secondary', 'text-white');
+            btn.classList.add('bg-primary', 'text-on-primary');
+        }, 2000);
+    });
+
+    // Logout
+    document.getElementById('logout-btn').addEventListener('click', () => {
+        NextStepAuth.logout();
+    });
+
+    document.getElementById('view-saved-careers-btn').addEventListener('click', () => {
+        window.location.href = '5-career-paths.html';
+    });
+
+    document.getElementById('explore-new-paths-card').addEventListener('click', () => {
+        window.location.href = '5-career-paths.html';
+    });
+
+    document.querySelectorAll('.saved-career-card').forEach(card => {
+        card.addEventListener('click', () => {
+            window.location.href = `career-path.html?path=${encodeURIComponent(card.dataset.path)}`;
+        });
+    });
+
+    document.getElementById('manage-cookies-btn').addEventListener('click', () => {
+        Settings.save('privacy', 'cookie-preferences-managed', true);
+        alert('Cookie preferences saved for this browser.');
+    });
+
+    // Account Deletion
+    document.getElementById('delete-account-btn').addEventListener('click', () => {
+        if (confirm('Are you sure? This will permanently delete your account and all associated data. This action cannot be undone.')) {
+            if (confirm('Last confirmation: Delete account forever?')) {
+                // In a real app, this would call an API
+                alert('Account deletion requested. An email confirmation has been sent.');
+                localStorage.removeItem(Settings.storageKey);
+            }
+        }
+    });
+
+    // Load settings on page load
+    window.addEventListener('load', () => {
+        const settings = Settings.getAll();
+        
+        // Load profile data
+        document.getElementById('profile-name').value = settings.profile.name;
+        document.getElementById('profile-email').value = settings.profile.email;
+        document.getElementById('profile-interests').value = settings.profile.interests;
+        document.getElementById('profile-level').value = settings.profile.level;
+        
+        // Update profile display name in header
+        const profileNameDisplay = document.getElementById('profile-display-name');
+        if (profileNameDisplay) {
+            profileNameDisplay.textContent = settings.profile.name;
+        }
+    });
+
+    // Search functionality in header
+    const searchInput = document.querySelector('input[placeholder="Search preferences..."]');
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            if (!query) return;
+            
+            // Simple search through settings
+            const results = [];
+            if ('notifications'.includes(query) || 'email'.includes(query)) {
+                results.push('notifications');
+            }
+            if ('privacy'.includes(query) || 'security'.includes(query)) {
+                results.push('privacy');
+            }
+            if ('profile'.includes(query)) {
+                results.push('profile');
+            }
+            
+            // Auto-navigate to first result
+            if (results.length > 0) {
+                const tab = document.querySelector(`[data-tab="${results[0]}"]`);
+                if (tab) tab.click();
+            }
+        });
+    }
+</script>
+
+</body></html>

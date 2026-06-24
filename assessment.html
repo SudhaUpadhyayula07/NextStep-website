@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>NextStep | Career Assessment</title>
+<script src="auth.js"></script>
+<script>NextStepAuth.requireLogin();</script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        primary: '#010a26',
+        background: '#fff9ed',
+        surface: '#fff9ed',
+        'surface-container': '#f7eed3',
+        'surface-container-low': '#fcf3d8',
+        'secondary-fixed': '#d8e9bc',
+        secondary: '#556340',
+        'on-surface-variant': '#45464d'
+      },
+      fontFamily: {
+        display: ['Sora'],
+        body: ['Manrope']
+      }
+    }
+  }
+};
+</script>
+<style>
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+</style>
+</head>
+<body class="bg-background text-primary font-body min-h-screen">
+<aside class="fixed left-0 top-0 h-full flex flex-col py-8 bg-surface border-r border-secondary-fixed w-64 z-50">
+<div class="px-6 mb-10">
+<h1 class="font-display text-2xl font-bold">NextStep</h1>
+<p class="text-[10px] uppercase tracking-widest mt-1 text-on-surface-variant">Executive Career Suite</p>
+</div>
+<nav class="flex-1 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-xl" href="4-dashboard.html"><span class="material-symbols-outlined">dashboard</span><span>Dashboard</span></a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-xl" href="5-study-paths.html"><span class="material-symbols-outlined">school</span><span>Study Paths</span></a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-xl" href="5-career-paths.html"><span class="material-symbols-outlined">explore</span><span>Career Paths</span></a>
+<a class="flex items-center gap-3 px-4 py-3 text-primary font-bold border-r-4 border-primary bg-surface-container-low rounded-xl" href="assessment.html"><span class="material-symbols-outlined">fact_check</span><span>Assessment</span></a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-xl" href="9-cgai.html"><span class="material-symbols-outlined">psychology</span><span>AI Mentor</span></a>
+</nav>
+</aside>
+<main class="ml-64 p-12 min-h-screen">
+<div class="max-w-5xl mx-auto">
+<div class="mb-10">
+<p class="text-sm uppercase tracking-widest text-secondary font-bold mb-3">Career Fit Assessment</p>
+<h1 class="font-display text-4xl font-semibold mb-3">Map your next direction</h1>
+<p class="text-on-surface-variant max-w-2xl">Answer a few focused questions and NextStep will save your assessment and suggest the best first pages to explore.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-8">
+<form id="assessment-form" class="bg-white border border-secondary-fixed rounded-2xl p-8 space-y-6">
+<div>
+<label class="block font-semibold mb-2" for="stream">Current stream or background</label>
+<select id="stream" class="w-full rounded-xl border-secondary-fixed bg-surface-container-low">
+<option value="Science">Science</option>
+<option value="Commerce">Commerce</option>
+<option value="Arts">Arts / Humanities</option>
+<option value="Technology">Technology</option>
+<option value="Undecided">Undecided</option>
+</select>
+</div>
+<div>
+<label class="block font-semibold mb-2" for="interest">Primary interest</label>
+<select id="interest" class="w-full rounded-xl border-secondary-fixed bg-surface-container-low">
+<option value="engineering">Engineering / Technology</option>
+<option value="medical">Medical / Healthcare</option>
+<option value="commerce">Finance / Business</option>
+<option value="arts">Design / Media / Arts</option>
+<option value="government">Government / Civil Services</option>
+<option value="entrepreneurship">Entrepreneurship</option>
+</select>
+</div>
+<div>
+<label class="block font-semibold mb-2" for="strengths">Your strongest skills</label>
+<input id="strengths" class="w-full rounded-xl border-secondary-fixed bg-surface-container-low" placeholder="e.g., problem solving, writing, leadership, biology">
+</div>
+<div>
+<label class="block font-semibold mb-2" for="goal">What do you want help deciding?</label>
+<textarea id="goal" class="w-full rounded-xl border-secondary-fixed bg-surface-container-low resize-none" rows="4" placeholder="Tell us your current confusion or goal."></textarea>
+</div>
+<button class="inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded-xl font-semibold hover:bg-primary/90 disabled:opacity-60" type="submit">
+<span class="material-symbols-outlined">analytics</span>
+Get Recommendation
+</button>
+</form>
+<aside id="assessment-result" class="bg-surface-container border border-secondary-fixed rounded-2xl p-8 h-fit">
+<span class="material-symbols-outlined text-5xl text-secondary mb-5">route</span>
+<h2 class="font-display text-2xl font-semibold mb-3">Your result will appear here</h2>
+<p class="text-on-surface-variant">Complete the assessment to get a saved recommendation and suggested next actions.</p>
+</aside>
+</div>
+</div>
+</main>
+<script>
+const categoryLinks = {
+  engineering: { label: 'Engineering and Technology', href: '5-career-paths.html' },
+  medical: { label: 'Medical and Healthcare', href: '5-career-paths.html' },
+  commerce: { label: 'Finance and Business', href: '5-career-paths.html' },
+  arts: { label: 'Design, Media, and Arts', href: '5-career-paths.html' },
+  government: { label: 'Government and Civil Services', href: '5-career-paths.html' },
+  entrepreneurship: { label: 'Entrepreneurship', href: '5-career-paths.html' }
+};
+
+document.getElementById('assessment-form').addEventListener('submit', async event => {
+  event.preventDefault();
+  const button = event.target.querySelector('button[type="submit"]');
+  const result = document.getElementById('assessment-result');
+  const answers = {
+    stream: document.getElementById('stream').value,
+    interest: document.getElementById('interest').value,
+    strengths: document.getElementById('strengths').value.trim(),
+    goal: document.getElementById('goal').value.trim()
+  };
+  const selected = categoryLinks[answers.interest] || categoryLinks.engineering;
+
+  button.disabled = true;
+  button.lastChild.textContent = ' Saving...';
+
+  try {
+    const response = await fetch(`${NextStepAuth.API_BASE}/api/assessments`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        ...(NextStepAuth.getToken() ? { Authorization: `Bearer ${NextStepAuth.getToken()}` } : {})
+      },
+      body: JSON.stringify({ answers })
+    });
+    if (!response.ok) throw new Error('Assessment could not be saved right now.');
+    await response.json();
+  } catch {
+    const saved = JSON.parse(localStorage.getItem('nextstep_assessments') || '[]');
+    saved.push({ answers, createdAt: new Date().toISOString() });
+    localStorage.setItem('nextstep_assessments', JSON.stringify(saved));
+  } finally {
+    button.disabled = false;
+    button.lastChild.textContent = ' Get Recommendation';
+  }
+
+  result.innerHTML = `
+    <span class="material-symbols-outlined text-5xl text-secondary mb-5">verified</span>
+    <h2 class="font-display text-2xl font-semibold mb-3">Best fit: ${selected.label}</h2>
+    <p class="text-on-surface-variant mb-6">Based on your ${answers.stream} background and stated interest, start by comparing careers, then ask the AI Mentor for a 30-day plan.</p>
+    <div class="space-y-3">
+      <a class="flex items-center justify-between bg-primary text-white px-5 py-3 rounded-xl font-semibold" href="${selected.href}">Explore careers <span class="material-symbols-outlined">arrow_forward</span></a>
+      <a class="flex items-center justify-between bg-white border border-secondary-fixed px-5 py-3 rounded-xl font-semibold" href="9-cgai.html">Ask AI Mentor <span class="material-symbols-outlined">chat_bubble</span></a>
+      <a class="flex items-center justify-between bg-white border border-secondary-fixed px-5 py-3 rounded-xl font-semibold" href="6-exams.html">Check exams <span class="material-symbols-outlined">event</span></a>
+    </div>
+  `;
+});
+</script>
+</body>
+</html>

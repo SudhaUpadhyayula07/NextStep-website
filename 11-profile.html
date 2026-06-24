@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile | NextStep</title>
+    <script src="auth.js"></script>
+    <script>NextStepAuth.requireLogin();</script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#1B2D5B',
+              beige: '#F5F0E8',
+              surface: '#FFFFFF',
+              muted: '#5A637F',
+              border: '#CCD3E2'
+            },
+            fontFamily: {
+              display: ['Sora', 'sans-serif'],
+              body: ['Manrope', 'sans-serif']
+            },
+            boxShadow: {
+              soft: '0 18px 60px rgba(27,45,91,0.12)'
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+        body { font-family: 'Manrope', sans-serif; background: #F5F0E8; color: #1B2D5B; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .scrollbar-hide::-webkit-scrollbar { width: 0; }
+    </style>
+</head>
+<body class="min-h-screen">
+<aside class="fixed left-0 top-0 h-full flex flex-col py-8 bg-white border-r border-[#CCD3E2] w-72 z-50">
+    <div class="px-8 mb-10">
+        <h1 class="font-display text-2xl font-bold text-primary">NextStep</h1>
+        <p class="font-body text-sm text-muted mt-1">Executive Career Suite</p>
+    </div>
+    <nav class="flex-1 flex flex-col gap-1 px-2">
+        <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-beige rounded-xl transition-colors duration-200" href="4-dashboard.html">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span class="font-label-md">Dashboard</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-beige rounded-xl transition-colors duration-200" href="5-study-paths.html">
+            <span class="material-symbols-outlined">school</span>
+            <span class="font-label-md">Study Paths</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-beige rounded-xl transition-colors duration-200" href="5-career-paths.html">
+            <span class="material-symbols-outlined">explore</span>
+            <span class="font-label-md">Career Paths</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-beige rounded-xl transition-colors duration-200" href="6-exams.html">
+            <span class="material-symbols-outlined">school</span>
+            <span class="font-label-md">Exams</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-beige rounded-xl transition-colors duration-200" href="7-colleges.html">
+            <span class="material-symbols-outlined">account_balance</span>
+            <span class="font-label-md">Colleges</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-beige rounded-xl transition-colors duration-200" href="8-scholarships.html">
+            <span class="material-symbols-outlined">payments</span>
+            <span class="font-label-md">Scholarships</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-beige rounded-xl transition-colors duration-200" href="9-cgai.html">
+            <span class="material-symbols-outlined">psychology</span>
+            <span class="font-label-md">AI Mentor</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-primary font-bold border-r-4 border-primary bg-beige rounded-xl transition-all duration-200" href="11-profile.html">
+            <span class="material-symbols-outlined">person</span>
+            <span class="font-label-md">My Profile</span>
+        </a>
+    </nav>
+</aside>
+<header class="sticky top-0 z-40 ml-72 flex items-center justify-between gap-6 px-10 py-5 bg-[#F5F0E8] border-b border-[#CCD3E2]">
+    <div>
+        <h2 class="font-display text-3xl text-primary">My Profile</h2>
+        <p class="font-body text-sm text-muted mt-1">Manage your profile, photo, class, stream and career interest.</p>
+    </div>
+    <div class="flex items-center gap-3">
+        <div id="profilePageAvatar" class="w-12 h-12 rounded-full bg-[#F5F0E8] border border-[#CCD3E2] flex items-center justify-center overflow-hidden text-primary text-xl font-semibold">
+            <span class="material-symbols-outlined">person</span>
+        </div>
+        <div class="text-right">
+            <p id="profilePageName" class="font-label-md font-bold text-primary">User</p>
+            <p id="profilePageSubtitle" class="text-sm text-muted">Profile details</p>
+        </div>
+    </div>
+</header>
+<main class="ml-72 p-10 pb-16">
+    <div class="max-w-6xl mx-auto">
+        <section class="bg-white rounded-[32px] border border-[#CCD3E2] shadow-soft overflow-hidden">
+            <div class="bg-[#1B2D5B] px-10 py-8">
+                <h3 class="font-display text-3xl text-beige">Profile Summary</h3>
+                <p class="font-body text-sm text-beige/80 mt-2 max-w-2xl">Use this page to keep your academic profile and future interests up to date.</p>
+            </div>
+            <div class="px-10 py-10 space-y-10">
+                <div id="profileViewSection" class="space-y-8">
+                    <div class="grid gap-6 lg:grid-cols-[280px_1fr] items-start">
+                        <div class="rounded-[28px] border border-[#CCD3E2] bg-[#F5F0E8] p-8 flex flex-col items-center text-center gap-4">
+                            <div id="profilePagePhoto" class="w-32 h-32 rounded-full bg-beige border border-[#1B2D5B] flex items-center justify-center overflow-hidden text-5xl text-primary"></div>
+                            <div>
+                                <p class="font-label-md text-primary/70 uppercase tracking-[0.2em] mb-2">Profile photo</p>
+                                <p class="font-body text-sm text-muted">Your saved photo or initials appear here.</p>
+                            </div>
+                        </div>
+                        <div class="grid gap-4">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="rounded-3xl border border-[#CCD3E2] bg-[#F5F0E8] p-6">
+                                    <p class="font-label-sm uppercase tracking-[0.18em] text-[#1B2D5B]/70 mb-3">Full Name</p>
+                                    <p id="displayFullName" class="font-semibold text-primary">Not set</p>
+                                </div>
+                                <div class="rounded-3xl border border-[#CCD3E2] bg-[#F5F0E8] p-6">
+                                    <p class="font-label-sm uppercase tracking-[0.18em] text-[#1B2D5B]/70 mb-3">Class / Year</p>
+                                    <p id="displayClass" class="font-semibold text-primary">Not set</p>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="rounded-3xl border border-[#CCD3E2] bg-[#F5F0E8] p-6">
+                                    <p class="font-label-sm uppercase tracking-[0.18em] text-[#1B2D5B]/70 mb-3">Stream</p>
+                                    <p id="displayStream" class="font-semibold text-primary">Not set</p>
+                                </div>
+                                <div class="rounded-3xl border border-[#CCD3E2] bg-[#F5F0E8] p-6">
+                                    <p class="font-label-sm uppercase tracking-[0.18em] text-[#1B2D5B]/70 mb-3">Career Interest</p>
+                                    <p id="displayInterest" class="font-semibold text-primary">Not set</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <button id="editProfileBtn" type="button" class="rounded-full border border-[#1B2D5B] bg-beige px-8 py-3 font-semibold text-[#1B2D5B] hover:bg-white transition-colors">Edit Profile</button>
+                        <button id="refreshProfileBtn" type="button" class="rounded-full border border-[#CCD3E2] bg-white px-8 py-3 font-semibold text-[#1B2D5B] hover:border-[#1B2D5B] transition-colors">Refresh</button>
+                    </div>
+                </div>
+                <div id="profileEditSection" class="hidden rounded-[28px] border border-[#CCD3E2] bg-[#F5F0E8] p-8">
+                    <div class="flex items-center justify-between gap-4 mb-8">
+                        <div>
+                            <p class="font-label-sm uppercase tracking-[0.18em] text-[#1B2D5B]/70 mb-2">Edit mode</p>
+                            <h4 class="font-display text-2xl text-primary">Update your profile</h4>
+                        </div>
+                        <button id="closeEditBtn" type="button" class="text-[#1B2D5B] font-semibold hover:text-[#0f1e42]">Close</button>
+                    </div>
+                    <form id="profileForm" class="grid gap-6">
+                        <div class="grid gap-4 lg:grid-cols-[190px_1fr] items-start">
+                            <div class="rounded-[28px] border border-[#CCD3E2] bg-white p-6 flex flex-col items-center gap-4">
+                                <div id="editPhotoPreview" class="w-28 h-28 rounded-full bg-beige border border-[#1B2D5B] flex items-center justify-center text-5xl text-primary overflow-hidden"></div>
+                                <label for="profilePhotoInput" class="inline-flex cursor-pointer items-center gap-2 rounded-full border border-[#1B2D5B] bg-white px-4 py-3 text-sm font-semibold text-[#1B2D5B] hover:bg-[#f1e9dc] transition-colors">
+                                    <span class="material-symbols-outlined">camera_alt</span>
+                                    Upload Photo
+                                </label>
+                                <input id="profilePhotoInput" type="file" accept="image/*" class="hidden" />
+                            </div>
+                            <div class="grid gap-4">
+                                <label class="block">
+                                    <span class="font-semibold text-[#1B2D5B]">Full Name</span>
+                                    <input id="profileFullName" type="text" placeholder="Enter your full name" class="mt-2 w-full rounded-3xl border border-[#1B2D5B] bg-white px-4 py-3 text-[#1B2D5B] focus:outline-none focus:ring-2 focus:ring-[#1B2D5B]/20" />
+                                </label>
+                                <label class="block">
+                                    <span class="font-semibold text-[#1B2D5B]">Class / Year</span>
+                                    <select id="profileClass" class="mt-2 w-full rounded-3xl border border-[#1B2D5B] bg-white px-4 py-3 text-[#1B2D5B] focus:outline-none focus:ring-2 focus:ring-[#1B2D5B]/20">
+                                        <option value="">Select class/year</option>
+                                        <option>Class 10</option>
+                                        <option>Class 11</option>
+                                        <option>Class 12</option>
+                                        <option>1st Year UG</option>
+                                        <option>2nd Year UG</option>
+                                        <option>3rd Year UG</option>
+                                        <option>4th Year UG</option>
+                                    </select>
+                                </label>
+                                <label class="block">
+                                    <span class="font-semibold text-[#1B2D5B]">Stream</span>
+                                    <select id="profileStream" class="mt-2 w-full rounded-3xl border border-[#1B2D5B] bg-white px-4 py-3 text-[#1B2D5B] focus:outline-none focus:ring-2 focus:ring-[#1B2D5B]/20">
+                                        <option value="">Select stream</option>
+                                        <option>Engineering</option>
+                                        <option>Medical</option>
+                                        <option>Arts</option>
+                                        <option>Commerce</option>
+                                        <option>Technology & Digital</option>
+                                        <option>Government</option>
+                                        <option>Law & Legal Services</option>
+                                        <option>Media & Journalism</option>
+                                        <option>Education & Training</option>
+                                        <option>Wellness & Lifestyle</option>
+                                        <option>Real Estate & Construction</option>
+                                        <option>Pure Sciences</option>
+                                        <option>Sports & Fitness</option>
+                                        <option>Environment & Agriculture</option>
+                                        <option>Hotel Management & Hospitality</option>
+                                        <option>Entrepreneurship</option>
+                                    </select>
+                                </label>
+                                <label class="block">
+                                    <span class="font-semibold text-[#1B2D5B]">Career Interest</span>
+                                    <select id="profileInterest" class="mt-2 w-full rounded-3xl border border-[#1B2D5B] bg-white px-4 py-3 text-[#1B2D5B] focus:outline-none focus:ring-2 focus:ring-[#1B2D5B]/20">
+                                        <option value="">Select interest</option>
+                                        <option>Engineering</option>
+                                        <option>Medical</option>
+                                        <option>Arts</option>
+                                        <option>Commerce</option>
+                                        <option>Technology & Digital</option>
+                                        <option>Government</option>
+                                        <option>Law & Legal Services</option>
+                                        <option>Media & Journalism</option>
+                                        <option>Education & Training</option>
+                                        <option>Wellness & Lifestyle</option>
+                                        <option>Real Estate & Construction</option>
+                                        <option>Pure Sciences</option>
+                                        <option>Sports & Fitness</option>
+                                        <option>Environment & Agriculture</option>
+                                        <option>Hotel Management & Hospitality</option>
+                                        <option>Entrepreneurship</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-4 items-center">
+                            <button id="saveProfileBtn" type="submit" class="rounded-full bg-primary px-8 py-3 font-semibold text-beige hover:bg-[#162444] transition-colors">Save</button>
+                            <button id="cancelEditBtnBottom" type="button" class="rounded-full border border-[#1B2D5B] bg-white px-8 py-3 font-semibold text-[#1B2D5B] hover:bg-[#f1e9dc] transition-colors">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+<script>
+(function() {
+    const STORAGE_KEY = 'nextstep_profile';
+    const profilePageAvatar = document.getElementById('profilePageAvatar');
+    const profilePageName = document.getElementById('profilePageName');
+    const profilePageSubtitle = document.getElementById('profilePageSubtitle');
+    const profilePagePhoto = document.getElementById('profilePagePhoto');
+    const displayFullName = document.getElementById('displayFullName');
+    const displayClass = document.getElementById('displayClass');
+    const displayStream = document.getElementById('displayStream');
+    const displayInterest = document.getElementById('displayInterest');
+    const editProfileBtn = document.getElementById('editProfileBtn');
+    const refreshProfileBtn = document.getElementById('refreshProfileBtn');
+    const closeEditBtn = document.getElementById('closeEditBtn');
+    const cancelEditBtnBottom = document.getElementById('cancelEditBtnBottom');
+    const profileViewSection = document.getElementById('profileViewSection');
+    const profileEditSection = document.getElementById('profileEditSection');
+    const profilePhotoInput = document.getElementById('profilePhotoInput');
+    const editPhotoPreview = document.getElementById('editPhotoPreview');
+    const profileFullName = document.getElementById('profileFullName');
+    const profileClass = document.getElementById('profileClass');
+    const profileStream = document.getElementById('profileStream');
+    const profileInterest = document.getElementById('profileInterest');
+    const profileForm = document.getElementById('profileForm');
+    let currentProfile = { name: '', photo: '', class: '', stream: '', interest: '' };
+
+    function readProfile() {
+        try {
+            const raw = localStorage.getItem(STORAGE_KEY);
+            return raw ? JSON.parse(raw) : { name: '', photo: '', class: '', stream: '', interest: '' };
+        } catch {
+            return { name: '', photo: '', class: '', stream: '', interest: '' };
+        }
+    }
+
+    function writeProfile(profile) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(profile));
+    }
+
+    function getInitial(name) {
+        return name.trim().charAt(0).toUpperCase() || '';
+    }
+
+    function showPhoto(element, photo, name) {
+        if (photo) {
+            element.innerHTML = `<img src="${photo}" alt="Profile photo" class="w-full h-full object-cover" />`;
+            element.classList.remove('bg-beige');
+            element.classList.add('bg-white');
+        } else if (name) {
+            element.innerHTML = `<span>${getInitial(name)}</span>`;
+            element.classList.remove('bg-white');
+            element.classList.add('bg-beige');
+        } else {
+            element.innerHTML = '<span class="material-symbols-outlined">person</span>';
+            element.classList.remove('bg-white');
+            element.classList.add('bg-beige');
+        }
+    }
+
+    function updateProfileView(profile) {
+        profilePageName.textContent = profile.name || 'User';
+        profilePageSubtitle.textContent = profile.name ? 'Profile details' : 'Complete your profile';
+        displayFullName.textContent = profile.name || 'Not set';
+        displayClass.textContent = profile.class || 'Not set';
+        displayStream.textContent = profile.stream || 'Not set';
+        displayInterest.textContent = profile.interest || 'Not set';
+        showPhoto(profilePagePhoto, profile.photo, profile.name);
+    }
+
+    function populateEditForm(profile) {
+        profileFullName.value = profile.name || '';
+        profileClass.value = profile.class || '';
+        profileStream.value = profile.stream || '';
+        profileInterest.value = profile.interest || '';
+        showPhoto(editPhotoPreview, profile.photo, profile.name);
+        currentProfile = profile;
+    }
+
+    function setEditMode(active) {
+        profileViewSection.classList.toggle('hidden', active);
+        profileEditSection.classList.toggle('hidden', !active);
+    }
+
+    function loadProfile() {
+        const profile = readProfile();
+        updateProfileView(profile);
+        populateEditForm(profile);
+    }
+
+    editProfileBtn.addEventListener('click', () => setEditMode(true));
+    refreshProfileBtn.addEventListener('click', loadProfile);
+    closeEditBtn.addEventListener('click', () => setEditMode(false));
+    cancelEditBtnBottom.addEventListener('click', () => {
+        populateEditForm(currentProfile);
+        setEditMode(false);
+    });
+
+    profilePhotoInput.addEventListener('change', event => {
+        const file = event.target.files && event.target.files[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = () => {
+            currentProfile.photo = reader.result;
+            showPhoto(editPhotoPreview, reader.result, currentProfile.name);
+        };
+        reader.readAsDataURL(file);
+    });
+
+    profileForm.addEventListener('submit', event => {
+        event.preventDefault();
+        const updatedProfile = {
+            name: profileFullName.value.trim(),
+            photo: currentProfile.photo || '',
+            class: profileClass.value,
+            stream: profileStream.value,
+            interest: profileInterest.value
+        };
+        writeProfile(updatedProfile);
+        currentProfile = updatedProfile;
+        updateProfileView(updatedProfile);
+        populateEditForm(updatedProfile);
+        setEditMode(false);
+    });
+
+    document.addEventListener('DOMContentLoaded', loadProfile);
+})();
+</script>
+</body>
+</html>

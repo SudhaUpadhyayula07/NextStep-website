@@ -1,0 +1,1736 @@
+<!DOCTYPE html><html class="light" lang="en" style="width: 1280px; height: 1646px; overflow-x: hidden; position: relative;"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>NextStep | Main Dashboard</title>
+<script src="auth.js"></script>
+<script>NextStepAuth.requireLogin();</script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #d1cca8;
+            border-radius: 10px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#010a26",
+                        "background": "#fff9ed",
+                        "surface-container": "#f7eed3",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "secondary": "#556340",
+                        "on-surface": "#1f1c0b",
+                        "on-secondary-fixed-variant": "#3e4b2b",
+                        "primary-fixed": "#dae2ff",
+                        "surface-bright": "#fff9ed",
+                        "inverse-primary": "#bbc6ea",
+                        "surface-container-low": "#fcf3d8",
+                        "on-secondary-container": "#5b6946",
+                        "on-background": "#1f1c0b",
+                        "surface-dim": "#e2dabf",
+                        "surface-tint": "#535e7d",
+                        "secondary-fixed": "#d8e9bc",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#d8e9bc",
+                        "inverse-surface": "#35301e",
+                        "on-tertiary-fixed": "#1e1c05",
+                        "on-primary-fixed": "#0f1a36",
+                        "on-primary-fixed-variant": "#3b4664",
+                        "tertiary": "#0e0d00",
+                        "secondary-fixed-dim": "#bccca2",
+                        "surface-container-high": "#f1e8cd",
+                        "surface": "#fff9ed",
+                        "tertiary-fixed": "#e9e4be",
+                        "on-tertiary-fixed-variant": "#4a482c",
+                        "inverse-on-surface": "#f9f0d5",
+                        "outline-variant": "#c6c6ce",
+                        "primary-fixed-dim": "#bbc6ea",
+                        "tertiary-fixed-dim": "#ccc8a4",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "outline": "#76777e",
+                        "tertiary-container": "#25230b",
+                        "primary-container": "#16213d",
+                        "surface-container-highest": "#ebe2c8",
+                        "on-primary-container": "#7e89aa",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#45464d",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#ebe2c8",
+                        "on-tertiary-container": "#8e8b6a",
+                        "on-secondary-fixed": "#131f04"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "margin-desktop": "80px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Sora"],
+                        "headline-lg": ["Sora"],
+                        "headline-md": ["Sora"],
+                        "body-lg": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "label-md": ["Manrope"],
+                        "label-sm": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased custom-scrollbar overflow-x-hidden">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full flex flex-col py-8 bg-surface border-r border-secondary-fixed w-64 z-50">
+<div class="px-6 mb-10">
+<h1 class="font-display-lg text-headline-md font-bold text-primary">NextStep</h1>
+<p class="font-label-md text-on-surface-variant text-[10px] uppercase tracking-widest mt-1">Executive Career Suite</p>
+</div>
+<nav class="flex-1 flex flex-col gap-1">
+<!-- Active: Dashboard -->
+<a class="flex items-center gap-3 px-4 py-3 text-primary font-bold border-r-4 border-primary bg-surface-container-low rounded-xl transition-all duration-200" href="4-dashboard.html">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="5-study-paths.html">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+<span class="font-label-md">Study Paths</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="5-career-paths.html">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-label-md">Career Paths</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="6-exams.html">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+<span class="font-label-md">Exams</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="7-colleges.html">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+<span class="font-label-md">Colleges</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="8-scholarships.html">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-label-md">Scholarships</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="9-cgai.html">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+<span class="font-label-md">AI Mentor</span>
+</a>
+</nav>
+<div class="mt-auto px-4">
+<div class="mt-4 pt-4 border-t border-secondary-fixed flex items-center gap-3 px-4">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-secondary-fixed"></div>
+<div class="flex flex-col"></div>
+</div>
+</div>
+</aside>
+<!-- TopAppBar -->
+<header class="sticky top-0 z-40 flex justify-between items-center w-full px-12 py-4 ml-64 max-w-[calc(100%-16rem)] bg-background/80 backdrop-blur-md">
+<div class="flex items-center flex-1 max-w-xl">
+<div class="relative w-full group focus-within:ring-2 focus-within:ring-primary/20 rounded-xl transition-all">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full bg-surface-container-low border-none rounded-xl py-2 pl-10 pr-4 text-body-md focus:ring-0 placeholder:text-on-surface-variant/50" placeholder="Search careers, exams or colleges..." type="text">
+</div>
+</div>
+<div class="flex items-center gap-6 ml-8">
+<button id="profileHeaderButton" type="button" class="flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-primary/50 rounded-full" aria-label="Open profile settings">
+<div class="text-right hidden sm:block">
+<p id="user-profile-name" class="font-label-md text-primary font-bold leading-none">User</p>
+</div>
+<div id="profileHeaderAvatar" class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center border border-secondary-fixed overflow-hidden">
+<span class="material-symbols-outlined text-primary">person</span>
+</div>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="ml-64 w-[calc(100%-16rem)] px-margin-desktop pt-4 flex flex-col gap-12">
+<div class="w-full max-w-container-max mx-auto">
+<!-- Hero Banner Section -->
+<section class="relative w-full h-[400px] rounded-[32px] overflow-hidden group">
+<div class="absolute inset-0 bg-primary/30 z-10"></div>
+<img class="absolute inset-0 w-full h-full object-cover transform scale-105 group-hover:scale-100 transition-transform duration-1000" data-alt="A focused student standing on a grassy hill at dusk, looking toward a distant glowing city skyline on the horizon. The atmosphere is contemplative and full of potential, with a deep blue and warm gold color palette. The lighting is editorial and cinematic, reflecting a sense of ambition and discovery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9mQGznyS-mW05VK1L7S5mtOlhbI1p3rx045RbxXEfhItI32bKCgQvIZRGNvHzWY1B62GUoAO1kOUXrh4PZbYYLl73-sJM5e8YW8e0KyuARHX8FBx2j_iAv7bH-J9t8nNcuKFHl3MVdiBt9zaiJ587uZaOrLn40DUHqfdcyP_oNs4banJyC_j-H35PjSLZU7IbtjHoAfdseI3xUFORh-0ayLi35hIdA9AJCZj8FPBqBI1B_i3CNgoqhsVsN1y1yhHlMxkNdapO6Cc">
+<div class="relative z-20 h-full flex flex-col justify-center px-16 max-w-2xl text-surface">
+<h2 class="font-display-lg text-display-lg mb-4 leading-tight">Discover. Learn. Decide.</h2>
+<p class="font-body-lg text-body-lg mb-8 text-surface/90">Explore careers, colleges, entrance exams, and opportunities all in one place. Your executive path starts here.</p>
+</div>
+</section>
+
+<section class="mt-8">
+  <div class="max-w-container-max mx-auto flex flex-col sm:flex-row items-center gap-4">
+    <button id="exploreCareersButton" class="w-full sm:w-auto bg-primary text-white px-8 py-3 rounded-xl font-label-md hover:bg-primary/90 transition-all flex items-center justify-center gap-2 shadow-lg">
+      Explore Careers
+      <span class="material-symbols-outlined text-sm">arrow_forward</span>
+    </button>
+    <button id="takeAssessmentButton" class="w-full sm:w-auto bg-primary text-white px-8 py-3 rounded-xl font-label-md hover:bg-primary/90 transition-all shadow-lg flex items-center justify-center gap-2">
+      <span class="material-symbols-outlined text-sm">fact_check</span>
+      Take Assessment
+    </button>
+  </div>
+</section>
+
+<div class="flex flex-col gap-6 mt-3">
+<!-- Main Feed -->
+<div class="space-y-16">
+
+<!-- Career Roadmap Section -->
+<section class="mt-16 w-full max-w-container-max mx-auto">
+  <div class="bg-surface-container p-12 rounded-[32px] border border-secondary-fixed">
+    <div class="mb-8">
+      <h3 class="font-headline-lg text-primary mb-2">Career Roadmap</h3>
+      <p class="font-body-md text-on-surface-variant">Select your career interest to see your personalized step-by-step path</p>
+    </div>
+    
+    <!-- Dropdown -->
+    <div class="mb-10">
+      <label for="careerCategory" class="block font-label-md text-primary uppercase tracking-widest mb-3">Select Career Category</label>
+      <select id="careerCategory" class="w-full md:w-96 px-4 py-3 rounded-xl border border-secondary-fixed bg-surface-container-lowest text-on-background font-body-md focus:outline-none focus:ring-2 focus:ring-primary/20">
+        <option value="">-- Choose a career path --</option>
+        <option value="engineering">Engineering</option>
+        <option value="medical">Medical</option>
+        <option value="arts">Arts</option>
+        <option value="commerce">Commerce</option>
+        <option value="technology">Technology & Digital</option>
+        <option value="government">Government</option>
+        <option value="law">Law & Legal Services</option>
+        <option value="media">Media & Journalism</option>
+        <option value="education">Education & Training</option>
+        <option value="wellness">Wellness & Lifestyle</option>
+        <option value="realestate">Real Estate & Construction</option>
+        <option value="sciences">Pure Sciences</option>
+        <option value="sports">Sports & Fitness</option>
+        <option value="environment">Environment & Agriculture</option>
+        <option value="hospitality">Hotel Management & Hospitality</option>
+        <option value="entrepreneurship">Entrepreneurship</option>
+      </select>
+    </div>
+
+    <!-- Roadmap Display -->
+    <div id="roadmapContainer" class="hidden">
+      <div id="roadmapSteps" class="space-y-6 relative pl-8">
+        <!-- Steps will be inserted here by JavaScript -->
+        <!-- Vertical line -->
+        <div class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-primary/50 to-primary/20"></div>
+      </div>
+    </div>
+
+    <!-- Empty State -->
+    <div id="emptyState" class="text-center py-12">
+      <span class="material-symbols-outlined text-6xl text-secondary-fixed/30 mx-auto block mb-4">explore</span>
+    </div>
+  </div>
+</section>
+
+<!-- Cards Section -->
+<section class="mt-16">
+<!-- ↓ CHANGED: was "w-full lg:w-[380px] space-y-8", now full width 3-column grid -->
+<aside class="w-full grid grid-cols-3 gap-10">
+<!-- AI Assistant Card -->
+<div class="bg-primary text-white p-8 rounded-[32px] relative overflow-hidden group" id="aiAssistantCard">
+<div class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-16 -mt-16 blur-2xl"></div>
+<div class="relative z-10">
+<div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-white" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<h4 class="font-headline-md mb-2" id="dashboardUserName">Hello,</h4>
+<p class="font-body-md text-white/70 mb-8 leading-relaxed" id="dashboardUserSubtitle">I've analyzed your recent assessments. We have 3 new matching roles in FinTech. Shall we discuss?</p>
+<button type="button" id="dashboardChatAssistantLink" class="w-full bg-white text-primary py-4 rounded-2xl font-label-md hover:bg-secondary-fixed transition-colors flex items-center justify-center gap-2">
+                            Chat with AI Assistant
+                            <span class="material-symbols-outlined text-sm">chat_bubble</span>
+</button>
+</div>
+</div>
+<!-- Quick Links -->
+<div class="bg-surface-container p-8 rounded-[32px] border border-secondary-fixed">
+<h4 class="font-label-md text-primary uppercase tracking-widest mb-6">Quick Actions</h4>
+<div class="space-y-4">
+<button id="quickUpdateProfileBtn" class="w-full text-left flex items-center justify-between p-4 bg-surface rounded-2xl border border-secondary-fixed/50 hover:border-primary/20 transition-all group">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="edit_note">edit_note</span>
+<span class="font-label-md text-on-surface">Update Profile</span>
+</div>
+<span class="material-symbols-outlined text-sm text-on-surface-variant group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<a class="flex items-center justify-between p-4 bg-surface rounded-2xl border border-secondary-fixed/50 hover:border-primary/20 transition-all group" href="6-exams.html">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="event_available">event_available</span>
+<span class="font-label-md text-on-surface">Exam Calendar</span>
+</div>
+<span class="material-symbols-outlined text-sm text-on-surface-variant group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<a class="flex items-center justify-between p-4 bg-surface rounded-2xl border border-secondary-fixed/50 hover:border-primary/20 transition-all group" href="8-scholarships.html">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="history_edu">history_edu</span>
+<span class="font-label-md text-on-surface">Scholarship Status</span>
+</div>
+<span class="material-symbols-outlined text-sm text-on-surface-variant group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Daily Motivation Card -->
+<div class="bg-surface p-10 rounded-[32px] border border-secondary-fixed flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-secondary-fixed-dim text-5xl mb-6" data-icon="format_quote">format_quote</span>
+<blockquote class="font-headline-md text-primary italic mb-6" id="motivationalQuote">
+                        "The best way to predict the future is to create it."
+                    </blockquote>
+<cite class="not-italic text-on-surface-variant font-label-md" id="quoteAuthor">— Peter Drucker</cite>
+</div>
+</aside>
+</div>
+</section>
+</main>
+<div id="assessmentModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4 py-6 overflow-y-auto">
+  <div class="w-full max-w-3xl bg-background rounded-[32px] shadow-2xl overflow-hidden border border-secondary-fixed my-8">
+    <div class="flex items-center justify-between px-8 py-6 border-b border-secondary-fixed/50 sticky top-0 bg-background z-10">
+      <div>
+        <h2 class="font-headline-md mb-1">Map your next direction</h2>
+        <p class="font-body-md text-on-surface-variant">Answer a few focused questions and NextStep will suggest your best career paths.</p>
+      </div>
+      <button id="assessmentModalClose" class="text-on-surface-variant hover:text-primary transition-colors flex-shrink-0" aria-label="Close assessment window">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <div class="p-8">
+      <form id="assessmentFormModal" class="space-y-6">
+        <div>
+          <label class="block font-semibold mb-2" for="streamModal">Current stream or background</label>
+          <select id="streamModal" class="w-full rounded-xl border border-secondary-fixed bg-surface-container-low p-3">
+            <option value="Science">Science</option>
+            <option value="Commerce">Commerce</option>
+            <option value="Arts">Arts / Humanities</option>
+            <option value="Technology">Technology</option>
+            <option value="Undecided">Undecided</option>
+          </select>
+        </div>
+        <div>
+          <label class="block font-semibold mb-2" for="interestModal">Primary interest</label>
+          <select id="interestModal" class="w-full rounded-xl border border-secondary-fixed bg-surface-container-low p-3">
+            <option value="engineering">Engineering / Technology</option>
+            <option value="medical">Medical / Healthcare</option>
+            <option value="commerce">Finance / Business</option>
+            <option value="arts">Design / Media / Arts</option>
+            <option value="government">Government / Civil Services</option>
+            <option value="entrepreneurship">Entrepreneurship</option>
+          </select>
+        </div>
+        <div>
+          <label class="block font-semibold mb-2" for="strengthsModal">Your strongest skills</label>
+          <input id="strengthsModal" class="w-full rounded-xl border border-secondary-fixed bg-surface-container-low p-3" placeholder="e.g., problem solving, writing, leadership">
+        </div>
+        <div>
+          <label class="block font-semibold mb-2" for="goalModal">What do you want help deciding?</label>
+          <textarea id="goalModal" class="w-full rounded-xl border border-secondary-fixed bg-surface-container-low p-3 resize-none" rows="4" placeholder="Tell us your current confusion or goal."></textarea>
+        </div>
+        <button type="submit" class="w-full bg-primary text-white px-6 py-4 rounded-xl font-semibold hover:bg-primary/90 transition-colors flex items-center justify-center gap-2">
+          <span class="material-symbols-outlined">analytics</span>
+          Get Recommendation
+        </button>
+      </form>
+      <div id="assessmentResultModal" class="mt-8 p-6 bg-surface-container border border-secondary-fixed rounded-2xl hidden">
+        <span class="material-symbols-outlined text-5xl text-secondary mb-4 block">verified</span>
+        <h3 class="font-display text-2xl font-semibold mb-3" id="resultTitle">Best fit: </h3>
+        <p class="text-on-surface-variant mb-6" id="resultDescription"></p>
+        <div class="space-y-3" id="resultActions"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+        // Simple micro-interactions for card hover effects
+        document.querySelectorAll('.cursor-pointer').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-4px)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0)';
+            });
+        });
+
+        async function apiJson(url, { method = 'GET', token = null, body = null } = {}) {
+            const headers = {};
+            if (token) headers['Authorization'] = `Bearer ${token}`;
+            if (body) headers['Content-Type'] = 'application/json';
+
+            const res = await fetch(url, {
+                method,
+                headers,
+                body: body ? JSON.stringify(body) : undefined
+            });
+
+            if (!res.ok) {
+                const text = await res.text().catch(() => '');
+                throw new Error(`API ${res.status}: ${text}`);
+            }
+            return res.json();
+        }
+
+        function getTokenFromLocalStorage() {
+            // Your current demo login only sets `loggedIn=true`, but this function
+            // supports real backend auth if a token is stored.
+            const token = localStorage.getItem('token') || localStorage.getItem('authToken');
+            return token || null;
+        }
+
+        function safeText(v) {
+            return (v === null || v === undefined) ? '' : String(v);
+        }
+
+        (async function initDashboard() {
+            const token = getTokenFromLocalStorage();
+            const apiBase = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') ? 'http://localhost:4000' : '';
+
+            // Load user profile
+            try {
+                const me = await apiJson(`${apiBase}/api/me`, { token });
+                const user = me.user || {};
+                const name = user.name ? user.name.split(' ')[0] : null;
+                if (name) {
+                    const el = document.getElementById('dashboardUserName');
+                    if (el) el.textContent = `Hello, ${name}.`;
+                }
+            } catch {
+                // No token / demo mode -> keep defaults
+            }
+        })();
+
+        document.getElementById('exploreCareersButton')?.addEventListener('click', () => {
+            window.location.href = '5-career-paths.html';
+        });
+
+        const assessmentModal = document.getElementById('assessmentModal');
+        const showAssessmentModal = () => assessmentModal?.classList.remove('hidden');
+        const hideAssessmentModal = () => assessmentModal?.classList.add('hidden');
+
+        document.getElementById('takeAssessmentButton')?.addEventListener('click', () => {
+            showAssessmentModal();
+        });
+
+        document.getElementById('assessmentModalClose')?.addEventListener('click', hideAssessmentModal);
+
+        document.getElementById('dashboardChatAssistantLink')?.addEventListener('click', () => {
+            window.location.href = '9-cgai.html';
+        });
+
+        document.getElementById('quickUpdateProfileBtn')?.addEventListener('click', () => {
+            document.getElementById('profileHeaderButton')?.click();
+        });
+
+        // Assessment form handler
+        const categoryLinks = {
+          engineering: { label: 'Engineering and Technology', href: '5-career-paths.html' },
+          medical: { label: 'Medical and Healthcare', href: '5-career-paths.html' },
+          commerce: { label: 'Finance and Business', href: '5-career-paths.html' },
+          arts: { label: 'Design, Media, and Arts', href: '5-career-paths.html' },
+          government: { label: 'Government and Civil Services', href: '5-career-paths.html' },
+          entrepreneurship: { label: 'Entrepreneurship', href: '5-career-paths.html' }
+        };
+
+        document.getElementById('assessmentFormModal')?.addEventListener('submit', async event => {
+          event.preventDefault();
+          const button = event.target.querySelector('button[type="submit"]');
+          const result = document.getElementById('assessmentResultModal');
+          const answers = {
+            stream: document.getElementById('streamModal').value,
+            interest: document.getElementById('interestModal').value,
+            strengths: document.getElementById('strengthsModal').value.trim(),
+            goal: document.getElementById('goalModal').value.trim()
+          };
+          const selected = categoryLinks[answers.interest] || categoryLinks.engineering;
+
+          button.disabled = true;
+          button.innerHTML = '<span class="material-symbols-outlined">hourglass_empty</span>Saving...';
+
+          try {
+            const response = await fetch(`${NextStepAuth.API_BASE}/api/assessments`, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                ...(NextStepAuth.getToken() ? { Authorization: `Bearer ${NextStepAuth.getToken()}` } : {})
+              },
+              body: JSON.stringify({ answers })
+            });
+            if (!response.ok) throw new Error('Assessment could not be saved.');
+            await response.json();
+          } catch {
+            const saved = JSON.parse(localStorage.getItem('nextstep_assessments') || '[]');
+            saved.push({ answers, createdAt: new Date().toISOString() });
+            localStorage.setItem('nextstep_assessments', JSON.stringify(saved));
+          } finally {
+            button.disabled = false;
+            button.innerHTML = '<span class="material-symbols-outlined">analytics</span>Get Recommendation';
+          }
+
+          document.getElementById('assessmentFormModal').classList.add('hidden');
+          document.getElementById('resultTitle').textContent = `Best fit: ${selected.label}`;
+          document.getElementById('resultDescription').textContent = `Based on your ${answers.stream} background and stated interest, start by comparing careers, then ask the AI Mentor for a 30-day plan.`;
+          document.getElementById('resultActions').innerHTML = `
+            <a class="flex items-center justify-between bg-primary text-white px-5 py-3 rounded-xl font-semibold hover:bg-primary/90 transition-colors" href="${selected.href}">Explore careers <span class="material-symbols-outlined">arrow_forward</span></a>
+            <a class="flex items-center justify-between bg-white border border-secondary-fixed px-5 py-3 rounded-xl font-semibold hover:bg-surface-container-high transition-colors" href="9-cgai.html">Ask AI Mentor <span class="material-symbols-outlined">chat_bubble</span></a>
+            <a class="flex items-center justify-between bg-white border border-secondary-fixed px-5 py-3 rounded-xl font-semibold hover:bg-surface-container-high transition-colors" href="6-exams.html">Check exams <span class="material-symbols-outlined">event</span></a>
+          `;
+          result.classList.remove('hidden');
+        });
+
+        // ===== CAREER ROADMAP DATA =====
+        const careerRoadmaps = {
+          engineering: [
+            {
+              step: 1,
+              title: "Master Core Subjects",
+              description: "Focus on Physics, Chemistry, Maths in Class 11 & 12",
+              button: null
+            },
+            {
+              step: 2,
+              title: "Crack Entrance Exams",
+              description: "Appear for JEE Main, JEE Advanced, or EAMCET",
+              button: { text: "View Exams", href: "6-exams.html" }
+            },
+            {
+              step: 3,
+              title: "Choose Your Branch",
+              description: "Select specialization: CSE, ECE, Civil, Mechanical, etc.",
+              button: null
+            },
+            {
+              step: 4,
+              title: "Apply to Colleges",
+              description: "Get admission to colleges based on your rank",
+              button: { text: "Browse Colleges", href: "7-colleges.html" }
+            },
+            {
+              step: 5,
+              title: "Secure Scholarships",
+              description: "Apply for financial aid and merit scholarships",
+              button: { text: "Find Scholarships", href: "8-scholarships.html" }
+            },
+            {
+              step: 6,
+              title: "Plan Your Future",
+              description: "Prepare for placements, GATE exam, or MBA",
+              button: null
+            }
+          ],
+          medical: [
+            {
+              step: 1,
+              title: "Build Strong Foundation",
+              description: "Focus on Physics, Chemistry, Biology in Class 11 & 12",
+              button: null
+            },
+            {
+              step: 2,
+              title: "Ace NEET UG",
+              description: "Prepare and appear for National Eligibility Test",
+              button: { text: "View Exams", href: "6-exams.html" }
+            },
+            {
+              step: 3,
+              title: "Choose Medical Field",
+              description: "Decide between MBBS, BDS, BAMS, BHMS, or Nursing",
+              button: null
+            },
+            {
+              step: 4,
+              title: "Get College Admission",
+              description: "Apply to medical colleges based on NEET rank",
+              button: { text: "Find Colleges", href: "7-colleges.html" }
+            },
+            {
+              step: 5,
+              title: "Apply for Scholarships",
+              description: "Access medical scholarships and grants",
+              button: { text: "Explore Scholarships", href: "8-scholarships.html" }
+            },
+            {
+              step: 6,
+              title: "Pursue Specialization",
+              description: "Complete MD/MS or other post-graduation specializations",
+              button: null
+            }
+          ],
+          arts: [
+            {
+              step: 1,
+              title: "Strengthen Humanities",
+              description: "Focus on History, Political Science, Geography, Literature in Class 11 & 12",
+              button: null
+            },
+            {
+              step: 2,
+              title: "Explore Entrance Exams",
+              description: "Check CUET, DUET, and other relevant exams",
+              button: { text: "View Exams", href: "6-exams.html" }
+            },
+            {
+              step: 3,
+              title: "Choose Your Degree",
+              description: "Select BA, BFA, BPA, BSW, or other undergraduate programs",
+              button: null
+            },
+            {
+              step: 4,
+              title: "Apply to Colleges",
+              description: "Get into top arts colleges across India",
+              button: { text: "Browse Colleges", href: "7-colleges.html" }
+            },
+            {
+              step: 5,
+              title: "Seek Scholarships",
+              description: "Apply for humanities and merit-based scholarships",
+              button: { text: "Find Scholarships", href: "8-scholarships.html" }
+            },
+            {
+              step: 6,
+              title: "Launch Your Career",
+              description: "Pursue Civil Services, Teaching, Journalism, Social Work, or Law",
+              button: null
+            }
+          ],
+          commerce: [
+            {
+              step: 1,
+              title: "Develop Business Acumen",
+              description: "Focus on Accountancy, Business Studies, Economics in Class 11 & 12",
+              button: null
+            },
+            {
+              step: 2,
+              title: "Prepare for Exams",
+              description: "Appear for CUET, CA Foundation, or state CET exams",
+              button: { text: "View Exams", href: "6-exams.html" }
+            },
+            {
+              step: 3,
+              title: "Select Your Path",
+              description: "Choose BCom, BBA, CA, CS, or CMA programs",
+              button: null
+            },
+            {
+              step: 4,
+              title: "Get College Admission",
+              description: "Join top commerce colleges nationwide",
+              button: { text: "Find Colleges", href: "7-colleges.html" }
+            },
+            {
+              step: 5,
+              title: "Apply for Scholarships",
+              description: "Access financial aid for commerce students",
+              button: { text: "Explore Scholarships", href: "8-scholarships.html" }
+            },
+            {
+              step: 6,
+              title: "Build Finance Career",
+              description: "Become a CA, banker, finance professional, or entrepreneur",
+              button: null
+            }
+          ],
+          technology: [
+            {
+              step: 1,
+              title: "Master Computer Science",
+              description: "Build strong basics in Maths and Computer Science in Class 11 & 12",
+              button: null
+            },
+            {
+              step: 2,
+              title: "Prepare for Entrance",
+              description: "Appear for JEE, CUET or pursue IT diploma",
+              button: { text: "View Exams", href: "6-exams.html" }
+            },
+            {
+              step: 3,
+              title: "Choose Specialization",
+              description: "Focus on Web Dev, AI/ML, Cybersecurity, or Data Science",
+              button: null
+            },
+            {
+              step: 4,
+              title: "Enroll in BTech/BCA",
+              description: "Get admission to top tech colleges",
+              button: { text: "Browse Colleges", href: "7-colleges.html" }
+            },
+            {
+              step: 5,
+              title: "Secure Financial Aid",
+              description: "Apply for scholarships and internships",
+              button: { text: "Find Scholarships", href: "8-scholarships.html" }
+            },
+            {
+              step: 6,
+              title: "Launch Tech Career",
+              description: "Build projects, get certifications, and land tech jobs or startups",
+              button: null
+            }
+          ],
+          government: [
+            {
+              step: 1,
+              title: "Build General Knowledge",
+              description: "Focus on all subjects and develop GK from Class 11 & 12",
+              button: null
+            },
+            {
+              step: 2,
+              title: "Target Exams",
+              description: "Identify your goal: UPSC, SSC, State PSC, Banking, or Railway",
+              button: { text: "View Exams", href: "6-exams.html" }
+            },
+            {
+              step: 3,
+              title: "Complete Graduation",
+              description: "Get your degree in any stream",
+              button: { text: "Find Colleges", href: "7-colleges.html" }
+            },
+            {
+              step: 4,
+              title: "Access Scholarships",
+              description: "Apply for scholarships during graduation",
+              button: { text: "Explore Scholarships", href: "8-scholarships.html" }
+            },
+            {
+              step: 5,
+              title: "Intensive Preparation",
+              description: "Start exam prep with coaching or self-study strategy",
+              button: null
+            },
+            {
+              step: 6,
+              title: "Clear Selection Process",
+              description: "Succeed in Prelims → Mains → Interview to get selected",
+              button: null
+            }
+          ],
+          law: [
+            {
+              step: 1,
+              title: "Excel in Academics",
+              description: "Focus on Arts or any stream in Class 11 & 12",
+              button: null
+            },
+            {
+              step: 2,
+              title: "Prepare for Law Exams",
+              description: "Appear for CLAT, AILET, or state law entrance exams",
+              button: { text: "View Exams", href: "6-exams.html" }
+            },
+            {
+              step: 3,
+              title: "Choose Law Program",
+              description: "Select BA LLB (5 years) or LLB after graduation (3 years)",
+              button: null
+            },
+            {
+              step: 4,
+              title: "Apply to Law Colleges",
+              description: "Get admission to top law institutions",
+              button: { text: "Find Colleges", href: "7-colleges.html" }
+            },
+            {
+              step: 5,
+              title: "Secure Scholarships",
+              description: "Apply for law scholarships and financial aid",
+              button: { text: "Explore Scholarships", href: "8-scholarships.html" }
+            },
+            {
+              step: 6,
+              title: "Build Legal Career",
+              description: "Become an Advocate, Judge, Legal Advisor, or Civil Servant",
+              button: null
+            }
+          ],
+          media: [
+            {
+              step: 1,
+              title: "Strengthen Communication",
+              description: "Focus on English, Languages, and Current Affairs in Class 11 & 12",
+              button: null
+            },
+            {
+              step: 2,
+              title: "Prepare for Entrance",
+              description: "Appear for CUET or journalism entrance exams",
+              button: { text: "View Exams", href: "6-exams.html" }
+            },
+            {
+              step: 3,
+              title: "Choose Media Degree",
+              description: "Select BJMC, BA Journalism, or Mass Communication",
+              button: null
+            },
+            {
+              step: 4,
+              title: "Apply to Media Colleges",
+              description: "Get admission to top journalism institutions",
+              button: { text: "Find Colleges", href: "7-colleges.html" }
+            },
+            {
+              step: 5,
+              title: "Access Scholarships",
+              description: "Apply for media and creative scholarships",
+              button: { text: "Explore Scholarships", href: "8-scholarships.html" }
+            },
+            {
+              step: 6,
+              title: "Start Media Career",
+              description: "Become a Reporter, Anchor, Content Creator, or PR Professional",
+              button: null
+            }
+          ],
+          education: [
+            {
+              step: 1,
+              title: "Complete Class 12",
+              description: "Pass Class 12 in any stream to qualify",
+              button: null
+            },
+            {
+              step: 2,
+              title: "Prepare for B.Ed Exams",
+              description: "Appear for entrance exams for B.Ed, D.El.Ed, or CUET",
+              button: { text: "View Exams", href: "6-exams.html" }
+            },
+            {
+              step: 3,
+              title: "Choose Teaching Level",
+              description: "Decide between Primary, Secondary, or Higher Education",
+              button: null
+            },
+            {
+              step: 4,
+              title: "Apply to Education Colleges",
+              description: "Get admission to teacher training institutes",
+              button: { text: "Find Colleges", href: "7-colleges.html" }
+            },
+            {
+              step: 5,
+              title: "Seek Scholarships",
+              description: "Apply for education and teaching scholarships",
+              button: { text: "Explore Scholarships", href: "8-scholarships.html" }
+            },
+            {
+              step: 6,
+              title: "Become an Educator",
+              description: "Clear TET, CTET, or state teacher exams for government jobs",
+              button: null
+            }
+          ],
+          wellness: [
+            {
+              step: 1,
+              title: "Focus on Science",
+              description: "Study Biology, Home Science, or Physical Education in Class 12",
+              button: null
+            },
+            {
+              step: 2,
+              title: "Prepare for Entrance",
+              description: "Appear for Nutrition, Yoga, Fitness entrance exams",
+              button: { text: "View Exams", href: "6-exams.html" }
+            },
+            {
+              step: 3,
+              title: "Select Wellness Path",
+              description: "Choose BSc Nutrition, BPT, Yoga, or Beauty & Wellness",
+              button: null
+            },
+            {
+              step: 4,
+              title: "Apply to Colleges",
+              description: "Get admission to wellness and healthcare colleges",
+              button: { text: "Find Colleges", href: "7-colleges.html" }
+            },
+            {
+              step: 5,
+              title: "Access Scholarships",
+              description: "Apply for health and wellness scholarships",
+              button: { text: "Explore Scholarships", href: "8-scholarships.html" }
+            },
+            {
+              step: 6,
+              title: "Help Others",
+              description: "Become a Dietitian, Physiotherapist, Yoga Instructor, or Spa Manager",
+              button: null
+            }
+          ],
+          realestate: [
+            {
+              step: 1,
+              title: "Strengthen STEM",
+              description: "Focus on Maths and Physics in Class 11 & 12",
+              button: null
+            },
+            {
+              step: 2,
+              title: "Prepare for Exams",
+              description: "Appear for JEE or state polytechnic entrance exams",
+              button: { text: "View Exams", href: "6-exams.html" }
+            },
+            {
+              step: 3,
+              title: "Choose Program",
+              description: "Select Civil Engineering, Architecture, or B.Planning",
+              button: null
+            },
+            {
+              step: 4,
+              title: "Get College Admission",
+              description: "Join top engineering and architecture colleges",
+              button: { text: "Find Colleges", href: "7-colleges.html" }
+            },
+            {
+              step: 5,
+              title: "Secure Scholarships",
+              description: "Apply for STEM and construction scholarships",
+              button: { text: "Explore Scholarships", href: "8-scholarships.html" }
+            },
+            {
+              step: 6,
+              title: "Build Construction Career",
+              description: "Become a Civil Engineer, Architect, Planner, or Real Estate Agent",
+              button: null
+            }
+          ],
+          sciences: [
+            {
+              step: 1,
+              title: "Excel in Science",
+              description: "Focus on Physics, Chemistry, Maths/Biology in Class 11 & 12",
+              button: null
+            },
+            {
+              step: 2,
+              title: "Prepare for Science Exams",
+              description: "Appear for IIT JAM, CUET, or state science entrance exams",
+              button: { text: "View Exams", href: "6-exams.html" }
+            },
+            {
+              step: 3,
+              title: "Choose Science Field",
+              description: "Select BSc Physics, Chemistry, Maths, or Biotechnology",
+              button: null
+            },
+            {
+              step: 4,
+              title: "Apply to Colleges",
+              description: "Get admission to science colleges and research institutes",
+              button: { text: "Find Colleges", href: "7-colleges.html" }
+            },
+            {
+              step: 5,
+              title: "Access Scholarships",
+              description: "Apply for science research and study scholarships",
+              button: { text: "Explore Scholarships", href: "8-scholarships.html" }
+            },
+            {
+              step: 6,
+              title: "Research & Innovation",
+              description: "Become a Research Scientist, Professor, or work at DRDO/ISRO",
+              button: null
+            }
+          ],
+          sports: [
+            {
+              step: 1,
+              title: "Develop Your Skill",
+              description: "Develop your chosen sport from school level onwards",
+              button: null
+            },
+            {
+              step: 2,
+              title: "Prepare for Sports",
+              description: "Appear for sports quota admissions or BPEd entrance exams",
+              button: { text: "View Exams", href: "6-exams.html" }
+            },
+            {
+              step: 3,
+              title: "Choose Sports Path",
+              description: "Select BPEd, BSc Sports Science, or Coaching Diploma",
+              button: null
+            },
+            {
+              step: 4,
+              title: "Apply to Sports Colleges",
+              description: "Get admission to sports universities and institutes",
+              button: { text: "Find Colleges", href: "7-colleges.html" }
+            },
+            {
+              step: 5,
+              title: "Seek Sports Scholarships",
+              description: "Apply for sports scholarships and athletic grants",
+              button: { text: "Explore Scholarships", href: "8-scholarships.html" }
+            },
+            {
+              step: 6,
+              title: "Sports Career",
+              description: "Become a Professional Athlete, Coach, Journalist, or Fitness Trainer",
+              button: null
+            }
+          ],
+          environment: [
+            {
+              step: 1,
+              title: "Master Science Subjects",
+              description: "Focus on Biology, Chemistry, and Agriculture in Class 11 & 12",
+              button: null
+            },
+            {
+              step: 2,
+              title: "Prepare for Agriculture Exams",
+              description: "Appear for ICAR AIEEA or state agriculture entrance exams",
+              button: { text: "View Exams", href: "6-exams.html" }
+            },
+            {
+              step: 3,
+              title: "Choose Agriculture Path",
+              description: "Select BSc Agriculture, Forestry, or Environmental Science",
+              button: null
+            },
+            {
+              step: 4,
+              title: "Apply to Agriculture Colleges",
+              description: "Get admission to agriculture and environmental institutes",
+              button: { text: "Find Colleges", href: "7-colleges.html" }
+            },
+            {
+              step: 5,
+              title: "Access Agricultural Scholarships",
+              description: "Apply for agriculture and environmental scholarships",
+              button: { text: "Explore Scholarships", href: "8-scholarships.html" }
+            },
+            {
+              step: 6,
+              title: "Environmental Career",
+              description: "Become an Agronomist, Forest Officer, Environmental Consultant, or Researcher",
+              button: null
+            }
+          ],
+          hospitality: [
+            {
+              step: 1,
+              title: "Prepare for Class 12",
+              description: "Focus on English and general subjects in Class 11 & 12",
+              button: null
+            },
+            {
+              step: 2,
+              title: "Prepare for Hospitality Exams",
+              description: "Appear for NCHMCT JEE or state hotel management exams",
+              button: { text: "View Exams", href: "6-exams.html" }
+            },
+            {
+              step: 3,
+              title: "Choose Hospitality Course",
+              description: "Select BHM, BSc Hospitality, or Hotel Management Diploma",
+              button: null
+            },
+            {
+              step: 4,
+              title: "Apply to Hotels Schools",
+              description: "Get admission to top hotel management colleges",
+              button: { text: "Find Colleges", href: "7-colleges.html" }
+            },
+            {
+              step: 5,
+              title: "Seek Scholarships",
+              description: "Apply for hospitality and service industry scholarships",
+              button: { text: "Explore Scholarships", href: "8-scholarships.html" }
+            },
+            {
+              step: 6,
+              title: "Hotel Career",
+              description: "Become a Chef, Hotel Manager, Travel Agent, Cabin Crew, or Event Manager",
+              button: null
+            }
+          ],
+          entrepreneurship: [
+            {
+              step: 1,
+              title: "Develop Your Idea",
+              description: "Develop your business idea and problem-solving mindset",
+              button: null
+            },
+            {
+              step: 2,
+              title: "Get Your Degree",
+              description: "Complete any relevant graduation degree for your field",
+              button: { text: "Find Colleges", href: "7-colleges.html" }
+            },
+            {
+              step: 3,
+              title: "Learn Business Basics",
+              description: "Study finance, marketing, operations, and management skills",
+              button: null
+            },
+            {
+              step: 4,
+              title: "Seek Startup Funding",
+              description: "Apply for startup scholarships and government grants",
+              button: { text: "Explore Scholarships", href: "8-scholarships.html" }
+            },
+            {
+              step: 5,
+              title: "Build Your MVP",
+              description: "Register your business and create a minimum viable product",
+              button: null
+            },
+            {
+              step: 6,
+              title: "Scale & Grow",
+              description: "Pitch to investors, join incubators like Startup India, and apply for MSME schemes",
+              button: null
+            }
+          ]
+        };
+
+        // Event listener for career dropdown
+        document.getElementById('careerCategory')?.addEventListener('change', (e) => {
+          const selected = e.target.value;
+          const container = document.getElementById('roadmapContainer');
+          const emptyState = document.getElementById('emptyState');
+          const stepsContainer = document.getElementById('roadmapSteps');
+
+          if (!selected) {
+            container.classList.add('hidden');
+            emptyState.classList.remove('hidden');
+            return;
+          }
+
+          container.classList.remove('hidden');
+          emptyState.classList.add('hidden');
+
+          // Clear previous steps
+          stepsContainer.innerHTML = '<div class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-primary/50 to-primary/20"></div>';
+
+          // Build roadmap steps
+          const roadmap = careerRoadmaps[selected] || [];
+          roadmap.forEach((step, index) => {
+            const stepEl = document.createElement('div');
+            stepEl.className = 'relative';
+            
+            const stepContent = document.createElement('div');
+            stepContent.className = 'bg-[#F5F0E8] border-2 border-[#1B2D5B]/20 rounded-2xl p-6 ml-8 hover:border-[#1B2D5B]/40 transition-all duration-300';
+            
+            let html = `
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0">
+                  <div class="flex items-center justify-center w-10 h-10 rounded-full bg-[#1B2D5B] text-white font-bold text-sm">
+                    ${step.step}
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <h4 class="font-semibold text-[#1B2D5B] mb-1">${step.title}</h4>
+                  <p class="text-sm text-[#1B2D5B]/70 mb-4">${step.description}</p>
+            `;
+
+            if (step.button) {
+              html += `
+                <a href="${step.button.href}" class="inline-flex items-center gap-2 text-sm font-semibold text-white bg-[#1B2D5B] hover:bg-[#1B2D5B]/90 px-4 py-2 rounded-lg transition-colors duration-200">
+                  ${step.button.text}
+                  <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+              `;
+            }
+
+            html += `
+                </div>
+              </div>
+            `;
+
+            stepContent.innerHTML = html;
+            stepEl.appendChild(stepContent);
+            stepsContainer.appendChild(stepEl);
+          });
+        });
+
+        // ===== MOTIVATIONAL QUOTES ROTATION =====
+        const quotes = [
+          "Your background doesn't define your future — your effort does.",
+          "Every expert was once a beginner. Keep going.",
+          "Small steps every day lead to big changes.",
+          "You don't need perfect conditions to start. Start now.",
+          "Your dream is valid, no matter where you come from.",
+          "Hard work beats talent when talent doesn't work hard.",
+          "One exam at a time. One day at a time.",
+          "Believe in yourself even when no one else does.",
+          "Education is the most powerful tool you can use to change the world.",
+          "Don't wait for opportunity. Create it.",
+          "The only limit to your success is the effort you put in.",
+          "You are capable of more than you know.",
+          "Struggle today, shine tomorrow.",
+          "Your village is proud of you. Keep going.",
+          "Be the first in your family to make history.",
+          "Difficulties in life are not stop signs — they are guidelines.",
+          "Success begins with a single decision to try.",
+          "Dream big, work hard, stay humble.",
+          "No one can take away what you learn.",
+          "Today's hard work is tomorrow's success story."
+        ];
+
+        function rotateQuote() {
+          const quoteElement = document.getElementById('motivationalQuote');
+          const authorElement = document.getElementById('quoteAuthor');
+          
+          if (!quoteElement) return;
+
+          // Get last shown quote index from localStorage
+          const lastQuoteIndex = parseInt(localStorage.getItem('lastQuoteIndex') || '-1', 10);
+          
+          // Generate random index that's different from the last one
+          let newIndex;
+          do {
+            newIndex = Math.floor(Math.random() * quotes.length);
+          } while (newIndex === lastQuoteIndex && quotes.length > 1);
+
+          // Update the quote
+          quoteElement.textContent = `"${quotes[newIndex]}"`;
+          authorElement.textContent = '— NextStep';
+
+          // Save the new index to localStorage
+          localStorage.setItem('lastQuoteIndex', newIndex.toString());
+        }
+
+        // Run on page load
+        rotateQuote();
+    </script>
+    <!-- Profile modal -->
+    <div id="profileModalOverlay" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4 py-6 overflow-y-auto">
+      <div class="w-full max-w-4xl rounded-[32px] border border-[#1B2D5B] bg-[#F5F0E8] shadow-2xl overflow-hidden max-h-[calc(100vh-4rem)]">
+        <div class="flex items-center justify-between px-8 py-6 border-b border-[#1B2D5B]/20 bg-[#F5F0E8] sticky top-0 z-10">
+          <div>
+            <h2 class="font-display-lg text-3xl font-bold text-[#1B2D5B]">Profile & Settings</h2>
+            <p class="font-body-md text-[#1B2D5B]/80 mt-1">Manage your account details, notification preferences, and privacy from one window.</p>
+          </div>
+          <button id="profileModalClose" type="button" class="text-[#1B2D5B] text-2xl leading-none hover:text-[#122141]" aria-label="Close profile window">✕</button>
+        </div>
+        <div class="grid gap-6 lg:grid-cols-[220px_1fr] px-8 py-8">
+          <aside class="space-y-6">
+            <div class="rounded-[32px] border border-[#1B2D5B]/20 bg-white p-5 space-y-3">
+              <p class="font-label-md uppercase tracking-[0.24em] text-[#1B2D5B]/70">Settings menu</p>
+              <button type="button" data-tab="profile" class="tab-button w-full text-left rounded-2xl px-4 py-3 bg-[#E9E3D6] text-[#1B2D5B] font-semibold shadow-sm">Profile Details</button>
+              <button type="button" data-tab="notifications" class="tab-button w-full text-left rounded-2xl px-4 py-3 text-[#1B2D5B] hover:bg-[#E9E3D6]">Notifications</button>
+              <button type="button" data-tab="privacy" class="tab-button w-full text-left rounded-2xl px-4 py-3 text-[#1B2D5B] hover:bg-[#E9E3D6]">Privacy & Safety</button>
+            </div>
+            <div class="rounded-[32px] border border-[#1B2D5B]/20 bg-white p-5">
+              <p class="font-semibold text-[#1B2D5B] mb-3">Quick note</p>
+              <p class="text-sm text-[#1B2D5B]/70">All profile and settings controls are available in this popup. No separate settings page is required.</p>
+            </div>
+          </aside>
+          <section class="space-y-6 overflow-y-auto">
+            <div id="profileTab" class="tab-panel space-y-8">
+              <div id="profileViewSection" class="space-y-8">
+                <div class="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+                  <div class="flex items-center gap-4">
+                    <div id="profileViewPhoto" class="w-28 h-28 rounded-full border border-[#1B2D5B] bg-[#F5F0E8] flex items-center justify-center text-5xl text-[#1B2D5B] overflow-hidden">
+                      <span class="material-symbols-outlined">account_circle</span>
+                    </div>
+                    <div class="space-y-3">
+                      <div>
+                        <p class="text-sm uppercase tracking-[0.24em] text-[#1B2D5B]/70">Full Name</p>
+                        <p id="profileViewName" class="font-semibold text-[#1B2D5B]">Not set</p>
+                      </div>
+                      <div>
+                        <p class="text-sm uppercase tracking-[0.24em] text-[#1B2D5B]/70">Class / Year</p>
+                        <p id="profileViewClass" class="font-semibold text-[#1B2D5B]">Not set</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="grid gap-4 sm:grid-cols-2">
+                  <div class="rounded-[24px] border border-[#1B2D5B]/20 bg-white p-6">
+                    <p class="text-sm uppercase tracking-[0.24em] text-[#1B2D5B]/70 mb-2">Stream</p>
+                    <p id="profileViewStream" class="font-semibold text-[#1B2D5B]">Not set</p>
+                  </div>
+                  <div class="rounded-[24px] border border-[#1B2D5B]/20 bg-white p-6">
+                    <p class="text-sm uppercase tracking-[0.24em] text-[#1B2D5B]/70 mb-2">Career Interest</p>
+                    <p id="profileViewInterest" class="font-semibold text-[#1B2D5B]">Not set</p>
+                  </div>
+                </div>
+                <button id="editProfileBtn" type="button" class="inline-flex items-center justify-center rounded-full border border-[#1B2D5B] bg-[#1B2D5B]/10 px-6 py-3 font-semibold text-[#1B2D5B] hover:bg-[#E9E3D6] transition-colors">Edit Profile</button>
+              </div>
+              <div id="profileEditSection" class="hidden space-y-6">
+                <form id="profileForm" class="space-y-6">
+                  <div class="grid gap-4 sm:grid-cols-[auto_1fr] items-center">
+                    <div class="relative">
+                      <div id="profilePhotoPreview" class="w-28 h-28 rounded-full border border-[#1B2D5B] bg-[#F5F0E8] flex items-center justify-center text-5xl text-[#1B2D5B] overflow-hidden">
+                        <span class="material-symbols-outlined">account_circle</span>
+                      </div>
+                      <label for="profilePhotoInput" class="absolute inset-0 cursor-pointer"></label>
+                      <input id="profilePhotoInput" type="file" accept="image/*" class="hidden">
+                    </div>
+                    <div>
+                      <p class="font-semibold text-[#1B2D5B] mb-2">Profile Photo</p>
+                      <p class="text-sm text-[#1B2D5B]/70">Upload a profile photo or click the circle to update it.</p>
+                    </div>
+                  </div>
+                  <div class="grid gap-4 sm:grid-cols-2">
+                    <label class="block">
+                      <span class="font-semibold text-[#1B2D5B]">Full Name</span>
+                      <input id="profileFullName" type="text" placeholder="Enter your full name" class="mt-2 w-full rounded-[20px] border border-[#1B2D5B] bg-white px-4 py-3 text-[#1B2D5B] focus:outline-none focus:ring-2 focus:ring-[#1B2D5B]/20">
+                    </label>
+                    <label class="block">
+                      <span class="font-semibold text-[#1B2D5B]">Class / Year</span>
+                      <select id="profileClass" class="mt-2 w-full rounded-[20px] border border-[#1B2D5B] bg-white px-4 py-3 text-[#1B2D5B] focus:outline-none focus:ring-2 focus:ring-[#1B2D5B]/20">
+                        <option value="">Select class/year</option>
+                        <option value="Class 10">Class 10</option>
+                        <option value="Class 11">Class 11</option>
+                        <option value="Class 12">Class 12</option>
+                        <option value="1st Year UG">1st Year UG</option>
+                        <option value="2nd Year UG">2nd Year UG</option>
+                        <option value="3rd Year UG">3rd Year UG</option>
+                        <option value="4th Year UG">4th Year UG</option>
+                      </select>
+                    </label>
+                  </div>
+                  <div class="grid gap-4 sm:grid-cols-2">
+                    <label class="block">
+                      <span class="font-semibold text-[#1B2D5B]">Stream</span>
+                      <select id="profileStream" class="mt-2 w-full rounded-[20px] border border-[#1B2D5B] bg-white px-4 py-3 text-[#1B2D5B] focus:outline-none focus:ring-2 focus:ring-[#1B2D5B]/20">
+                        <option value="">Select stream</option>
+                        <option value="Engineering">Engineering</option>
+                        <option value="Medical">Medical</option>
+                        <option value="Arts">Arts</option>
+                        <option value="Commerce">Commerce</option>
+                        <option value="Technology & Digital">Technology & Digital</option>
+                        <option value="Government">Government</option>
+                        <option value="Law & Legal Services">Law & Legal Services</option>
+                        <option value="Media & Journalism">Media & Journalism</option>
+                        <option value="Education & Training">Education & Training</option>
+                        <option value="Wellness & Lifestyle">Wellness & Lifestyle</option>
+                        <option value="Real Estate & Construction">Real Estate & Construction</option>
+                        <option value="Pure Sciences">Pure Sciences</option>
+                        <option value="Sports & Fitness">Sports & Fitness</option>
+                        <option value="Environment & Agriculture">Environment & Agriculture</option>
+                        <option value="Hotel Management & Hospitality">Hotel Management & Hospitality</option>
+                        <option value="Entrepreneurship">Entrepreneurship</option>
+                      </select>
+                    </label>
+                    <label class="block">
+                      <span class="font-semibold text-[#1B2D5B]">Career Interest</span>
+                      <select id="profileInterest" class="mt-2 w-full rounded-[20px] border border-[#1B2D5B] bg-white px-4 py-3 text-[#1B2D5B] focus:outline-none focus:ring-2 focus:ring-[#1B2D5B]/20">
+                        <option value="">Select interest</option>
+                        <option value="Engineering">Engineering</option>
+                        <option value="Medical">Medical</option>
+                        <option value="Arts">Arts</option>
+                        <option value="Commerce">Commerce</option>
+                        <option value="Technology & Digital">Technology & Digital</option>
+                        <option value="Government">Government</option>
+                        <option value="Law & Legal Services">Law & Legal Services</option>
+                        <option value="Media & Journalism">Media & Journalism</option>
+                        <option value="Education & Training">Education & Training</option>
+                        <option value="Wellness & Lifestyle">Wellness & Lifestyle</option>
+                        <option value="Real Estate & Construction">Real Estate & Construction</option>
+                        <option value="Pure Sciences">Pure Sciences</option>
+                        <option value="Sports & Fitness">Sports & Fitness</option>
+                        <option value="Environment & Agriculture">Environment & Agriculture</option>
+                        <option value="Hotel Management & Hospitality">Hotel Management & Hospitality</option>
+                        <option value="Entrepreneurship">Entrepreneurship</option>
+                      </select>
+                    </label>
+                  </div>
+                  <p id="profileStatusText" class="text-sm text-[#1B2D5B]/70"></p>
+                  <div class="flex flex-wrap gap-3">
+                    <button type="submit" class="inline-flex items-center justify-center rounded-full bg-[#1B2D5B] px-6 py-3 font-semibold text-[#F5F0E8] hover:bg-[#122141] transition-colors">Save</button>
+                    <button id="profileCancelBtn" type="button" class="inline-flex items-center justify-center rounded-full border border-[#1B2D5B] bg-[#F5F0E8] px-6 py-3 font-semibold text-[#1B2D5B] hover:bg-white transition-colors">Cancel</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div id="notificationsTab" class="tab-panel hidden">
+              <div class="rounded-[32px] border border-[#1B2D5B]/20 bg-white p-8 space-y-6">
+                <div>
+                  <h3 class="font-headline-md text-2xl font-bold text-[#1B2D5B]">Notifications</h3>
+                  <p class="text-sm text-[#1B2D5B]/70 mt-1">Choose how you want to receive reminders and career updates.</p>
+                </div>
+                <div class="space-y-4">
+                  <label class="flex items-center justify-between gap-4 rounded-3xl border border-[#1B2D5B]/10 bg-[#F5F0E8] px-4 py-4">
+                    <div>
+                      <p class="font-semibold text-[#1B2D5B]">Email alerts</p>
+                      <p class="text-sm text-[#1B2D5B]/70">Receive email updates about recommendations and new opportunities.</p>
+                    </div>
+                    <input id="notificationsEmail" type="checkbox" class="h-5 w-5 rounded accent-primary">
+                  </label>
+                  <label class="flex items-center justify-between gap-4 rounded-3xl border border-[#1B2D5B]/10 bg-[#F5F0E8] px-4 py-4">
+                    <div>
+                      <p class="font-semibold text-[#1B2D5B]">SMS reminders</p>
+                      <p class="text-sm text-[#1B2D5B]/70">Get exam and deadline reminders by SMS.</p>
+                    </div>
+                    <input id="notificationsSMS" type="checkbox" class="h-5 w-5 rounded accent-primary">
+                  </label>
+                  <label class="flex items-center justify-between gap-4 rounded-3xl border border-[#1B2D5B]/10 bg-[#F5F0E8] px-4 py-4">
+                    <div>
+                      <p class="font-semibold text-[#1B2D5B]">Exam deadline alerts</p>
+                      <p class="text-sm text-[#1B2D5B]/70">Receive timely notices for upcoming exam dates.</p>
+                    </div>
+                    <input id="notificationsExam" type="checkbox" class="h-5 w-5 rounded accent-primary">
+                  </label>
+                  <label class="flex items-center justify-between gap-4 rounded-3xl border border-[#1B2D5B]/10 bg-[#F5F0E8] px-4 py-4">
+                    <div>
+                      <p class="font-semibold text-[#1B2D5B]">Personalized recommendations</p>
+                      <p class="text-sm text-[#1B2D5B]/70">Allow tailored career suggestions based on your progress.</p>
+                    </div>
+                    <input id="notificationsPersonalized" type="checkbox" class="h-5 w-5 rounded accent-primary">
+                  </label>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                  <button id="saveNotificationsBtn" type="button" class="inline-flex items-center justify-center rounded-full bg-[#1B2D5B] px-6 py-3 font-semibold text-[#F5F0E8] hover:bg-[#122141] transition-colors">Save Notifications</button>
+                  <button id="resetNotificationsBtn" type="button" class="inline-flex items-center justify-center rounded-full border border-[#1B2D5B] bg-[#F5F0E8] px-6 py-3 font-semibold text-[#1B2D5B] hover:bg-white transition-colors">Reset to Default</button>
+                </div>
+                <p id="notificationsStatusText" class="text-sm text-[#1B2D5B]/70"></p>
+              </div>
+            </div>
+            <div id="privacyTab" class="tab-panel hidden">
+              <div class="rounded-[32px] border border-[#1B2D5B]/20 bg-white p-8 space-y-6">
+                <div>
+                  <h3 class="font-headline-md text-2xl font-bold text-[#1B2D5B]">Privacy & Safety</h3>
+                  <p class="text-sm text-[#1B2D5B]/70 mt-1">Control what information is visible and how your data is shared.</p>
+                </div>
+                <div class="space-y-4">
+                  <label class="flex items-center justify-between gap-4 rounded-3xl border border-[#1B2D5B]/10 bg-[#F5F0E8] px-4 py-4">
+                    <div>
+                      <p class="font-semibold text-[#1B2D5B]">Show profile to mentors</p>
+                      <p class="text-sm text-[#1B2D5B]/70">Allow coaches and mentors to view your student profile.</p>
+                    </div>
+                    <input id="privacyProfileToggle" type="checkbox" class="h-5 w-5 rounded accent-primary">
+                  </label>
+                  <label class="flex items-center justify-between gap-4 rounded-3xl border border-[#1B2D5B]/10 bg-[#F5F0E8] px-4 py-4">
+                    <div>
+                      <p class="font-semibold text-[#1B2D5B]">Allow anonymous data sharing</p>
+                      <p class="text-sm text-[#1B2D5B]/70">Help improve career guidance by sharing usage anonymously.</p>
+                    </div>
+                    <input id="privacyDataSharing" type="checkbox" class="h-5 w-5 rounded accent-primary">
+                  </label>
+                  <label class="flex items-center justify-between gap-4 rounded-3xl border border-[#1B2D5B]/10 bg-[#F5F0E8] px-4 py-4">
+                    <div>
+                      <p class="font-semibold text-[#1B2D5B]">Secure session</p>
+                      <p class="text-sm text-[#1B2D5B]/70">Keep your dashboard access safe on shared devices.</p>
+                    </div>
+                    <input id="privacySecureSession" type="checkbox" class="h-5 w-5 rounded accent-primary">
+                  </label>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                  <button id="savePrivacyBtn" type="button" class="inline-flex items-center justify-center rounded-full bg-[#1B2D5B] px-6 py-3 font-semibold text-[#F5F0E8] hover:bg-[#122141] transition-colors">Save Privacy</button>
+                  <button id="resetPrivacyBtn" type="button" class="inline-flex items-center justify-center rounded-full border border-[#1B2D5B] bg-[#F5F0E8] px-6 py-3 font-semibold text-[#1B2D5B] hover:bg-white transition-colors">Reset to Default</button>
+                </div>
+                <p id="privacyStatusText" class="text-sm text-[#1B2D5B]/70"></p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <script>
+      (function() {
+        const PROFILE_KEY = 'nextstep_profile';
+        const SETTINGS_KEY = 'nextstep_settings';
+        const DEFAULT_SETTINGS = {
+          emailAlerts: true,
+          smsAlerts: false,
+          examReminders: true,
+          personalizedRecommendations: true,
+          showProfileToMentors: false,
+          allowDataSharing: false,
+          secureSession: true
+        };
+        const profileButton = document.getElementById('profileHeaderButton');
+        const profileAvatar = document.getElementById('profileHeaderAvatar');
+        const profileName = document.getElementById('user-profile-name');
+        const modalOverlay = document.getElementById('profileModalOverlay');
+        const modalClose = document.getElementById('profileModalClose');
+        const editButton = document.getElementById('editProfileBtn');
+        const cancelButton = document.getElementById('profileCancelBtn');
+        const profileForm = document.getElementById('profileForm');
+        const viewSection = document.getElementById('profileViewSection');
+        const editSection = document.getElementById('profileEditSection');
+        const viewPhoto = document.getElementById('profileViewPhoto');
+        const viewName = document.getElementById('profileViewName');
+        const viewClass = document.getElementById('profileViewClass');
+        const viewStream = document.getElementById('profileViewStream');
+        const viewInterest = document.getElementById('profileViewInterest');
+        const profilePhotoPreview = document.getElementById('profilePhotoPreview');
+        const profilePhotoInput = document.getElementById('profilePhotoInput');
+        const profileFullName = document.getElementById('profileFullName');
+        const profileClass = document.getElementById('profileClass');
+        const profileStream = document.getElementById('profileStream');
+        const profileInterest = document.getElementById('profileInterest');
+        const profileStatusText = document.getElementById('profileStatusText');
+        const tabButtons = document.querySelectorAll('#profileModalOverlay .tab-button');
+        const tabs = {
+          profile: document.getElementById('profileTab'),
+          notifications: document.getElementById('notificationsTab'),
+          privacy: document.getElementById('privacyTab')
+        };
+        const notificationsEmail = document.getElementById('notificationsEmail');
+        const notificationsSMS = document.getElementById('notificationsSMS');
+        const notificationsExam = document.getElementById('notificationsExam');
+        const notificationsPersonalized = document.getElementById('notificationsPersonalized');
+        const notificationsStatusText = document.getElementById('notificationsStatusText');
+        const saveNotificationsBtn = document.getElementById('saveNotificationsBtn');
+        const resetNotificationsBtn = document.getElementById('resetNotificationsBtn');
+        const privacyProfileToggle = document.getElementById('privacyProfileToggle');
+        const privacyDataSharing = document.getElementById('privacyDataSharing');
+        const privacySecureSession = document.getElementById('privacySecureSession');
+        const privacyStatusText = document.getElementById('privacyStatusText');
+        const savePrivacyBtn = document.getElementById('savePrivacyBtn');
+        const resetPrivacyBtn = document.getElementById('resetPrivacyBtn');
+        let currentProfile = { name: '', photo: '', class: '', stream: '', interest: '' };
+
+        function readProfile() {
+          try {
+            const saved = JSON.parse(localStorage.getItem(PROFILE_KEY) || '{}');
+            if (saved && (saved.name || saved.photo || saved.class || saved.stream || saved.interest)) {
+              return {
+                name: saved.name || '',
+                photo: saved.photo || '',
+                class: saved.class || '',
+                stream: saved.stream || '',
+                interest: saved.interest || ''
+              };
+            }
+          } catch {
+            // ignore parse errors and try legacy user fallback
+          }
+          try {
+            const user = JSON.parse(localStorage.getItem('user') || 'null');
+            if (user && typeof user === 'object' && user.name) {
+              return { name: user.name || '', photo: user.photo || '', class: '', stream: '', interest: '' };
+            }
+          } catch {
+            // ignore parse errors
+          }
+          return { name: '', photo: '', class: '', stream: '', interest: '' };
+        }
+
+        function writeProfile(profile) {
+          localStorage.setItem(PROFILE_KEY, JSON.stringify(profile));
+        }
+
+        function readSettings() {
+          try {
+            return JSON.parse(localStorage.getItem(SETTINGS_KEY) || 'null') || DEFAULT_SETTINGS;
+          } catch {
+            return DEFAULT_SETTINGS;
+          }
+        }
+
+        function writeSettings(settings) {
+          localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
+        }
+
+        function getInitial(name) {
+          return name.trim().charAt(0).toUpperCase() || '';
+        }
+
+        function setAvatar(profile) {
+          if (profile.photo) {
+            profileAvatar.innerHTML = `<img src="${profile.photo}" alt="Profile photo" class="w-full h-full object-cover" />`;
+            profileAvatar.classList.remove('bg-secondary-fixed', 'bg-[#F5F0E8]');
+            profileAvatar.classList.add('bg-white');
+          } else if (profile.name) {
+            const initial = getInitial(profile.name);
+            profileAvatar.innerHTML = `<span class="font-semibold text-[#1B2D5B]">${initial}</span>`;
+            profileAvatar.classList.remove('bg-secondary-fixed', 'bg-white');
+            profileAvatar.classList.add('bg-[#F5F0E8]');
+          } else {
+            profileAvatar.innerHTML = '<span class="material-symbols-outlined text-primary">person</span>';
+            profileAvatar.classList.remove('bg-[#F5F0E8]', 'bg-white');
+            profileAvatar.classList.add('bg-secondary-fixed');
+          }
+        }
+
+        function refreshHeader() {
+          const profile = readProfile();
+          currentProfile = profile;
+          profileName.textContent = profile.name || 'User';
+          setAvatar(profile);
+        }
+
+        function showView(profile) {
+          viewName.textContent = profile.name || 'Not set';
+          viewClass.textContent = profile.class || 'Not set';
+          viewStream.textContent = profile.stream || 'Not set';
+          viewInterest.textContent = profile.interest || 'Not set';
+          viewPhoto.innerHTML = profile.photo
+            ? `<img src="${profile.photo}" alt="Photo" class="w-full h-full object-cover" />`
+            : `<span class="material-symbols-outlined">account_circle</span>`;
+        }
+
+        function showEdit(profile) {
+          profileFullName.value = profile.name || '';
+          profileClass.value = profile.class || '';
+          profileStream.value = profile.stream || '';
+          profileInterest.value = profile.interest || '';
+          profilePhotoPreview.innerHTML = profile.photo
+            ? `<img src="${profile.photo}" alt="Photo preview" class="w-full h-full object-cover" />`
+            : '<span class="material-symbols-outlined">account_circle</span>';
+          currentProfile = profile;
+        }
+
+        function setMode(editMode) {
+          viewSection.classList.toggle('hidden', editMode);
+          editSection.classList.toggle('hidden', !editMode);
+          profileStatusText.textContent = '';
+        }
+
+        function setActiveTab(tabName) {
+          Object.keys(tabs).forEach(key => {
+            tabs[key].classList.toggle('hidden', key !== tabName);
+          });
+          tabButtons.forEach(button => {
+            const isActive = button.dataset.tab === tabName;
+            button.classList.toggle('bg-[#E9E3D6]', isActive);
+            button.classList.toggle('font-semibold', isActive);
+          });
+          profileStatusText.textContent = '';
+          notificationsStatusText.textContent = '';
+          privacyStatusText.textContent = '';
+        }
+
+        function applySettingsToControls(settings) {
+          notificationsEmail.checked = settings.emailAlerts;
+          notificationsSMS.checked = settings.smsAlerts;
+          notificationsExam.checked = settings.examReminders;
+          notificationsPersonalized.checked = settings.personalizedRecommendations;
+          privacyProfileToggle.checked = settings.showProfileToMentors;
+          privacyDataSharing.checked = settings.allowDataSharing;
+          privacySecureSession.checked = settings.secureSession;
+        }
+
+        function readCurrentSettings() {
+          return {
+            emailAlerts: notificationsEmail.checked,
+            smsAlerts: notificationsSMS.checked,
+            examReminders: notificationsExam.checked,
+            personalizedRecommendations: notificationsPersonalized.checked,
+            showProfileToMentors: privacyProfileToggle.checked,
+            allowDataSharing: privacyDataSharing.checked,
+            secureSession: privacySecureSession.checked
+          };
+        }
+
+        function openModal() {
+          const profile = readProfile();
+          currentProfile = profile;
+          showView(profile);
+          showEdit(profile);
+          setMode(false);
+          applySettingsToControls(readSettings());
+          setActiveTab('profile');
+          modalOverlay.classList.remove('hidden');
+          document.body.classList.add('overflow-hidden');
+        }
+
+        function closeModal() {
+          modalOverlay.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }
+
+        profileButton?.addEventListener('click', openModal);
+        modalClose?.addEventListener('click', closeModal);
+        modalOverlay?.addEventListener('click', event => {
+          if (event.target === modalOverlay) closeModal();
+        });
+        editButton?.addEventListener('click', () => setMode(true));
+        cancelButton?.addEventListener('click', () => {
+          showView(currentProfile);
+          showEdit(currentProfile);
+          setMode(false);
+        });
+
+        tabButtons.forEach(button => {
+          button.addEventListener('click', () => setActiveTab(button.dataset.tab));
+        });
+
+        profilePhotoInput?.addEventListener('change', event => {
+          const file = event.target.files && event.target.files[0];
+          if (!file) return;
+          const reader = new FileReader();
+          reader.onload = () => {
+            currentProfile.photo = reader.result;
+            profilePhotoPreview.innerHTML = `<img src="${reader.result}" alt="Photo preview" class="w-full h-full object-cover" />`;
+          };
+          reader.readAsDataURL(file);
+        });
+
+        profileForm?.addEventListener('submit', event => {
+          event.preventDefault();
+          const updatedProfile = {
+            name: profileFullName.value.trim(),
+            photo: currentProfile.photo || '',
+            class: profileClass.value,
+            stream: profileStream.value,
+            interest: profileInterest.value
+          };
+          writeProfile(updatedProfile);
+          refreshHeader();
+          showView(updatedProfile);
+          showEdit(updatedProfile);
+          setMode(false);
+          profileStatusText.textContent = 'Profile saved successfully.';
+        });
+
+        saveNotificationsBtn?.addEventListener('click', () => {
+          writeSettings({
+            ...readCurrentSettings()
+          });
+          notificationsStatusText.textContent = 'Notification settings saved.';
+        });
+
+        resetNotificationsBtn?.addEventListener('click', () => {
+          writeSettings(DEFAULT_SETTINGS);
+          applySettingsToControls(DEFAULT_SETTINGS);
+          notificationsStatusText.textContent = 'Notification settings reset to default.';
+        });
+
+        savePrivacyBtn?.addEventListener('click', () => {
+          writeSettings({
+            ...readCurrentSettings()
+          });
+          privacyStatusText.textContent = 'Privacy settings saved.';
+        });
+
+        resetPrivacyBtn?.addEventListener('click', () => {
+          writeSettings(DEFAULT_SETTINGS);
+          applySettingsToControls(DEFAULT_SETTINGS);
+          privacyStatusText.textContent = 'Privacy settings reset to default.';
+        });
+
+        refreshHeader();
+      })();
+    </script>
+</body>
+</html>

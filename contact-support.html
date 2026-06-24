@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Support | NextStep</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-[#F8F9FC] text-[#010A26]" style="font-family: Manrope, sans-serif;">
+<header class="border-b border-[#DDE3F0] bg-white">
+  <div class="max-w-4xl mx-auto px-6 py-5 flex items-center justify-between">
+    <a class="font-bold text-xl" href="4-dashboard.html" style="font-family: Sora, sans-serif;">NextStep</a>
+    <nav class="flex gap-5 text-sm font-semibold">
+      <a class="hover:underline" href="privacy-policy.html">Privacy</a>
+      <a class="hover:underline" href="terms-of-service.html">Terms</a>
+    </nav>
+  </div>
+</header>
+<main class="max-w-4xl mx-auto px-6 py-12">
+  <h1 class="text-4xl font-bold mb-4" style="font-family: Sora, sans-serif;">Contact Support</h1>
+  <p class="text-[#526070] mb-8">Need help with college data, scholarships, exams, or the AI mentor? Send a note to the project team.</p>
+  <form class="bg-white border border-[#DDE3F0] rounded-xl p-6 space-y-5" onsubmit="event.preventDefault(); document.getElementById('support-status').textContent = 'Thanks. Your support request has been noted for this demo.';">
+    <div>
+      <label class="block text-sm font-bold mb-2" for="name">Name</label>
+      <input class="w-full rounded-lg border border-[#DDE3F0] px-4 py-3" id="name" type="text" required>
+    </div>
+    <div>
+      <label class="block text-sm font-bold mb-2" for="email">Email</label>
+      <input class="w-full rounded-lg border border-[#DDE3F0] px-4 py-3" id="email" type="email" required>
+    </div>
+    <div>
+      <label class="block text-sm font-bold mb-2" for="message">Message</label>
+      <textarea class="w-full rounded-lg border border-[#DDE3F0] px-4 py-3 min-h-32" id="message" required></textarea>
+    </div>
+    <button class="rounded-lg bg-[#010A26] text-white px-5 py-3 font-bold" type="submit">Send Request</button>
+    <p class="text-sm text-[#526070]" id="support-status"></p>
+  </form>
+</main>
+</body>
+</html>

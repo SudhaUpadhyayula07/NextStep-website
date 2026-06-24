@@ -1,0 +1,708 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>NextStep | Indian Executive Scholarship Hub</title>
+<script src="auth.js"></script>
+<script>NextStepAuth.requireLogin();</script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Manrope:wght@200..800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fff9ed;
+            color: #1f1c0b;
+            font-family: 'Manrope', sans-serif;
+        }
+        .editorial-shadow {
+            box-shadow: 0px 10px 30px rgba(22, 33, 61, 0.04);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#ebe2c8",
+                        "surface-bright": "#fff9ed",
+                        "tertiary-fixed": "#e9e4be",
+                        "surface": "#fff9ed",
+                        "surface-container-low": "#fcf3d8",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#0f1a36",
+                        "error-container": "#ffdad6",
+                        "on-tertiary": "#ffffff",
+                        "secondary-container": "#d8e9bc",
+                        "background": "#fff9ed",
+                        "secondary-fixed": "#d8e9bc",
+                        "secondary-fixed-dim": "#bccca2",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#f1e8cd",
+                        "outline-variant": "#c6c6ce",
+                        "inverse-surface": "#35301e",
+                        "on-surface-variant": "#45464d",
+                        "on-secondary-fixed-variant": "#3e4b2b",
+                        "inverse-primary": "#bbc6ea",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#8e8b6a",
+                        "primary": "#010a26",
+                        "on-primary": "#ffffff",
+                        "secondary": "#556340",
+                        "primary-fixed-dim": "#bbc6ea",
+                        "on-secondary-fixed": "#131f04",
+                        "inverse-on-surface": "#f9f0d5",
+                        "primary-fixed": "#dae2ff",
+                        "primary-container": "#16213d",
+                        "on-background": "#1f1c0b",
+                        "on-tertiary-fixed-variant": "#4a482c",
+                        "surface-container": "#f7eed3",
+                        "outline": "#76777e",
+                        "tertiary-fixed-dim": "#ccc8a4",
+                        "surface-variant": "#ebe2c8",
+                        "surface-dim": "#e2dabf",
+                        "on-surface": "#1f1c0b",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#535e7d",
+                        "on-tertiary-fixed": "#1e1c05",
+                        "on-secondary-container": "#5b6946",
+                        "on-primary-fixed-variant": "#3b4664",
+                        "tertiary-container": "#25230b",
+                        "on-primary-container": "#7e89aa",
+                        "tertiary": "#0e0d00",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "80px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "container-max": "1200px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "headline-lg": ["Sora"],
+                        "display-lg-mobile": ["Sora"],
+                        "display-lg": ["Sora"],
+                        "headline-md": ["Sora"],
+                        "label-sm": ["Manrope"],
+                        "body-lg": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "display-lg-mobile": ["36px", { "lineHeight": "1.2", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "label-sm": ["12px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background antialiased">
+
+<!-- Side Navigation -->
+<aside class="fixed left-0 top-0 h-screen w-64 border-r border-secondary-fixed bg-surface flex flex-col py-8 z-50">
+    <div class="px-6 mb-12">
+        <h1 class="font-display-lg text-headline-md font-bold text-primary">NextStep</h1>
+        <p class="font-label-md text-label-sm text-on-surface-variant uppercase tracking-widest mt-1">Indian Executive Suite</p>
+    </div>
+    <nav class="flex-1 flex flex-col gap-1">
+        <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="4-dashboard.html">
+            <span class="material-symbols-outlined">dashboard</span>
+            <span class="font-label-md text-label-md">Dashboard</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="5-study-paths.html">
+            <span class="material-symbols-outlined">school</span>
+            <span class="font-label-md text-label-md">Study Paths</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="5-career-paths.html">
+            <span class="material-symbols-outlined">explore</span>
+            <span class="font-label-md text-label-md">Career Paths</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="6-exams.html">
+            <span class="material-symbols-outlined">school</span>
+            <span class="font-label-md text-label-md">Exams</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="7-colleges.html">
+            <span class="material-symbols-outlined">account_balance</span>
+            <span class="font-label-md text-label-md">Colleges</span>
+        </a>
+        <!-- Active: Scholarships -->
+        <a class="flex items-center gap-3 px-4 py-3 text-primary font-bold border-r-4 border-primary bg-surface-container-low rounded-xl transition-all duration-200" href="8-scholarships.html">
+            <span class="material-symbols-outlined">payments</span>
+            <span class="font-label-md text-label-md">Scholarships</span>
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="9-cgai.html">
+            <span class="material-symbols-outlined">psychology</span>
+            <span class="font-label-md text-label-md">AI Mentor</span>
+        </a>
+
+    </nav>
+</aside>
+
+<!-- Top AppBar -->
+<header class="sticky top-0 z-40 flex justify-between items-center w-full px-12 py-4 ml-64 max-w-[calc(100%-16rem)] bg-background/80 backdrop-blur-md">
+    <div class="flex-1 max-w-md">
+        <div class="relative flex items-center bg-surface-container-high px-4 py-2 rounded-full focus-within:ring-2 focus-within:ring-primary/20 transition-all">
+            <span class="material-symbols-outlined text-outline">search</span>
+            <input id="scholarship-search" class="bg-transparent border-none focus:ring-0 w-full text-label-md font-body-md placeholder-outline ml-2" placeholder="Search scholarships, providers, eligibility..." type="text">
+        </div>
+    </div>
+    <div class="flex items-center gap-6">
+        <div id="profileHeaderButton" class="flex items-center gap-3 cursor-pointer" role="button" aria-label="Open profile settings">
+            <div class="text-right hidden sm:block">
+                <p id="user-profile-name" class="font-label-md text-primary font-bold leading-none">User</p>
+            </div>
+            <div id="profileHeaderAvatar" class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center border border-secondary-fixed">
+                <span class="material-symbols-outlined text-primary">person</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<main class="ml-64 w-[calc(100%-16rem)] px-margin-desktop pt-12">
+    <div class="w-full max-w-container-max mx-auto">
+    <header class="mb-12">
+        <h2 class="font-display-lg text-display-lg text-primary">Funding &amp; Endowments</h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant mt-2 max-w-2xl">Curated financial support for Indian executives and researchers. Explore government fellowships and private grants aligned with your career trajectory.</p>
+    </header>
+    <div class="bg-surface-container p-8 rounded-xl border border-secondary-fixed editorial-shadow mb-10">
+        <h3 class="font-headline-md text-label-md mb-6 flex items-center gap-2">
+            <span class="material-symbols-outlined text-primary">filter_alt</span>
+            Eligibility Filters
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+                <label class="font-label-md text-label-sm uppercase tracking-wider text-on-surface-variant block mb-3">Professional Level</label>
+                <select id="level-filter" class="w-full bg-surface-container-low border border-secondary-fixed rounded-lg focus:border-primary font-body-md py-2 px-3 transition-all">
+                    <option value="">All education levels</option>
+                    <option value="Class">School Students</option>
+                    <option value="UG">Undergraduate</option>
+                    <option value="PG">Postgraduate</option>
+                    <option value="Research">Research / PhD</option>
+                </select>
+            </div>
+            <div>
+                <label class="font-label-md text-label-sm uppercase tracking-wider text-on-surface-variant block mb-3">Funding Amount</label>
+                <div class="flex flex-wrap gap-2">
+                    <button data-amount-filter="0" class="amount-filter px-4 py-2 bg-primary text-white rounded-full font-label-md text-label-sm">Any</button>
+                    <button data-amount-filter="500000" class="amount-filter px-4 py-2 bg-secondary-fixed text-on-secondary-fixed rounded-full font-label-md text-label-sm hover:bg-secondary-fixed-dim transition-colors">₹5L+</button>
+                    <button data-amount-filter="2000000" class="amount-filter px-4 py-2 bg-secondary-fixed text-on-secondary-fixed rounded-full font-label-md text-label-sm hover:bg-secondary-fixed-dim transition-colors">₹20L+</button>
+                </div>
+            </div>
+            <div>
+                <label class="font-label-md text-label-sm uppercase tracking-wider text-on-surface-variant block mb-3">Residency Status</label>
+                <div class="space-y-3">
+                    <label class="flex items-center gap-3 cursor-pointer">
+                        <input checked="" class="rounded border-secondary text-primary focus:ring-primary w-5 h-5" type="checkbox">
+                        <span class="font-body-md text-on-surface">Indian Nationals</span>
+                    </label>
+                    <label class="flex items-center gap-3 cursor-pointer">
+                        <input class="rounded border-secondary text-primary focus:ring-primary w-5 h-5" type="checkbox">
+                        <span class="font-body-md text-on-surface">OCI / NRI Talent</span>
+                    </label>
+                </div>
+            </div>
+            <div>
+                <label class="font-label-md text-label-sm uppercase tracking-wider text-on-surface-variant block mb-3">State Preferences</label>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm font-label-md">Maharashtra</span>
+                    <span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm font-label-md">Karnataka</span>
+                    <span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm font-label-md">+4 more</span>
+                </div>
+            </div>
+        </div>
+        <!-- Main Listing Grid -->
+        <div id="scholarship-listing" class="flex-1 space-y-16">
+            <!-- DATASET COVERAGE -->
+            <section class="bg-primary-container p-8 rounded-xl text-on-primary-container">
+                <h3 class="font-headline-md text-label-md mb-6 flex items-center gap-2 text-primary-fixed">
+                    <span class="material-symbols-outlined">database</span>
+                    DATASET COVERAGE
+                </h3>
+                <div class="space-y-6">
+                    <div class="group">
+                        <p class="font-label-md text-label-sm text-on-primary-container/60 mb-1">Scholarships</p>
+                        <p id="coverage-total" class="font-headline-md text-label-md text-white">Loading...</p>
+                    </div>
+                    <div class="group">
+                        <p class="font-label-md text-label-sm text-on-primary-container/60 mb-1">Categories</p>
+                        <p id="coverage-types" class="font-headline-md text-label-md text-white">Loading...</p>
+                    </div>
+                    <div class="group">
+                        <p class="font-label-md text-label-sm text-on-primary-container/60 mb-1">Saved</p>
+                        <p id="coverage-saved" class="font-headline-md text-label-md text-white">0 bookmarked</p>
+                    </div>
+                </div>
+                <button id="show-saved" class="w-full mt-8 bg-secondary-fixed text-on-secondary-fixed font-label-md py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-secondary-fixed-dim transition-all">
+                    <span class="material-symbols-outlined">bookmark</span>
+                    Show Saved
+                </button>
+            </section>
+            <!-- Government Initiatives -->
+            <section>
+                <div class="flex justify-between items-end mb-8 border-b border-secondary-fixed pb-4">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary text-3xl">account_balance</span>
+                        <h3 class="font-headline-lg text-headline-md text-primary">Government Initiatives</h3>
+                    </div>
+                    <a class="flex items-center gap-1 font-label-md text-primary hover:gap-2 transition-all" href="5-career-paths.html">
+                        View All <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-surface p-8 rounded-2xl border border-secondary-fixed editorial-shadow hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-12 h-12 bg-secondary-fixed flex items-center justify-center rounded-lg">
+                                <span class="material-symbols-outlined text-on-secondary-fixed">flag</span>
+                            </div>
+                            <span class="bg-secondary-container px-4 py-1.5 rounded-full font-label-md text-label-sm text-on-secondary-container">₹2.5L / Semester</span>
+                        </div>
+                        <h4 class="font-headline-md text-headline-md text-primary mb-3">Prime Minister's Research Fellowship (PMRF)</h4>
+                        <p class="font-body-md text-on-surface-variant mb-6 line-clamp-2">Direct admission and fellowship for PhD candidates at IISc, IITs, NITs, and select central universities with executive research focus.</p>
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-sm">verified</span>
+                                <span class="font-body-md text-label-md">Criteria: GATE Score 650+ or 8.0 CGPA</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-sm">event</span>
+                                <span class="font-body-md text-label-md">Deadline: Oct 15, 2024</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <button class="flex-1 bg-primary text-white font-label-md py-4 rounded-xl hover:bg-primary/90 transition-all">View Details</button>
+                            <button class="px-4 py-4 border-2 border-primary rounded-xl text-primary hover:bg-primary hover:text-white transition-all">
+                                <span class="material-symbols-outlined">bookmark</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-surface p-8 rounded-2xl border border-secondary-fixed editorial-shadow hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-12 h-12 bg-secondary-fixed flex items-center justify-center rounded-lg">
+                                <span class="material-symbols-outlined text-on-secondary-fixed">science</span>
+                            </div>
+                            <span class="bg-secondary-container px-4 py-1.5 rounded-full font-label-md text-label-sm text-on-secondary-container">₹50,000 / Month</span>
+                        </div>
+                        <h4 class="font-headline-md text-headline-md text-primary mb-3">CSIR-SRF Industry Lead Program</h4>
+                        <p class="font-body-md text-on-surface-variant mb-6 line-clamp-2">Bridging the gap between industrial R&amp;D and academic excellence for senior research associates in Tier-1 cities.</p>
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-sm">verified</span>
+                                <span class="font-body-md text-label-md">Criteria: 5+ Years Industry Experience</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-sm">event</span>
+                                <span class="font-body-md text-label-md">Deadline: Jan 12, 2025</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <button class="flex-1 bg-primary text-white font-label-md py-4 rounded-xl hover:bg-primary/90 transition-all">View Details</button>
+                            <button class="px-4 py-4 border-2 border-primary rounded-xl text-primary hover:bg-primary hover:text-white transition-all">
+                                <span class="material-symbols-outlined">bookmark</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Private Endowments -->
+            <section>
+                <div class="flex justify-between items-end mb-8 border-b border-secondary-fixed pb-4">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary text-3xl">corporate_fare</span>
+                        <h3 class="font-headline-lg text-headline-md text-primary">Private Endowments</h3>
+                    </div>
+                    <a class="flex items-center gap-1 font-label-md text-primary hover:gap-2 transition-all" href="5-career-paths.html">
+                        View All <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                </div>
+                <div class="grid grid-cols-1 xl:grid-cols-2 gap-8">
+                    <div class="bg-surface p-8 rounded-2xl border border-secondary-fixed editorial-shadow hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-12 h-12 bg-secondary-fixed flex items-center justify-center rounded-lg">
+                                <span class="material-symbols-outlined text-on-secondary-fixed">work</span>
+                            </div>
+                            <span class="bg-secondary-container px-4 py-1.5 rounded-full font-label-md text-label-sm text-on-secondary-container">₹15.0L / Full Grant</span>
+                        </div>
+                        <h4 class="font-headline-md text-headline-md text-primary mb-3">Tata Trusts Executive Endowment</h4>
+                        <p class="font-body-md text-on-surface-variant mb-6 line-clamp-2">Loan scholarships for Indian professionals pursuing specialized executive MBAs or leadership programs abroad.</p>
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-sm">verified</span>
+                                <span class="font-body-md text-label-md">Criteria: Top 10 B-School Admit</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-sm">event</span>
+                                <span class="font-body-md text-label-md">Deadline: Sep 30, 2024</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <button class="flex-1 bg-primary text-white font-label-md py-4 rounded-xl hover:bg-primary/90 transition-all">View Details</button>
+                            <button class="px-4 py-4 border-2 border-primary rounded-xl text-primary hover:bg-primary hover:text-white transition-all">
+                                <span class="material-symbols-outlined">bookmark</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-surface p-8 rounded-2xl border border-secondary-fixed editorial-shadow hover:-translate-y-1 transition-all duration-300">
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="w-12 h-12 bg-secondary-fixed flex items-center justify-center rounded-lg">
+                                <span class="material-symbols-outlined text-on-secondary-fixed">woman</span>
+                            </div>
+                            <span class="bg-secondary-container px-4 py-1.5 rounded-full font-label-md text-label-sm text-on-secondary-container">₹6.0L / Year</span>
+                        </div>
+                        <h4 class="font-headline-md text-headline-md text-primary mb-3">Mahindra Pride Leadership Grant</h4>
+                        <p class="font-body-md text-on-surface-variant mb-6 line-clamp-2">Dedicated support for female leaders in STEM transitioning into C-suite roles within the Indian industry landscape.</p>
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-sm">verified</span>
+                                <span class="font-body-md text-label-md">Criteria: Female / 10+ Yrs Exp</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-on-surface-variant">
+                                <span class="material-symbols-outlined text-sm">event</span>
+                                <span class="font-body-md text-label-md">Deadline: Nov 05, 2024</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <button class="flex-1 bg-primary text-white font-label-md py-4 rounded-xl hover:bg-primary/90 transition-all">View Details</button>
+                            <button class="px-4 py-4 border-2 border-primary rounded-xl text-primary hover:bg-primary hover:text-white transition-all">
+                                <span class="material-symbols-outlined">bookmark</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- AI Mentor Banner -->
+            <section class="relative overflow-hidden bg-surface-container rounded-3xl p-12 flex flex-col md:flex-row items-center gap-12 border border-secondary-fixed">
+                <div class="relative z-10 flex-1">
+                    <h3 class="font-display-lg text-headline-lg text-primary mb-4">Confused about eligibility?</h3>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant mb-8">Let our AI Mentor scan your profile and match you with 100% eligibility accuracy based on current Indian educational standards.</p>
+                    <a href="9-cgai.html" class="bg-primary text-white font-label-md px-10 py-4 rounded-xl hover:bg-primary/90 transition-all inline-flex items-center gap-2">
+                        <span class="material-symbols-outlined">psychology</span>
+                        Start Scanning
+                    </a>
+                </div>
+                <div class="relative w-full md:w-1/3 aspect-square rounded-2xl overflow-hidden shadow-2xl">
+                    <div class="absolute inset-0 bg-primary/10 mix-blend-multiply z-10"></div>
+                    <img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw05jWgbquvG44U_vSM8EV706ThnSyqYu793hJ3mimINn37kYH_SfVqfAfgch8_qfrVIeWh3ynjU4HvY41h8KxOwjkr1bNv6-DwCbSNU9JQKSZqDJDcJUDawo9WyszPfzohjx0Rs34OoSXPzR_KZ0sV7nWOSD9FB4RXU7rdL4XPAw8XF_roioNyVOfMU0QD67cnebU5nODWB-5H2VWS8HCqanNjK8-cIH0NfPFPDhIzIpHtA0THPx-LZIMH7_TFrU7hTRerzZbJKQ" alt="AI Mentor">
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+
+<footer class="ml-64 p-12 border-t border-secondary-fixed">
+    <div class="max-w-[1200px] flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="flex items-center gap-2">
+            <span class="font-display-lg text-headline-md font-bold text-primary">NextStep</span>
+            <span class="text-on-surface-variant font-label-md">© 2024 Career Suite India</span>
+        </div>
+        <div class="flex gap-8">
+            <a class="font-label-md text-on-surface-variant hover:text-primary transition-colors" href="privacy-policy.html">Privacy Policy</a>
+            <a class="font-label-md text-on-surface-variant hover:text-primary transition-colors" href="terms-of-service.html">Terms of Service</a>
+            <a class="font-label-md text-on-surface-variant hover:text-primary transition-colors" href="contact-support.html">Contact Support</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const listing = document.getElementById('scholarship-listing');
+    const searchInput = document.getElementById('scholarship-search');
+    const levelFilter = document.getElementById('level-filter');
+    const amountButtons = [...document.querySelectorAll('.amount-filter')];
+    const showSavedButton = document.getElementById('show-saved');
+    const coverageTotal = document.getElementById('coverage-total');
+    const coverageTypes = document.getElementById('coverage-types');
+    const coverageSaved = document.getElementById('coverage-saved');
+    const savedKey = 'nextstep_saved_scholarships';
+    const state = {
+        scholarships: [],
+        query: '',
+        level: '',
+        amount: 0,
+        type: '',
+        page: 1,
+        pageSize: 5,
+        showSavedOnly: false,
+        saved: new Set(JSON.parse(localStorage.getItem(savedKey) || '[]'))
+    };
+
+    const iconsByType = {
+        'Central Govt': 'account_balance',
+        'State Govt': 'location_city',
+        'Private': 'corporate_fare',
+        'UGC': 'school',
+        'AICTE': 'engineering',
+        'International': 'public',
+        'Corporate': 'business_center',
+        'Bank': 'account_balance_wallet'
+    };
+
+    function escapeHtml(value) {
+        return String(value || '').replace(/[&<>"']/g, char => ({
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&#039;'
+        }[char]));
+    }
+
+    function getType(item) {
+        return item.type || item.sheet || 'Scholarships';
+    }
+
+    function getIcon(type) {
+        const key = Object.keys(iconsByType).find(item => type.toLowerCase().includes(item.toLowerCase()));
+        return iconsByType[key] || 'payments';
+    }
+
+    function filterScholarships() {
+        const query = state.query.toLowerCase();
+        return state.scholarships.filter(item => {
+            const haystack = [
+                item.name,
+                item.fullName,
+                item.type,
+                item.provider,
+                item.beneficiary,
+                item.level,
+                item.amount,
+                item.eligibility
+            ].join(' ').toLowerCase();
+            const matchesQuery = !query || haystack.includes(query);
+            const matchesLevel = !state.level || String(item.level || '').toLowerCase().includes(state.level.toLowerCase());
+            const matchesAmount = !state.amount || Number(item.amountValue || 0) >= state.amount;
+            const matchesType = !state.type || getType(item) === state.type;
+            const matchesSaved = !state.showSavedOnly || state.saved.has(item.id);
+            return matchesQuery && matchesLevel && matchesAmount && matchesType && matchesSaved;
+        });
+    }
+
+    function groupByType(items) {
+        return items.reduce((groups, item) => {
+            const type = getType(item);
+            groups[type] = groups[type] || [];
+            groups[type].push(item);
+            return groups;
+        }, {});
+    }
+
+    function renderTypeChips(types) {
+        const chips = [''].concat(types).map(type => {
+            const active = state.type === type;
+            const label = type || 'All Categories';
+            return `<button data-type-filter="${escapeHtml(type)}" class="type-filter px-4 py-2 rounded-full font-label-md text-label-sm transition-colors ${active ? 'bg-primary text-white' : 'bg-secondary-fixed text-on-secondary-fixed hover:bg-secondary-fixed-dim'}">${escapeHtml(label)}</button>`;
+        }).join('');
+        return `<div class="flex flex-wrap gap-2">${chips}</div>`;
+    }
+
+    function renderCard(item) {
+        const saved = state.saved.has(item.id);
+        const url = item.website || '#';
+        return `
+            <article class="bg-surface p-8 rounded-xl border border-secondary-fixed editorial-shadow hover:-translate-y-1 transition-all duration-300">
+                <div class="flex justify-between gap-4 items-start mb-6">
+                    <div class="w-12 h-12 bg-secondary-fixed flex items-center justify-center rounded-lg flex-shrink-0">
+                        <span class="material-symbols-outlined text-on-secondary-fixed">${getIcon(getType(item))}</span>
+                    </div>
+                    <span class="bg-secondary-container px-4 py-1.5 rounded-full font-label-md text-label-sm text-on-secondary-container text-right">${escapeHtml(item.amount || 'Amount varies')}</span>
+                </div>
+                <p class="font-label-md text-label-sm uppercase tracking-wider text-on-surface-variant mb-2">${escapeHtml(item.provider || getType(item))}</p>
+                <h4 class="font-headline-md text-headline-md text-primary mb-3">${escapeHtml(item.name)}</h4>
+                <p class="font-body-md text-on-surface-variant mb-6 line-clamp-2">${escapeHtml(item.fullName || item.beneficiary || item.eligibility)}</p>
+                <div class="space-y-3 mb-8">
+                    <div class="flex items-start gap-3 text-on-surface-variant">
+                        <span class="material-symbols-outlined text-sm mt-1">verified</span>
+                        <span class="font-body-md text-label-md">Eligibility: ${escapeHtml(item.eligibility || 'Check official website')}</span>
+                    </div>
+                    <div class="flex items-start gap-3 text-on-surface-variant">
+                        <span class="material-symbols-outlined text-sm mt-1">school</span>
+                        <span class="font-body-md text-label-md">Level: ${escapeHtml(item.level || 'Multiple levels')}</span>
+                    </div>
+                    <div class="flex items-start gap-3 text-on-surface-variant">
+                        <span class="material-symbols-outlined text-sm mt-1">groups</span>
+                        <span class="font-body-md text-label-md">For: ${escapeHtml(item.beneficiary || 'Eligible students')}</span>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <a class="flex-1 bg-primary text-white font-label-md py-4 rounded-xl hover:bg-primary/90 transition-all text-center" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">View Details</a>
+                    <button data-save-scholarship="${escapeHtml(item.id)}" class="save-scholarship px-4 py-4 border-2 border-primary rounded-xl ${saved ? 'bg-primary text-white' : 'text-primary hover:bg-primary hover:text-white'} transition-all" aria-label="Save ${escapeHtml(item.name)}">
+                        <span class="material-symbols-outlined">${saved ? 'bookmark_added' : 'bookmark'}</span>
+                    </button>
+                </div>
+            </article>
+        `;
+    }
+
+    function render() {
+        const filtered = filterScholarships();
+        const totalPages = Math.max(1, Math.ceil(filtered.length / state.pageSize));
+        state.page = Math.min(state.page, totalPages);
+        const start = (state.page - 1) * state.pageSize;
+        const paged = filtered.slice(start, start + state.pageSize);
+        const groups = groupByType(paged);
+        const types = [...new Set(state.scholarships.map(getType))].sort();
+        const savedCount = filtered.filter(item => state.saved.has(item.id)).length;
+        coverageTotal.textContent = `${state.scholarships.length} records`;
+        coverageTypes.textContent = `${types.length} categories`;
+        coverageSaved.textContent = `${state.saved.size} bookmarked`;
+        showSavedButton.classList.toggle('ring-2', state.showSavedOnly);
+        showSavedButton.classList.toggle('ring-primary-fixed', state.showSavedOnly);
+        showSavedButton.querySelector('span').textContent = state.showSavedOnly ? 'bookmark_added' : 'bookmark';
+        showSavedButton.lastChild.textContent = state.showSavedOnly ? ' Show All' : ' Show Saved';
+        const sections = Object.entries(groups).map(([type, items]) => `
+            <section>
+                <div class="flex justify-between items-end mb-8 border-b border-secondary-fixed pb-4">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary text-3xl">${getIcon(type)}</span>
+                        <h3 class="font-headline-lg text-headline-md text-primary">${escapeHtml(type)}</h3>
+                    </div>
+                    <span class="font-label-md text-on-surface-variant">${items.length} on this page</span>
+                </div>
+                <div class="grid grid-cols-1 xl:grid-cols-2 gap-8">
+                    ${items.map(renderCard).join('')}
+                </div>
+            </section>
+        `).join('');
+        const pagination = filtered.length ? `
+            <section class="flex items-center justify-center gap-4 py-2">
+                <button data-page-action="prev" class="page-action w-11 h-11 rounded-full border border-secondary-fixed bg-surface-container-lowest text-on-surface-variant hover:text-primary hover:border-primary disabled:opacity-40 disabled:hover:border-secondary-fixed disabled:hover:text-on-surface-variant transition-colors flex items-center justify-center" ${state.page === 1 ? 'disabled' : ''} aria-label="Previous page">
+                    <span class="material-symbols-outlined text-xl">chevron_left</span>
+                </button>
+                <span class="font-label-md text-label-md text-primary min-w-[120px] text-center">Page ${state.page} of ${totalPages}</span>
+                <button data-page-action="next" class="page-action w-11 h-11 rounded-full border border-secondary-fixed bg-surface-container-lowest text-primary hover:border-primary hover:bg-secondary-fixed disabled:opacity-40 disabled:hover:border-secondary-fixed disabled:hover:bg-surface-container-lowest transition-colors flex items-center justify-center" ${state.page === totalPages ? 'disabled' : ''} aria-label="Next page">
+                    <span class="material-symbols-outlined text-xl">chevron_right</span>
+                </button>
+            </section>
+        ` : '';
+
+        listing.innerHTML = `
+            <section class="bg-surface-container-low p-8 rounded-xl border border-secondary-fixed">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div>
+                        <p class="font-label-md text-label-sm uppercase tracking-wider text-on-surface-variant">Dataset</p>
+                        <p class="font-display-lg text-headline-lg text-primary">${state.scholarships.length}</p>
+                    </div>
+                    <div>
+                        <p class="font-label-md text-label-sm uppercase tracking-wider text-on-surface-variant">Current Matches</p>
+                        <p class="font-display-lg text-headline-lg text-primary">${filtered.length}</p>
+                    </div>
+                    <div>
+                        <p class="font-label-md text-label-sm uppercase tracking-wider text-on-surface-variant">Saved In View</p>
+                        <p class="font-display-lg text-headline-lg text-primary">${savedCount}</p>
+                    </div>
+                </div>
+                ${renderTypeChips(types)}
+            </section>
+            ${sections || `
+                <section class="bg-surface p-10 rounded-xl border border-secondary-fixed text-center">
+                    <span class="material-symbols-outlined text-primary text-5xl mb-4">search_off</span>
+                    <h3 class="font-headline-lg text-headline-md text-primary mb-2">No scholarships found</h3>
+                    <p class="font-body-md text-on-surface-variant">Try a broader search, another level, or a lower funding amount.</p>
+                </section>
+            `}
+            ${pagination}
+        `;
+
+        document.querySelectorAll('.type-filter').forEach(button => {
+            button.addEventListener('click', () => {
+                state.type = button.dataset.typeFilter;
+                state.page = 1;
+                render();
+            });
+        });
+        document.querySelectorAll('.save-scholarship').forEach(button => {
+            button.addEventListener('click', () => {
+                const id = button.dataset.saveScholarship;
+                state.saved.has(id) ? state.saved.delete(id) : state.saved.add(id);
+                localStorage.setItem(savedKey, JSON.stringify([...state.saved]));
+                render();
+            });
+        });
+        document.querySelectorAll('.page-action').forEach(button => {
+            button.addEventListener('click', () => {
+                state.page += button.dataset.pageAction === 'next' ? 1 : -1;
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                render();
+            });
+        });
+        bindHoverShadows();
+    }
+
+    function bindHoverShadows() {
+        document.querySelectorAll('.editorial-shadow').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.boxShadow = '0px 15px 40px rgba(22, 33, 61, 0.08)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.boxShadow = '0px 10px 30px rgba(22, 33, 61, 0.04)';
+            });
+        });
+    }
+
+    function setAmountFilter(button) {
+        state.amount = Number(button.dataset.amountFilter || 0);
+        state.page = 1;
+        amountButtons.forEach(item => {
+            const active = item === button;
+            item.classList.toggle('bg-primary', active);
+            item.classList.toggle('text-white', active);
+            item.classList.toggle('bg-secondary-fixed', !active);
+            item.classList.toggle('text-on-secondary-fixed', !active);
+        });
+        render();
+    }
+
+    searchInput.addEventListener('input', event => {
+        state.query = event.target.value.trim();
+        state.page = 1;
+        render();
+    });
+    levelFilter.addEventListener('change', event => {
+        state.level = event.target.value;
+        state.page = 1;
+        render();
+    });
+    amountButtons.forEach(button => button.addEventListener('click', () => setAmountFilter(button)));
+    showSavedButton.addEventListener('click', () => {
+        state.showSavedOnly = !state.showSavedOnly;
+        state.page = 1;
+        render();
+    });
+
+    fetch('data/india-scholarships.json')
+        .then(response => {
+            if (!response.ok) throw new Error('Dataset could not be loaded.');
+            return response.json();
+        })
+        .then(data => {
+            state.scholarships = data;
+            render();
+        })
+        .catch(() => {
+            listing.innerHTML = `
+                <section class="bg-error-container p-8 rounded-xl text-on-error-container">
+                    <h3 class="font-headline-lg text-headline-md mb-2">Scholarship dataset unavailable</h3>
+                    <p class="font-body-md">Start the local server and reopen this page so the JSON file can be loaded.</p>
+                </section>
+            `;
+        });
+</script>
+<script src="profile-popup.js"></script>

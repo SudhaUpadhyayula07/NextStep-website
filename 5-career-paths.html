@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NextStep | Career Paths</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="auth.js"></script>
+<script>NextStepAuth.requireLogin();</script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .career-card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0px 10px 30px rgba(1, 10, 38, 0.04);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#010a26",
+                        "background": "#fff9ed",
+                        "surface-container": "#f7eed3",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "secondary": "#556340",
+                        "on-surface": "#1f1c0b",
+                        "on-secondary-fixed-variant": "#3e4b2b",
+                        "primary-fixed": "#dae2ff",
+                        "surface-bright": "#fff9ed",
+                        "inverse-primary": "#bbc6ea",
+                        "surface-container-low": "#fcf3d8",
+                        "on-secondary-container": "#5b6946",
+                        "on-background": "#1f1c0b",
+                        "surface-dim": "#e2dabf",
+                        "surface-tint": "#535e7d",
+                        "secondary-fixed": "#d8e9bc",
+                        "error-container": "#ffdad6",
+                        "secondary-container": "#d8e9bc",
+                        "inverse-surface": "#35301e",
+                        "on-tertiary-fixed": "#1e1c05",
+                        "on-primary-fixed": "#0f1a36",
+                        "on-primary-fixed-variant": "#3b4664",
+                        "tertiary": "#0e0d00",
+                        "secondary-fixed-dim": "#bccca2",
+                        "surface-container-high": "#f1e8cd",
+                        "surface": "#fff9ed",
+                        "tertiary-fixed": "#e9e4be",
+                        "on-tertiary-fixed-variant": "#4a482c",
+                        "inverse-on-surface": "#f9f0d5",
+                        "outline-variant": "#c6c6ce",
+                        "primary-fixed-dim": "#bbc6ea",
+                        "tertiary-fixed-dim": "#ccc8a4",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "outline": "#76777e",
+                        "tertiary-container": "#25230b",
+                        "primary-container": "#16213d",
+                        "surface-container-highest": "#ebe2c8",
+                        "on-primary-container": "#7e89aa",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#45464d",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#ebe2c8",
+                        "on-tertiary-container": "#8e8b6a",
+                        "on-secondary-fixed": "#131f04"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "margin-desktop": "80px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Sora"],
+                        "headline-md": ["Sora"],
+                        "headline-lg": ["Sora"],
+                        "label-sm": ["Manrope"],
+                        "label-md": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "body-lg": ["Manrope"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-full flex flex-col py-8 bg-surface dark:bg-surface-dim border-r border-secondary-fixed dark:border-outline-variant w-64 z-50">
+<div class="px-6 mb-10">
+<h1 class="font-display-lg text-headline-md font-extrabold text-primary dark:text-primary-fixed tracking-tight">NextStep</h1>
+<p class="font-label-md text-label-md text-on-surface-variant mt-1">Executive Career Suite</p>
+</div>
+<nav class="flex-1 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="4-dashboard.html">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="5-study-paths.html">
+<span class="material-symbols-outlined">school</span>
+<span class="font-label-md text-label-md">Study Paths</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-primary font-bold border-r-4 border-primary bg-surface-container-low rounded-xl transition-all duration-200" href="5-career-paths.html">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-label-md text-label-md">Career Paths</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="6-exams.html">
+<span class="material-symbols-outlined">school</span>
+<span class="font-label-md text-label-md">Exams</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="7-colleges.html">
+<span class="material-symbols-outlined">account_balance</span>
+<span class="font-label-md text-label-md">Colleges</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="8-scholarships.html">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-label-md text-label-md">Scholarships</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="9-cgai.html">
+<span class="material-symbols-outlined">psychology</span>
+<span class="font-label-md text-label-md">AI Mentor</span>
+</a>
+</nav>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 min-h-screen pb-20">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-40 flex justify-between items-center w-full px-margin-desktop py-6 bg-background/80 backdrop-blur-md">
+<div class="relative w-full max-w-xl group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface-container-low border-b border-secondary-container focus:border-primary focus:ring-0 transition-all font-body-md rounded-t-lg outline-none" placeholder="Search careers, industries, or skills..." type="text"/>
+</div>
+<div class="flex items-center gap-6">
+<div id="profileHeaderButton" class="flex items-center gap-3 cursor-pointer" role="button" aria-label="Open profile settings">
+<div class="text-right hidden sm:block">
+<p id="user-profile-name" class="font-label-md text-primary font-bold leading-none">User</p>
+</div>
+<div id="profileHeaderAvatar" class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center border border-secondary-fixed">
+<span class="material-symbols-outlined text-primary">person</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Content Body -->
+<div class="max-w-container-max mx-auto px-margin-desktop space-y-12 py-10">
+<section>
+<div class="flex justify-between items-end mb-8">
+<div>
+<span class="text-secondary font-label-sm uppercase tracking-widest">Industry Exploration</span>
+<h3 class="font-headline-lg text-headline-lg text-primary mt-2">Career Categories</h3>
+</div>
+<a class="text-secondary font-label-md hover:underline flex items-center gap-1" href="career-path.html">
+                            View All <span class="material-symbols-outlined text-sm">chevron_right</span>
+</a>
+</div>
+<div id="careerCategoriesGrid" class="grid grid-cols-2 md:grid-cols-3 gap-6">
+<div class="career-category-card bg-surface p-8 rounded-[24px] border border-secondary-fixed hover:shadow-[0px_10px_30px_rgba(1,10,38,0.04)] transition-all group cursor-pointer" data-category="Engineering" data-count="42 Career Paths" data-icon="precision_manufacturing" data-description="Build solutions across software, mechanical systems, electronics, civil infrastructure, robotics, and emerging technologies.">
+<div class="w-12 h-12 bg-secondary-fixed/30 rounded-xl flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="precision_manufacturing">precision_manufacturing</span>
+</div>
+<h4 class="font-headline-md text-primary mb-1">Engineering</h4>
+<p class="text-on-surface-variant font-label-sm">42 Career Paths</p>
+</div>
+<div class="career-category-card bg-surface p-8 rounded-[24px] border border-secondary-fixed hover:shadow-[0px_10px_30px_rgba(1,10,38,0.04)] transition-all group cursor-pointer" data-category="Medical" data-count="28 Career Paths" data-icon="medical_services" data-description="Explore clinical care, diagnostics, research, public health, allied health, and healthcare management careers across medicine, paramedical sciences, and wellness.">
+<div class="w-12 h-12 bg-secondary-fixed/30 rounded-xl flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="medical_services">medical_services</span>
+</div>
+<h4 class="font-headline-md text-primary mb-1">Medical</h4>
+<p class="text-on-surface-variant font-label-sm">28 Career Paths</p>
+</div>
+<div class="career-category-card bg-surface p-8 rounded-[24px] border border-secondary-fixed hover:shadow-[0px_10px_30px_rgba(1,10,38,0.04)] transition-all group cursor-pointer" data-category="Arts" data-count="35 Career Paths" data-icon="palette" data-description="Discover creative paths in design, media, writing, fine arts, animation, performing arts, and cultural industries.">
+<div class="w-12 h-12 bg-secondary-fixed/30 rounded-xl flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="palette">palette</span>
+</div>
+<h4 class="font-headline-md text-primary mb-1">Arts</h4>
+<p class="text-on-surface-variant font-label-sm">35 Career Paths</p>
+</div>
+<div class="career-category-card bg-surface p-8 rounded-[24px] border border-secondary-fixed hover:shadow-[0px_10px_30px_rgba(1,10,38,0.04)] transition-all group cursor-pointer" data-category="Commerce" data-count="19 Career Paths" data-icon="trending_up" data-description="Compare careers in finance, accounting, business analytics, economics, entrepreneurship, and management.">
+<div class="w-12 h-12 bg-secondary-fixed/30 rounded-xl flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+</div>
+<h4 class="font-headline-md text-primary mb-1">Commerce</h4>
+<p class="text-on-surface-variant font-label-sm">19 Career Paths</p>
+</div>
+<div class="career-category-card bg-surface p-8 rounded-[24px] border border-secondary-fixed hover:shadow-[0px_10px_30px_rgba(1,10,38,0.04)] transition-all group cursor-pointer" data-category="Technology & Digital" data-count="15 Career Paths" data-icon="devices" data-description="Discover digital careers in AI, cloud, cybersecurity, development, and emerging tech innovation.">
+<div class="w-12 h-12 bg-secondary-fixed/30 rounded-xl flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="devices">devices</span>
+</div>
+<h4 class="font-headline-md text-primary mb-1">Technology & Digital</h4>
+<p class="text-on-surface-variant font-label-sm">15 Career Paths</p>
+</div>
+<div class="career-category-card bg-surface p-8 rounded-[24px] border border-secondary-fixed hover:shadow-[0px_10px_30px_rgba(1,10,38,0.04)] transition-all group cursor-pointer" style="transform: translateY(0px);" data-category="Government" data-count="54 Career Paths" data-icon="account_balance" data-description="Prepare for civil services, defense, public administration, policy, law enforcement, and public sector opportunities.">
+<div class="w-12 h-12 bg-secondary-fixed/30 rounded-xl flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+</div>
+<h4 class="font-headline-md text-primary mb-1">Government</h4>
+<p class="text-on-surface-variant font-label-sm">54 Career Paths</p>
+</div>
+<div class="career-category-card bg-surface p-8 rounded-[24px] border border-secondary-fixed hover:shadow-[0px_10px_30px_rgba(1,10,38,0.04)] transition-all group cursor-pointer" data-category="Law & Legal Services" data-count="15 Career Paths" data-icon="gavel" data-description="Explore legal careers in litigation, corporate advisory, dispute resolution and emerging cyber law fields.">
+<div class="w-12 h-12 bg-secondary-fixed/30 rounded-xl flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="gavel">gavel</span>
+</div>
+<h4 class="font-headline-md text-primary mb-1">Law & Legal Services</h4>
+<p class="text-on-surface-variant font-label-sm">15 Career Paths</p>
+</div>
+            <div class="career-category-card bg-surface p-8 rounded-[24px] border border-secondary-fixed hover:shadow-[0px_10px_30px_rgba(1,10,38,0.04)] transition-all group cursor-pointer" data-category="Media & Journalism" data-count="15 Career Paths" data-icon="newspaper" data-description="Explore careers in broadcast, print, digital and visual media, journalism, production, and public relations.">
+                <div class="w-12 h-12 bg-secondary-fixed/30 rounded-xl flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined" data-icon="newspaper">newspaper</span>
+                </div>
+                <h4 class="font-headline-md text-primary mb-1">Media & Journalism</h4>
+                <p class="text-on-surface-variant font-label-sm">15 Career Paths</p>
+            </div>
+            <div class="career-category-card bg-surface p-8 rounded-[24px] border border-secondary-fixed hover:shadow-[0px_10px_30px_rgba(1,10,38,0.04)] transition-all group cursor-pointer" data-category="Education & Training" data-count="15 Career Paths" data-icon="school" data-description="Explore careers in teaching, training, curriculum design, counseling, EdTech, and skills development.">
+                <div class="w-12 h-12 bg-secondary-fixed/30 rounded-xl flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined" data-icon="school">school</span>
+                </div>
+                <h4 class="font-headline-md text-primary mb-1">Education & Training</h4>
+                <p class="text-on-surface-variant font-label-sm">15 Career Paths</p>
+            </div>
+            <div class="career-category-card bg-surface p-8 rounded-[24px] border border-secondary-fixed hover:shadow-[0px_10px_30px_rgba(1,10,38,0.04)] transition-all group cursor-pointer" data-category="Wellness & Lifestyle" data-count="11 Career Paths" data-icon="spa" data-description="Discover careers in yoga, meditation, nutrition, counseling, and holistic lifestyle wellness.">
+                <div class="w-12 h-12 bg-secondary-fixed/30 rounded-xl flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined" data-icon="spa">spa</span>
+                </div>
+                <h4 class="font-headline-md text-primary mb-1">Wellness & Lifestyle</h4>
+                <p class="text-on-surface-variant font-label-sm">11 Career Paths</p>
+            </div>
+            <div class="career-category-card bg-surface p-8 rounded-[24px] border border-secondary-fixed hover:shadow-[0px_10px_30px_rgba(1,10,38,0.04)] transition-all group cursor-pointer" data-category="Real Estate & Construction" data-count="13 Career Paths" data-icon="home_repair_service" data-description="Discover careers in property broking, development, construction, facility management, and real estate advisory.">
+                <div class="w-12 h-12 bg-secondary-fixed/30 rounded-xl flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined" data-icon="home_repair_service">home_repair_service</span>
+                </div>
+                <h4 class="font-headline-md text-primary mb-1">Real Estate & Construction</h4>
+                <p class="text-on-surface-variant font-label-sm">13 Career Paths</p>
+            </div>
+            <div class="career-category-card bg-surface p-8 rounded-[24px] border border-secondary-fixed hover:shadow-[0px_10px_30px_rgba(1,10,38,0.04)] transition-all group cursor-pointer" data-category="Pure Sciences" data-count="15 Career Paths" data-icon="science" data-description="Explore foundational science careers in physics, chemistry, biology, math, earth science, and space research.">
+                <div class="w-12 h-12 bg-secondary-fixed/30 rounded-xl flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined" data-icon="science">science</span>
+                </div>
+                <h4 class="font-headline-md text-primary mb-1">Pure Sciences</h4>
+                <p class="text-on-surface-variant font-label-sm">15 Career Paths</p>
+            </div>
+            <div class="career-category-card bg-surface p-8 rounded-[24px] border border-secondary-fixed hover:shadow-[0px_10px_30px_rgba(1,10,38,0.04)] transition-all group cursor-pointer" data-category="Sports & Fitness" data-count="14 Career Paths" data-icon="sports" data-description="Explore careers in professional sports, coaching, fitness, sports science, and athlete support systems.">
+                <div class="w-12 h-12 bg-secondary-fixed/30 rounded-xl flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined" data-icon="sports">sports</span>
+                </div>
+                <h4 class="font-headline-md text-primary mb-1">Sports & Fitness</h4>
+                <p class="text-on-surface-variant font-label-sm">14 Career Paths</p>
+            </div>
+            <div class="career-category-card bg-surface p-8 rounded-[24px] border border-secondary-fixed hover:shadow-[0px_10px_30px_rgba(1,10,38,0.04)] transition-all group cursor-pointer" data-category="Environment & Agriculture" data-count="15 Career Paths" data-icon="agriculture" data-description="Explore careers in sustainable agriculture, environmental science, natural resource management, and climate resilience.">
+                <div class="w-12 h-12 bg-secondary-fixed/30 rounded-xl flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined" data-icon="agriculture">agriculture</span>
+                </div>
+                <h4 class="font-headline-md text-primary mb-1">Environment & Agriculture</h4>
+                <p class="text-on-surface-variant font-label-sm">15 Career Paths</p>
+            </div><div class="career-category-card bg-surface p-8 rounded-[24px] border border-secondary-fixed hover:shadow-[0px_10px_30px_rgba(1,10,38,0.04)] transition-all group cursor-pointer" data-category="Hotel Management & Hospitality" data-count="20 Career Paths" data-icon="hotel" data-description="Explore hotel operations, culinary arts, travel, airport services and luxury hospitality careers.">
+<div class="w-12 h-12 bg-secondary-fixed/30 rounded-xl flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="hotel">hotel</span>
+</div>
+<h4 class="font-headline-md text-primary mb-1">Hotel Management & Hospitality</h4>
+<p class="text-on-surface-variant font-label-sm">20 Career Paths</p>
+</div>
+<div class="career-category-card bg-surface p-8 rounded-[24px] border border-secondary-fixed hover:shadow-[0px_10px_30px_rgba(1,10,38,0.04)] transition-all group cursor-pointer" style="transform: translateY(0px);" data-category="Entrepreneurship" data-count="12 Programs" data-icon="rocket_launch" data-description="Learn how founders identify ideas, validate markets, build teams, raise capital, and launch scalable ventures.">
+<div class="w-12 h-12 bg-secondary-fixed/30 rounded-xl flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined" data-icon="rocket_launch">rocket_launch</span>
+</div>
+<h4 class="font-headline-md text-primary mb-1">Entrepreneurship</h4>
+<p class="text-on-surface-variant font-label-sm">12 Programs</p>
+</div>
+</div>
+<div id="careerCategoryDetail" class="hidden bg-surface p-8 rounded-[24px] border border-secondary-fixed">
+<button id="careerCategoryBack" class="mb-8 inline-flex items-center gap-2 text-secondary font-label-md hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-sm">arrow_back</span>
+Back to categories
+</button>
+<div class="flex flex-col lg:flex-row gap-8 lg:items-start">
+<div class="w-16 h-16 bg-secondary-fixed/30 rounded-2xl flex items-center justify-center text-secondary shrink-0">
+<span id="careerDetailIcon" class="material-symbols-outlined text-4xl">precision_manufacturing</span>
+</div>
+<div class="flex-1">
+<span id="careerDetailCount" class="text-secondary font-label-sm uppercase tracking-widest">42 Career Paths</span>
+<h4 id="careerDetailTitle" class="font-headline-lg text-headline-lg text-primary mt-2 mb-4">Engineering</h4>
+<p id="careerDetailDescription" class="font-body-lg text-on-surface-variant max-w-3xl mb-8">Build solutions across software, mechanical systems, electronics, civil infrastructure, robotics, and emerging technologies.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="bg-surface-container-low p-5 rounded-2xl border border-secondary-fixed/50">
+<span class="material-symbols-outlined text-secondary mb-3">route</span>
+<h5 class="font-label-md text-primary mb-1">Popular Paths</h5>
+<p id="careerDetailPaths" class="text-on-surface-variant font-label-sm">Software, Mechanical, Civil</p>
+</div>
+<div class="bg-surface-container-low p-5 rounded-2xl border border-secondary-fixed/50">
+<span class="material-symbols-outlined text-secondary mb-3">school</span>
+<h5 class="font-label-md text-primary mb-1">Next Step</h5>
+<p class="text-on-surface-variant font-label-sm">Compare exams, colleges, and skills.</p>
+</div>
+<div class="bg-surface-container-low p-5 rounded-2xl border border-secondary-fixed/50">
+<span class="material-symbols-outlined text-secondary mb-3">psychology</span>
+<h5 class="font-label-md text-primary mb-1">AI Guidance</h5>
+<p class="text-on-surface-variant font-label-sm">Ask the mentor for a matched roadmap.</p>
+</div>
+</div>
+<div id="careerPathListSection" class="mt-8 hidden">
+<h5 class="font-label-md text-primary uppercase tracking-widest mb-4">All Career Paths</h5>
+<div id="careerPathList" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+        const categoryGrid = document.getElementById('careerCategoriesGrid');
+        const categoryDetail = document.getElementById('careerCategoryDetail');
+        const categoryBack = document.getElementById('careerCategoryBack');
+        const detailIcon = document.getElementById('careerDetailIcon');
+        const detailCount = document.getElementById('careerDetailCount');
+        const detailTitle = document.getElementById('careerDetailTitle');
+        const detailDescription = document.getElementById('careerDetailDescription');
+        const detailPaths = document.getElementById('careerDetailPaths');
+        const careerPathListSection = document.getElementById('careerPathListSection');
+        const careerPathList = document.getElementById('careerPathList');
+
+        const categoryPathSummary = {
+            Engineering: 'Software, Mechanical, Civil',
+            Medical: 'Doctor, Nurse, Pharmacist, Surgeon, Radiologist',
+            Arts: 'Designer, Writer, Performer',
+            Commerce: 'Accountant, Analyst, Manager',
+            'Technology & Digital': 'Data Scientist, Cybersecurity Analyst, Full Stack Developer',
+            Government: 'Civil Services, Defense, Public Sector',
+            'Law & Legal Services': 'Lawyer, Corporate Lawyer, Criminal Lawyer',
+            'Media & Journalism': 'News Anchor, TV Reporter, Podcast Host',
+            'Education & Training': 'School Teacher, EdTech Educator, Corporate Trainer',
+            'Wellness & Lifestyle': 'Yoga Instructor, Nutritionist / Dietitian, Wellness Coach',
+            'Real Estate & Construction': 'Real Estate Agent, Property Developer, Construction Manager',
+            'Pure Sciences': 'Physicist, Chemist, Biologist, Biochemist',
+            'Sports & Fitness': 'Professional Athlete, Sports Coach, Fitness Trainer',
+            'Hotel Management & Hospitality': 'Hotel Manager, Executive Chef, Resort Manager',
+            'Maritime & Aviation': 'Ship Captain, Aviation Engineer, Port Manager, Naval Architect',
+            Entrepreneurship: 'Founder, Consultant, Venture Builder'
+        };
+
+        const categoryCareerPaths = {
+            Engineering: [
+                'Software Engineer',
+                'Computer Hardware Engineer',
+                'Data Engineer',
+                'AI/ML Engineer',
+                'Cybersecurity Engineer',
+                'Cloud Engineer',
+                'DevOps Engineer',
+                'Civil Engineer',
+                'Structural Engineer',
+                'Environmental Engineer',
+                'Transportation Engineer',
+                'Geotechnical Engineer',
+                'Mechanical Engineer',
+                'Automobile Engineer',
+                'Aerospace Engineer',
+                'Robotics Engineer',
+                'Manufacturing Engineer',
+                'Industrial Engineer',
+                'Electrical Engineer',
+                'Electronics Engineer',
+                'Telecommunication Engineer',
+                'Instrumentation Engineer',
+                'Power Systems Engineer',
+                'Renewable Energy Engineer',
+                'Chemical Engineer',
+                'Petroleum Engineer',
+                'Biomedical Engineer',
+                'Biotechnology Engineer',
+                'Agricultural Engineer',
+                'Marine Engineer',
+                'Mining Engineer',
+                'Metallurgical Engineer',
+                'Materials Engineer',
+                'Mechatronics Engineer',
+                'Nanotechnology Engineer',
+                'Food Technology Engineer',
+                'Textile Engineer',
+                'Nuclear Engineer',
+                'Quality Assurance Engineer',
+                'Product Design Engineer',
+                'Safety Engineer',
+                'Systems Engineer'
+            ],
+            Medical: [
+                'Doctor',
+                'Surgeon',
+                'Dentist',
+                'Nurse',
+                'Pharmacist',
+                'Physiotherapist',
+                'Veterinarian',
+                'Medical Lab Technologist',
+                'Radiologist',
+                'Anesthesiologist',
+                'Cardiologist',
+                'Dermatologist',
+                'Pediatrician',
+                'Psychiatrist',
+                'Psychologist',
+                'Nutritionist',
+                'Optometrist',
+                'Occupational Therapist',
+                'Speech Therapist',
+                'Public Health Specialist',
+                'Biomedical Scientist',
+                'Clinical Researcher',
+                'Paramedic',
+                'Hospital Administrator',
+                'Forensic Medical Expert',
+                'Homeopathy Doctor',
+                'Ayurveda Doctor',
+                'Medical Writer'
+            ],
+            Arts: [
+                'Graphic Designer',
+                'UI/UX Designer',
+                'Fashion Designer',
+                'Interior Designer',
+                'Animator',
+                'Illustrator',
+                'Fine Artist',
+                'Photographer',
+                'Film Director',
+                'Video Editor',
+                'Content Writer',
+                'Copywriter',
+                'Journalist',
+                'Author',
+                'Screenwriter',
+                'Actor',
+                'Musician',
+                'Dancer',
+                'Theatre Artist',
+                'Art Director',
+                'Creative Director',
+                'Game Artist',
+                'Product Designer',
+                'Architect',
+                'Museum Curator',
+                'Art Therapist',
+                'Digital Marketer',
+                'Social Media Manager',
+                'Event Manager',
+                'Public Relations Specialist',
+                'Language Translator',
+                'Linguist',
+                'Historian',
+                'Archaeologist',
+                'Sociologist'
+            ],
+            Commerce: [
+                'Chartered Accountant',
+                'Company Secretary',
+                'Cost Accountant',
+                'Investment Banker',
+                'Financial Analyst',
+                'Business Analyst',
+                'Accountant',
+                'Auditor',
+                'Tax Consultant',
+                'Bank Manager',
+                'Stockbroker',
+                'Insurance Advisor',
+                'Marketing Manager',
+                'Human Resources Manager',
+                'Operations Manager',
+                'Entrepreneur',
+                'Economist',
+                'Actuary',
+                'Management Consultant'
+            ],
+            Government: [
+                'IAS Officer',
+                'IPS Officer',
+                'IFS Officer',
+                'IRS Officer',
+                'Defense Officer',
+                'Army Officer',
+                'Navy Officer',
+                'Air Force Officer',
+                'Police Officer',
+                'Railway Officer',
+                'Bank PO',
+                'SSC Officer',
+                'State Civil Service Officer',
+                'Judge',
+                'Public Prosecutor',
+                'Government Teacher',
+                'Professor',
+                'Scientist',
+                'Forest Officer',
+                'Customs Officer',
+                'Income Tax Officer',
+                'Public Sector Engineer',
+                'Administrative Assistant',
+                'Clerk',
+                'Data Entry Operator',
+                'Librarian',
+                'Diplomat',
+                'Policy Analyst',
+                'Urban Planner',
+                'Social Welfare Officer',
+                'Agricultural Officer',
+                'Food Safety Officer',
+                'Labour Officer',
+                'Excise Officer',
+                'Intelligence Officer',
+                'Coast Guard Officer',
+                'Postal Officer',
+                'Municipal Officer',
+                'Public Health Officer',
+                'Election Officer',
+                'Revenue Officer',
+                'Transport Officer',
+                'Legal Officer',
+                'Accounts Officer',
+                'Audit Officer',
+                'Statistical Officer',
+                'Information Officer',
+                'Planning Officer',
+                'Disaster Management Officer',
+                'Women and Child Development Officer',
+                'Rural Development Officer',
+                'Panchayat Officer',
+                'Foreign Service Assistant',
+                'Research Officer'
+            ],
+            'Law & Legal Services': [
+                'Lawyer / Advocate',
+                'Corporate Lawyer',
+                'Criminal Lawyer',
+                'Civil Lawyer',
+                'Family Lawyer',
+                'Intellectual Property Lawyer',
+                'Tax Lawyer',
+                'Environmental Lawyer',
+                'Human Rights Lawyer',
+                'Legal Consultant',
+                'Patent Attorney',
+                'Notary',
+                'Legal Researcher',
+                'Arbitrator / Mediator',
+                'Cyber Lawyer'
+            ],
+            'Environment & Agriculture': [
+                'Agricultural Scientist',
+                'Horticulturist',
+                'Dairy Farmer / Manager',
+                'Fisheries Officer',
+                'Soil Scientist',
+                'Agronomist',
+                'Plant Geneticist',
+                'Farm Manager',
+                'Environmental Consultant',
+                'Climate Change Analyst',
+                'Wildlife Biologist',
+                'Conservation Scientist',
+                'Oceanographer',
+                'Meteorologist',
+                'Water Resource Manager'
+            ],
+            'Media & Journalism': [
+                'News Anchor',
+                'TV Reporter',
+                'Radio Jockey (RJ)',
+                'Podcast Host',
+                'Photojournalist',
+                'Documentary Filmmaker',
+                'Film Critic',
+                'Sports Journalist',
+                'Political Analyst',
+                'Magazine Editor',
+                'News Editor',
+                'Media Producer',
+                'PR Manager',
+                'Fact Checker',
+                'War Correspondent'
+            ],
+            'Education & Training': [
+                'School Teacher (Private)',
+                'Special Education Teacher',
+                'Online Tutor / EdTech Educator',
+                'Corporate Trainer',
+                'Educational Psychologist',
+                'Curriculum Developer',
+                'Preschool Teacher',
+                'Montessori Teacher',
+                'Career Counselor',
+                'Life Coach',
+                'Skill Development Trainer',
+                'IELTS / Language Trainer',
+                'Coding Instructor',
+                'Music Teacher',
+                'Dance Teacher'
+            ],
+            'Sports & Fitness': [
+                'Professional Athlete',
+                'Sports Coach',
+                'Fitness Trainer / Personal Trainer',
+                'Yoga Instructor',
+                'Sports Physiotherapist',
+                'Sports Psychologist',
+                'Sports Nutritionist',
+                'Sports Manager',
+                'Cricket Coach',
+                'Football Coach',
+                'Swimming Coach',
+                'Esports Player / Coach',
+                'Sports Administrator',
+                'Olympics Coach'
+            ],
+            'Sports & Fitness': [
+                'Professional Athlete',
+                'Sports Coach',
+                'Fitness Trainer / Personal Trainer',
+                'Yoga Instructor',
+                'Sports Physiotherapist',
+                'Sports Psychologist',
+                'Sports Nutritionist',
+                'Sports Manager',
+                'Cricket Coach',
+                'Football Coach',
+                'Swimming Coach',
+                'Esports Player / Coach',
+                'Sports Administrator',
+                'Olympics Coach'
+            ],
+            'Technology & Digital': [
+                'Data Scientist',
+                'Blockchain Developer',
+                'Prompt Engineer',
+                'Cybersecurity Analyst',
+                'No-Code Developer',
+                'Digital Forensics Expert',
+                'Cloud Architect',
+                'Full Stack Developer',
+                'Mobile App Developer',
+                'AR/VR Developer',
+                'Game Developer',
+                'IT Project Manager',
+                'Database Administrator',
+                'Network Engineer',
+                'Technical Writer'
+            ],
+            'Hotel Management & Hospitality': [
+                'Hotel Manager',
+                'Front Office Manager',
+                'Food & Beverage Manager',
+                'Executive Chef',
+                'Sous Chef',
+                'Pastry Chef',
+                'Housekeeping Manager',
+                'Event & Banquet Manager',
+                'Revenue Manager',
+                'Travel & Tourism Manager',
+                'Resort Manager',
+                'Cabin Crew / Flight Attendant',
+                'Commercial Pilot',
+                'Airport Manager',
+                'Hospitality Trainer',
+                'Spa & Wellness Manager',
+                'Restaurant Manager',
+                'Sommelier',
+                'Tourism Officer (Government)',
+                'Cruise Ship Officer'
+            ],
+            'Wellness & Lifestyle': [
+                'Yoga Instructor',
+                'Meditation Coach',
+                'Nutritionist / Dietitian',
+                'Wellness Coach',
+                'Ayurveda Practitioner',
+                'Naturopath',
+                'Mental Health Counselor',
+                'Relationship Counselor',
+                'Life Coach',
+                'Sleep Therapist',
+                'Holistic Health Practitioner'
+            ],
+            'Real Estate & Construction': [
+                'Real Estate Agent',
+                'Property Developer',
+                'Real Estate Lawyer',
+                'Property Manager',
+                'Construction Manager',
+                'Quantity Surveyor',
+                'Urban Planner',
+                'Interior Contractor',
+                'Real Estate Consultant',
+                'Housing Finance Advisor',
+                'Facility Manager',
+                'Land Acquisition Officer'
+            ],
+            'Pure Sciences': [
+                'Physicist',
+                'Chemist',
+                'Mathematician',
+                'Biologist',
+                'Zoologist',
+                'Botanist',
+                'Astronomer',
+                'Geologist',
+                'Microbiologist',
+                'Biochemist',
+                'Neuroscientist',
+                'Marine Biologist',
+                'Forensic Scientist',
+                'Geneticist',
+                'Astrophysicist'
+            ],
+            'Maritime & Aviation': [
+                'Merchant Navy Officer',
+                'Marine Engineer',
+                'Ship Captain',
+                'Naval Architect',
+                'Port Manager',
+                'Maritime Lawyer',
+                'Aviation Engineer',
+                'Air Traffic Controller',
+                'Aircraft Maintenance Engineer (AME)',
+                'Aerospace Scientist'
+            ],
+            Entrepreneurship: [
+                'Startup Founder',
+                'Small Business Owner',
+                'Product Founder',
+                'Social Entrepreneur',
+                'E-commerce Entrepreneur',
+                'Franchise Owner',
+                'Consultant',
+                'Creator Entrepreneur',
+                'Tech Entrepreneur',
+                'Food Business Founder',
+                'Education Business Founder',
+                'Venture Builder'
+            ]
+        };
+
+        document.querySelectorAll('.career-category-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const category = card.dataset.category;
+                detailIcon.textContent = card.dataset.icon;
+                detailCount.textContent = card.dataset.count;
+                detailTitle.textContent = category;
+                detailDescription.textContent = card.dataset.description;
+                detailPaths.textContent = categoryPathSummary[category] || 'Career tracks and programs';
+
+                careerPathList.innerHTML = '';
+                if (categoryCareerPaths[category]) {
+                    categoryCareerPaths[category].forEach(path => {
+                        const pathItem = document.createElement('a');
+                        pathItem.href = `career-path.html?path=${encodeURIComponent(path)}`;
+                        pathItem.className = 'block bg-surface-container-low border border-secondary-fixed/50 rounded-xl px-4 py-3 font-label-md text-on-surface hover:bg-surface-container transition-colors';
+                        pathItem.textContent = path;
+                        pathItem.setAttribute('aria-label', `View details for ${path}`);
+                        careerPathList.appendChild(pathItem);
+                    });
+                    careerPathListSection.classList.remove('hidden');
+                } else {
+                    careerPathListSection.classList.add('hidden');
+                }
+
+                categoryGrid.classList.add('hidden');
+                categoryDetail.classList.remove('hidden');
+            });
+        });
+
+        categoryBack.addEventListener('click', () => {
+            categoryDetail.classList.add('hidden');
+            categoryGrid.classList.remove('hidden');
+        });
+    </script>
+    <script src="profile-popup.js"></script>
+</body></html>
+

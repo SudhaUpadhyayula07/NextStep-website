@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>NextStep - Career Guidance</title>
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        'brand-cream': '#F9F7E8',
+        'brand-hero-bg': '#FAF8E7',
+        'brand-moss-bg': '#D1D3AF',
+        'brand-navy': '#111F36',
+        'brand-olive': '#485C2E',
+        'brand-badge': '#BBC29A',
+      }
+    }
+  }
+}
+</script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #F9F7E8;
+}
+.border-custom {
+  border: 1px solid #111F36;
+}
+</style>
+
+</head>
+
+<body class="min-h-screen text-brand-navy">
+
+<!-- HEADER -->
+<header class="w-full py-6 px-12 flex justify-between items-center bg-brand-cream">
+
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-brand-olive flex items-center justify-center">
+<svg class="w-5 h-5 text-brand-cream fill-current" viewBox="0 0 24 24">
+<path d="M12 4l9 16H3z"></path>
+</svg>
+</div>
+<span class="text-2xl font-extrabold tracking-tight">NextStep</span>
+</div>
+
+<!-- ✅ CLEAN NAVBAR -->
+<nav class="flex gap-10 text-lg font-medium">
+<a class="hover:opacity-70 transition-opacity" href="index.html">Home</a>
+</nav>
+
+</header>
+
+<!-- MAIN -->
+<main class="max-w-container-max mx-auto px-4 py-8 md:py-12">
+
+<div class="flex flex-col lg:flex-row gap-8 items-stretch">
+
+<!-- HERO -->
+<section class="flex-1 bg-brand-hero-bg border-custom p-10 md:p-16 flex flex-col justify-between">
+
+<div>
+
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-badge border border-brand-navy rounded-sm mb-12">
+<div class="w-2 h-2 rounded-full bg-brand-olive"></div>
+<span class="text-xs font-bold uppercase tracking-widest text-brand-olive">Career Guidance</span>
+</div>
+
+<h1 class="text-7xl md:text-8xl font-black mb-6 tracking-tighter">NextStep</h1>
+
+<h2 class="text-2xl md:text-3xl font-bold text-brand-olive mb-4">
+Find the path meant for you
+</h2>
+
+<div class="w-16 h-1 bg-brand-olive mb-10"></div>
+
+<p class="text-lg leading-relaxed text-gray-600 max-w-xl mb-12">
+NextStep is a student-centered career guidance platform designed to make career exploration and planning simple.
+</p>
+
+</div>
+
+<!-- ✅ BUTTONS FIXED -->
+<div class="flex flex-wrap gap-8 items-end">
+
+<div class="flex flex-col gap-2">
+<span class="text-sm text-gray-400">Doesn't have an account?</span>
+<button onclick="goToSignup()" class="bg-brand-navy text-white px-10 py-4 font-bold text-lg border border-brand-navy w-48 h-16">
+Create
+</button>
+</div>
+
+<div class="flex flex-col gap-2">
+<span class="text-sm text-gray-400">Already have an account?</span>
+<button onclick="goToLogin()" class="bg-transparent text-brand-navy px-10 py-4 font-bold text-lg border-custom w-40 h-16">
+Login
+</button>
+</div>
+
+</div>
+
+</section>
+
+<!-- FEATURES -->
+<section class="lg:w-[450px] bg-brand-moss-bg border-custom p-8 md:p-10">
+
+<h3 class="text-xs font-bold uppercase tracking-[0.2em] mb-8 text-brand-olive">
+What We Offer
+</h3>
+
+<div class="flex flex-col gap-6">
+
+<div class="bg-brand-hero-bg border-custom p-8">
+<h4 class="text-xl font-bold mb-2">Career Exploration</h4>
+<p class="text-gray-600">Discover career paths based on your interests.</p>
+</div>
+
+<div class="bg-brand-hero-bg border-custom p-8">
+<h4 class="text-xl font-bold mb-2">Personalized Guidance</h4>
+<p class="text-gray-600">Get tailored career suggestions.</p>
+</div>
+
+<div class="bg-brand-hero-bg border-custom p-8">
+<h4 class="text-xl font-bold mb-2">Education Pathways</h4>
+<p class="text-gray-600">Learn courses and requirements.</p>
+</div>
+
+</div>
+
+</section>
+
+</div>
+</main>
+
+<!-- ✅ SCRIPT -->
+<script>
+function goToSignup() {
+  window.location.href = "signup.html";
+}
+
+function goToLogin() {
+  window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>

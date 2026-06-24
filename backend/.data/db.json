@@ -1,0 +1,246 @@
+{
+  "users": [
+    {
+      "id": "1c004406-02ab-403a-86ad-22f8c70d2147",
+      "name": "sudha",
+      "email": "sudharaniuvd7@gmail.com",
+      "plan": "Free",
+      "createdAt": "2026-06-23T15:53:01.660Z",
+      "passwordHash": "7d5d3498ff5fa88dde16ec820fe70b19252318b107f25a58ce8221b965cbb8b5"
+    },
+    {
+      "id": "4abdf514-393d-443f-bdee-49f1aaed2f42",
+      "name": "Test User",
+      "email": "testuser@example.com",
+      "plan": "Free",
+      "createdAt": "2026-06-23T17:06:58.092Z",
+      "passwordHash": "13d249f2cb4127b40cfa757866850278793f814ded3c587fe5889e889a7a9f6c"
+    }
+  ],
+  "sessions": {
+    "401500c8-c559-49bf-ad6f-7e466ba88455": "1c004406-02ab-403a-86ad-22f8c70d2147",
+    "ab83e21f-4e8f-404d-b2f8-89b8f0b7f3f1": "4abdf514-393d-443f-bdee-49f1aaed2f42"
+  },
+  "savedColleges": {},
+  "assessmentAnswers": [
+    {
+      "id": "a0adee68-8cd7-4482-8617-6c873b94d7d5",
+      "userId": null,
+      "answers": {
+        "stream": "Science",
+        "interest": "engineering",
+        "strengths": "problem solving",
+        "goal": "none"
+      },
+      "createdAt": "2026-06-23T14:48:25.068Z"
+    },
+    {
+      "id": "2d489d3c-51b2-4fc9-85e7-d33ba2909619",
+      "userId": "1c004406-02ab-403a-86ad-22f8c70d2147",
+      "answers": {
+        "stream": "Science",
+        "interest": "medical",
+        "strengths": "",
+        "goal": ""
+      },
+      "createdAt": "2026-06-23T16:44:10.108Z"
+    }
+  ],
+  "chatSessions": {
+    "3a1136ae-c74c-4804-a780-9901aff979fe": {
+      "id": "3a1136ae-c74c-4804-a780-9901aff979fe",
+      "createdAt": "2026-06-18T16:30:29.211Z",
+      "updatedAt": "2026-06-18T16:30:29.217Z",
+      "profile": {},
+      "messages": [
+        {
+          "role": "user",
+          "text": "Compare career paths",
+          "createdAt": "2026-06-18T16:30:29.211Z"
+        },
+        {
+          "role": "bot",
+          "text": "I can compare these career paths:\n\n• software engineer vs data scientist\n• doctor vs engineer\n\nWhich two would you like me to compare?",
+          "createdAt": "2026-06-18T16:30:29.217Z"
+        }
+      ]
+    },
+    "0756edb8-a983-4f3e-974e-ae1b8f9ab077": {
+      "id": "0756edb8-a983-4f3e-974e-ae1b8f9ab077",
+      "createdAt": "2026-06-18T16:30:38.902Z",
+      "updatedAt": "2026-06-18T16:30:38.905Z",
+      "profile": {},
+      "messages": [
+        {
+          "role": "user",
+          "text": "Resume & interview tips",
+          "createdAt": "2026-06-18T16:30:38.902Z"
+        },
+        {
+          "role": "bot",
+          "text": "**Resume & Interview Preparation Guide**\n\n**📝 Resume Structure:**\n✓ Keep it to 1 page (for freshers), max 2 pages for experienced\n✓ Use clear headings: Contact Info → Summary → Experience → Education → Skills → Projects\n✓ Use action verbs: Developed, Designed, Optimized, Led (not \"Worked on\")\n✓ Quantify achievements: \"Improved performance by 40%\" instead of \"Made it faster\"\n\n**🎨 Formatting Tips:**\n✓ Use consistent fonts (Calibri, Arial) and sizes (10-12 pt body, larger for headers)\n✓ Maintain 1-inch margins on all sides\n✓ Use bullet points for readability\n✓ Save as PDF to preserve formatting\n\n**🔑 Keywords to Include:**\nIndustry-specific skills (e.g., Python, AWS, React for tech roles)\nSoft skills: Leadership, Communication, Problem-solving, Teamwork\nCertifications and achievements relevant to the role\nAvoid: Typos, unexplained gaps, irrelevant information\n\n**🎤 Interview Preparation:**\n1. Research the company: mission, recent news, culture, role requirements\n2. Prepare STAR method responses: Situation, Task, Action, Result\n3. Prepare 2-3 questions for the interviewer\n4. Practice: Tell me about yourself (max 2 min), Why this role, your strengths/weaknesses\n\nNeed specific advice on cover letters or interview questions for a particular role?",
+          "createdAt": "2026-06-18T16:30:38.905Z"
+        }
+      ]
+    },
+    "86311b39-505b-4d80-af86-5fc9bd4f8135": {
+      "id": "86311b39-505b-4d80-af86-5fc9bd4f8135",
+      "createdAt": "2026-06-18T16:33:15.464Z",
+      "updatedAt": "2026-06-18T16:39:51.878Z",
+      "profile": {
+        "stream": "Science",
+        "category": "engineering",
+        "stage": "Grade 12 / Higher Secondary",
+        "goal": "i am in class 12 science and want to become a software engineer"
+      },
+      "messages": [
+        {
+          "role": "user",
+          "text": "I am in class 12 science and want to become a software engineer",
+          "createdAt": "2026-06-18T16:33:15.464Z"
+        },
+        {
+          "role": "bot",
+          "text": "Based on your profile, you are focusing on **Engineering**. You are currently in Science. You are at Grade 12 / Higher Secondary. Your expressed interest is: i am in class 12 science and want to become a software engineer.\n\nHere are strong career options to explore: Software Engineer, Computer Hardware Engineer, Data Engineer, AI/ML Engineer.\n\nRelevant exams to plan for: JEE Main, JEE Advanced, BITSAT.\n\nNext, tell me whether you want a 30/90-day roadmap, college shortlists, or resume and skill development guidance.",
+          "createdAt": "2026-06-18T16:33:15.464Z"
+        },
+        {
+          "role": "user",
+          "text": "Compare career paths",
+          "createdAt": "2026-06-18T16:33:46.886Z"
+        },
+        {
+          "role": "bot",
+          "text": "I can compare these career paths:\n\n• software engineer vs data scientist\n• doctor vs engineer\n\nWhich two would you like me to compare?",
+          "createdAt": "2026-06-18T16:33:46.886Z"
+        },
+        {
+          "role": "user",
+          "text": "Compare career paths",
+          "createdAt": "2026-06-18T16:35:10.596Z"
+        },
+        {
+          "role": "bot",
+          "text": "I can compare these career paths:\n\n• software engineer vs data scientist\n• doctor vs engineer\n\nWhich two would you like me to compare?",
+          "createdAt": "2026-06-18T16:35:10.596Z"
+        },
+        {
+          "role": "user",
+          "text": "\"What's the best path: IT vs Data Science? Compare for me.\"",
+          "createdAt": "2026-06-18T16:35:37.509Z"
+        },
+        {
+          "role": "bot",
+          "text": "I can compare these career paths:\n\n• software engineer vs data scientist\n• doctor vs engineer\n\nWhich two would you like me to compare?",
+          "createdAt": "2026-06-18T16:35:37.510Z"
+        },
+        {
+          "role": "user",
+          "text": "I am interested in engineering",
+          "createdAt": "2026-06-18T16:39:51.878Z"
+        },
+        {
+          "role": "bot",
+          "text": "Based on your profile, you are focusing on **Engineering**. You are currently in Science. You are at Grade 12 / Higher Secondary. Your expressed interest is: i am in class 12 science and want to become a software engineer.\n\nHere are strong career options to explore: Software Engineer, Computer Hardware Engineer, Data Engineer, AI/ML Engineer.\n\nRelevant exams to plan for: JEE Main, JEE Advanced, BITSAT.\n\nNext, tell me whether you want a 30/90-day roadmap, college shortlists, or resume and skill development guidance.",
+          "createdAt": "2026-06-18T16:39:51.878Z"
+        }
+      ]
+    },
+    "85f39928-4f19-45c2-a78f-7d13f570fce1": {
+      "id": "85f39928-4f19-45c2-a78f-7d13f570fce1",
+      "createdAt": "2026-06-21T17:23:05.855Z",
+      "updatedAt": "2026-06-24T02:08:50.893Z",
+      "profile": {},
+      "messages": [
+        {
+          "role": "user",
+          "text": "Compare career paths",
+          "createdAt": "2026-06-21T17:23:05.856Z"
+        },
+        {
+          "role": "bot",
+          "text": "I can compare these career paths:\n\n• software engineer vs data scientist\n• doctor vs engineer\n\nWhich two would you like me to compare?",
+          "createdAt": "2026-06-21T17:23:05.859Z"
+        },
+        {
+          "role": "user",
+          "text": "Resume & interview tips",
+          "createdAt": "2026-06-21T17:23:08.152Z"
+        },
+        {
+          "role": "bot",
+          "text": "**Resume & Interview Preparation Guide**\n\n**📝 Resume Structure:**\n✓ Keep it to 1 page (for freshers), max 2 pages for experienced\n✓ Use clear headings: Contact Info → Summary → Experience → Education → Skills → Projects\n✓ Use action verbs: Developed, Designed, Optimized, Led (not \"Worked on\")\n✓ Quantify achievements: \"Improved performance by 40%\" instead of \"Made it faster\"\n\n**🎨 Formatting Tips:**\n✓ Use consistent fonts (Calibri, Arial) and sizes (10-12 pt body, larger for headers)\n✓ Maintain 1-inch margins on all sides\n✓ Use bullet points for readability\n✓ Save as PDF to preserve formatting\n\n**🔑 Keywords to Include:**\nIndustry-specific skills (e.g., Python, AWS, React for tech roles)\nSoft skills: Leadership, Communication, Problem-solving, Teamwork\nCertifications and achievements relevant to the role\nAvoid: Typos, unexplained gaps, irrelevant information\n\n**🎤 Interview Preparation:**\n1. Research the company: mission, recent news, culture, role requirements\n2. Prepare STAR method responses: Situation, Task, Action, Result\n3. Prepare 2-3 questions for the interviewer\n4. Practice: Tell me about yourself (max 2 min), Why this role, your strengths/weaknesses\n\nNeed specific advice on cover letters or interview questions for a particular role?",
+          "createdAt": "2026-06-21T17:23:08.153Z"
+        },
+        {
+          "role": "user",
+          "text": "Compare career paths",
+          "createdAt": "2026-06-23T04:10:50.357Z"
+        },
+        {
+          "role": "bot",
+          "text": "I can compare these career paths:\n\n• software engineer vs data scientist\n• doctor vs engineer\n\nWhich two would you like me to compare?",
+          "createdAt": "2026-06-23T04:10:50.362Z"
+        },
+        {
+          "role": "user",
+          "text": "Skill gap analysis",
+          "createdAt": "2026-06-23T04:11:02.565Z"
+        },
+        {
+          "role": "bot",
+          "text": "What role are you targeting? I can provide a personalized skill development roadmap.\n\nAvailable roles:\n• Software Engineer\n• Data Scientist\n• Doctor\n\nOr mention a specific role!",
+          "createdAt": "2026-06-23T04:11:02.567Z"
+        },
+        {
+          "role": "user",
+          "text": "Resume & interview tips",
+          "createdAt": "2026-06-23T14:45:16.801Z"
+        },
+        {
+          "role": "bot",
+          "text": "**Resume & Interview Preparation Guide**\n\n**📝 Resume Structure:**\n✓ Keep it to 1 page (for freshers), max 2 pages for experienced\n✓ Use clear headings: Contact Info → Summary → Experience → Education → Skills → Projects\n✓ Use action verbs: Developed, Designed, Optimized, Led (not \"Worked on\")\n✓ Quantify achievements: \"Improved performance by 40%\" instead of \"Made it faster\"\n\n**🎨 Formatting Tips:**\n✓ Use consistent fonts (Calibri, Arial) and sizes (10-12 pt body, larger for headers)\n✓ Maintain 1-inch margins on all sides\n✓ Use bullet points for readability\n✓ Save as PDF to preserve formatting\n\n**🔑 Keywords to Include:**\nIndustry-specific skills (e.g., Python, AWS, React for tech roles)\nSoft skills: Leadership, Communication, Problem-solving, Teamwork\nCertifications and achievements relevant to the role\nAvoid: Typos, unexplained gaps, irrelevant information\n\n**🎤 Interview Preparation:**\n1. Research the company: mission, recent news, culture, role requirements\n2. Prepare STAR method responses: Situation, Task, Action, Result\n3. Prepare 2-3 questions for the interviewer\n4. Practice: Tell me about yourself (max 2 min), Why this role, your strengths/weaknesses\n\nNeed specific advice on cover letters or interview questions for a particular role?",
+          "createdAt": "2026-06-23T14:45:16.805Z"
+        },
+        {
+          "role": "user",
+          "text": "Resume & interview tips",
+          "createdAt": "2026-06-23T19:21:31.836Z"
+        },
+        {
+          "role": "bot",
+          "text": "**Resume & Interview Preparation Guide**\n\n**📝 Resume Structure:**\n✓ Keep it to 1 page (for freshers), max 2 pages for experienced\n✓ Use clear headings: Contact Info → Summary → Experience → Education → Skills → Projects\n✓ Use action verbs: Developed, Designed, Optimized, Led (not \"Worked on\")\n✓ Quantify achievements: \"Improved performance by 40%\" instead of \"Made it faster\"\n\n**🎨 Formatting Tips:**\n✓ Use consistent fonts (Calibri, Arial) and sizes (10-12 pt body, larger for headers)\n✓ Maintain 1-inch margins on all sides\n✓ Use bullet points for readability\n✓ Save as PDF to preserve formatting\n\n**🔑 Keywords to Include:**\nIndustry-specific skills (e.g., Python, AWS, React for tech roles)\nSoft skills: Leadership, Communication, Problem-solving, Teamwork\nCertifications and achievements relevant to the role\nAvoid: Typos, unexplained gaps, irrelevant information\n\n**🎤 Interview Preparation:**\n1. Research the company: mission, recent news, culture, role requirements\n2. Prepare STAR method responses: Situation, Task, Action, Result\n3. Prepare 2-3 questions for the interviewer\n4. Practice: Tell me about yourself (max 2 min), Why this role, your strengths/weaknesses\n\nNeed specific advice on cover letters or interview questions for a particular role?",
+          "createdAt": "2026-06-23T19:21:31.840Z"
+        },
+        {
+          "role": "user",
+          "text": "Compare career paths",
+          "createdAt": "2026-06-24T02:08:50.888Z"
+        },
+        {
+          "role": "bot",
+          "text": "I can compare these career paths:\n\n• software engineer vs data scientist\n• doctor vs engineer\n\nWhich two would you like me to compare?",
+          "createdAt": "2026-06-24T02:08:50.893Z"
+        }
+      ]
+    },
+    "bb69036c-c957-48be-9bfc-f7ea1ff03ddf": {
+      "id": "bb69036c-c957-48be-9bfc-f7ea1ff03ddf",
+      "createdAt": "2026-06-24T02:43:20.187Z",
+      "updatedAt": "2026-06-24T02:43:20.192Z",
+      "profile": {},
+      "messages": [
+        {
+          "role": "user",
+          "text": "Resume & interview tips",
+          "createdAt": "2026-06-24T02:43:20.187Z"
+        },
+        {
+          "role": "bot",
+          "text": "**Resume & Interview Preparation Guide**\n\n**📝 Resume Structure:**\n✓ Keep it to 1 page (for freshers), max 2 pages for experienced\n✓ Use clear headings: Contact Info → Summary → Experience → Education → Skills → Projects\n✓ Use action verbs: Developed, Designed, Optimized, Led (not \"Worked on\")\n✓ Quantify achievements: \"Improved performance by 40%\" instead of \"Made it faster\"\n\n**🎨 Formatting Tips:**\n✓ Use consistent fonts (Calibri, Arial) and sizes (10-12 pt body, larger for headers)\n✓ Maintain 1-inch margins on all sides\n✓ Use bullet points for readability\n✓ Save as PDF to preserve formatting\n\n**🔑 Keywords to Include:**\nIndustry-specific skills (e.g., Python, AWS, React for tech roles)\nSoft skills: Leadership, Communication, Problem-solving, Teamwork\nCertifications and achievements relevant to the role\nAvoid: Typos, unexplained gaps, irrelevant information\n\n**🎤 Interview Preparation:**\n1. Research the company: mission, recent news, culture, role requirements\n2. Prepare STAR method responses: Situation, Task, Action, Result\n3. Prepare 2-3 questions for the interviewer\n4. Practice: Tell me about yourself (max 2 min), Why this role, your strengths/weaknesses\n\nNeed specific advice on cover letters or interview questions for a particular role?",
+          "createdAt": "2026-06-24T02:43:20.191Z"
+        }
+      ]
+    }
+  }
+}

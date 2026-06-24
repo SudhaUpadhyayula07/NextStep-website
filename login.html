@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NextStep - Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet"/>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+          background: '#FBF7EA',
+          dark: '#020718',
+          border: '#D1D5B8',
+          text: '#4A4A4A'
+        }
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        serif: ['Playfair Display', 'serif']
+      }
+    }
+  }
+};
+</script>
+<style>
+body {
+  background-color: #FBF7EA;
+  font-family: 'Inter', sans-serif;
+}
+.login-card {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+input::placeholder {
+  color: #A0A0A0;
+}
+</style>
+</head>
+<body class="min-h-screen flex flex-col">
+<header class="w-full px-8 py-6 flex justify-between items-center bg-brand-background">
+<div class="flex items-center">
+<span class="text-2xl font-bold tracking-tight text-brand-dark">NextStep</span>
+</div>
+<nav class="flex gap-8 items-center">
+<a class="text-sm font-medium text-brand-dark hover:opacity-70" href="login.html">Login</a>
+<a class="text-sm font-medium text-brand-dark hover:opacity-70" href="signup.html">Sign Up</a>
+</nav>
+</header>
+<main class="flex-grow flex items-center justify-center px-4 py-12">
+<div class="login-card bg-white border border-brand-border rounded-[2rem] p-12 w-full max-w-[640px] flex flex-col items-center">
+<div class="text-center mb-10">
+<h1 class="text-[42px] font-bold text-brand-dark mb-4">Welcome Back</h1>
+<p class="text-lg text-brand-text max-w-[340px] mx-auto">Continue your professional journey with intentionality.</p>
+</div>
+<form class="w-full space-y-6" onsubmit="loginUser(event)">
+<div id="login-error-msg" class="text-red-600 text-sm hidden mb-4 p-3 bg-red-50 rounded-lg"></div>
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-brand-dark">Email Address or Phone Number</label>
+<input id="login-email" class="w-full px-4 py-3.5 border border-brand-border rounded-lg outline-none" type="text" placeholder="email@example.com or +91XXXXXXXXXX" required/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-brand-dark">Password</label>
+<input id="login-password" class="w-full px-4 py-3.5 border border-brand-border rounded-lg outline-none" type="password" required/>
+</div>
+<button type="submit" class="w-full py-4 mt-4 bg-brand-dark text-white font-semibold rounded-lg disabled:opacity-60">Sign In</button>
+</form>
+<div class="mt-12 text-center">
+<p class="text-brand-text text-base">Don't have an account? <a class="text-brand-dark font-semibold hover:underline" href="signup.html">Create an account</a></p>
+</div>
+</div>
+</main>
+<footer class="w-full px-8 py-10 border-t border-brand-border bg-brand-background text-center">© 2024 NextStep Career Advisory</footer>
+<script src="auth.js"></script>
+<script>
+async function sha256Hex(value) {
+  const enc = new TextEncoder();
+  const buf = await crypto.subtle.digest('SHA-256', enc.encode(String(value)));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+async function loginUser(event) {
+  event.preventDefault();
+  const form = event.target;
+  const input = document.getElementById('login-email').value.trim();
+  const password = document.getElementById('login-password').value.trim();
+  const errorMsg = document.getElementById('login-error-msg');
+  const submitButton = form.querySelector('button[type="submit"]');
+  const next = new URLSearchParams(window.location.search).get('next') || '4-dashboard.html';
+  const isEmail = input.includes('@');
+  const email = isEmail ? input : '';
+  const phone = !isEmail ? input : '';
+
+  errorMsg.classList.add('hidden');
+  if (!email || !password) {
+    errorMsg.textContent = 'Please enter your email and password.';
+    errorMsg.classList.remove('hidden');
+    return;
+  }
+
+  submitButton.disabled = true;
+  submitButton.textContent = 'Signing in...';
+
+  (async () => {
+    try {
+      const response = await fetch(`${NextStepAuth.API_BASE}/api/auth/login`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, phone, password })
+      });
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.error || 'Invalid email or password.');
+      NextStepAuth.saveSession(data);
+      window.location.href = next;
+      return;
+    } catch (error) {
+      // If server unavailable, fall back to secure local credential store
+      try {
+        const passwordHash = await sha256Hex(password);
+        const local = JSON.parse(localStorage.getItem('local_users') || '[]');
+        const found = local.find(u => (email && u.email === email.toLowerCase() || phone && u.phone === phone) && u.passwordHash === passwordHash);
+        if (found) {
+          const token = 'local-' + Math.random().toString(36).slice(2);
+          NextStepAuth.saveSession({ token, user: { name: found.name, email: found.email } });
+          window.location.href = next;
+          return;
+        }
+      } catch (e) {
+        // ignore and show original error below
+      }
+      errorMsg.textContent = error.message || 'Invalid email or password. Make sure the server is running.';
+      errorMsg.classList.remove('hidden');
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = 'Sign In';
+    }
+  })();
+}
+</script>
+</body>
+</html>
