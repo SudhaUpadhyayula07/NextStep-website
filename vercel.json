@@ -1,7 +1,0 @@
-{
-  "framework": "vite",
-  "buildCommand": "npm run build",
-  "env": {
-    "npm_config_legacy_peer_deps": "true"
-  }
-}
