@@ -325,7 +325,7 @@
         const suggestedButtons = document.querySelectorAll('.suggestion-button');
         // For local development: http://localhost:4000
         // For production: same origin
-        const API_BASE = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') ? 'http://localhost:4000' : '';
+        const API_BASE = '';
 
         function appendMessage(role, text) {
             const messageWrapper = document.createElement('div');
@@ -389,7 +389,7 @@
             setSending(true);
 
             try {
-                const res = await fetch(`${API_BASE}/api/mentor/chat`, {
+                const res = await fetch(`${API_BASE}/api/mentor`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ message: trimmed, sessionId: mentorSessionId })
