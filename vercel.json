@@ -1,7 +1,11 @@
 {
   "version": 2,
-  "cleanUrls": true,
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "backend/server.js" }
+  "builds": [
+    { "src": "*.html", "use": "@vercel/static" },
+    { "src": "api/mentor.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/mentor.js" },
+    { "src": "/(.*)", "dest": "/$1" }
   ]
 }
