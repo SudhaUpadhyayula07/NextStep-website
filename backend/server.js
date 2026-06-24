@@ -4,7 +4,6 @@ import { existsSync } from 'node:fs';
 import { extname, join, normalize } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash, randomUUID } from 'node:crypto';
-import { createClient } from '@supabase/supabase-js';
 import { careerCategories, colleges, engineeringColleges, exams } from './data.js';
 import { 
   handleCareerComparison, 
@@ -21,14 +20,6 @@ const DB_DIR = join(DATA_ROOT, 'backend', '.data');
 const DB_FILE = join(DB_DIR, 'db.json');
 const SCHOLARSHIPS_FILE = join(ROOT_DIR, 'data', 'india-scholarships.json');
 
-// Supabase initialization
-const SUPABASE_URL = process.env.SUPABASE_URL || '';
-const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY || '';
-let supabase = null;
-if (SUPABASE_URL && SUPABASE_SERVICE_ROLE_KEY) {
-  supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
-}
-
 const contentTypes = {
   '.html': 'text/html; charset=utf-8',
   '.js': 'text/javascript; charset=utf-8',
@@ -44,7 +35,6 @@ const contentTypes = {
 const defaultDb = {
   users: [],
   sessions: {},
-  savedColleges: {},
   assessmentAnswers: [],
   chatSessions: {}
 };
@@ -61,10 +51,6 @@ function sendJson(res, status, data) {
 
 function sendError(res, status, message) {
   sendJson(res, status, { error: message });
-}
-
-function hashPassword(password) {
-  return createHash('sha256').update(String(password)).digest('hex');
 }
 
 async function readDb() {
@@ -90,42 +76,6 @@ async function readBody(req) {
   } catch {
     return {};
   }
-}
-
-function getToken(req) {
-  const auth = req.headers.authorization || '';
-  return auth.startsWith('Bearer ') ? auth.slice(7) : '';
-}
-
-async function getCurrentUser(req) {
-  const token = getToken(req);
-  if (!token) return null;
-  
-  if (supabase) {
-    // Look up user in Supabase
-    const db = await readDb();
-    const userId = db.sessions[token];
-    if (!userId) return null;
-    
-    const { data, error } = await supabase
-      .from('users')
-      .select('*')
-      .eq('id', userId)
-      .single();
-    
-    return error ? null : data;
-  } else {
-    // Fallback to JSON if Supabase not configured
-    const db = await readDb();
-    const userId = db.sessions[token];
-    return db.users.find(user => user.id === userId) || null;
-  }
-}
-
-function publicUser(user) {
-  if (!user) return null;
-  const { passwordHash, ...safeUser } = user;
-  return safeUser;
 }
 
 function getChatSessionId(body) {
@@ -369,183 +319,6 @@ async function handleApi(req, res, url) {
     return sendJson(res, 200, { ok: true, app: 'NextStep API' });
   }
 
-  if (method === 'POST' && path === '/api/auth/signup') {
-    const body = await readBody(req);
-    const name = String(body.name || '').trim();
-    const email = normalizeText(body.email);
-    const phone = String(body.phone || '').trim();
-    const password = String(body.password || '');
-    if (!name || !email || password.length < 6) {
-      return sendError(res, 400, 'Name, valid email, and 6+ character password are required.');
-    }
-
-    try {
-      if (supabase) {
-        // Check if user already exists in Supabase
-        const { data: existing } = await supabase
-          .from('users')
-          .select('id')
-          .or(`email.eq.${email},phone.eq.${phone}`)
-          .limit(1);
-        
-        if (existing && existing.length > 0) {
-          return sendError(res, 409, 'A user with this email or phone already exists.');
-        }
-
-        // Create user via Supabase Auth
-        const { data: authData, error: authError } = await supabase.auth.admin.createUser({
-          email,
-          password,
-          user_metadata: { name, phone }
-        });
-
-        if (authError) {
-          return sendError(res, 409, authError.message || 'Failed to create user.');
-        }
-
-        const userId = authData.user.id;
-
-        // Store user profile in users table
-        const { error: dbError } = await supabase
-          .from('users')
-          .insert({
-            id: userId,
-            name,
-            email,
-            phone,
-            plan: 'Free',
-            created_at: new Date().toISOString()
-          });
-
-        if (dbError) {
-          return sendError(res, 500, 'Failed to save user profile.');
-        }
-
-        // Create session token
-        const token = randomUUID();
-        const db = await readDb();
-        db.sessions[token] = userId;
-        await writeDb(db);
-
-        const user = { id: userId, name, email, phone, plan: 'Free', createdAt: new Date().toISOString() };
-        return sendJson(res, 201, { token, user });
-      } else {
-        // Fallback: JSON-based auth (for local dev without Supabase)
-        const db = await readDb();
-        if (db.users.some(user => user.email === email || (phone && user.phone === phone))) {
-          return sendError(res, 409, 'A user with this email or phone already exists.');
-        }
-
-        const user = {
-          id: randomUUID(),
-          name,
-          email,
-          phone,
-          plan: 'Free',
-          createdAt: new Date().toISOString(),
-          passwordHash: hashPassword(password)
-        };
-        const token = randomUUID();
-        db.users.push(user);
-        db.sessions[token] = user.id;
-        await writeDb(db);
-        return sendJson(res, 201, { token, user: publicUser(user) });
-      }
-    } catch (error) {
-      return sendError(res, 500, 'Signup failed: ' + error.message);
-    }
-  }
-
-  if (method === 'POST' && path === '/api/auth/login') {
-    const body = await readBody(req);
-    const email = normalizeText(body.email);
-    const phone = String(body.phone || '').trim();
-    const password = String(body.password || '');
-
-    try {
-      if (supabase) {
-        // Authenticate via Supabase
-        const { data: authData, error: authError } = await supabase.auth.admin.getUserByEmail(email);
-        
-        if (authError || !authData?.user) {
-          // Try phone lookup
-          const { data: phoneData } = await supabase
-            .from('users')
-            .select('id')
-            .eq('phone', phone)
-            .single();
-          
-          if (!phoneData) {
-            return sendError(res, 401, 'Invalid email/phone or password.');
-          }
-
-          const { data: user } = await supabase
-            .from('users')
-            .select('*')
-            .eq('id', phoneData.id)
-            .single();
-
-          // Verify password by attempting auth
-          const { error: verifyError } = await supabase.auth.signInWithPassword({
-            email: user.email,
-            password
-          });
-
-          if (verifyError) {
-            return sendError(res, 401, 'Invalid email/phone or password.');
-          }
-
-          const token = randomUUID();
-          const db = await readDb();
-          db.sessions[token] = user.id;
-          await writeDb(db);
-          return sendJson(res, 200, { token, user });
-        }
-
-        // Verify password
-        const { error: signInError } = await supabase.auth.signInWithPassword({
-          email,
-          password
-        });
-
-        if (signInError) {
-          return sendError(res, 401, 'Invalid email/phone or password.');
-        }
-
-        // Get user profile
-        const { data: user } = await supabase
-          .from('users')
-          .select('*')
-          .eq('id', authData.user.id)
-          .single();
-
-        const token = randomUUID();
-        const db = await readDb();
-        db.sessions[token] = authData.user.id;
-        await writeDb(db);
-        return sendJson(res, 200, { token, user });
-      } else {
-        // Fallback: JSON-based auth
-        const passwordHash = hashPassword(password || '');
-        const db = await readDb();
-        const user = db.users.find(item => (email && item.email === email || phone && item.phone === phone) && item.passwordHash === passwordHash);
-        if (!user) return sendError(res, 401, 'Invalid email/phone or password.');
-        const token = randomUUID();
-        db.sessions[token] = user.id;
-        await writeDb(db);
-        return sendJson(res, 200, { token, user: publicUser(user) });
-      }
-    } catch (error) {
-      return sendError(res, 500, 'Login failed: ' + error.message);
-    }
-  }
-
-  if (method === 'GET' && path === '/api/me') {
-    const user = await getCurrentUser(req);
-    if (!user) return sendError(res, 401, 'Login required.');
-    return sendJson(res, 200, { user: publicUser(user) });
-  }
-
   if (method === 'GET' && path === '/api/careers/categories') {
     const summary = careerCategories.map(({ paths, ...category }) => ({
       ...category,
@@ -584,25 +357,6 @@ async function handleApi(req, res, url) {
     return sendJson(res, 200, { states });
   }
 
-  if (method === 'POST' && path === '/api/saved-colleges') {
-    const user = await getCurrentUser(req);
-    if (!user) return sendError(res, 401, 'Login required.');
-    const body = await readBody(req);
-    const collegeName = String(body.collegeName || '').trim();
-    if (!collegeName) return sendError(res, 400, 'collegeName is required.');
-    const db = await readDb();
-    db.savedColleges[user.id] = [...new Set([...(db.savedColleges[user.id] || []), collegeName])];
-    await writeDb(db);
-    return sendJson(res, 200, { savedColleges: db.savedColleges[user.id] });
-  }
-
-  if (method === 'GET' && path === '/api/saved-colleges') {
-    const user = await getCurrentUser(req);
-    if (!user) return sendError(res, 401, 'Login required.');
-    const db = await readDb();
-    return sendJson(res, 200, { savedColleges: db.savedColleges[user.id] || [] });
-  }
-
   if (method === 'GET' && path === '/api/exams') {
     return sendJson(res, 200, { count: exams.length, exams });
   }
@@ -626,7 +380,7 @@ async function handleApi(req, res, url) {
     const db = await readDb();
     const entry = {
       id: randomUUID(),
-      userId: (await getCurrentUser(req))?.id || null,
+      userId: null,
       answers: body.answers || {},
       createdAt: new Date().toISOString()
     };
@@ -658,6 +412,7 @@ async function handleApi(req, res, url) {
     const lower = userMessage.toLowerCase();
     const intent = getIntent(lower);
 
+    // Keep deterministic handlers for specific intents first
     if (intent.wantsComparison) {
       const response = handleCareerComparison(lower);
       session.messages.push({ role: 'bot', text: response, createdAt: new Date().toISOString() });
@@ -711,6 +466,26 @@ async function handleApi(req, res, url) {
       });
     }
 
+    // For open-ended queries, prefer Gemini. If Gemini fails, fall back to rule-based guidance.
+    try {
+      const gRes = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${process.env.GEMINI_API_KEY}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ contents: [{ parts: [{ text: userMessage }] }] })
+      });
+      const gData = await gRes.json();
+      const reply = gData.candidates?.[0]?.content?.parts?.[0]?.text?.trim();
+      if (reply) {
+        session.messages.push({ role: 'bot', text: reply, createdAt: new Date().toISOString() });
+        updateChatSession(db, session);
+        await writeDb(db);
+        return sendJson(res, 200, { reply, sessionId: session.id });
+      }
+    } catch (err) {
+      console.error('Gemini error:', err && err.message ? err.message : err);
+    }
+
+    // Fallback: build guidance locally
     const guidance = buildGuidanceReply(session, userMessage, intent);
     session.messages.push({ role: 'bot', text: guidance.reply, createdAt: new Date().toISOString() });
     updateChatSession(db, session);

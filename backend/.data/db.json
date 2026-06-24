@@ -149,7 +149,7 @@
     "85f39928-4f19-45c2-a78f-7d13f570fce1": {
       "id": "85f39928-4f19-45c2-a78f-7d13f570fce1",
       "createdAt": "2026-06-21T17:23:05.855Z",
-      "updatedAt": "2026-06-24T02:08:50.893Z",
+      "updatedAt": "2026-06-24T12:14:37.179Z",
       "profile": {},
       "messages": [
         {
@@ -221,6 +221,86 @@
           "role": "bot",
           "text": "I can compare these career paths:\n\n• software engineer vs data scientist\n• doctor vs engineer\n\nWhich two would you like me to compare?",
           "createdAt": "2026-06-24T02:08:50.893Z"
+        },
+        {
+          "role": "user",
+          "text": "Compare career paths",
+          "createdAt": "2026-06-24T08:16:55.470Z"
+        },
+        {
+          "role": "bot",
+          "text": "I can compare these career paths:\n\n• software engineer vs data scientist\n• doctor vs engineer\n\nWhich two would you like me to compare?",
+          "createdAt": "2026-06-24T08:16:55.474Z"
+        },
+        {
+          "role": "user",
+          "text": "Skill gap analysis",
+          "createdAt": "2026-06-24T08:23:43.858Z"
+        },
+        {
+          "role": "bot",
+          "text": "What role are you targeting? I can provide a personalized skill development roadmap.\n\nAvailable roles:\n• Software Engineer\n• Data Scientist\n• Doctor\n\nOr mention a specific role!",
+          "createdAt": "2026-06-24T08:23:43.859Z"
+        },
+        {
+          "role": "user",
+          "text": "Resume & interview tips",
+          "createdAt": "2026-06-24T11:39:31.849Z"
+        },
+        {
+          "role": "bot",
+          "text": "**Resume & Interview Preparation Guide**\n\n**📝 Resume Structure:**\n✓ Keep it to 1 page (for freshers), max 2 pages for experienced\n✓ Use clear headings: Contact Info → Summary → Experience → Education → Skills → Projects\n✓ Use action verbs: Developed, Designed, Optimized, Led (not \"Worked on\")\n✓ Quantify achievements: \"Improved performance by 40%\" instead of \"Made it faster\"\n\n**🎨 Formatting Tips:**\n✓ Use consistent fonts (Calibri, Arial) and sizes (10-12 pt body, larger for headers)\n✓ Maintain 1-inch margins on all sides\n✓ Use bullet points for readability\n✓ Save as PDF to preserve formatting\n\n**🔑 Keywords to Include:**\nIndustry-specific skills (e.g., Python, AWS, React for tech roles)\nSoft skills: Leadership, Communication, Problem-solving, Teamwork\nCertifications and achievements relevant to the role\nAvoid: Typos, unexplained gaps, irrelevant information\n\n**🎤 Interview Preparation:**\n1. Research the company: mission, recent news, culture, role requirements\n2. Prepare STAR method responses: Situation, Task, Action, Result\n3. Prepare 2-3 questions for the interviewer\n4. Practice: Tell me about yourself (max 2 min), Why this role, your strengths/weaknesses\n\nNeed specific advice on cover letters or interview questions for a particular role?",
+          "createdAt": "2026-06-24T11:39:31.850Z"
+        },
+        {
+          "role": "user",
+          "text": "Compare career paths",
+          "createdAt": "2026-06-24T12:13:19.801Z"
+        },
+        {
+          "role": "bot",
+          "text": "I can compare these career paths:\n\n• software engineer vs data scientist\n• doctor vs engineer\n\nWhich two would you like me to compare?",
+          "createdAt": "2026-06-24T12:13:19.802Z"
+        },
+        {
+          "role": "user",
+          "text": "Resume & interview tips",
+          "createdAt": "2026-06-24T12:13:22.002Z"
+        },
+        {
+          "role": "bot",
+          "text": "**Resume & Interview Preparation Guide**\n\n**📝 Resume Structure:**\n✓ Keep it to 1 page (for freshers), max 2 pages for experienced\n✓ Use clear headings: Contact Info → Summary → Experience → Education → Skills → Projects\n✓ Use action verbs: Developed, Designed, Optimized, Led (not \"Worked on\")\n✓ Quantify achievements: \"Improved performance by 40%\" instead of \"Made it faster\"\n\n**🎨 Formatting Tips:**\n✓ Use consistent fonts (Calibri, Arial) and sizes (10-12 pt body, larger for headers)\n✓ Maintain 1-inch margins on all sides\n✓ Use bullet points for readability\n✓ Save as PDF to preserve formatting\n\n**🔑 Keywords to Include:**\nIndustry-specific skills (e.g., Python, AWS, React for tech roles)\nSoft skills: Leadership, Communication, Problem-solving, Teamwork\nCertifications and achievements relevant to the role\nAvoid: Typos, unexplained gaps, irrelevant information\n\n**🎤 Interview Preparation:**\n1. Research the company: mission, recent news, culture, role requirements\n2. Prepare STAR method responses: Situation, Task, Action, Result\n3. Prepare 2-3 questions for the interviewer\n4. Practice: Tell me about yourself (max 2 min), Why this role, your strengths/weaknesses\n\nNeed specific advice on cover letters or interview questions for a particular role?",
+          "createdAt": "2026-06-24T12:13:22.002Z"
+        },
+        {
+          "role": "user",
+          "text": "Salary & job market",
+          "createdAt": "2026-06-24T12:13:54.201Z"
+        },
+        {
+          "role": "bot",
+          "text": "Let me share salary insights for careers you might be interested in.\n\n",
+          "createdAt": "2026-06-24T12:13:54.202Z"
+        },
+        {
+          "role": "user",
+          "text": "Resume & interview tips",
+          "createdAt": "2026-06-24T12:13:56.668Z"
+        },
+        {
+          "role": "bot",
+          "text": "**Resume & Interview Preparation Guide**\n\n**📝 Resume Structure:**\n✓ Keep it to 1 page (for freshers), max 2 pages for experienced\n✓ Use clear headings: Contact Info → Summary → Experience → Education → Skills → Projects\n✓ Use action verbs: Developed, Designed, Optimized, Led (not \"Worked on\")\n✓ Quantify achievements: \"Improved performance by 40%\" instead of \"Made it faster\"\n\n**🎨 Formatting Tips:**\n✓ Use consistent fonts (Calibri, Arial) and sizes (10-12 pt body, larger for headers)\n✓ Maintain 1-inch margins on all sides\n✓ Use bullet points for readability\n✓ Save as PDF to preserve formatting\n\n**🔑 Keywords to Include:**\nIndustry-specific skills (e.g., Python, AWS, React for tech roles)\nSoft skills: Leadership, Communication, Problem-solving, Teamwork\nCertifications and achievements relevant to the role\nAvoid: Typos, unexplained gaps, irrelevant information\n\n**🎤 Interview Preparation:**\n1. Research the company: mission, recent news, culture, role requirements\n2. Prepare STAR method responses: Situation, Task, Action, Result\n3. Prepare 2-3 questions for the interviewer\n4. Practice: Tell me about yourself (max 2 min), Why this role, your strengths/weaknesses\n\nNeed specific advice on cover letters or interview questions for a particular role?",
+          "createdAt": "2026-06-24T12:13:56.668Z"
+        },
+        {
+          "role": "user",
+          "text": "Resume & interview tips",
+          "createdAt": "2026-06-24T12:14:37.179Z"
+        },
+        {
+          "role": "bot",
+          "text": "**Resume & Interview Preparation Guide**\n\n**📝 Resume Structure:**\n✓ Keep it to 1 page (for freshers), max 2 pages for experienced\n✓ Use clear headings: Contact Info → Summary → Experience → Education → Skills → Projects\n✓ Use action verbs: Developed, Designed, Optimized, Led (not \"Worked on\")\n✓ Quantify achievements: \"Improved performance by 40%\" instead of \"Made it faster\"\n\n**🎨 Formatting Tips:**\n✓ Use consistent fonts (Calibri, Arial) and sizes (10-12 pt body, larger for headers)\n✓ Maintain 1-inch margins on all sides\n✓ Use bullet points for readability\n✓ Save as PDF to preserve formatting\n\n**🔑 Keywords to Include:**\nIndustry-specific skills (e.g., Python, AWS, React for tech roles)\nSoft skills: Leadership, Communication, Problem-solving, Teamwork\nCertifications and achievements relevant to the role\nAvoid: Typos, unexplained gaps, irrelevant information\n\n**🎤 Interview Preparation:**\n1. Research the company: mission, recent news, culture, role requirements\n2. Prepare STAR method responses: Situation, Task, Action, Result\n3. Prepare 2-3 questions for the interviewer\n4. Practice: Tell me about yourself (max 2 min), Why this role, your strengths/weaknesses\n\nNeed specific advice on cover letters or interview questions for a particular role?",
+          "createdAt": "2026-06-24T12:14:37.179Z"
         }
       ]
     },

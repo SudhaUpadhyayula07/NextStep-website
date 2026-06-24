@@ -3,8 +3,6 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Colleges &amp; Institutions | NextStep</title>
-<script src="auth.js"></script>
-<script>NextStepAuth.requireLogin();</script>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
@@ -77,12 +75,6 @@
 <input id="globalSearch" class="w-full pl-12 pr-4 py-3 bg-surface-container-low border border-secondary-fixed rounded-lg focus:border-primary focus:ring-0 transition-all font-body-md placeholder:text-outline" placeholder="Search by institution name, state, or category" type="search" autocomplete="off">
 </label>
 </div>
-<div class="flex items-center gap-6 ml-8">
-<div id="profileHeaderButton" class="flex items-center gap-3 cursor-pointer" role="button" aria-label="Open profile settings">
-<div class="text-right hidden sm:block">
-<p id="user-profile-name" class="font-label-md text-primary font-bold leading-none">User</p>
-</div>
-<div id="profileHeaderAvatar" class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center border border-secondary-fixed"><span class="material-symbols-outlined text-primary">person</span></div>
 </div>
 </div>
 </header>
@@ -369,4 +361,3 @@ els.clear.addEventListener('click', () => { els.search.value = ''; els.state.val
 els.chips.addEventListener('click', event => { const button = event.target.closest('[data-category]'); if (!button) return; els.category.value = button.dataset.category; applyFilters(); });
 boot();
 </script>
-<script src="profile-popup.js"></script>
