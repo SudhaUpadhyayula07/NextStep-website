@@ -1,4 +1,7 @@
 {
   "framework": "vite",
-  "buildCommand": "npm run build"
+  "buildCommand": "npm run build",
+  "env": {
+    "NPM_FLAGS": "--include=dev"
+  }
 }
