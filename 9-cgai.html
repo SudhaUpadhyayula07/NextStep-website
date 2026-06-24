@@ -325,8 +325,7 @@
         const suggestedButtons = document.querySelectorAll('.suggestion-button');
         // For local development: http://localhost:4000
         // For production: Vercel backend route prefix
-        const API_BASE = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') ? 'http://localhost:4000' : '/_/backend';
-
+        const API_BASE = '';
         function appendMessage(role, text) {
             const messageWrapper = document.createElement('div');
             messageWrapper.className = `flex items-start gap-4 max-w-[85%] animate-fadeIn ${role === 'user' ? 'flex-row-reverse ml-auto' : ''}`;
