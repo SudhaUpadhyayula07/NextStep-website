@@ -4,9 +4,8 @@
 <title>NextStep | Main Dashboard</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link rel="stylesheet" href="../responsive.css">
-<link rel="stylesheet" href="../chatbot-widget.css">
 <script src="../responsive.js" defer></script>
-<script src="../chatbot-widget.js" defer></script>
+<script src='https://cdn.jotfor.ms/agent/embedjs/019efc83ad867a568c96b7284d5a7f1a2bdf/embed.js'></script>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
@@ -380,12 +379,8 @@
 
         document.getElementById('assessmentModalClose')?.addEventListener('click', hideAssessmentModal);
 
-        document.getElementById('dashboardChatAssistantLink')?.addEventListener('click', () => {
-            const chatbotToggle = document.getElementById('chatbotToggle');
-            if (chatbotToggle) {
-                chatbotToggle.click();
-            }
-        });
+
+        // Jotform chatbot handled by embed script
 
         // Assessment form handler
         const categoryLinks = {
@@ -436,7 +431,6 @@
           document.getElementById('resultDescription').textContent = `Based on your ${answers.stream} background and stated interest, start by comparing careers, then ask the AI Mentor for a 30-day plan.`;
           document.getElementById('resultActions').innerHTML = `
             <a class="flex items-center justify-between bg-primary text-white px-5 py-3 rounded-xl font-semibold hover:bg-primary/90 transition-colors" href="${selected.href}">Explore careers <span class="material-symbols-outlined">arrow_forward</span></a>
-            <button class="flex items-center justify-between bg-white border border-secondary-fixed px-5 py-3 rounded-xl font-semibold hover:bg-surface-container-high transition-colors w-full" onclick="document.getElementById('chatbotToggle')?.click()">Ask AI Mentor <span class="material-symbols-outlined">chat_bubble</span></button>
             <a class="flex items-center justify-between bg-white border border-secondary-fixed px-5 py-3 rounded-xl font-semibold hover:bg-surface-container-high transition-colors" href="6-exams.html">Check exams <span class="material-symbols-outlined">event</span></a>
           `;
           result.classList.remove('hidden');
