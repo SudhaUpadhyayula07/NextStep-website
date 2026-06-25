@@ -47,20 +47,19 @@ header, main, section, article, aside, footer, nav {
   .sidebar-responsive {
     display: none !important;
     position: fixed !important;
-    top: auto !important;
-    bottom: 0 !important;
+    top: 4.5rem !important;
     left: 0 !important;
     right: 0 !important;
     height: auto !important;
-    max-height: 65vh !important;
+    max-height: calc(100vh - 4.5rem) !important;
     width: 100% !important;
-    transform: translateY(100%) !important;
+    transform: translateY(-120%) !important;
     visibility: hidden !important;
     opacity: 0 !important;
     z-index: 80 !important;
     overflow-y: auto !important;
     background: inherit !important;
-    border-top: 1px solid rgba(17, 31, 54, 0.12) !important;
+    border-bottom: 1px solid rgba(17, 31, 54, 0.12) !important;
     border-right: none !important;
     border-left: none !important;
   }
