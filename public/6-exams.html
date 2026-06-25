@@ -228,7 +228,7 @@ let filtered = [];
 let currentPage = 1;
 
 const els = {
-    search: document.getElementById('globalSearch'),
+    search: document.getElementById('globalSearch'), // optional search field
     category: document.getElementById('categoryFilter'),
     level: document.getElementById('levelFilter'),
     scope: document.getElementById('scopeFilter'),
@@ -317,7 +317,7 @@ function updateScopeOptions() {
 
 function applyFilters(resetPage = true) {
     if (resetPage) currentPage = 1;
-    const query = els.search.value.trim().toLowerCase();
+    const query = (els.search?.value || '').trim().toLowerCase();
     filtered = exams.filter(item => {
         const haystack = [item.exam, item.fullName, item.category, item.level, item.conductingBody, item.programme, item.eligibility, item.scope].join(' ').toLowerCase();
         return (!query || haystack.includes(query))
@@ -377,7 +377,11 @@ function init(data) {
     applyFilters();
 }
 
-els.search.addEventListener('input', () => applyFilters());
+if (els.search) {
+    els.search.addEventListener('input', () => applyFilters());
+} else {
+    console.log('No globalSearch input found on Exams page; search field is disabled.');
+}
 els.category.addEventListener('change', () => { updateScopeOptions(); applyFilters(); });
 els.level.addEventListener('change', () => applyFilters());
 els.scope.addEventListener('change', () => applyFilters());
@@ -393,13 +397,18 @@ els.clear.addEventListener('click', () => {
 els.prev.addEventListener('click', () => { if (currentPage > 1) { currentPage -= 1; render(); } });
 els.next.addEventListener('click', () => { if (currentPage < Math.ceil(filtered.length / PAGE_SIZE)) { currentPage += 1; render(); } });
 
+console.log('Entrance Exams init: fetching data from', DATA_URL);
 fetch(DATA_URL)
     .then(response => {
-        if (!response.ok) throw new Error('Dataset unavailable');
+        if (!response.ok) throw new Error(`Dataset unavailable (${response.status})`);
         return response.json();
     })
-    .then(init)
+    .then(data => {
+        console.log('Entrance Exams data loaded:', Array.isArray(data.exams) ? data.exams.length : 'no exams array');
+        init(data);
+    })
     .catch(error => {
         els.status.textContent = `Could not load entrance exam data: ${error.message}`;
+        console.error('Entrance Exams load error:', error);
     });
 </script>

@@ -307,8 +307,8 @@ const levelCountEl = document.getElementById('levelCount');
 const resultsCountEl = document.getElementById('resultsCount');
 const coursesGrid = document.getElementById('coursesGrid');
 const noResultsEl = document.getElementById('noResults');
-const globalSearch = document.getElementById('globalSearch');
 const courseSearchInput = document.getElementById('courseSearchInput');
+const globalSearch = courseSearchInput; // alias for compatibility
 const levelFilter = document.getElementById('levelFilter');
 const streamFilter = document.getElementById('streamFilter');
 const examFilter = document.getElementById('examFilter');
@@ -528,16 +528,19 @@ nextPageButton.addEventListener('click', () => {
 // ============== Initialize ==============
 async function init() {
   try {
+    console.log('Study Paths init: fetching course data from data/courses.json');
     const response = await fetch('data/courses.json');
+    if (!response.ok) throw new Error(`Failed to load data/courses.json: ${response.status}`);
     const data = await response.json();
     courses = data.filter(c => c['Course Name'] && c['Course Name'].trim()); // Filter out empty rows
     filtered = [...courses];
+    console.log('Study Paths data loaded:', courses.length, 'courses');
     updateSummaryNumbers();
     populateFilterOptions();
     renderCourses(filtered);
   } catch (error) {
     coursesGrid.innerHTML = '<div class="rounded-2xl border border-secondary-fixed bg-surface-container-low p-8 text-center text-on-surface-variant col-span-full">Unable to load course data. Please open this page from the project server.</div>';
-    console.error(error);
+    console.error('Study Paths load error:', error);
   }
 }
 
