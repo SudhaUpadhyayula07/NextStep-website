@@ -144,50 +144,34 @@
             .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         </style></head>
 <body class="font-body-md text-body-md bg-background">
-<!-- Top Navigation Shell -->
-<header class="sticky top-0 z-40 flex justify-between items-center w-full px-4 sm:px-6 lg:px-10 py-4 bg-background/80 backdrop-blur-md border-b border-secondary-fixed/30 topbar-responsive">
-<button id="mobileMenuButton" aria-expanded="false" aria-label="Open navigation menu" class="mobile-menu-button inline-flex items-center justify-center h-12 w-12 rounded-xl border border-secondary-fixed bg-surface text-on-surface hover:bg-surface-container-high transition-all lg:hidden">
-<span class="material-symbols-outlined">menu</span>
-</button>
-<div class="flex items-center gap-8">
-<span class="font-display-lg text-headline-md font-bold text-primary">NextStep</span>
-</div>
-<div class="flex items-center gap-4">
-</div>
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 bg-[#010a26] text-white">
+  <div class="max-w-container-max mx-auto flex items-center justify-between px-4 sm:px-6 md:px-8 h-14 md:h-16">
+    <a href="index.html" class="flex items-center gap-3">
+      <span class="font-display-lg text-headline-md font-bold text-white">NextStep</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-3">
+      <a href="4-dashboard.html" class="px-3 py-2 rounded-full text-sm font-medium text-white hover:text-[#f5c842]">Dashboard</a>
+      <a href="5-study-paths.html" class="px-3 py-2 rounded-full text-sm font-medium text-white hover:text-[#f5c842]">Study Paths</a>
+      <a href="5-career-paths.html" class="px-3 py-2 rounded-full text-sm font-medium text-white hover:text-[#f5c842]">Career Paths</a>
+      <a href="6-exams.html" class="px-3 py-2 rounded-full text-sm font-medium text-white hover:text-[#f5c842]">Exams</a>
+      <a href="7-colleges.html" class="px-3 py-2 rounded-full text-sm font-medium text-white hover:text-[#f5c842]">Colleges</a>
+      <a href="8-scholarships.html" class="px-3 py-2 rounded-full text-sm font-medium text-white hover:text-[#f5c842]">Scholarships</a>
+    </nav>
+    <button type="button" onclick="const d=document.getElementById('topNavLinks'); const open=!d.classList.toggle('hidden'); this.setAttribute('aria-expanded', String(open));" aria-controls="topNavLinks" aria-expanded="false" aria-label="Open navigation menu" class="md:hidden inline-flex items-center justify-center h-10 w-10 text-2xl text-white">☰</button>
+  </div>
+  <div id="topNavLinks" class="hidden md:hidden border-t border-white/10 bg-[#010a26]">
+    <div class="flex flex-col px-4 py-3 space-y-1">
+      <a href="4-dashboard.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-white hover:text-[#f5c842]">Dashboard</a>
+      <a href="5-study-paths.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-white hover:text-[#f5c842]">Study Paths</a>
+      <a href="5-career-paths.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-white hover:text-[#f5c842]">Career Paths</a>
+      <a href="6-exams.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-white hover:text-[#f5c842]">Exams</a>
+      <a href="7-colleges.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-white hover:text-[#f5c842]">Colleges</a>
+      <a href="8-scholarships.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-white hover:text-[#f5c842]">Scholarships</a>
+    </div>
+  </div>
 </header>
-<div class="flex min-h-[calc(100vh-73px)]">
-<!-- Sidebar Navigation Shell -->
-<aside class="sidebar-responsive hidden lg:flex w-64 flex-col py-8 px-4 border-r border-secondary-fixed bg-surface h-[calc(100vh-73px)] sticky top-[73px]">
-<nav class="flex-1 flex flex-col gap-1">
-<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl font-label-md text-label-md" href="4-dashboard.html">
-<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span> Dashboard
-                </a>
-<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="5-study-paths.html">
-<span class="material-symbols-outlined" data-icon="school">school</span> Study Paths
-                </a>
-<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="5-career-paths.html">
-<span class="material-symbols-outlined" data-icon="explore">explore</span> Career Paths
-                </a>
-<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl font-label-md text-label-md" href="6-exams.html">
-<span class="material-symbols-outlined" data-icon="school">school</span> Exams
-                </a>
-<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl font-label-md text-label-md" href="7-colleges.html">
-<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span> Colleges
-                </a>
-<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl font-label-md text-label-md" href="8-scholarships.html">
-<span class="material-symbols-outlined" data-icon="payments">payments</span> Scholarships
-                </a>
-<a class="flex items-center gap-3 px-4 py-3 text-primary font-bold border-r-4 border-primary bg-surface-container-low rounded-xl font-label-md text-label-md" href="9-cgai.html">
-<span class="material-symbols-outlined" data-icon="psychology" style="font-variation-settings: &quot;FILL&quot; 1;">psychology</span> AI Mentor
-                </a>
-</nav>
-
-</nav>
-<div class="pt-8 border-t border-secondary-fixed/50">
-
-</div>
-</aside>
-<!-- Main Content Area -->
+<main class="flex-1 flex flex-col p-6 lg:p-10 gap-10 items-center justify-center pt-16">
 <main class="flex-1 flex flex-col p-6 lg:p-10 gap-10 items-center justify-center">
 <!-- Welcome Section -->
 <section class="w-full max-w-2xl">
@@ -199,16 +183,7 @@
 </section>
 </section>
 </main>
-</div>
-<!-- Mobile Navigation Shell -->
-<nav class="md:hidden fixed bottom-0 left-0 right-0 bg-surface/90 backdrop-blur-xl border-t border-secondary-fixed/30 flex justify-around py-4 z-50">
-<button class="flex flex-col items-center gap-1 text-on-surface-variant">
-<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
-<span class="text-[10px] font-label-md">Dashboard</span>
-</button>
-<button class="flex flex-col items-center gap-1 text-primary">
-<span class="material-symbols-outlined" data-icon="psychology" style="font-variation-settings: &quot;FILL&quot; 1;">psychology</span>
-<span class="text-[10px] font-bold">AI Mentor</span>
+</div><span class="text-[10px] font-bold">AI Mentor</span>
 </button>
 <button class="flex flex-col items-center gap-1 text-on-surface-variant">
 <span class="material-symbols-outlined" data-icon="school">school</span>

@@ -121,54 +121,40 @@
     </style>
 </head>
 <body class="flex min-h-screen">
-<!-- SideNavBar -->
-<aside class="sidebar-responsive fixed left-0 top-0 h-full flex flex-col py-8 bg-surface border-r border-secondary-fixed w-64 z-50">
-<div class="px-6 mb-10">
-<h1 class="font-display-lg text-headline-md font-bold text-primary">NextStep</h1>
-<p class="font-label-md text-label-md text-on-surface-variant opacity-70">Executive Career Suite</p>
-</div>
-<nav class="flex-1 flex flex-col gap-1">
-<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200" href="4-dashboard.html">
-<span class="material-symbols-outlined">dashboard</span>
-<span class="font-label-md text-label-md">Dashboard</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200" href="5-study-paths.html">
-<span class="material-symbols-outlined">school</span>
-<span class="font-label-md text-label-md">Study Paths</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200" href="5-career-paths.html">
-<span class="material-symbols-outlined">explore</span>
-<span class="font-label-md text-label-md">Career Paths</span>
-</a>
-<!-- Exams (Active) -->
-<a class="flex items-center gap-3 px-4 py-3 text-primary font-bold border-r-4 border-primary bg-surface-container-low rounded-xl transition-all duration-200" href="6-exams.html">
-<span class="material-symbols-outlined">school</span>
-<span class="font-label-md text-label-md">Exams</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200" href="7-colleges.html">
-<span class="material-symbols-outlined">account_balance</span>
-<span class="font-label-md text-label-md">Colleges</span>
-</a>
-<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200" href="8-scholarships.html">
-<span class="material-symbols-outlined">payments</span>
-<span class="font-label-md text-label-md">Scholarships</span>
-</a>
-
-</nav>
-</aside>
-<!-- Main Content -->
-<main class="main-responsive ml-0 lg:ml-64 flex-1 flex flex-col min-h-screen">
-<!-- TopAppBar -->
-<header class="sticky top-0 z-40 flex justify-between items-center w-full px-4 sm:px-6 lg:px-12 py-4 bg-background/80 backdrop-blur-md border-b border-surface-container-highest topbar-responsive">
-<button id="mobileMenuButton" aria-expanded="false" aria-label="Open navigation menu" class="mobile-menu-button inline-flex items-center justify-center h-12 w-12 rounded-xl border border-secondary-fixed bg-surface text-on-surface hover:bg-surface-container-high transition-all lg:hidden">
-<span class="material-symbols-outlined">menu</span>
-</button>
-<div class="flex-1 max-w-xl">
-<div class="relative group">
-<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
-<input id="globalSearch" class="w-full pl-12 pr-4 py-3 bg-surface-container-low border border-transparent rounded-xl focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all font-body-md text-body-md outline-none" placeholder="Search exam, programme, board, or state..." type="search" autocomplete="off"/>
-</div>
-</div>
+<main class="main-responsive w-full flex-1 flex flex-col min-h-screen pt-16">
+<header class="sticky top-0 z-40 w-full bg-background/95 backdrop-blur-md border-b border-secondary-fixed/30 topbar-responsive">
+  <div class="mx-auto flex flex-wrap items-center justify-between gap-4 px-4 sm:px-6 lg:px-12 py-4">
+    <a href="4-dashboard.html" class="font-display text-headline-md font-bold text-primary tracking-tight">NextStep</a>
+    <nav class="hidden md:flex items-center gap-2">
+      <a class="rounded-full px-3 py-2 text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition" href="4-dashboard.html">Dashboard</a>
+      <a class="rounded-full px-3 py-2 text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition" href="5-study-paths.html">Study Paths</a>
+      <a class="rounded-full px-3 py-2 text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition" href="5-career-paths.html">Career Paths</a>
+      <a class="rounded-full px-3 py-2 text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition" href="6-exams.html">Exams</a>
+      <a class="rounded-full px-3 py-2 text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition" href="7-colleges.html">Colleges</a>
+      <a class="rounded-full px-3 py-2 text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition" href="8-scholarships.html">Scholarships</a>
+    </nav>
+    <div class="flex flex-1 min-w-0 items-center gap-3">
+      <button id="mobileMenuButton" aria-expanded="false" aria-label="Open navigation menu" class="mobile-menu-button inline-flex items-center justify-center h-12 w-12 rounded-xl border border-secondary-fixed bg-surface text-on-surface hover:bg-surface-container-high transition-all md:hidden">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+      <div class="flex-1 max-w-xl">
+        <div class="relative group">
+          <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+          <input id="globalSearch" class="w-full pl-12 pr-4 py-3 bg-surface-container-low border border-transparent rounded-xl focus:ring-2 focus:ring-primary/10 focus:border-primary transition-all font-body-md text-body-md outline-none" placeholder="Search exam, programme, board, or state..." type="search" autocomplete="off"/>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="topNavLinks" class="hidden md:hidden border-t border-secondary-fixed/30 bg-background">
+    <nav class="flex flex-col px-4 py-3 gap-2">
+      <a class="block rounded-xl px-3 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition" href="4-dashboard.html">Dashboard</a>
+      <a class="block rounded-xl px-3 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition" href="5-study-paths.html">Study Paths</a>
+      <a class="block rounded-xl px-3 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition" href="5-career-paths.html">Career Paths</a>
+      <a class="block rounded-xl px-3 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition" href="6-exams.html">Exams</a>
+      <a class="block rounded-xl px-3 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition" href="7-colleges.html">Colleges</a>
+      <a class="block rounded-xl px-3 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition" href="8-scholarships.html">Scholarships</a>
+    </nav>
+  </div>
 </header>
 <!-- Content Canvas -->
 <div class="px-margin-desktop py-10 max-w-container-max mx-auto w-full">

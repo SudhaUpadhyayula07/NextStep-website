@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
   const menuButton = document.getElementById('mobileMenuButton');
   const aside = document.querySelector('aside.sidebar-responsive');
-  if (!menuButton || !aside) {
+  const topNavLinks = document.getElementById('topNavLinks');
+
+  if (!menuButton || (!aside && !topNavLinks)) {
     return;
   }
 
@@ -9,16 +11,25 @@ document.addEventListener('DOMContentLoaded', function () {
   let touchStartY = null;
   let touchStartedInNav = false;
 
-  const backdrop = document.createElement('div');
-  backdrop.className = 'mobile-nav-backdrop';
-  backdrop.setAttribute('aria-hidden', 'true');
-  document.body.appendChild(backdrop);
+  const backdrop = aside ? document.createElement('div') : null;
+  if (backdrop) {
+    backdrop.className = 'mobile-nav-backdrop';
+    backdrop.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(backdrop);
+  }
 
   const setOpenState = function (isOpen) {
-    aside.classList.toggle('mobile-open', isOpen);
-    document.body.classList.toggle('sidebar-open', isOpen);
+    if (aside) {
+      aside.classList.toggle('mobile-open', isOpen);
+      document.body.classList.toggle('sidebar-open', isOpen);
+    }
+    if (topNavLinks) {
+      topNavLinks.classList.toggle('hidden', !isOpen);
+    }
     menuButton.setAttribute('aria-expanded', String(isOpen));
-    backdrop.classList.toggle('visible', isOpen);
+    if (backdrop) {
+      backdrop.classList.toggle('visible', isOpen);
+    }
   };
 
   const closeMenu = function () {
@@ -32,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   const onTouchStart = function (event) {
-    if (event.touches.length !== 1) {
+    if (!aside || event.touches.length !== 1) {
       return;
     }
 
@@ -43,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   const onTouchMove = function (event) {
-    if (touchStartX === null || event.touches.length !== 1) {
+    if (!aside || touchStartX === null || event.touches.length !== 1) {
       return;
     }
 
@@ -74,16 +85,21 @@ document.addEventListener('DOMContentLoaded', function () {
   };
 
   menuButton.addEventListener('click', function () {
-    setOpenState(!aside.classList.contains('mobile-open'));
+    const isOpen = aside
+      ? aside.classList.contains('mobile-open')
+      : topNavLinks && !topNavLinks.classList.contains('hidden');
+    setOpenState(!isOpen);
   });
 
-  backdrop.addEventListener('click', closeMenu);
-  document.addEventListener('touchstart', onTouchStart, { passive: true });
-  document.addEventListener('touchmove', onTouchMove, { passive: true });
-  document.addEventListener('touchend', resetTouch);
+  if (backdrop) {
+    backdrop.addEventListener('click', closeMenu);
+    document.addEventListener('touchstart', onTouchStart, { passive: true });
+    document.addEventListener('touchmove', onTouchMove, { passive: true });
+    document.addEventListener('touchend', resetTouch);
+  }
 
   document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape' && aside.classList.contains('mobile-open')) {
+    if (event.key === 'Escape' && ((aside && aside.classList.contains('mobile-open')) || (topNavLinks && !topNavLinks.classList.contains('hidden')))) {
       closeMenu();
     }
   });
