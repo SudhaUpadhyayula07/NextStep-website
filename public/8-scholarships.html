@@ -3,6 +3,8 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>NextStep | Indian Executive Scholarship Hub</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="../responsive.css">
+<script src="../responsive.js" defer></script>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&family=Manrope:wght@200..800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 <style>
@@ -113,7 +115,7 @@
 <body class="bg-background text-on-background antialiased">
 
 <!-- Side Navigation -->
-<aside class="fixed left-0 top-0 h-screen w-64 border-r border-secondary-fixed bg-surface flex flex-col py-8 z-50">
+<aside class="sidebar-responsive fixed left-0 top-0 h-screen w-64 border-r border-secondary-fixed bg-surface flex flex-col py-8 z-50">
     <div class="px-6 mb-12">
         <h1 class="font-display-lg text-headline-md font-bold text-primary">NextStep</h1>
         <p class="font-label-md text-label-sm text-on-surface-variant uppercase tracking-widest mt-1">Indian Executive Suite</p>
@@ -153,7 +155,10 @@
 </aside>
 
 <!-- Top AppBar -->
-<header class="sticky top-0 z-40 flex justify-between items-center w-full px-12 py-4 ml-64 max-w-[calc(100%-16rem)] bg-background/80 backdrop-blur-md">
+<header class="sticky top-0 z-40 flex justify-between items-center w-full px-4 sm:px-6 lg:px-12 py-4 lg:ml-64 lg:max-w-[calc(100%-16rem)] bg-background/80 backdrop-blur-md topbar-responsive">
+<button id="mobileMenuButton" aria-expanded="false" aria-label="Open navigation menu" class="mobile-menu-button inline-flex items-center justify-center h-12 w-12 rounded-xl border border-secondary-fixed bg-surface text-on-surface hover:bg-surface-container-high transition-all lg:hidden">
+<span class="material-symbols-outlined">menu</span>
+</button>
     <div class="flex-1 max-w-md">
         <div class="relative flex items-center bg-surface-container-high px-4 py-2 rounded-full focus-within:ring-2 focus-within:ring-primary/20 transition-all">
             <span class="material-symbols-outlined text-outline">search</span>
@@ -165,7 +170,7 @@
 </header>
 
 <!-- Main Content -->
-<main class="ml-64 w-[calc(100%-16rem)] px-margin-desktop pt-12">
+<main class="main-responsive ml-0 lg:ml-64 w-full lg:w-[calc(100%-16rem)] px-4 sm:px-6 lg:px-margin-desktop pt-12">
     <div class="w-full max-w-container-max mx-auto">
     <header class="mb-12">
         <h2 class="font-display-lg text-display-lg text-primary">Funding &amp; Endowments</h2>
@@ -397,7 +402,7 @@
     </div>
 </main>
 
-<footer class="ml-64 p-12 border-t border-secondary-fixed">
+<footer class="lg:ml-64 p-8 sm:p-10 lg:p-12 border-t border-secondary-fixed">
     <div class="max-w-[1200px] flex flex-col md:flex-row justify-between items-center gap-8">
         <div class="flex items-center gap-2">
             <span class="font-display-lg text-headline-md font-bold text-primary">NextStep</span>

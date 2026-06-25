@@ -3,6 +3,8 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>NextStep | Career Guidance AI</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="../responsive.css">
+<script src="../responsive.js" defer></script>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
@@ -143,17 +145,19 @@
         </style></head>
 <body class="font-body-md text-body-md bg-background">
 <!-- Top Navigation Shell -->
-<header class="sticky top-0 z-40 flex justify-between items-center w-full px-10 py-4 bg-background/80 backdrop-blur-md border-b border-secondary-fixed/30">
+<header class="sticky top-0 z-40 flex justify-between items-center w-full px-4 sm:px-6 lg:px-10 py-4 bg-background/80 backdrop-blur-md border-b border-secondary-fixed/30 topbar-responsive">
+<button id="mobileMenuButton" aria-expanded="false" aria-label="Open navigation menu" class="mobile-menu-button inline-flex items-center justify-center h-12 w-12 rounded-xl border border-secondary-fixed bg-surface text-on-surface hover:bg-surface-container-high transition-all lg:hidden">
+<span class="material-symbols-outlined">menu</span>
+</button>
 <div class="flex items-center gap-8">
 <span class="font-display-lg text-headline-md font-bold text-primary">NextStep</span>
 </div>
 <div class="flex items-center gap-4">
 </div>
-</div>
 </header>
 <div class="flex min-h-[calc(100vh-73px)]">
 <!-- Sidebar Navigation Shell -->
-<aside class="hidden lg:flex w-64 flex-col py-8 px-4 border-r border-secondary-fixed bg-surface h-[calc(100vh-73px)] sticky top-[73px]">
+<aside class="sidebar-responsive hidden lg:flex w-64 flex-col py-8 px-4 border-r border-secondary-fixed bg-surface h-[calc(100vh-73px)] sticky top-[73px]">
 <nav class="flex-1 flex flex-col gap-1">
 <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl font-label-md text-label-md" href="4-dashboard.html">
 <span class="material-symbols-outlined" data-icon="dashboard">dashboard</span> Dashboard

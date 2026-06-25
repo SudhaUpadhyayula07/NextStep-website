@@ -7,6 +7,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="../responsive.css">
+<script src="../responsive.js" defer></script>
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
@@ -172,7 +174,7 @@
 </head>
 <body class="bg-background text-on-background font-body-md min-h-screen">
 <!-- SideNavBar -->
-<aside class="fixed left-0 top-0 h-full flex flex-col py-8 bg-surface border-r border-secondary-fixed w-64 z-50">
+<aside class="sidebar-responsive fixed left-0 top-0 h-full flex flex-col py-8 bg-surface border-r border-secondary-fixed w-64 z-50">
 <div class="px-6 mb-10">
 <h1 class="font-display-lg text-headline-md font-extrabold text-primary tracking-tight">NextStep</h1>
 <p class="font-label-md text-label-md text-on-surface-variant mt-1">Executive Career Suite</p>
@@ -209,14 +211,15 @@
 </nav>
 </aside>
 <!-- Main Content Canvas -->
-<main class="ml-64 min-h-screen pb-20">
+<main class="main-responsive ml-0 lg:ml-64 min-h-screen pb-20">
 <!-- TopAppBar -->
-<header class="sticky top-0 z-40 flex justify-between items-center w-full px-margin-desktop py-6 bg-background/80 backdrop-blur-md">
+<header class="sticky top-0 z-40 flex justify-between items-center w-full px-4 sm:px-6 lg:px-margin-desktop py-6 bg-background/80 backdrop-blur-md topbar-responsive">
+<button id="mobileMenuButton" aria-expanded="false" aria-label="Open navigation menu" class="mobile-menu-button inline-flex items-center justify-center h-12 w-12 rounded-xl border border-secondary-fixed bg-surface text-on-surface hover:bg-surface-container-high transition-all lg:hidden">
+<span class="material-symbols-outlined">menu</span>
+</button>
 <div class="relative w-full max-w-xl group">
 <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
 <input id="globalSearch" class="w-full pl-12 pr-4 py-3 bg-surface-container-low border-b border-secondary-container focus:border-primary focus:ring-0 transition-all font-body-md rounded-t-lg outline-none" placeholder="Search courses, streams, or exams..." type="text"/>
-</div>
-</div>
 </div>
 </header>
 <!-- Content Body -->
@@ -231,7 +234,7 @@
 </div>
 
 <!-- Quick Stats -->
-<div class="grid grid-cols-3 sm:grid-cols-3 gap-4 max-w-xl">
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-xl">
 <div class="bg-surface p-4 rounded-2xl border border-secondary-fixed/50 text-center">
 <p class="text-label-sm text-secondary uppercase tracking-widest text-xs mb-2">Total Courses</p>
 <p id="courseCount" class="font-headline-md text-2xl font-bold text-primary">0</p>

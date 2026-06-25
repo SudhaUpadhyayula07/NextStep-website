@@ -3,6 +3,8 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>NextStep | Main Dashboard</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="../responsive.css">
+<script src="../responsive.js" defer></script>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
@@ -113,7 +115,7 @@
 </head>
 <body class="bg-background text-on-background font-body-md antialiased custom-scrollbar overflow-x-hidden">
 <!-- SideNavBar -->
-<aside class="fixed left-0 top-0 h-full flex flex-col py-8 bg-surface border-r border-secondary-fixed w-64 z-50">
+<aside class="sidebar-responsive fixed left-0 top-0 h-full flex flex-col py-8 bg-surface border-r border-secondary-fixed w-64 z-50">
 <div class="px-6 mb-10">
 <h1 class="font-display-lg text-headline-md font-bold text-primary">NextStep</h1>
 <p class="font-label-md text-on-surface-variant text-[10px] uppercase tracking-widest mt-1">Executive Career Suite</p>
@@ -157,18 +159,18 @@
 </div>
 </aside>
 <!-- TopAppBar -->
-<header class="sticky top-0 z-40 flex justify-between items-center w-full px-12 py-4 ml-64 max-w-[calc(100%-16rem)] bg-background/80 backdrop-blur-md">
+<header class="sticky top-0 z-40 flex justify-between items-center w-full px-4 sm:px-6 lg:px-12 py-4 lg:ml-64 lg:max-w-[calc(100%-16rem)] bg-background/80 backdrop-blur-md topbar-responsive">
+<button id="mobileMenuButton" aria-expanded="false" aria-label="Open navigation menu" class="mobile-menu-button inline-flex items-center justify-center h-12 w-12 rounded-xl border border-secondary-fixed bg-surface text-on-surface hover:bg-surface-container-high transition-all lg:hidden">
+<span class="material-symbols-outlined">menu</span>
+</button>
 <div class="flex items-center flex-1 max-w-xl">
 <div class="relative w-full group focus-within:ring-2 focus-within:ring-primary/20 rounded-xl transition-all">
 <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
 <input class="w-full bg-surface-container-low border-none rounded-xl py-2 pl-10 pr-4 text-body-md focus:ring-0 placeholder:text-on-surface-variant/50" placeholder="Search careers, exams or colleges..." type="text">
 </div>
-</div>
-</button>
-</div>
 </header>
 <!-- Main Content -->
-<main class="ml-64 w-[calc(100%-16rem)] px-margin-desktop pt-4 flex flex-col gap-12">
+<main class="main-responsive ml-0 lg:ml-64 w-full lg:w-[calc(100%-16rem)] px-4 sm:px-6 lg:px-margin-desktop pt-4 flex flex-col gap-12">
 <div class="w-full max-w-container-max mx-auto">
 <!-- Hero Banner Section -->
 <section class="relative w-full h-[400px] rounded-[32px] overflow-hidden group">

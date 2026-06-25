@@ -4,6 +4,8 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Colleges &amp; Institutions | NextStep</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="stylesheet" href="../responsive.css">
+<script src="../responsive.js" defer></script>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <script id="tailwind-config">
@@ -52,7 +54,7 @@
 </style>
 </head>
 <body class="bg-background">
-<aside class="fixed left-0 top-0 h-full flex flex-col py-8 bg-surface border-r border-secondary-fixed w-64 z-50">
+<aside class="sidebar-responsive fixed left-0 top-0 h-full flex flex-col py-8 bg-surface border-r border-secondary-fixed w-64 z-50">
 <div class="px-6 mb-10">
 <h1 class="font-display-lg text-2xl font-bold text-primary">NextStep</h1>
 <p class="font-label-sm text-on-surface-variant opacity-70">Executive Career Suite</p>
@@ -67,15 +69,16 @@
 <a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition-colors duration-200 rounded-xl" href="9-cgai.html"><span class="material-symbols-outlined">psychology</span><span class="font-label-md">AI Mentor</span></a>
 </nav>
 </aside>
-<main class="ml-64 min-h-screen">
-<header class="sticky top-0 z-40 flex justify-between items-center w-full px-12 py-6 bg-background/90 backdrop-blur-md border-b border-secondary-fixed/40">
+<main class="main-responsive ml-0 lg:ml-64 min-h-screen">
+<header class="sticky top-0 z-40 flex justify-between items-center w-full px-4 sm:px-6 lg:px-12 py-6 bg-background/90 backdrop-blur-md border-b border-secondary-fixed/40 topbar-responsive">
+<button id="mobileMenuButton" aria-expanded="false" aria-label="Open navigation menu" class="mobile-menu-button inline-flex items-center justify-center h-12 w-12 rounded-xl border border-secondary-fixed bg-surface text-on-surface hover:bg-surface-container-high transition-all lg:hidden">
+<span class="material-symbols-outlined">menu</span>
+</button>
 <div class="flex-1 max-w-2xl">
 <label class="relative block" for="globalSearch">
 <span class="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline">search</span>
 <input id="globalSearch" class="w-full pl-12 pr-4 py-3 bg-surface-container-low border border-secondary-fixed rounded-lg focus:border-primary focus:ring-0 transition-all font-body-md placeholder:text-outline" placeholder="Search by institution name, state, or category" type="search" autocomplete="off">
 </label>
-</div>
-</div>
 </div>
 </header>
 <div class="px-margin-desktop py-10 max-w-container-max mx-auto">
