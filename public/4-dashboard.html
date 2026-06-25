@@ -1157,6 +1157,43 @@
 
         // Run on page load
         rotateQuote();
-    </script>
-</body>
-</html>
+      </script>
+
+      <!-- Jotform Chat Modal (opens when 'Chat with AI Assistant' is clicked) -->
+      <div id="jotformChatModal" class="fixed inset-0 z-50 hidden items-end justify-center">
+        <div id="jotformChatBackdrop" class="absolute inset-0 bg-black/50"></div>
+        <div class="relative w-full max-w-md h-[80vh] bg-white rounded-xl overflow-hidden m-4 shadow-2xl">
+          <button id="jotformChatClose" aria-label="Close chat" class="absolute top-3 right-3 z-10 text-gray-700 bg-white/80 rounded-md px-2 py-1">✕</button>
+          <iframe id="jotformChatIframe" src="https://jotform.jotform.io/form/019efc83ad867a568c96b7284d5a7f1a2bdf" class="w-full h-full border-0" title="Career Guidance Chat"></iframe>
+        </div>
+      </div>
+
+      <script>
+        (function(){
+          const openBtn = document.getElementById('dashboardChatAssistantLink');
+          const modal = document.getElementById('jotformChatModal');
+          const closeBtn = document.getElementById('jotformChatClose');
+          const backdrop = document.getElementById('jotformChatBackdrop');
+
+          function openModal() {
+            if (!modal) return;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+          }
+          function closeModal() {
+            if (!modal) return;
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+          }
+
+          openBtn?.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal();
+          });
+          closeBtn?.addEventListener('click', closeModal);
+          backdrop?.addEventListener('click', closeModal);
+          document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+        })();
+      </script>
+    </body>
+    </html>
