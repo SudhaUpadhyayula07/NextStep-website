@@ -155,7 +155,7 @@ document.getElementById('assessment-form').addEventListener('submit', async even
     <p class="text-on-surface-variant mb-6">Based on your ${answers.stream} background and stated interest, start by comparing careers, then ask the AI Mentor for a 30-day plan.</p>
           // Authentication is not required for assessments
       <a class="flex items-center justify-between bg-primary text-white px-5 py-3 rounded-xl font-semibold" href="${selected.href}">Explore careers <span class="material-symbols-outlined">arrow_forward</span></a>
-      <a class="flex items-center justify-between bg-white border border-secondary-fixed px-5 py-3 rounded-xl font-semibold" href="9-cgai.html">Ask AI Mentor <span class="material-symbols-outlined">chat_bubble</span></a>
+        <button class="flex items-center justify-between bg-white border border-secondary-fixed px-5 py-3 rounded-xl font-semibold w-full" onclick="document.getElementById('chatbotToggle')?.click()">Ask AI Mentor <span class="material-symbols-outlined">chat_bubble</span></button>
       <a class="flex items-center justify-between bg-white border border-secondary-fixed px-5 py-3 rounded-xl font-semibold" href="6-exams.html">Check exams <span class="material-symbols-outlined">event</span></a>
     </div>
   `;
