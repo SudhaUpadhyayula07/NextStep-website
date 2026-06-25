@@ -174,15 +174,15 @@
         <h2 class="font-display-lg text-display-lg text-primary">Funding &amp; Endowments</h2>
         <p class="font-body-lg text-body-lg text-on-surface-variant mt-2 max-w-2xl">Curated financial support for Indian executives and researchers. Explore government fellowships and private grants aligned with your career trajectory.</p>
     </header>
-    <div class="bg-surface-container p-8 rounded-xl border border-secondary-fixed editorial-shadow mb-10">
-        <h3 class="font-headline-md text-label-md mb-6 flex items-center gap-2">
+    <div class="bg-surface-container py-2 px-4 md:p-8 rounded-xl border border-secondary-fixed editorial-shadow mb-10">
+        <h3 class="hidden md:flex font-headline-md text-label-md mb-6 items-center gap-2">
             <span class="material-symbols-outlined text-primary">filter_alt</span>
             Eligibility Filters
         </h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div>
-                <label class="font-label-md text-label-sm uppercase tracking-wider text-on-surface-variant block mb-3">Professional Level</label>
-                <select id="level-filter" class="w-full bg-surface-container-low border border-secondary-fixed rounded-lg focus:border-primary font-body-md py-2 px-3 transition-all">
+        <div class="flex items-center gap-2 overflow-x-auto whitespace-nowrap min-h-[48px] md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-8">
+            <div class="flex-shrink-0 min-w-max md:min-w-0">
+                <label class="hidden md:block font-label-md text-label-sm uppercase tracking-wider text-on-surface-variant block mb-3">Professional Level</label>
+                <select id="level-filter" class="min-w-[10rem] w-auto md:w-full bg-surface-container-low border border-secondary-fixed rounded-full md:rounded-lg focus:border-primary font-body-md text-xs md:text-base py-1 px-3 transition-all">
                     <option value="">All education levels</option>
                     <option value="Class">School Students</option>
                     <option value="UG">Undergraduate</option>
@@ -190,33 +190,33 @@
                     <option value="Research">Research / PhD</option>
                 </select>
             </div>
-            <div>
-                <label class="font-label-md text-label-sm uppercase tracking-wider text-on-surface-variant block mb-3">Funding Amount</label>
-                <div class="flex flex-wrap gap-2">
-                    <button data-amount-filter="0" class="amount-filter px-4 py-2 bg-primary text-white rounded-full font-label-md text-label-sm">Any</button>
-                    <button data-amount-filter="500000" class="amount-filter px-4 py-2 bg-secondary-fixed text-on-secondary-fixed rounded-full font-label-md text-label-sm hover:bg-secondary-fixed-dim transition-colors">₹5L+</button>
-                    <button data-amount-filter="2000000" class="amount-filter px-4 py-2 bg-secondary-fixed text-on-secondary-fixed rounded-full font-label-md text-label-sm hover:bg-secondary-fixed-dim transition-colors">₹20L+</button>
+            <div class="flex-shrink-0 min-w-max md:min-w-0">
+                <label class="hidden md:block font-label-md text-label-sm uppercase tracking-wider text-on-surface-variant block mb-3">Funding Amount</label>
+                <div class="flex items-center gap-2 md:flex-wrap">
+                    <button data-amount-filter="0" class="amount-filter text-xs py-1 px-3 bg-primary text-white rounded-full font-label-md text-label-sm whitespace-nowrap">Any</button>
+                    <button data-amount-filter="500000" class="amount-filter text-xs py-1 px-3 bg-secondary-fixed text-on-secondary-fixed rounded-full font-label-md text-label-sm whitespace-nowrap hover:bg-secondary-fixed-dim transition-colors">₹5L+</button>
+                    <button data-amount-filter="2000000" class="amount-filter text-xs py-1 px-3 bg-secondary-fixed text-on-secondary-fixed rounded-full font-label-md text-label-sm whitespace-nowrap hover:bg-secondary-fixed-dim transition-colors">₹20L+</button>
                 </div>
             </div>
-            <div>
-                <label class="font-label-md text-label-sm uppercase tracking-wider text-on-surface-variant block mb-3">Residency Status</label>
-                <div class="space-y-3">
-                    <label class="flex items-center gap-3 cursor-pointer">
-                        <input checked="" class="rounded border-secondary text-primary focus:ring-primary w-5 h-5" type="checkbox">
+            <div class="flex-shrink-0 min-w-max md:min-w-0">
+                <label class="hidden md:block font-label-md text-label-sm uppercase tracking-wider text-on-surface-variant block mb-3">Residency Status</label>
+                <div class="flex items-center gap-2 md:space-y-3 md:flex-col">
+                    <label class="inline-flex items-center gap-2 cursor-pointer whitespace-nowrap text-xs">
+                        <input checked="" class="rounded border-secondary text-primary focus:ring-primary w-4 h-4" type="checkbox">
                         <span class="font-body-md text-on-surface">Indian Nationals</span>
                     </label>
-                    <label class="flex items-center gap-3 cursor-pointer">
-                        <input class="rounded border-secondary text-primary focus:ring-primary w-5 h-5" type="checkbox">
+                    <label class="inline-flex items-center gap-2 cursor-pointer whitespace-nowrap text-xs">
+                        <input class="rounded border-secondary text-primary focus:ring-primary w-4 h-4" type="checkbox">
                         <span class="font-body-md text-on-surface">OCI / NRI Talent</span>
                     </label>
                 </div>
             </div>
-            <div>
-                <label class="font-label-md text-label-sm uppercase tracking-wider text-on-surface-variant block mb-3">State Preferences</label>
-                <div class="flex flex-wrap gap-2">
-                    <span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm font-label-md">Maharashtra</span>
-                    <span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm font-label-md">Karnataka</span>
-                    <span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm font-label-md">+4 more</span>
+            <div class="flex-shrink-0 min-w-max md:min-w-0">
+                <label class="hidden md:block font-label-md text-label-sm uppercase tracking-wider text-on-surface-variant block mb-3">State Preferences</label>
+                <div class="flex items-center gap-2 md:flex-wrap">
+                    <span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm font-label-md whitespace-nowrap">Maharashtra</span>
+                    <span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm font-label-md whitespace-nowrap">Karnataka</span>
+                    <span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm font-label-md whitespace-nowrap">+4 more</span>
                 </div>
             </div>
         </div>
