@@ -117,38 +117,30 @@
 <body class="bg-background text-on-background antialiased">
 
 <main class="main-responsive w-full px-4 sm:px-6 lg:px-margin-desktop pt-16">
-<header class="sticky top-0 z-40 w-full bg-background/95 backdrop-blur-md border-b border-secondary-fixed/30 topbar-responsive">
-  <div class="mx-auto flex flex-wrap items-center justify-between gap-4 px-4 sm:px-6 lg:px-12 py-4">
-    <a href="4-dashboard.html" class="font-display text-headline-md font-bold text-primary tracking-tight">NextStep</a>
-    <nav class="hidden md:flex items-center gap-2">
-      <a class="rounded-full px-3 py-2 text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition" href="4-dashboard.html">Dashboard</a>
-      <a class="rounded-full px-3 py-2 text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition" href="5-study-paths.html">Study Paths</a>
-      <a class="rounded-full px-3 py-2 text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition" href="5-career-paths.html">Career Paths</a>
-      <a class="rounded-full px-3 py-2 text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition" href="6-exams.html">Exams</a>
-      <a class="rounded-full px-3 py-2 text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition" href="7-colleges.html">Colleges</a>
-      <a class="rounded-full px-3 py-2 text-sm text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition" href="8-scholarships.html">Scholarships</a>
+<header class="sticky top-0 z-50 bg-[#010a26] text-white topbar-responsive">
+  <div class="max-w-container-max mx-auto flex items-center justify-between px-4 sm:px-6 md:px-8 h-14 md:h-16">
+    <a href="index.html" class="flex items-center gap-3">
+      <span class="font-display-lg text-headline-md font-bold text-white">NextStep</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-3">
+      <a href="4-dashboard.html" class="px-3 py-2 rounded-full text-sm font-medium text-white hover:text-[#f5c842]">Dashboard</a>
+      <a href="5-study-paths.html" class="px-3 py-2 rounded-full text-sm font-medium text-white hover:text-[#f5c842]">Study Paths</a>
+      <a href="5-career-paths.html" class="px-3 py-2 rounded-full text-sm font-medium text-white hover:text-[#f5c842]">Career Paths</a>
+      <a href="6-exams.html" class="px-3 py-2 rounded-full text-sm font-medium text-white hover:text-[#f5c842]">Exams</a>
+      <a href="7-colleges.html" class="px-3 py-2 rounded-full text-sm font-medium text-white hover:text-[#f5c842]">Colleges</a>
+      <a href="8-scholarships.html" class="px-3 py-2 rounded-full text-sm font-medium text-primary bg-surface-container-low">Scholarships</a>
     </nav>
-    <div class="flex flex-1 min-w-0 items-center gap-3">
-      <button id="mobileMenuButton" aria-expanded="false" aria-label="Open navigation menu" class="mobile-menu-button inline-flex items-center justify-center h-12 w-12 rounded-xl border border-secondary-fixed bg-surface text-on-surface hover:bg-surface-container-high transition-all md:hidden">
-        <span class="material-symbols-outlined">menu</span>
-      </button>
-      <div class="flex-1 max-w-md">
-        <div class="relative flex items-center bg-surface-container-high px-4 py-2 rounded-full focus-within:ring-2 focus-within:ring-primary/20 transition-all">
-          <span class="material-symbols-outlined text-outline">search</span>
-          <input id="scholarship-search" class="bg-transparent border-none focus:ring-0 w-full text-label-md font-body-md placeholder-outline ml-2" placeholder="Search scholarships, providers, eligibility..." type="text">
-        </div>
-      </div>
-    </div>
+    <button type="button" id="mobileMenuButton" onclick="const d=document.getElementById('topNavLinks'); const open=!d.classList.toggle('hidden'); this.setAttribute('aria-expanded', String(open));" aria-controls="topNavLinks" aria-expanded="false" aria-label="Open navigation menu" class="md:hidden inline-flex items-center justify-center h-10 w-10 text-2xl text-white">☰</button>
   </div>
-  <div id="topNavLinks" class="hidden md:hidden border-t border-secondary-fixed/30 bg-background">
-    <nav class="flex flex-col px-4 py-3 gap-2">
-      <a class="block rounded-xl px-3 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition" href="4-dashboard.html">Dashboard</a>
-      <a class="block rounded-xl px-3 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition" href="5-study-paths.html">Study Paths</a>
-      <a class="block rounded-xl px-3 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition" href="5-career-paths.html">Career Paths</a>
-      <a class="block rounded-xl px-3 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition" href="6-exams.html">Exams</a>
-      <a class="block rounded-xl px-3 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition" href="7-colleges.html">Colleges</a>
-      <a class="block rounded-xl px-3 py-3 text-on-surface-variant hover:text-primary hover:bg-surface-container-high transition" href="8-scholarships.html">Scholarships</a>
-    </nav>
+  <div id="topNavLinks" class="hidden md:hidden border-t border-white/10 bg-[#010a26]">
+    <div class="flex flex-col px-4 py-3 space-y-1">
+      <a href="4-dashboard.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-white hover:text-[#f5c842]">Dashboard</a>
+      <a href="5-study-paths.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-white hover:text-[#f5c842]">Study Paths</a>
+      <a href="5-career-paths.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-white hover:text-[#f5c842]">Career Paths</a>
+      <a href="6-exams.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-white hover:text-[#f5c842]">Exams</a>
+      <a href="7-colleges.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-white hover:text-[#f5c842]">Colleges</a>
+      <a href="8-scholarships.html" class="block px-3 py-2 rounded-lg text-sm font-medium text-primary bg-surface-container-low">Scholarships</a>
+    </div>
   </div>
 </header>
     <div class="w-full max-w-container-max mx-auto">
